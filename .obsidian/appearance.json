@@ -1,0 +1,6 @@
+{
+  "cssTheme": "PLN",
+  "enabledCssSnippets": [
+    "meta-bind-dashboard-selects"
+  ]
+}

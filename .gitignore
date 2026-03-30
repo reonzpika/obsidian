@@ -1,0 +1,14 @@
+# Obsidian: workspace and UI state (per machine)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/graph.json
+.obsidian/global-search.json
+.obsidian/page-preview.json
+.obsidian/starred.json
+.obsidian/backlink.json
+.obsidian/types.json
+.obsidian/canvas.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
