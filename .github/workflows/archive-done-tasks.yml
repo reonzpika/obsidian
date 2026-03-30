@@ -1,0 +1,38 @@
+name: Archive done tasks
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Every 6 hours UTC
+    - cron: "0 */6 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: archive-done-tasks
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Move tasks with status done
+        run: python scripts/archive-done-tasks.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --cached --quiet; then
+            echo "No task files moved."
+            exit 0
+          fi
+          git commit -m "chore: archive done tasks to tasks/done"
+          git push
