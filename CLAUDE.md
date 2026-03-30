@@ -17,8 +17,9 @@ This is an **Obsidian vault** — a task/project management workspace for NexWav
 | `clinicpro-saas` | `C:\Users\reonz\Cursor\clinicpro-saas` | Main web app — Next.js, Clerk, Drizzle/Neon, Vercel |
 | `clinicpro-medtech` | `C:\Users\reonz\Cursor\clinicpro-medtech` | ClinicPro Capture PWA + Medtech BFF — Next.js, Supabase OTP, AWS Lightsail |
 | `nexwave-rd` | `C:\Users\reonz\Cursor\nexwave-rd` | MBIE R&D — isolated from commercial code, AWS Bedrock |
+| `gp-fellowship` | N/A (no code repo) | Personal training — RNZCGP Fellowship application and assessment |
 
-**Choosing a repo:** use the `repo:` frontmatter field in a task file, or infer from the task ID prefix (`saas-*`, `medtech-*`, `rd-*`). Ask the user if ambiguous.
+**Choosing a repo:** use the `repo:` frontmatter field in a task file, or infer from the task ID prefix (`saas-*`, `medtech-*`, `rd-*`, `gpf-*`). Ask the user if ambiguous.
 
 ## Vault structure
 
@@ -43,7 +44,7 @@ obsidian/
 id: {repo-prefix}-{YYYYMMDD}-{NNN}   # e.g. saas-20260330-001
 title: Short human-readable description
 project: {project-id}                  # must match a filename in projects/ (no .md)
-repo: clinicpro-saas | clinicpro-medtech | nexwave-rd
+repo: clinicpro-saas | clinicpro-medtech | nexwave-rd | gp-fellowship
 sprint: {sprint-id}                    # must match a filename in sprints/ (no .md)
 status: open | in-progress | blocked | done
 priority: high | medium | low
@@ -53,7 +54,7 @@ due: YYYY-MM-DD
 
 R&D tasks add: `objective: obj-1|obj-2|obj-3|obj-4|capability` and `owner: ryo|ting|both`
 
-**Project** (`projects/*.md`): `id`, `status`, `type: product|rd`, `repo`, `stack`
+**Project** (`projects/*.md`): `id`, `status`, `type: product|rd|training`, `repo`, `stack`
 
 **Sprint** (`sprints/active/*.md`): `id: YYYY-MM-sprint-N`, `status`, `start`, `end`, `repos`, `projects`, `goal`
 
