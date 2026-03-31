@@ -2,6 +2,19 @@
 
 Products: ClinicPro Capture (and future Medtech ALEX products)
 
+---
+
+## Quick links
+
+| | |
+|--|--|
+| **Products** | [[clinicpro-capture]] |
+| **API reference** | [[alex-api-docs]] |
+| **Active sprint** | [[2026-03-sprint-1]] |
+| **Repo map** | [[repos]] |
+
+---
+
 ## Open tasks
 
 ```dataviewjs

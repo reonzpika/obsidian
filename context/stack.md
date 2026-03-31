@@ -23,3 +23,24 @@
 ## GitHub
 - Account: reonzpika
 - Workflow: main branch only. No PRs/issues workflow.
+
+---
+
+## Tools
+
+### OpenSpace (custom build)
+- Repo: https://github.com/HKUDS/OpenSpace
+- What it is: Self-evolving skill engine for AI agents — captures reusable task patterns, auto-improves them, shares across agents
+- Our version: Built a custom `/evolve` skill + hook system on top of Claude Code instead. No API key needed — uses Claude Max plan. Skills are `.md` files in `~/.claude/commands/`, tracked via `skill-evolver/` hooks, reviewed end-of-session with `/evolve`.
+
+---
+
+## Curious / Exploring
+
+### CLI-Anything
+- Repo: https://github.com/HKUDS/CLI-Anything
+- What it is: Makes any software agent-native via CLI interfaces
+
+### notebooklm-py
+- Repo: https://github.com/teng-lin/notebooklm-py
+- What it is: Unofficial Python API + CLI for Google NotebookLM — programmatic access including features not in the web UI, usable from scripts and AI agents

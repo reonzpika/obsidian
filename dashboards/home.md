@@ -1,5 +1,18 @@
 # Dashboard — All Projects
 
+---
+
+## Dashboards
+
+| | |
+|--|--|
+| **ClinicPro Medtech** | [[clinicpro-medtech]] |
+| **ClinicPro SaaS** | [[clinicpro-saas]] |
+| **Nexwave R&D** | [[nexwave-rd]] |
+| **GP Fellowship** | [[gp-fellowship]] |
+
+---
+
 ## Open tasks (all repos)
 
 ```dataviewjs

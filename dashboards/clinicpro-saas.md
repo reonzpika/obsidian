@@ -2,6 +2,17 @@
 
 Products: referral-images, ai-scribe, 12-month-prescription, acc, openmailer
 
+---
+
+## Quick links
+
+| | |
+|--|--|
+| **Products** | [[ai-scribe]] · [[referral-images]] · [[12-month-prescription]] |
+| **Repo map** | [[repos]] |
+
+---
+
 ## Open tasks
 
 ```dataviewjs

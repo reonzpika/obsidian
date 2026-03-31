@@ -2,6 +2,17 @@
 
 RNZCGP Fellowship application and assessment. College ID: 66153. Requirements completed: 16 Feb 2026.
 
+---
+
+## Quick links
+
+| | |
+|--|--|
+| **Project** | [[gp-fellowship]] |
+| **Assessment guide** | [[fellowship-assessment-guide]] |
+
+---
+
 ## Open tasks
 
 ```dataviewjs

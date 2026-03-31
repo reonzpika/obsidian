@@ -2,6 +2,17 @@
 
 MBIE-funded. Keep isolated from commercial work.
 
+---
+
+## Quick links
+
+| | |
+|--|--|
+| **Project** | [[nexwave-rd]] |
+| **Repo map** | [[repos]] |
+
+---
+
 ## Open tasks
 
 ```dataviewjs
