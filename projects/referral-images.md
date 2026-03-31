@@ -7,7 +7,32 @@ stack: [nextjs, typescript, tailwind, vercel, neon, clerk, stripe]
 ---
 
 ## Description
-Referral image tool for GPs. Transitioning from free to paid on 6 April 2026. Existing users grandfathered.
+Referral image tool for GPs. Transitioning from free to paid on 6 April 2026. Existing users get 1 free year from signup.
+
+## Pricing
+- **$5/month** recurring subscription, cancel anytime
+- **No annual plan**
+- New users: 1 month free trial, then $5/month
+- Existing users (signed up before 6 April 2026): free for 1 year, no credit card until renewal
+
+## Launch Status
+- **Launch date:** 6 April 2026
+- **Customer email sent:** 31 March 2026 (via Resend broadcast)
+- **Grandfathering migration:** pending (run day before launch)
+- **Stripe subscription price:** pending creation ($5/month)
+
+## Technical Model (post-launch)
+- `imageTier === 'premium'` → unlimited (existing users + paying subscribers)
+- Month 1 for new users → unlimited (free trial)
+- Month 2+ with `imageTier === 'free'` → blocked, must subscribe
+- Grace unlock system: **removed**
+- Stripe integration: **subscription** (not one-time payment)
+
+## Key Decisions
+- One-time $50 payment model scrapped in favour of $5/month subscription
+- No annual plan — monthly only, keep it simple
+- Existing users grandfathered for 1 year (not forever) — ~60 users × $5/month = $3,600/year revenue starting April 2027
+- Landing page improvements deferred to post-launch sprint (2026-04-sprint-1)
 
 ## Tasks
 
