@@ -92,7 +92,7 @@ Flow: `linkedin-post-create` skill → plan → research → scout → draft →
 
 ### scraper
 Two scrapers:
-1. `alex_scraper/` — Playwright SPA scraper that crawls the ALEX API docs site and dumps every endpoint to individual Markdown files for AI context.
+1. `alex_scraper/` — Scraper for the ALEX API docs site. Intercepts the Postman collection JSON via Playwright, parses all endpoints (including nested folders), and writes one Markdown file per endpoint. Also extracts static doc pages from the collection description. Output: `scraper/output/alex-api-docs/` (261 endpoints, 7 static pages). Run: `python run_scraper.py` (cached) or `--refresh` (re-fetch live). Full reference: [[alex-api-docs]].
 2. `gp_clinic_scraper.py` — Crawl4AI scraper for Healthpoint GP clinic listings → CSV.
 
 ---

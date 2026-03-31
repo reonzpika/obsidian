@@ -9,6 +9,8 @@ stack: [nextjs, typescript, tailwind, vercel, supabase, aws-lightsail-bff]
 ## Description
 Mobile web app that photographs clinical images and commits them to patient records in Medtech Evolution via the ALEX API. All ALEX calls route through BFF at api.clinicpro.co.nz.
 
+**API reference**: [[alex-api-docs]]
+
 ## Current goals
 - Ship /about-capture landing page
 - Await Medtech production sign-off
