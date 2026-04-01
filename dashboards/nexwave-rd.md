@@ -14,16 +14,16 @@ MBIE-funded R&D programme (N2RD grant CONT-109091-N2RD-NSIWKC). Developing NZ-so
 
 ## Programme at a Glance
 
-| Field | Detail |
-|---|---|
-| Contract ref | CONT-109091-N2RD-NSIWKC |
-| Total funding | $716,926.00 (GST excl.) |
-| First tranche | $286,770.40 |
-| Grant split | 40% MBIE / 60% company |
-| Contract start | 12 March 2026 |
-| Contract end | 11 March 2028 |
-| MBIE contact | Lisa Pritchard |
-| Q1 claim due | 31 May 2026 (PAYE evidence due 30 Apr 2026) |
+| Field          | Detail                                      |
+| -------------- | ------------------------------------------- |
+| Contract ref   | CONT-109091-N2RD-NSIWKC                     |
+| Total funding  | $716,926.00 (GST excl.)                     |
+| First tranche  | $286,770.40                                 |
+| Grant split    | 40% MBIE / 60% company                      |
+| Contract start | 12 March 2026                               |
+| Contract end   | 11 March 2028                               |
+| MBIE contact   | Lisa Pritchard                              |
+| Q1 claim due   | 31 May 2026 (PAYE evidence due 30 Apr 2026) |
 
 ---
 
