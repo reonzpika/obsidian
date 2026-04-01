@@ -44,3 +44,7 @@
 ### notebooklm-py
 - Repo: https://github.com/teng-lin/notebooklm-py
 - What it is: Unofficial Python API + CLI for Google NotebookLM — programmatic access including features not in the web UI, usable from scripts and AI agents
+
+### Awesome Open Source AI
+- Repo: https://github.com/alvinunreal/awesome-opensource-ai
+- What it is: Curated list of open-source AI models, libraries, inference/serving, agents, RAG, MLOps, evaluation, safety, and related tooling (awesome-list style)
