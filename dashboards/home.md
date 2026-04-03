@@ -33,6 +33,7 @@
 - [Cursor Dashboard](https://cursor.com/dashboard)
 - [OpenAI Usage](https://platform.openai.com/settings/organization/usage)
 - [Domains Direct](https://secure.domainsdirect.nz/?login)
+- [Vercel](https://vercel.com/nexwave-solutions-projects)
 
 **AI**
 - [Claude](https://claude.ai/settings/general)
