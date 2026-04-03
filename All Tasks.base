@@ -1,0 +1,10 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.folder == "tasks/open"
+    order:
+      - title
+      - file.name
+      - file.folder
