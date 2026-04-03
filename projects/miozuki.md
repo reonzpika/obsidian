@@ -14,7 +14,7 @@ Fine jewellery ecommerce brand (NZ) specialising in moissanite and pearl pieces.
 ## Notes
 - Shopify store: nassuu-px.myshopify.com (live, products loaded)
 - Brand palette: deep burgundy `#7B1E22` + cream `#F5F0E9`, Playfair serif
-- No repo yet — to be scaffolded in sprint 1
+- Repo: github.com/reonzpika/miozuki-web (scaffolded sprint 1)
 - No sales yet; ads running, conversion optimisation needed post-launch
 - NZD / NZ market, DTC model
 
