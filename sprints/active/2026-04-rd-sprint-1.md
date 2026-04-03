@@ -7,7 +7,7 @@ repos:
   - nexwave-rd
 projects:
   - nexwave-rd
-goal: Define the problems clearly: Inbox Helper and Care Gap Finder
+goal: "Define the problems clearly: Inbox Helper and Care Gap Finder"
 objective: obj-1
 ---
 
