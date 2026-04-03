@@ -1,29 +1,31 @@
 ---
-id: side-projects
+id: miozuki
 status: active
 type: side-project
+owner: ting
 ---
 
-# Side Projects
+## Description
+<!-- Add description here -->
 
-Personal and family projects outside of ClinicPro and Nexwave R&D. Maintained by Ryo and Ting.
+## Notes
+<!-- Add notes here -->
 
----
+## Sprints
 
-## Projects
+```dataviewjs
+const active = dv.pages('"sprints/active"')
+  .where(p => p.projects && p.projects.includes("miozuki"));
+const archived = dv.pages('"sprints/archive"')
+  .where(p => p.projects && p.projects.includes("miozuki"));
+const pages = active.concat(archived).sort(p => p.start);
+const headers = ['Sprint', 'Goal', 'Start', 'End', 'Status'];
+dv.table(headers, pages.map(p => [
+  dv.fileLink(p.file.path, false, p.id), p.goal, p.start, p.end, p.status
+]));
+```
 
-| Project            | Owner | Status        | Notes                                 |
-| ------------------ | ----- | ------------- | ------------------------------------- |
-| [[linkedin-agent]] | Ryo   | 🟢 Production | Automated. Low maintenance.           |
-| [[gp-community]]   | Ryo   | 💤 Parked     | Parked indefinitely.                  |
-| [[cloud9japan]]    | Ryo   | 💤 Parked     | Mum's business. Horse Messe complete. |
-| [[ahuru]]          | Ting  | 🟡 Active     | Ting's ecommerce SEO project.         |
-| [[miozuki]]        | Ting  | 🟡 Active     | —                                     |
-| [[eguchi-family]]  | Ryo   | 💤 Parked     | Family AI site.                       |
-
----
-
-## Open Tasks
+## Tasks
 
 ```dataviewjs
 const mb = app.plugins.getPlugin('obsidian-meta-bind-plugin')?.api;
@@ -38,11 +40,6 @@ const priorityOpts = [
   { name: 'option', value: ['high'] },
   { name: 'option', value: ['medium'] },
   { name: 'option', value: ['low'] }
-];
-const ownerOpts = [
-  { name: 'option', value: ['ryo'] },
-  { name: 'option', value: ['ting'] },
-  { name: 'option', value: ['both'] }
 ];
 function statusSelect(filePath) {
   const el = dv.el('span', '');
@@ -115,14 +112,13 @@ function scheduleDashboardColumnSort(dv, headerNames) {
   obs.observe(dv.container, { childList: true, subtree: true });
   setTimeout(() => obs.disconnect(), 8000);
 }
-const sideProjects = ["gp-community", "cloud9japan", "linkedin-agent", "ahuru", "miozuki", "eguchi-family"];
 const pages = dv.pages('"tasks/open"')
-  .where(p => sideProjects.includes(p.project) && p.status !== "done")
+  .where(p => p.project === "miozuki" && p.status !== "done")
   .sort(p => p.priority === "high" ? 0 : p.priority === "medium" ? 1 : 2);
-const headers = ['Task', 'Project', 'Owner', 'Status', 'Priority', 'Due'];
+const headers = ['Task', 'Status', 'Priority', 'Due'];
 dv.table(headers, pages.map(p => [
   dv.fileLink(p.file.path, false, p.title || p.file.name),
-  p.project, p.owner, statusSelect(p.file.path), prioritySelect(p.file.path), p.due
+  statusSelect(p.file.path), prioritySelect(p.file.path), p.due
 ]));
 scheduleDashboardColumnSort(dv, headers);
 ```

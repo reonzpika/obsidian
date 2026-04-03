@@ -1,15 +1,27 @@
 ---
 id: ahuru
-status: parked
+status: active
 type: side-project
 owner: ting
+sprint:
 ---
 
 ## Description
-Ting's ecommerce SEO project. Parked.
 
-## Notes
-- Ting's ecommerce SEO project.
+
+## Sprints
+
+```dataviewjs
+const active = dv.pages('"sprints/active"')
+  .where(p => p.projects && p.projects.includes("ahuru"));
+const archived = dv.pages('"sprints/archive"')
+  .where(p => p.projects && p.projects.includes("ahuru"));
+const pages = active.concat(archived).sort(p => p.start);
+const headers = ['Sprint', 'Goal', 'Start', 'End', 'Status'];
+dv.table(headers, pages.map(p => [
+  dv.fileLink(p.file.path, false, p.id), p.goal, p.start, p.end, p.status
+]));
+```
 
 ## Tasks
 
