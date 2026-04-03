@@ -395,9 +395,10 @@ All expenses are R&D relevant and approved for Q1 claim. Records retained per 7-
 |---|---|---|---|---|---|---|---|---|
 | 22 Mar 2026 | Anthropic Claude Pro Plan | Anthropic, PBC | $40.00 | $34.78 | $5.22 | Compute / AI API | Q1 (Mar–May 2026) | Approved |
 | 24 Mar 2026 | Anthropic Claude Max Plan | Anthropic, PBC | $163.34 | $142.03 | $21.31 | Compute / AI API | Q1 (Mar–May 2026) | Approved |
-| **Q1 Total** | | | **$203.34** | **$176.81** | **$26.53** | | | |
+| 4 Apr 2026 | Hynix 8GB DDR4-3200 SO-DIMM Laptop RAM — Ting's computer (Order CL22712) | Computer Lounge | $65.54 | $57.00 | $8.54 | Hardware / Equipment | Q1 (Mar–May 2026) | Approved |
+| **Q1 Total** | | | **$268.88** | **$233.81** | **$35.07** | | | |
 
-*Notes: Claude Pro — Mar 22–Apr 22 2026 (R&D programme AI tooling and research). Claude Max (5x) — Mar 24–Apr 24 2026 (R&D AI research and development work).*
+*Notes: Claude Pro — Mar 22–Apr 22 2026 (R&D programme AI tooling and research). Claude Max (5x) — Mar 24–Apr 24 2026 (R&D AI research and development work). RAM upgrade — Ting's HP Envy x360 15m-dr1xxx (R&D workstation).*
 
 ---
 
@@ -409,3 +410,4 @@ All expenses are R&D relevant and approved for Q1 claim. Records retained per 7-
 | 1 Apr 2026 | Migrated full reference content from Notion R&D Reference page. Added Critical Deadlines, Contract Conditions, Key Contract Terms, Clawback Triggers, Tax Treatment, Capability Development, Key Contacts, Change Log. |
 | 1 Apr 2026 | Added project overview, Current Phase section, full Q1–Q8 claim schedule, co-funding sources, NZ regulatory note, context file links. Simplified to high-level view: sprints only (no individual task view), objective column added to sprint table, archived sprints included. |
 | 1 Apr 2026 | Added Obj 1 Milestones table (Goals A–D from Notion). Migrated Weekly Progress Log (weeks of 16 & 23 Mar) and R&D Expenses (2 entries, $203.34 Q1 total) from Notion. Created missing task rd-20260401-001 (KiwiSaver savings suspension). |
+| 4 Apr 2026 | Added RAM purchase to R&D Expenses (Hynix 8GB DDR4-3200 SO-DIMM, Order CL22712, $65.54 NZD). Q1 total updated to $268.88. |
