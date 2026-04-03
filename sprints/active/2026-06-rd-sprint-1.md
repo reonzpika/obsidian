@@ -8,6 +8,7 @@ repos:
 projects:
   - nexwave-rd
 goal: Q1 claim submission and Obj 1 wrap-up
+objective: obj-1
 ---
 
 ## Tasks

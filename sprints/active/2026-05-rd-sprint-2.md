@@ -8,6 +8,7 @@ repos:
 projects:
   - nexwave-rd
 goal: Accuracy testing and architecture lock
+objective: obj-1
 ---
 
 ## Tasks

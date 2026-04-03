@@ -82,7 +82,7 @@
       "type": "external"
     }
   },
-  "defaultProfile": "win32IntegratedDefault",
+  "defaultProfile": null,
   "terminalOptions": {
     "documentOverride": null
   }

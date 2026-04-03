@@ -8,6 +8,7 @@ repos:
 projects:
   - nexwave-rd
 goal: Architecture decision + capability setup
+objective: obj-1
 ---
 
 ## Tasks

@@ -8,6 +8,7 @@ repos:
 projects:
   - nexwave-rd
 goal: Programme launch — legal, grant admin, operations setup
+objective: setup
 ---
 
 ## Retrospective record

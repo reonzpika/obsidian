@@ -8,6 +8,7 @@ repos:
 projects:
   - nexwave-rd
 goal: CVDRA and triage prototyping
+objective: obj-1
 ---
 
 ## Tasks

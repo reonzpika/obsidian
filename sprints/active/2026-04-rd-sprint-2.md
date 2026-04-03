@@ -8,6 +8,7 @@ repos:
 projects:
   - nexwave-rd
 goal: Synthetic data design and generation
+objective: obj-1
 ---
 
 ## Tasks
