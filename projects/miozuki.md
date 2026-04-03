@@ -3,13 +3,19 @@ id: miozuki
 status: active
 type: side-project
 owner: ting
+repo: miozuki-web
+stack: Next.js, TypeScript, Tailwind, Vercel, Shopify Storefront API
 ---
 
 ## Description
-<!-- Add description here -->
+Fine jewellery ecommerce brand (NZ) specialising in moissanite and pearl pieces. Migrating the Shopify-native storefront to a custom Next.js frontend using the Shopify Storefront API. Hosted on Vercel at miozuki.co.nz.
 
 ## Notes
-<!-- Add notes here -->
+- Shopify store: nassuu-px.myshopify.com (live, products loaded)
+- Brand palette: deep burgundy `#7B1E22` + cream `#F5F0E9`, Playfair serif
+- No repo yet — to be scaffolded in sprint 1
+- No sales yet; ads running, conversion optimisation needed post-launch
+- NZD / NZ market, DTC model
 
 ## Sprints
 
