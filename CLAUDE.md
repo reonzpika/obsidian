@@ -6,9 +6,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is an **Obsidian vault** — a task/project management workspace for NexWave / ClinicPro. It holds planning, sprints, tasks, and strategy notes. It does **not** contain application code.
 
-- Implementation code lives in the three product repos (see below)
 - The vault holds **what to do**; product repos hold **how it is built**
-- Full rules: `context/llm-workspace-guide.md` — read before editing anything when given Obsidian context
+- `context/repos.md` — authoritative route/folder map for all repos
+- `context/llm-workspace-guide.md` — full rules; read before editing anything when given Obsidian context
 
 ## Product repos (where code lives)
 
@@ -19,7 +19,11 @@ This is an **Obsidian vault** — a task/project management workspace for NexWav
 | `nexwave-rd` | `C:\Users\reonz\Cursor\nexwave-rd` | MBIE R&D — isolated from commercial code, AWS Bedrock |
 | `gp-fellowship` | N/A (no code repo) | Personal training — RNZCGP Fellowship application and assessment |
 
-**Choosing a repo:** use the `repo:` frontmatter field in a task file, or infer from the task ID prefix (`saas-*`, `medtech-*`, `rd-*`, `gpf-*`). Ask the user if ambiguous.
+**Choosing a repo — in priority order:**
+1. Task frontmatter `repo:` field — authoritative
+2. Task ID prefix: `saas-*` → clinicpro-saas; `medtech-*` → clinicpro-medtech; `rd-*` → nexwave-rd; `gpf-*` → gp-fellowship
+3. Project file (`projects/*.md`) `repo:` field
+4. If still ambiguous — ask the user before writing code
 
 ## Vault structure
 
@@ -42,7 +46,7 @@ obsidian/
 **Task** (`tasks/open/*.md`):
 ```yaml
 id: {repo-prefix}-{YYYYMMDD}-{NNN}   # e.g. saas-20260330-001
-title: Short human-readable description
+title: Short human-readable description  # dashboards display title, not filename
 project: {project-id}                  # must match a filename in projects/ (no .md)
 repo: clinicpro-saas | clinicpro-medtech | nexwave-rd | gp-fellowship
 sprint: {sprint-id}                    # must match a filename in sprints/ (no .md)
@@ -56,7 +60,9 @@ R&D tasks add: `objective: obj-1|obj-2|obj-3|obj-4|capability` and `owner: ryo|t
 
 **Project** (`projects/*.md`): `id`, `status`, `type: product|rd|training`, `repo`, `stack`
 
-**Sprint** (`sprints/active/*.md`): `id: YYYY-MM-sprint-N`, `status`, `start`, `end`, `repos`, `projects`, `goal`
+**Sprint** (`sprints/active/*.md`): `id`, `status`, `start`, `end`, `repos`, `projects`, `goal`
+
+Sprint IDs follow `YYYY-MM-sprint-N` for cross-repo sprints, or `YYYY-MM-{repo-tag}-sprint-N` for single-repo sprints (e.g. `2026-04-rd-sprint-1`, `2026-04-gpf-sprint-1`).
 
 ## Rules
 
@@ -68,3 +74,18 @@ R&D tasks add: `objective: obj-1|obj-2|obj-3|obj-4|capability` and `owner: ryo|t
 - Never create or edit anything inside `.obsidian/`.
 - **R&D isolation:** `nexwave-rd` work must not import ClinicPro commercial code unless the user explicitly allows it.
 - Due dates: ISO 8601, no quotes — e.g. `due: 2026-04-06`
+- `title` must be short and human-readable — dashboards use `title`, not the filename.
+
+## Available vault skills
+
+These Claude Code skills are configured for vault work (invoke with `/skill-name`):
+
+| Skill | Purpose |
+|-------|---------|
+| `/obsidian` | Orient for project management work — loads vault structure and key rules |
+| `/obsidian-task-table` | Generate correctly-structured task tables for sprint/dashboard files |
+| `/obsidian-markdown` | Create/edit Obsidian Flavored Markdown (wikilinks, callouts, properties) |
+| `/obsidian-cli` | Interact with the vault via Obsidian CLI |
+| `/obsidian-bases` | Create/edit Obsidian Bases (`.base` files) |
+| `/calendar-sync` | Sync active sprint timelines to Google Calendar |
+| `/json-canvas` | Create/edit `.canvas` files |
