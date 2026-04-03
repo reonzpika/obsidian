@@ -1,1 +1,6 @@
-{}
+{
+  "defaultViewMode": "preview",
+  "openBehavior": "file:dashboards/home",
+  "alwaysUpdateLinks": true,
+  "promptDelete": false
+}
