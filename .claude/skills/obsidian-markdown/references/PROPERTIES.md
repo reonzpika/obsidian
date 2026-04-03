@@ -33,6 +33,20 @@ due: 2024-02-01T14:30:00
 | List | `tags: [one, two]` or YAML list |
 | Links | `related: "[[Other Note]]"` |
 
+## YAML Quoting Rule — Critical
+
+Any string value containing a colon followed by a space (`: `) **must be quoted**, otherwise YAML parsing fails silently and Dataview cannot read any frontmatter fields from that file.
+
+```yaml
+# WRONG — breaks YAML parsing, Dataview loses the entire note
+goal: Define the problems clearly: Inbox Helper and Care Gap Finder
+
+# CORRECT — quoted value parses fine
+goal: "Define the problems clearly: Inbox Helper and Care Gap Finder"
+```
+
+This applies to all text fields: `title`, `goal`, `description`, `summary`, or any free-text property. The failure is silent — the file still opens in Obsidian but disappears from all Dataview queries.
+
 ## Default Properties
 
 - `tags` - Note tags (searchable, shown in graph view)

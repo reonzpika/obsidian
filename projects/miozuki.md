@@ -6,7 +6,8 @@ owner: ting
 repo: miozuki-web
 stack: Next.js, TypeScript, Tailwind, Vercel, Shopify Storefront API
 ---
-
+## Quick Links ##
+- [Shopify](https://admin.shopify.com/store/miozuki/)
 ## Description
 Fine jewellery ecommerce brand (NZ) specialising in moissanite and pearl pieces. Migrating the Shopify-native storefront to a custom Next.js frontend using the Shopify Storefront API. Hosted on Vercel at miozuki.co.nz.
 
