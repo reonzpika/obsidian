@@ -26,4 +26,5 @@
 
 ## Helen Yu
 - Role: Accountant
+- Email: helen.yu@nexusca.co.nz
 - Note: Meeting arranged re: R&D grant accounting
