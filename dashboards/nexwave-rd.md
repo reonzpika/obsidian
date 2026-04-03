@@ -41,38 +41,11 @@ stack: [aws-bedrock, claude-haiku, claude-sonnet, python, nextjs]
 
 ## Current Phase — Objective 1
 
-**Objective 1: Foundation AI Architecture and Data Requirements**
-Jan–Jun 2026 (Months 1–6) | Status: Active
+**Status:** Active | **Period:** Months 1–6 (March–June 2026) | **Budget:** $177,396
 
-The programme is in its research foundation phase. Working on synthetic NZ clinical data only — no real patient data yet. The core question being investigated is which AI architecture (fine-tuned LLMs, RAG, hybrid, agentic) achieves clinical-grade performance under NZ sovereignty constraints, and what data types and volumes are required.
+Pick the right AI architecture that works for NZ GPs under sovereignty rules, and prove it works on synthetic data by end of June 2026.
 
-**Two prototypes being built this phase:**
-
-| Prototype | Target | Data |
-|---|---|---|
-| Inbox Triage | ≥90% classification accuracy | Synthetic NZ GP inbox items |
-| CVDRA Calculator | ≥95% accuracy vs manual GP calculation | Synthetic patient records |
-
-**Phase deliverables (due end of June 2026):**
-- Medtech and Indici sandbox environments connected
-- Architecture selected with documented evidence
-- Data requirements documented (types and volumes)
-- Both prototypes hitting accuracy targets on synthetic data
-
-**NZ regulatory note:** No pre-market approval is currently required for SaMD under the Medicines Act 1981. The Medical Products Bill (in progress as at March 2026) may introduce IMDRF-aligned SaMD regulation during the grant period. Assist-only design is the correct positioning to minimise future regulatory risk. Engage regulatory compliance consultant early.
-
----
-
-## Obj 1 Milestones
-
-Four milestone goals tracking Obj 1 end-to-end (Mar–Jun 2026). Each goal is a deliverable checkpoint with linked tasks.
-
-| Goal | Month | Owner | Status | Notes |
-|---|---|---|---|---|
-| Goal A — Groundwork and Setup | March 2026 | Both | In Progress | Admin setup, PAYE, employment contract, initial LLM research, R&D operations system, Medtech R&D meeting |
-| Goal B — Architecture Decision Made and Documented | April 2026 | Ryo | Not Started | Evaluate RAG vs fine-tune vs prompt-engineering vs hybrid. Document decision with evidence for MBIE. |
-| Goal C — Data Requirements Documented and Sandbox Access | May 2026 | Both | Not Started | Document data types, volumes, sources, consent/privacy requirements. Connect Medtech and Indici sandboxes. |
-| Goal D — Triage and CVDRA Prototypes Hitting Accuracy Targets | June 2026 | Both | Not Started | Prototypes on synthetic data: ≥90% triage accuracy, ≥95% CVDRA accuracy. Q1 claim evidence. |
+See [[nexwave-rd-obj-1]] for full detail — goals, execution roadmap, deliverables, and sprints.
 
 ---
 
@@ -80,7 +53,7 @@ Four milestone goals tracking Obj 1 end-to-end (Mar–Jun 2026). Each goal is a 
 
 | Objective | Title | Period | Status |
 |---|---|---|---|
-| Obj 1 | Foundation AI Architecture | Months 1–6 (Jan–Jun 2026) | Active |
+| [[nexwave-rd-obj-1\|Obj 1]] | Foundation AI Architecture | Months 1–6 (Jan–Jun 2026) | Active |
 | Obj 2 | Real-World Inbox Data Handling | Months 4–12 (Apr–Dec 2026) | Not Started |
 | Obj 3 | Care Gap Detection Validation | Months 7–16 (Jul 2026–Apr 2027) | Not Started |
 | Obj 4 | Real-World Deployment | Months 16–24 (Apr 2027–Jan 2028) | Not Started |
