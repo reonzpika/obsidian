@@ -7,7 +7,7 @@ repos:
   - nexwave-rd
 projects:
   - nexwave-rd
-goal: Architecture decision + capability setup
+goal: Define the problems clearly: Inbox Helper and Care Gap Finder
 objective: obj-1
 ---
 

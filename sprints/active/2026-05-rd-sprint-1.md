@@ -7,7 +7,7 @@ repos:
   - nexwave-rd
 projects:
   - nexwave-rd
-goal: CVDRA and triage prototyping
+goal: Synthetic data design and architecture evaluation
 objective: obj-1
 ---
 

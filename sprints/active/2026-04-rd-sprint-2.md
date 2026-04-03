@@ -7,7 +7,7 @@ repos:
   - nexwave-rd
 projects:
   - nexwave-rd
-goal: Synthetic data design and generation
+goal: Literature review and architecture research
 objective: obj-1
 ---
 
