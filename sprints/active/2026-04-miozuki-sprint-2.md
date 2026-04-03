@@ -37,3 +37,42 @@ FROM "tasks"
 WHERE sprint = "2026-04-miozuki-sprint-2"
 SORT priority DESC
 ```
+
+## Gap Report
+
+Full audit output: `C:\Users\reonz\Cursor\scraper\miozuki\gap-report.md`
+
+Key findings:
+
+**Global (all tasks):**
+- Announcement bar missing: "NZ Flat Shipping $8 | $1 ring sizer"
+- Header nav links are wrong — correct handles documented in gap report
+- Footer is sparse — missing Help/About columns, social links, payment icons
+
+**Task 002 — Home page:**
+- Hero image URL confirmed from scrape (hero-image.webp on Shopify CDN)
+- 3 sections missing: brand story, Accessible Luxury editorial block, home FAQ (5 Q&As)
+
+**Task 003 — Collections:**
+- Collection images + descriptions come from API; confirm query includes `image` and `description`
+- Key collection handles: `all-moissanite-pearl-nz`, `best-sellers`, `moissanite-ear-rings`, `bridal-jewellery`
+
+**Task 004 — Product pages (HIGH complexity):**
+- Structured sections (What's Included, Details, Materials) are almost certainly Shopify metafields — need to confirm field names in Shopify admin before building
+- Engraving field (4-char text input) → needs `customAttributes` in `cartLinesAdd`
+- Ring size guide modal (static content + size chart image)
+- Shipping accordion (static, same on all products)
+
+**Task 005 — About pages:**
+- `/pages/about-us` and `/pages/our-founder` — full content captured in scrape
+- Founder image URL confirmed: PXL_20241230... on Shopify CDN
+
+**Task 006 — Policy pages:**
+- 7 pages to build: moissanite-faq, jewellery-care, warranty, returns, size-guide, contact, shipping
+- Contact form needs a solution (Formspree or simple mailto)
+- Shipping policy is also at `/policies/shipping-policy` (Shopify built-in)
+
+**Open questions before Task 004:**
+1. What are the metafield namespace/key names for What's Included / Details / Materials?
+2. Contact form: third-party (Formspree) or mailto link?
+3. Blogs: migrate content or link to Shopify blog?
