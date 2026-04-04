@@ -74,5 +74,20 @@ Key findings:
 
 **Open questions before Task 004:**
 1. What are the metafield namespace/key names for What's Included / Details / Materials?
-2. Contact form: third-party (Formspree) or mailto link?
-3. Blogs: migrate content or link to Shopify blog?
+2. Contact form: **decided** — mailto approach implemented
+3. Blogs: not in scope for sprint 2
+
+## Progress (2026-04-04)
+
+**Done (code complete):**
+- Task 001: Content audit ✓
+- Task 002: Home page — hero, brand story, collections grid, best sellers, accessible luxury, FAQ accordion ✓
+- Task 005: About pages — `/pages/about-us`, `/pages/our-founder` ✓
+- Task 006: Policy pages — moissanite-faq, jewellery-care-guide, warranty-cover, returns-refunds-policy, size-guide, contact, shipping-policy ✓
+- Global: Announcement bar, header nav fix, footer rewrite ✓
+- Product page: Engraving field (cart customAttributes), ring size guide modal, shipping accordion, Judge.me reviews (Option C — server component, graceful empty state) ✓
+
+**Blocked — needs Shopify admin input from Ting:**
+- Task 003: Upload collection images + write collection descriptions in Shopify admin
+- Task 004: Product page metafields (What's Included / Details / Materials) — need namespace/key names from Shopify admin → any ring product → Metafields section
+- Judge.me private API token — add to `.env.local` as `JUDGE_ME_PRIVATE_TOKEN=`
