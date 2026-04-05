@@ -19,6 +19,7 @@
 | Project | Owner | Status | Notes |
 | --- | --- | --- | --- |
 | [[linkedin-agent]] | Ryo | 🟢 Production | Automated. Low maintenance. |
+| [[miozuki]] | Ting | 🔵 Active | NZ fine jewellery — Next.js headless frontend. |
 | [[ahuru]] | Ting | 🔵 Active | Ting's ecommerce SEO project. |
 | [[gp-community]] | Ryo | 💤 Parked | Parked indefinitely. |
 | [[cloud9japan]] | Ryo | 💤 Parked | Mum's business. |
