@@ -43,6 +43,8 @@ Key rule: AI assists only. Never makes a clinical decision.
 | Triage prototype hitting ≥90% accuracy on synthetic data | Not Started |
 | CVDRA prototype hitting ≥95% accuracy on synthetic data | Not Started |
 
+**Step 1 complete (5 April 2026):** Inbox Helper task spec and Care Gap Finder task spec both finalised. Stored in `context/nexwave-rd-context/`. Both constitute MBIE evidence for the Step 1 deliverable.
+
 ---
 
 ## The Four Goals
