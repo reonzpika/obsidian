@@ -35,6 +35,7 @@
 - [OpenAI Usage](https://platform.openai.com/settings/organization/usage)
 - [Domains Direct](https://secure.domainsdirect.nz/?login)
 - [Vercel](https://vercel.com/nexwave-solutions-projects)
+- [Neon DB](https://console.neon.tech)
 
 **AI**
 - [Claude](https://claude.ai/settings/general)
