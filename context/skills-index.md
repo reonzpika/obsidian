@@ -48,6 +48,22 @@ All Claude Code skills available in this workspace. Invoke with `/skill-name`.
 
 ---
 
+## My Skills — Personal Commands (`~/.claude/commands/`)
+
+Personal commands available across all projects. These are distinct from `skills/` — same invocation, different directory.
+
+| Skill | When to use |
+|---|---|
+| `/evolve` | End-of-session skill reviewer — scores skill quality, suggests improvements, identifies new skill candidates from session patterns |
+| `/skill-creator` | Create, modify, or benchmark skills — packages a workflow into a reusable slash command |
+| `/board` | Strategic thinking session — explore ideas, weigh trade-offs, produce a PRD/ADR/RFC/sprint plan before any execution |
+| `/bug-audit` | Full bug audit for a reported issue — trace data flow, find all bugs, fix in priority order, commit |
+| `/frontend-design` | Build or redesign production-grade UI — React/Next.js/Tailwind components, landing pages, dashboards |
+| `/claude-md-improver` | Audit and improve CLAUDE.md files — keep project instructions fresh and accurate |
+| `/claude-automation-recommender` | Analyse a codebase and recommend Claude Code automations (hooks, subagents, skills, MCP servers) |
+
+---
+
 ## Built-in Claude Code Skills
 
 Bundled with the Claude Code app. Always available across all projects.
@@ -55,8 +71,6 @@ Bundled with the Claude Code app. Always available across all projects.
 | Skill | When to use |
 |---|---|
 | `/claude-api` | Build apps with the Claude API or Anthropic SDK — auto-triggers when code imports `anthropic` / `@anthropic-ai/sdk` |
-| `/claude-md-improver` | Audit and improve CLAUDE.md files in any repository |
-| `/claude-automation-recommender` | Analyse a codebase and recommend Claude Code automations (hooks, subagents, skills, MCP servers) |
 
 ---
 
@@ -121,7 +135,8 @@ Exposed by connected MCP servers via claude.ai integrations.
 
 | Scope | Path |
 |---|---|
-| Personal (all projects) | `C:\Users\reonz\.claude\skills\` |
-| Project (vault only) | `C:\Users\reonz\cursor\obsidian\.claude\skills\` |
+| Personal skills (all projects) | `C:\Users\reonz\.claude\skills\` |
+| Personal commands (all projects) | `C:\Users\reonz\.claude\commands\` |
+| Project skills (vault only) | `C:\Users\reonz\cursor\obsidian\.claude\skills\` |
 | App plugins | `AppData\Local\Packages\Claude_pzs8sxrjxfjjc\...\rpm\` — managed by Claude desktop app |
 | Built-in | Bundled with Claude Code — no file path |
