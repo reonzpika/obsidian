@@ -75,7 +75,7 @@ Key findings:
 **Open questions before Task 004:**
 1. What are the metafield namespace/key names for What's Included / Details / Materials?
 2. Contact form: **decided** — mailto approach implemented
-3. Blogs: not in scope for sprint 2
+3. Blogs: **in scope — Task 004** — Storefront API dynamic routes, ISR, 23 existing posts + auto-updates for new posts
 
 ## Progress (2026-04-04)
 
