@@ -88,4 +88,5 @@ These Claude Code skills are configured for vault work (invoke with `/skill-name
 | `/obsidian-cli` | Interact with the vault via Obsidian CLI |
 | `/obsidian-bases` | Create/edit Obsidian Bases (`.base` files) |
 | `/calendar-sync` | Sync active sprint timelines to Google Calendar |
+| `/session-update` | End-of-session update — progress log, new tasks, project step status |
 | `/json-canvas` | Create/edit `.canvas` files |
