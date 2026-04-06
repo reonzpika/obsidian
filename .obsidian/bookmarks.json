@@ -17,6 +17,12 @@
       "ctime": 1775443190952,
       "url": "https://mail.google.com/mail/u/0/#inbox",
       "title": "Gmail"
+    },
+    {
+      "type": "url",
+      "ctime": 1775457090594,
+      "url": "https://claude.ai/settings/usage",
+      "title": "Claude"
     }
   ]
 }
