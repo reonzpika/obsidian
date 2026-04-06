@@ -368,23 +368,30 @@ AI-maintained weekly log. Primary audit trail for MBIE claims. Hours: Ryo ~30hrs
 
 ### Week of 16 March 2026
 
-**Ryo** (~30hrs)
 - Employment contract drafted and signed
 - Medtech R&D meeting — agreed on R&D scope post-grant approval
 - LLM/RAG/fine-tuning initial research (in progress)
-
-**Ting** (40hrs)
 - PAYE setup completed
 
 ### Week of 23 March 2026
 
-**Ryo** (~30hrs)
 - R&D operations system designed (Notion task/goal structure, reporting workflow)
 - Continued LLM/RAG/fine-tuning research (in progress)
-
-**Ting** (40hrs)
-- R&D operations system designed (in collaboration with Ryo)
 - Tasks underway: Medtech sandbox documentation, Indici contact search, literature review
+
+### Week of 30 March 2026
+
+- Sprint 1 kicked off (Objective 1 Step 1: define the problems clearly)
+- Sprint goals restructured to enforce sequential dependencies across the 5-step Objective 1 roadmap
+- Inbox Helper task specification drafted — urgency taxonomy, document-type classification criteria, boundary cases, output schema, success criteria, test set design
+
+### Week of 5 April 2026
+
+- Inbox Helper task specification finalised (status: final) — constitutes MBIE Step 1 evidence
+- Care Gap Finder task specification completed (status: final) — constitutes MBIE Step 1 evidence
+- Step 1 complete: both task specs grounded in NZ guidelines (RCPA/AACB, BPAC NZ, NZSSD, Te Whatu Ora, HDC case law)
+- NexWave Health established as the R&D programme brand (separate from ClinicPro commercial product and NexWave Solutions Limited legal entity); name checked clean against NZ Companies Office and IPONZ
+- GP clinical review outreach initiated: intro emails drafted and scheduled (2026-04-06) to Brendan Duck (Health HB PHO), Gareth Roberts (Comprehensive Care PHO), Heidi Bubendorfer (RNZCGP) — seeking 2-3 GP reviewers for focused 20-30 min spec review before proceeding to Step 2
 
 ---
 

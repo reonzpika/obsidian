@@ -37,6 +37,7 @@
 - [Vercel](https://vercel.com/nexwave-solutions-projects)
 - [Neon DB](https://console.neon.tech)
 - [Stripe](https://dashboard.stripe.com/)
+- [Clerk](https://dashboard.clerk.com/apps)
 
 **AI**
 - [Claude](https://claude.ai/settings/general)
