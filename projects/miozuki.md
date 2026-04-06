@@ -28,6 +28,11 @@ Fine jewellery ecommerce brand (NZ) specialising in moissanite and pearl pieces.
 - Created deep research prompt (industry standards and best practices for fine jewellery DTC brands)
 - Identified 3 additional research tracks before implementing updates: competitor live sites, NZ market specifics, moissanite positioning landscape
 - Created detailed deep research prompts for all 3 research tracks — ready to run in Claude.ai
+- Identified zero-reviews trust gap as primary conversion blocker at launch; researched trust signal priority stack for new DTC fine jewellery (NZ market)
+- Trust tier-1 (implement immediately, no research needed): returns policy visible on PDPs, NZ identity signals (NZBN in footer, NZ address, Afterpay badge), craftsmanship warranty statement
+- Trust tier-2 (pre-launch): founder story above fold on homepage (not About page), moissanite provenance/certification page, micro-influencer seeding (15-20 NZ creators, gifted)
+- Mapped moissanite-specific credibility problem ("fake diamond" perception) as requiring separate trust framing beyond standard DTC tactics — certification detail and lab-stone narrative are the key levers
+- Added fourth deep research track: trust signals for zero-review DTC fine jewellery launch — structured prompt ready to run in Claude.ai
 
 ## Sprints
 
