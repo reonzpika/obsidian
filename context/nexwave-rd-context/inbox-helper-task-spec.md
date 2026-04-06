@@ -215,7 +215,7 @@ This section is an input to architecture selection (Objective 1, Steps 2–5).
 
 ## 9. MBIE Evidence Statement
 
-This document constitutes the Step 1 deliverable for Objective 1 of the NexWave R&D programme under contract CONT-109091-N2RD-NSIWKC: "Clear written definition of both tasks with success criteria."
+This document constitutes the Step 1 deliverable for Objective 1 of the NexWave Health R&D Programme (NexWave Solutions Limited, contract CONT-109091-N2RD-NSIWKC): "Clear written definition of both tasks with success criteria."
 
 **Development basis:**
 - Systematic literature review of GP inbox management frameworks (RNZCGP Foundation Standard, RACGP Standards 5th Ed., BPAC NZ guidance, BMA test results guidance, NHS GP Forward View Correspondence Management Programme)

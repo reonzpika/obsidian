@@ -36,6 +36,7 @@
 - [Domains Direct](https://secure.domainsdirect.nz/?login)
 - [Vercel](https://vercel.com/nexwave-solutions-projects)
 - [Neon DB](https://console.neon.tech)
+- [Stripe](https://dashboard.stripe.com/)
 
 **AI**
 - [Claude](https://claude.ai/settings/general)

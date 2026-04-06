@@ -6,9 +6,9 @@ repo: nexwave-rd
 stack: [aws-bedrock, claude-haiku, claude-sonnet, python, nextjs]
 ---
 
-# NexWave R&D
+# NexWave Health
 
-	NexWave Solutions Ltd is conducting MBIE-funded R&D to determine whether AI can achieve clinical-grade performance for two core GP workflow problems: **Inbox Helper** (triaging lab results, discharge summaries, and clinical correspondence by urgency) and **Care Gap Finder** (identifying patients overdue for diabetes and cardiovascular risk management). The founder is a practising GP and full-stack developer, bringing direct clinical domain knowledge to the research. NexWave has a formal partnership with Medtech (NZ's largest PMS provider, ~60% market share), giving real-world integration access. The ultimate goal is NZ-sovereign clinical AI — built and operated within NZ under Privacy Act constraints, not dependent on overseas cloud infrastructure. Success would free an estimated 900,000 GP hours per year across the NZ workforce.
+**NexWave Health** is the MBIE-funded R&D programme of NexWave Solutions Limited, working to determine whether AI can achieve clinical-grade performance for two core GP workflow problems: **Inbox Helper** (triaging lab results, discharge summaries, and clinical correspondence by urgency) and **Care Gap Finder** (identifying patients overdue for diabetes and cardiovascular risk management). The founder is a practising GP and full-stack developer, bringing direct clinical domain knowledge to the research. NexWave Health has a formal partnership with Medtech (NZ's largest PMS provider, ~60% market share), giving real-world integration access. The ultimate goal is NZ-sovereign clinical AI — built and operated within NZ under Privacy Act constraints, not dependent on overseas cloud infrastructure. Success would free an estimated 900,000 GP hours per year across the NZ workforce.
 
 **Signed contract:** [CONT-109091-N2RD-NSIWKC — Funding Agreement (signed 25 Mar 2026)](https://drive.google.com/file/d/1P_le7IGb8EyQtnNIJYLwfjKmeAKmU-_w/view?usp=drivesdk) — filed in Google Drive: R&D / Grant archive
 
@@ -34,6 +34,7 @@ stack: [aws-bedrock, claude-haiku, claude-sonnet, python, nextjs]
 
 | Field | Detail |
 | --- | --- |
+| Programme brand | NexWave Health (legal entity: NexWave Solutions Limited) |
 | Contract ref | CONT-109091-N2RD-NSIWKC |
 | Application ref | PROP-109091-N2RD-NSIWKC |
 | Grant scheme | New to R&D (N2RD) — MBIE |

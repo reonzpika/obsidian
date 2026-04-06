@@ -560,7 +560,7 @@ All test patients require GP-reviewed ground truth labels for care gap detection
 
 ## 10. MBIE Evidence Statement
 
-This document constitutes the Step 1 deliverable for Objective 1 of the NexWave R&D programme under contract CONT-109091-N2RD-NSIWKC: "Clear written definition of both tasks with success criteria."
+This document constitutes the Step 1 deliverable for Objective 1 of the NexWave Health R&D Programme (NexWave Solutions Limited, contract CONT-109091-N2RD-NSIWKC): "Clear written definition of both tasks with success criteria."
 
 **Development basis:**
 - NZSSD / MoH Type 2 Diabetes Management Guidance (2021, updated 2023) — HbA1c intervals, annual review checklist, diabetes coding, eGFR/ACR monitoring matrix

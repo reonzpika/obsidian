@@ -6,7 +6,7 @@ repo: nexwave-rd
 stack: [aws-bedrock, claude-haiku, claude-sonnet, python]
 ---
 
-# NexWave R&D — Objective 1: Foundation AI Architecture
+# NexWave Health R&D — Objective 1: Foundation AI Architecture
 
 | Field | Detail |
 |---|---|
