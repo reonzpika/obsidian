@@ -18,6 +18,13 @@ Products: referral-images, ai-scribe, 12-month-prescription, acc, openmailer
 - Stale code cleaned: removed `graceUnlocksRemaining`, `calculateLimit`, `canUseGraceUnlock`, `IMAGE_TOOL_FREE_MONTHLY_LIMIT`, `getImageToolUsage`, `unlock-grace` route; `sendMonthResetEmail` copy updated to $5/month
 - FK re-key bug fixed in `ensure-links` and Clerk webhook routes — sequential child-table updates to work around neon-http no-transaction constraint
 - Stripe CLI installed; test env configured; local webhook listener running
+- Fixed user re-key duplicate email constraint: temp-email swap before INSERT in `ensure-links` and `clerk-user` webhook routes
+- Fixed Stripe webhook product check (`referral_images_premium` → `referral_images`); added `customer.subscription.deleted` and `invoice.payment_failed` handlers
+- Fixed Clerk middleware blocking Stripe webhook route (was returning 401 to Stripe on every event)
+- Fixed success page redirect loop: was pushing to `/referral-images/capture` (requires `?u=` param); corrected to `/referral-images`; updated copy to subscription language
+- Registered dedicated production Stripe webhook at `clinicpro.co.nz/api/referral-images/upgrade/webhook`; `STRIPE_REFERRAL_IMAGES_WEBHOOK_SECRET` updated in Vercel
+- Deployed to production (commit 667a203); TypeScript error on `Invoice.subscription` field patched before deploy succeeded
+- T5 verified in dev: payment flow completes, Premium badge appears; T6 (cancel → revert) pending production verification
 
 ---
 
