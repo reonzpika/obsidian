@@ -18,6 +18,17 @@ Fine jewellery ecommerce brand (NZ) specialising in moissanite and pearl pieces.
 - No sales yet; ads running, conversion optimisation needed post-launch
 - NZD / NZ market, DTC model
 
+## Weekly Progress Log
+
+### Week of 2026-04-06
+
+- Completed full UI/UX and brand audit of miozuki-web — saved to `miozuki-web/brand-audit-2026.md`
+- Identified 15 prioritised findings across brand identity, visual design, copy, navigation, and product UX
+- Critical gaps flagged: no logomark exists, hero headline is SEO copy not brand copy, AI-generated image in Accessible Luxury section, dual brand voice register not unified
+- Created deep research prompt (industry standards and best practices for fine jewellery DTC brands)
+- Identified 3 additional research tracks before implementing updates: competitor live sites, NZ market specifics, moissanite positioning landscape
+- Created detailed deep research prompts for all 3 research tracks — ready to run in Claude.ai
+
 ## Sprints
 
 ```dataviewjs

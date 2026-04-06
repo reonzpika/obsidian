@@ -4,6 +4,23 @@ Products: referral-images, ai-scribe, 12-month-prescription, acc, openmailer
 
 ---
 
+## Weekly Progress Log
+
+### Week of 2026-04-06
+
+- Referral Images launched 6 April 2026 on $5/month subscription model
+- Grandfathering migration applied: 78 pre-launch users set to `grandfatheredUntil = 2027-04-06`; new users get 1-month free trial via Clerk webhook
+- `referral_images_users` table extracted from `users` (migration 0057) — holds `imageTier`, `grandfatheredUntil`, and referral-images-specific columns
+- Tier resolver updated to query `referralImagesUsers` with `grandfatheredUntil > now()` logic
+- Stripe checkout converted to subscription mode; webhook branched on `product: referral_images` to avoid AI Scribe cross-contamination
+- Free tier fully blocked post-trial — removed 20-image limit, grace unlock system, and `sendLimitHitEmail`
+- Paywall UI added to both capture and desktop pages; copy updated to "Already used by 100+ GPs across NZ. Billed monthly, cancel anytime."
+- Stale code cleaned: removed `graceUnlocksRemaining`, `calculateLimit`, `canUseGraceUnlock`, `IMAGE_TOOL_FREE_MONTHLY_LIMIT`, `getImageToolUsage`, `unlock-grace` route; `sendMonthResetEmail` copy updated to $5/month
+- FK re-key bug fixed in `ensure-links` and Clerk webhook routes — sequential child-table updates to work around neon-http no-transaction constraint
+- Stripe CLI installed; test env configured; local webhook listener running
+
+---
+
 ## Quick links
 
 | | |

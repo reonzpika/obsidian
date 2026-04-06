@@ -16,10 +16,10 @@ Referral image tool for GPs. Transitioning from free to paid on 6 April 2026. Ex
 - Existing users (signed up before 6 April 2026): free for 1 year, no credit card until renewal
 
 ## Launch Status
-- **Launch date:** 6 April 2026
+- **Launch date:** 6 April 2026 ✓ Launched
 - **Customer email sent:** 31 March 2026 (via Resend broadcast)
-- **Grandfathering migration:** pending (run day before launch)
-- **Stripe subscription price:** pending creation ($5/month)
+- **Grandfathering migration:** complete (6 April 2026) — 78 users set to `2027-04-06`
+- **Stripe subscription price:** created; test env configured; T5/T6 pending
 
 ## Technical Model (post-launch)
 - `imageTier === 'premium'` → unlimited (existing users + paying subscribers)
