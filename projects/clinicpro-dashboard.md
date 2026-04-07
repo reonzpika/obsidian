@@ -41,9 +41,26 @@ Billing is the simplest NLP problem, generates immediate measurable revenue, and
 | DiagnosticReport (V2) | Confirmed | Labs + radiology; unfiled inbox via `attentionto` |
 | Task | Confirmed (docs) | Pending role test |
 | Communication | Confirmed (docs) | Inbox messages; pending role test |
-| Invoice | Pending | 403 on all queries — awaiting Medtech role grant |
-| ChargeItem | Pending | Billing catalogue — awaiting Medtech role grant |
-| ExplanationOfBenefit | Pending | ACC claim details — awaiting Medtech role grant |
+| Invoice | Confirmed (limited) | Roles granted 6 Apr. Read by `_id` only — no patient/date search. See billing constraint below. |
+| ChargeItem | Confirmed | Roles granted 6 Apr. Returns practice billing catalogue. No patient filter needed. |
+| ExplanationOfBenefit | Confirmed (docs) | Roles granted 6 Apr. Pending endpoint test. |
+| Appointment | Confirmed (docs) | Queryable by patient NHI + date range + status. Key to billing completeness flow. |
+
+## Billing completeness: API constraint (tested 2026-04-08)
+
+**Critical finding:** The ALEX Invoice API does not support patient-based search. Only `GET /FHIR/Invoice?_id={invoiceId}` works. Queries using `subject=Patient/{id}` or `date=` return 403. This is a documentation gap, not a permissions issue — the endpoint simply does not exist.
+
+**Implication:** The billing completeness module cannot retroactively check if an invoice was raised for a given encounter. Any approach that requires "does an invoice exist for this patient today?" is blocked unless Medtech adds a patient search endpoint (requested via Defne, 2026-04-08).
+
+**Preferred interim architecture — Appointment-driven prompting:**
+1. Pull completed appointments for the session: `GET /FHIR/Appointment?actor={provider-id}&date={today}&status=fulfilled`
+2. For each appointment, fetch the consult note: `GET /FHIR/DocumentReference?subject=Patient/{id}&date={date}`
+3. NLP-extract expected service codes from the consult note (consultation type, procedures, nurse involvement, CSC/HUHC eligibility)
+4. Surface a per-patient billing prompt to the GP at end of session: "We found X, Y, Z in this note — confirm billed or create invoice"
+5. If GP confirms or writes back via `POST /FHIR/Invoice`, the encounter is resolved
+6. No dashboard-side invoice state needed — the prompt is driven by appointments, not by checking existing invoices
+
+This reframes the module from "flag missing invoices" to "prompt billing confirmation after each consult" — better UX and no dependency on a patient Invoice search API.
 
 ## Tasks
 

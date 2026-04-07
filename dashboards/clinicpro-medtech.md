@@ -148,6 +148,19 @@ dv.table(headers,
 scheduleDashboardColumnSort(dv, headers);
 ```
 
+---
+
+## Weekly Progress Log
+
+### Week of 2026-04-07
+
+- Defne (Medtech) confirmed all five FHIR roles granted: Invoice R/W, ChargeItem R, ExplanationOfBenefit R, Task R/W, Communication R/W
+- Tested Invoice endpoint via SSH on Lightsail BFF — discovered patient/date search not supported; only `GET /Invoice?_id=` works (confirmed against ALEX API docs)
+- ChargeItem confirmed working — returns practice billing catalogue for facility F2N060-E
+- Diagnosed billing completeness architectural constraint: cannot retroactively audit invoices by patient; redesigned as appointment-driven billing prompt (see clinicpro-dashboard.md)
+- Updated clinicpro-dashboard.md with API status findings and new billing completeness architecture
+- Sent follow-up to Alex Cauble-Chantrenne re Medtech partnership agreement (OOO until 10 April)
+- Sent feature request to Defne requesting patient-based Invoice search (`Invoice?subject=Patient/{id}`)
 ## Active sprint tasks
 
 ```dataviewjs
