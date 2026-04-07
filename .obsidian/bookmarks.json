@@ -23,6 +23,12 @@
       "ctime": 1775457090594,
       "url": "https://claude.ai/settings/usage",
       "title": "Claude"
+    },
+    {
+      "type": "url",
+      "ctime": 1775539884202,
+      "url": "https://github.com/reonzpika?tab=repositories",
+      "title": "github"
     }
   ]
 }

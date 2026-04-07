@@ -8,7 +8,7 @@ RNZCGP Fellowship application and assessment. College ID: 66153. Requirements co
 
 | | |
 |--|--|
-| **Project** | [[gp-fellowship]] |
+| **Project** | [[dashboards/gp-fellowship]] |
 | **Assessment guide** | [[fellowship-assessment-guide]] |
 
 ---

@@ -9,7 +9,7 @@
 | **ClinicPro Medtech** | [[clinicpro-medtech]] |
 | **ClinicPro SaaS** | [[clinicpro-saas]] |
 | **Nexwave R&D** | [[nexwave-rd]] |
-| **GP Fellowship** | [[gp-fellowship]] |
+| **GP Fellowship** | [[dashboards/gp-fellowship]] |
 | **Side Projects** | [[side-projects]] |
 
 ---
