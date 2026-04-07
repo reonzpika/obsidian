@@ -25,6 +25,10 @@ Products: referral-images, ai-scribe, 12-month-prescription, acc, openmailer
 - Registered dedicated production Stripe webhook at `clinicpro.co.nz/api/referral-images/upgrade/webhook`; `STRIPE_REFERRAL_IMAGES_WEBHOOK_SECRET` updated in Vercel
 - Deployed to production (commit 667a203); TypeScript error on `Invoice.subscription` field patched before deploy succeeded
 - T5 verified in dev: payment flow completes, Premium badge appears; T6 (cancel → revert) pending production verification
+- T5 and T6 completed locally: subscribe → `imageTier = premium` and cancel → `imageTier = free` both confirmed end-to-end
+- Root cause of webhook failures identified: Stripe CLI was authenticated to NexWave account (`acct_1RhpQRP6R5CzSXa7`) but `.env` had test keys from a different account (`acct_1TJ6xV`); fixed by updating `.env` to NexWave test keys
+- `.env` bug fixed: leading space in `STRIPE_REFERRAL_IMAGES_WEBHOOK_SECRET` was causing signature verification to fail silently (truthy value prevented fallback to `STRIPE_WEBHOOK_SECRET`)
+- Local test environment now stable: NexWave test keys + CLI on NexWave account; correct webhook path is `/api/referral-images/upgrade/webhook` (route group `(clinical)` does not appear in URL)
 
 ---
 
