@@ -19,7 +19,11 @@ status: active
 
 ## Tool 1 — Inbox Helper
 
-Reads incoming documents in your Medtech inbox (lab results, radiology reports, discharge summaries, specialist letters, patient messages) and assigns each an urgency level so you can prioritise your review queue.
+**The problem it solves:** A busy GP inbox contains 100-200 items per session. The PMS flags abnormal lab values, but radiology reports, specialist letters with action requests, and discharge summaries carry no urgency signal. A critical result arriving at 9am can sit unreviewed until the afternoon inbox session.
+
+**What it enables:** Once items are triaged by urgency, Immediate and Urgent items surface to the top. Routine items and Information-only correspondence can be delegated to a nurse or HCA for filing. The GP plans the day around what actually needs attention, rather than working through the queue in arrival order.
+
+Reads incoming documents in your Medtech inbox (lab results, radiology reports, discharge summaries, specialist letters, patient messages) and assigns each an urgency level.
 
 **The output looks like this:**
 
@@ -44,6 +48,10 @@ Reads incoming documents in your Medtech inbox (lab results, radiology reports, 
 ---
 
 ## Tool 2 — Care Gap Finder
+
+**The problem it solves:** Nurses and HCAs already do this work — pulling manual reports from the PMS to identify patients overdue for monitoring. But it is a point-in-time snapshot, not continuous monitoring. Patients fall due between report runs and are missed until someone remembers to pull the report again. Each outreach requires manual identification and manual patient contact.
+
+**What it enables:** Continuous monitoring flags patients as they fall due, not only when a report is run. This helps practices stay on top of PHO enrolment targets without nursing staff time being consumed by periodic manual audits. It also creates the foundation for automated patient outreach — portal messages, SMS recalls — reducing the manual contact load further.
 
 Scans your enrolled patient register and surfaces patients who are overdue for specific health monitoring. It is a population health tool — it works across your patient list, not on individual documents.
 
@@ -84,7 +92,7 @@ Scans your enrolled patient register and surfaces patients who are overdue for s
 
 Reply to this email with your answers to the three questions. A few sentences per question is enough — you do not need to write a report. If it is easier to talk through, happy to schedule a 20-minute call instead.
 
-**As a thank-you for your time, we will send you a $50 Prezzy card on receipt of your feedback.**
+**There is no formal reimbursement for this review. As a small thank-you for your time, I would like to offer a $50 Prezzy card on receipt of your feedback.**
 
 Questions or clarifications: ryo@clinicpro.co.nz or +64 [phone].
 
