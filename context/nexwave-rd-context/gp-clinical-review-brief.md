@@ -19,7 +19,7 @@ status: active
 
 ## Tool 1 — Inbox Helper
 
-**The problem it solves:** A busy GP inbox contains 100-200 items per session. The PMS flags abnormal lab values, but radiology reports, specialist letters with action requests, and discharge summaries carry no urgency signal. A critical result arriving at 9am can sit unreviewed until the afternoon inbox session.
+**The problem it solves:** A busy GP inbox contains 100-200 items per session. The PMS flags abnormal lab values, but a critical result can still sit unreviewed until the afternoon inbox session. Other document types — radiology reports, specialist letters with action requests, and discharge summaries — carry no urgency signal at all.
 
 **What it enables:** Once items are triaged by urgency, Immediate and Urgent items surface to the top. Routine items and Information-only correspondence can be delegated to a nurse or HCA for filing. The GP plans the day around what actually needs attention, rather than working through the queue in arrival order.
 
@@ -94,7 +94,7 @@ Reply to this email with your answers to the three questions. A few sentences pe
 
 **There is no formal reimbursement for this review. As a small thank-you for your time, I would like to offer a $50 Prezzy card on receipt of your feedback.**
 
-Questions or clarifications: ryo@clinicpro.co.nz or +64 [phone].
+Questions or clarifications: ryo@clinicpro.co.nz
 
 Ngā mihi,
 Ryo Eguchi
