@@ -1,4 +1,4 @@
 {
-  "prefersReducedMotion": true,
-  "spinnerTipsEnabled": false
+  "spinnerTipsEnabled": true,
+  "prefersReducedMotion": true
 }
