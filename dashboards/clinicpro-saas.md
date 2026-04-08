@@ -35,6 +35,13 @@ Products: referral-images, ai-scribe, 12-month-prescription, acc, openmailer
 - ClinicPro design system created: `context/clinicpro-context/clinicpro-design-system.md` — brand philosophy, typography (Inter body, Oswald marketing display), spacing, component patterns, animation rules, voice/tone, do-not-do list — all research-backed
 - Design research documented: `context/clinicpro-context/design-research.md` — colour psychology in healthcare, typography for clinical software, GP workflow UX, NZ/AU cultural context
 - 4 colour palette options documented (decision pending): `context/clinicpro-context/colour-options.md` — Native (forest green + charcoal), Indigo Authority, Editorial Slate, Amber Earth — blue and teal dismissed as too generic
+- Colour palette decision finalised: **Option 1 Native** chosen — forest green `nz-green-700` (`#15803d`) as SaaS primary with amber (`#f59e0b`) shared accent; replaces `nz-blue` across all marketing surfaces (`saas-20260408-001` closed)
+- Referral Images landing page complete visual redesign (`app/(marketing)/referral-images/page.tsx`): light cream `#fafaf7` editorial hero (was dark navy), asymmetric headline-led layout with animated amber underline accent, forest green CTAs, dark `#0c1628` security anchor with green glow, structure compressed from 12 to 11 sections (merged "Honest about scope" + "Is this for you?" into single "Scope + Fit" 4-card section)
+- Body font switched from Open Sans (deprecated per design system) to Inter (already loaded in `app/layout.tsx` — only required removing the `font-open-sans` wrapper class); Oswald preserved on display headings
+- All landing page copy preserved verbatim; `useAuth`, `ensure-links` chain, `LOADING_MESSAGES`, `showLoading`, `showEnsureError`, and all redirect logic preserved byte-for-byte
+- `nz-green` palette already existed in `clinicpro-saas/tailwind.config.ts:96-108` with full 50-950 range, so the redesign required zero Tailwind config changes — only class swaps in the page file
+- Verification: `npx tsc --noEmit` exit 0; ESLint regression check confirmed net reduction in errors vs. original (14 → 3, where the remaining 3 `max-statements-per-line` warnings sit inside the preserved auth chain and predate the rewrite)
+- Repo-wide migration of `tailwind.config.ts` `--primary` HSL + obsidian context doc updates (`clinicpro-design-system.md` §2, `colour-options.md`) deferred to `saas-20260408-002`
 
 ---
 
