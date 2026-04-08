@@ -34,7 +34,7 @@ Fine jewellery ecommerce brand (NZ) specialising in moissanite and pearl pieces.
 ### Week of 2026-04-07
 
 - Implemented Miozuki 2.0 UI/UX on branch `feat/ui-animations-2.0` — 13 files, 778 insertions: scroll-reveal animations, staggered grids, hero line-by-line reveal, animated FAQ accordion, mobile snap-scroll product rail, luxury hover overlay, CSS marquee announcement bar, nav restructure with animated dropdowns, homepage reorder, differentiator strip, stone stats bar, email capture section, section diamond dividers
-- Created `miozuki-2.0-proposal-for-ting.md` — standalone approval doc covering Phase 1 (7 quick wins) and Phase 2 (7 investment items) with evidence citations; awaiting Ting sign-off
+- Created `miozuki-web/docs/context/miozuki-2.0-proposal-for-ting.md` — standalone approval doc covering Phase 1 (7 quick wins) and Phase 2 (7 investment items) with evidence citations; awaiting Ting sign-off
 - Wired Klaviyo email subscribe via `/api/subscribe` — uses `profile-subscription-bulk-create-jobs` endpoint (revision 2024-02-15); name + email captured, `first_name` mapped in Klaviyo profile
 - Built site-wide email popup (`email-popup.tsx`) — 4s trigger on first visit, 7-day suppression on dismiss, permanent suppression on subscribe; uses same API route
 
