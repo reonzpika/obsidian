@@ -30,7 +30,17 @@ Billing is the simplest NLP problem, generates immediate measurable revenue, and
 - Task write-back is bidirectional: extracted action items land in ALEX as native tasks
 - Unfiled inbox queue via `GET /FHIR/V2/DiagnosticReport?attentionto={hpi-cpn}` (v2.10)
 - Human-in-the-loop required for all AI outputs — NZ regulatory + patient safety
-- Dashboard-owned state tracks billing review status (Invoice query scope TBC pending Medtech role grant)
+- Billing completeness uses appointment-driven prompting, not invoice auditing — ALEX Invoice API has no patient search; only `?_id=` lookup exists (tested 2026-04-08)
+- No dashboard-owned invoice state — prompt is driven by completed appointments for the session; GP confirms billing or creates invoice via write-back
+
+## Open questions / blockers
+
+| Item | Status | Date |
+|---|---|---|
+| Invoice patient search (`Invoice?subject=Patient/{id}`) | Awaiting Defne response | 2026-04-08 |
+| ExplanationOfBenefit endpoint test | Pending — roles granted, not yet tested | 2026-04-08 |
+| Task endpoint live test (write-back) | Pending — roles granted, not yet tested | 2026-04-08 |
+| Communication endpoint live test (write-back) | Pending — roles granted, not yet tested | 2026-04-08 |
 
 ## API status
 

@@ -59,18 +59,11 @@ Scans your enrolled patient register and surfaces patients who are overdue for s
 
 | Care Gap | Condition | Trigger |
 |---|---|---|
-| HbA1c monitoring | T2DM / T1DM | Last HbA1c >4 months ago (if above target, ≥53 mmol/mol) or >7 months ago (if at target) |
+| HbA1c monitoring | T2DM / T1DM | ≥75 mmol/mol: >4 months ago. 53–74 mmol/mol (above target, stable): >7 months ago. <53 mmol/mol (at target): >13 months ago. |
 | Diabetes annual review | T2DM / T1DM | Any of: uACR, creatinine/eGFR, lipid panel, LFTs, or LDL-C not done in past 13 months |
 | Foot exam | T2DM / T1DM | No foot exam documented in past 13 months |
 | CVDRA eligibility and recall | Age/ethnicity criteria per MoH 2018 | No CVDRA assessment within recall interval (5 years low risk; 1–2 years moderate/high risk) |
 | Blood pressure monitoring | Hypertension (on treatment) | No BP recorded in past 6 months |
-
-**Escalation flags** (surfaced separately as requiring GP review, not just routine recall):
-
-| Condition | Flag |
-|---|---|
-| HbA1c ≥75 mmol/mol | Urgent — very poor glycaemic control |
-| HbA1c >90 mmol/mol + symptoms | Immediate — insulin initiation likely indicated |
 
 **Priority ordering logic:** If a patient with hypertension is also due for CVDRA but has no recent BP, the system flags the BP gap first — because a current BP is required to complete the CVDRA calculation. We flag the prerequisite ahead of the downstream task.
 

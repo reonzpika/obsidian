@@ -85,8 +85,9 @@ Source: NZSSD Type 2 Diabetes Management Guidance 2021/2023; BPAC NZ Diabetes To
 
 | Patient HbA1c status | Monitoring interval | Care gap trigger | Flag threshold |
 |---|---|---|---|
-| Last HbA1c **above target** (≥53 mmol/mol) | Every 3 months | Last HbA1c > 4 months ago | High priority |
-| Last HbA1c **at target** (<53 mmol/mol) | Every 6 months | Last HbA1c > 7 months ago | Routine priority |
+| Last HbA1c **very poor control** (≥75 mmol/mol) | Every 3 months | Last HbA1c > 4 months ago | Urgent |
+| Last HbA1c **above target, stable** (53–74 mmol/mol) | Every 6 months | Last HbA1c > 7 months ago | Routine priority |
+| Last HbA1c **at target** (<53 mmol/mol) | Annually | Last HbA1c > 13 months ago | Routine priority |
 | **No HbA1c ever recorded** | Immediate | No HbA1c result in patient record | High priority |
 
 **HbA1c target threshold:** <53 mmol/mol for most adults. Individualised targets apply — see Boundary Case 4.1.A.
