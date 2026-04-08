@@ -42,6 +42,13 @@ Products: referral-images, ai-scribe, 12-month-prescription, acc, openmailer
 - `nz-green` palette already existed in `clinicpro-saas/tailwind.config.ts:96-108` with full 50-950 range, so the redesign required zero Tailwind config changes — only class swaps in the page file
 - Verification: `npx tsc --noEmit` exit 0; ESLint regression check confirmed net reduction in errors vs. original (14 → 3, where the remaining 3 `max-statements-per-line` warnings sit inside the preserved auth chain and predate the rewrite)
 - Repo-wide migration of `tailwind.config.ts` `--primary` HSL + obsidian context doc updates (`clinicpro-design-system.md` §2, `colour-options.md`) deferred to `saas-20260408-002`
+- Hero photograph generated with Nano Banana Pro (Gemini 3 Pro Image): editorial Leica Q2 / 28mm / f/2.0 / Kodak Portra 400 prompt; final asset saved at `public/images/referral-images/referral_images_hero_image_3.png` (2752×1536) and wired into the redesigned hero with `next/image` priority + responsive `sizes`
+- Editorial typography stack added page-scoped via `next/font/google` for the referral-images landing page: Newsreader serif (display + body accents), Caveat handwritten (sign-off), JetBrains Mono (§ section markers); Inter retained for UI chrome and Oswald removed from this page
+- "Letter grammar" structure applied across the page: `§ 01`–`§ 05` section markers, `P.S.` lead-in to the FAQ accordion, Caveat sign-off above the footer
+- Visual identity primitives added as inline SVG: 4-position viewfinder corner brackets, `Logomark` (corner bracket framing a "RI" serif glyph), `HandUnderline` (Q-curve path) wrapped in a reusable `<Marked>` component, inline marginalia rail beside the hero
+- Four post-rewrite polish fixes after side-by-side review: logomark bracket enlarged to fully frame the "RI" glyph; hand-drawn headline underline strength increased (`strokeWidth` 3→4.5, opacity /70→/90, height `h-2`→`h-3`); italic wrapper removed from "In 30 seconds." so all three headline lines render at equal weight; "How it works" dotted connector swapped from `h-px` @ 0.18 opacity to `h-1` @ 0.55 opacity in `nz-green-700` so the line between numbered chips is actually visible
+- New vault reference doc created: `context/clinicpro-context/nano-banana-pro-research.md` — 12-section prompt-engineering guide for Google Nano Banana Pro (Gemini 3 Pro Image), including the 7-part prompt template, anti-AI-look techniques, hand-handling rules, and the verbatim Referral Images hero prompt (v1 + two backup variants)
+- Final verification on the redesigned page after the polish pass: `npx tsc --noEmit` exit 0; ESLint clean with zero errors (14 cosmetic `tailwindcss/no-custom-classname` warnings remain on intentional `ri-*` keyframe utility classes)
 
 ---
 
