@@ -9,7 +9,9 @@ status: active
 
 # NexWave Health — GP Clinical Review Brief
 
-**Thank you for taking the time to do this.** This brief is the only document you need to read. It takes 20–30 minutes to work through and respond to. You do not need to review any other documents.
+I am a practising GP in Auckland and the founder of NexWave Health, an MBIE-funded R&D programme developing AI-assisted tools for NZ GP practices. I also built ClinicPro, a practice management integration tool used in NZ practices. I want GP input on the clinical logic before we build anything — getting this right at the specification stage is far better than discovering problems once a prototype exists. This brief is the only thing I am asking you to read.
+
+**Thank you for taking the time to do this.** It takes 20–30 minutes to work through and respond to. You do not need to review any other documents.
 
 **What this is not:** This is not a request for College endorsement, ethical approval, or formal consulting. It is clinical input from one GP to another — validating that the logic we have designed matches real-world NZ practice before we build anything.
 
