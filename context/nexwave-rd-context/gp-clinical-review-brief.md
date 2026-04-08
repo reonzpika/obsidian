@@ -31,6 +31,8 @@ I am a practising GP in Auckland and the founder of NexWave Health, an MBIE-fund
 
 > *Creatinine 198 umol/L, above reference range. Significant rise if new — requires assessment.* **[Urgent]** *GP to confirm whether this represents a change from the patient's established baseline.*
 
+**Scope note:** At MVP the system classifies on the incoming document alone, without longitudinal chart context. Incorporating patient history is a later phase.
+
 ### Urgency Taxonomy
 
 | Level | Label | Meaning | Example |
@@ -41,6 +43,8 @@ I am a practising GP in Auckland and the founder of NexWave Health, an MBIE-fund
 | 4 | **Information only** | No active clinical action needed. Review, acknowledge, and file. | Normal result. Stable chronic condition confirmed within target range. Routine specialist review letter with no GP action required. |
 
 **Design choice we want you to validate:** When a result is ambiguous and we cannot determine urgency with confidence, the system defaults to the *higher* urgency level. We have accepted over-triage as the trade-off. Missing a critical result is the outcome we are designing against.
+
+**Exclusions:** The system will respect documented care plan status — palliative, advanced frailty, or explicit informed refusals. Reliably detecting these from Medtech data is an open design question we are working through separately.
 
 ### Question 1
 
@@ -61,13 +65,15 @@ I am a practising GP in Auckland and the founder of NexWave Health, an MBIE-fund
 
 | Care Gap | Condition | Trigger |
 |---|---|---|
-| HbA1c monitoring | T2DM / T1DM | ≥75 mmol/mol: >4 months ago. 53–74 mmol/mol (above target, stable): >7 months ago. <53 mmol/mol (at target): >13 months ago. |
+| HbA1c monitoring | T2DM / T1DM | • ≥75 mmol/mol: >4 months ago<br>• 53–74 mmol/mol (above target, stable): >7 months ago<br>• <53 mmol/mol (at target): >13 months ago |
 | Diabetes annual review | T2DM / T1DM | Any of: uACR, creatinine/eGFR, lipid panel, LFTs, or LDL-C not done in past 13 months |
 | Foot exam | T2DM / T1DM | No foot exam documented in past 13 months |
-| CVDRA eligibility and recall | Age/ethnicity criteria per MoH 2018 | No CVDRA assessment within recall interval (5 years low risk; 1–2 years moderate/high risk) |
-| Blood pressure monitoring | Hypertension (on treatment) | No BP recorded in past 6 months |
+| CVDRA eligibility and recall | Per NZ 2018 CVD risk assessment guideline:<br>• Men: Māori/Pacific/South Asian ≥30; other ≥45<br>• Women: Māori/Pacific/South Asian ≥40; other ≥55<br>• Diabetes: from diagnosis<br>• Known CVD/FH/severe mental illness: individualised | • Low risk: no CVDRA in past 5 years<br>• Moderate/high risk: no CVDRA in past 1–2 years |
+| Blood pressure monitoring | Hypertension (on treatment) | • At target (<140/90, or <130/80 if diabetes/CKD): >12 months ago<br>• Mildly elevated (140–159/90–99): >6 months ago<br>• Moderately elevated (160–179/100–109): >3 months ago<br>• Severely elevated (≥180/110): >1 month ago |
 
 **Priority ordering logic:** If a patient with hypertension is also due for CVDRA but has no recent BP, the system flags the BP gap first — because a current BP is required to complete the CVDRA calculation. We flag the prerequisite ahead of the downstream task.
+
+**Exclusions:** Patients with palliative status, advanced frailty, or documented informed refusal of a specific intervention are suppressed from alerts for that intervention. Detecting these reliably from Medtech coding is an open question we are working through separately.
 
 ### Question 2
 

@@ -29,6 +29,12 @@ Products: referral-images, ai-scribe, 12-month-prescription, acc, openmailer
 - Root cause of webhook failures identified: Stripe CLI was authenticated to NexWave account (`acct_1RhpQRP6R5CzSXa7`) but `.env` had test keys from a different account (`acct_1TJ6xV`); fixed by updating `.env` to NexWave test keys
 - `.env` bug fixed: leading space in `STRIPE_REFERRAL_IMAGES_WEBHOOK_SECRET` was causing signature verification to fail silently (truthy value prevented fallback to `STRIPE_WEBHOOK_SECRET`)
 - Local test environment now stable: NexWave test keys + CLI on NexWave account; correct webhook path is `/api/referral-images/upgrade/webhook` (route group `(clinical)` does not appear in URL)
+- Vercel production env vars verified: all four live Stripe keys confirmed on NexWave account (`sk_live_`, `pk_live_`, live price ID, live webhook secret) — production deploy confirmed complete
+- Landing page fully redesigned (`app/(marketing)/referral-images/page.tsx`): dark navy hero, scroll animations, GP quotes from "GPs for GPs" Facebook group, expanded security section, pricing section ($5/month, 1 month free trial), all "completely free" messaging removed, Oswald + Inter typography, mobile-first
+- gws CLI confirmed installed globally (`npm` global) and authenticated — provides Google Drive/Docs access from Claude Code sessions
+- ClinicPro design system created: `context/clinicpro-context/clinicpro-design-system.md` — brand philosophy, typography (Inter body, Oswald marketing display), spacing, component patterns, animation rules, voice/tone, do-not-do list — all research-backed
+- Design research documented: `context/clinicpro-context/design-research.md` — colour psychology in healthcare, typography for clinical software, GP workflow UX, NZ/AU cultural context
+- 4 colour palette options documented (decision pending): `context/clinicpro-context/colour-options.md` — Native (forest green + charcoal), Indigo Authority, Editorial Slate, Amber Earth — blue and teal dismissed as too generic
 
 ---
 
