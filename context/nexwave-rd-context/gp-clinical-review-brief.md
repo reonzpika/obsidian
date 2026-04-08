@@ -19,11 +19,11 @@ status: active
 
 ## Tool 1 — Inbox Helper
 
-**The problem it solves:** A busy GP inbox contains 100-200 items per session. The PMS flags abnormal lab values, but a critical result can still sit unreviewed until the afternoon inbox session. Other document types — radiology reports, specialist letters with action requests, and discharge summaries — carry no urgency signal at all.
+**The problem it solves:** A busy GP inbox contains 100-200 items per session. While the PMS flags abnormal lab values, there is no urgency triage — the GP still has to open and assess each item individually to determine how quickly it needs action. A critical result can sit unreviewed until the afternoon inbox session. Other document types — radiology reports, specialist letters with action requests, and discharge summaries — carry no urgency signal at all.
 
-**What it enables:** Once items are triaged by urgency, Immediate and Urgent items surface to the top. Routine items and Information-only correspondence can be delegated to a nurse or HCA for filing. The GP plans the day around what actually needs attention, rather than working through the queue in arrival order.
+**What it does:** Reads every incoming item in your Medtech inbox and assigns it an urgency level — Immediate, Urgent, Routine, or Information only — with a brief rationale for each classification.
 
-Reads incoming documents in your Medtech inbox (lab results, radiology reports, discharge summaries, specialist letters, patient messages) and assigns each an urgency level.
+**What it enables:** Immediate and Urgent items surface to the top of the queue. Routine items and Information-only correspondence can be delegated to a nurse or HCA for filing. The GP plans the day around what actually needs attention, rather than opening items one by one in arrival order.
 
 **The output looks like this:**
 
@@ -49,11 +49,11 @@ Reads incoming documents in your Medtech inbox (lab results, radiology reports, 
 
 ## Tool 2 — Care Gap Finder
 
-**The problem it solves:** Nurses and HCAs already do this work — pulling manual reports from the PMS to identify patients overdue for monitoring. But it is a point-in-time snapshot, not continuous monitoring. Patients fall due between report runs and are missed until someone remembers to pull the report again. Each outreach requires manual identification and manual patient contact.
+**The problem it solves:** Nurses and HCAs already do this work — pulling manual reports from the PMS to identify patients overdue for monitoring. But it is a point-in-time snapshot, not continuous monitoring. Patients fall due between report runs and are missed until someone remembers to pull the report again. Each outreach then requires manual identification and manual patient contact.
 
-**What it enables:** Continuous monitoring flags patients as they fall due, not only when a report is run. This helps practices stay on top of PHO enrolment targets without nursing staff time being consumed by periodic manual audits. It also creates the foundation for automated patient outreach — portal messages, SMS recalls — reducing the manual contact load further.
+**What it does:** Continuously scans your enrolled patient register and surfaces patients who are overdue for specific health monitoring — HbA1c checks, diabetes annual review components, CVDRA assessments, and blood pressure monitoring for patients on treatment.
 
-Scans your enrolled patient register and surfaces patients who are overdue for specific health monitoring. It is a population health tool — it works across your patient list, not on individual documents.
+**What it enables:** Patients are flagged as they fall due, not only when a report is run. This helps practices stay on top of PHO enrolment targets without nursing staff time being consumed by periodic manual audits. It also creates the foundation for automated patient outreach — portal messages, SMS recalls — reducing the manual contact load further.
 
 ### Care Gaps in Scope (MVP)
 
