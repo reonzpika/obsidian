@@ -392,6 +392,9 @@ AI-maintained weekly log. Primary audit trail for MBIE claims. Hours: Ryo ~30hrs
 - Step 1 complete: both task specs grounded in NZ guidelines (RCPA/AACB, BPAC NZ, NZSSD, Te Whatu Ora, HDC case law)
 - NexWave Health established as the R&D programme brand (separate from ClinicPro commercial product and NexWave Solutions Limited legal entity); name checked clean against NZ Companies Office and IPONZ
 - GP clinical review outreach initiated: intro emails drafted and scheduled (2026-04-06) to Brendan Duck (Health HB PHO), Gareth Roberts (Comprehensive Care PHO), Heidi Bubendorfer (RNZCGP) — seeking 2-3 GP reviewers for focused 20-30 min spec review before proceeding to Step 2
+- GP Clinical Review Brief revised before reviewer outreach: BP monitoring trigger restructured into 4-tier stratification (target / mildly elevated / moderately elevated / severe — replaces blanket 6-monthly); CVDRA exclusions added; scope note added clarifying MVP classifies on incoming document only without longitudinal chart context; table cell readability improved
+- Gareth Roberts (Comprehensive Care PHO) outreach actioned: reply drafted with brief PDF attached, scheduled to send 2026-04-09 08:00 NZST via Gmail native Schedule Send. Gareth has offered to circulate within his network and asked about funding (answered: voluntary collegial input, no formal reimbursement budget)
+- Brendan Duck and Heidi Bubendorfer outreach held pending Gareth's network response — strategic decision to preserve warm-intro yield over parallel cold outreach in small Auckland GP community. Heidi (RNZCGP College channel) reserved as next escalation if <2 reviewers confirmed by 2026-04-14
 
 ---
 

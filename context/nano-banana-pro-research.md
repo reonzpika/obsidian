@@ -370,3 +370,87 @@ border, no caption.
 - [How to Fix AI Hands: Complete Guide 2026 — zsky.ai](https://zsky.ai/blog/how-to-fix-ai-hands)
 - [AI Hands, Anatomy & Body Fixes — GensGPT](https://www.gensgpt.com/blog/ai-hands-anatomy-body-fixes-common-errors-2026-guide)
 - [Awesome Nano Banana Pro — GitHub repo of curated prompts](https://github.com/ZeroLu/awesome-nanobanana-pro)
+
+---
+
+## 13. Integration: laozhang.ai gateway + Claude Code setup
+
+This section documents how Claude Code generates Nano Banana Pro images for project work (Miozuki = first adopter). All §1 to §12 content above is the source of truth for *what* to put in a prompt — this section is about *how* to run it from inside Claude Code.
+
+Added 2026-04-08.
+
+### 13.1 Why laozhang.ai
+
+- Gateway service that proxies Google's Gemini image API at ~80% discount versus going direct.
+- Endpoint: `https://api.laozhang.ai/v1beta/models/{model}:generateContent`
+- Auth: `Authorization: Bearer ${LAOZHANG_API_KEY}` header.
+- Models available:
+  - `gemini-3.1-flash-image-preview` — Nano Banana 2 (faster, ~$0.045/image, default)
+  - `gemini-3-pro-image-preview` — Nano Banana Pro / Gemini 3 Pro Image (~$0.05/image, higher fidelity)
+- Aspect ratios supported: `1:1`, `2:3`, `3:2`, `3:4`, `4:3`, `4:5`, `5:4`, `9:16`, `16:9`, `21:9`
+- Sizes: `1K`, `2K` (default for landing-page work), `4K`
+- Image-to-image: pass up to 14 reference images via `inline_data` parts in the same `contents` array. Use this for iteration (text-only v1, then refine via ref).
+- **Not supported**: negative prompts as a separate field (encode negatives in the prompt text per §7), seed control (each call is fresh).
+- Docs: https://docs.laozhang.ai/api-capabilities/nano-banana-pro-image
+
+### 13.2 Environment variable
+
+- **Name**: `LAOZHANG_API_KEY`
+- **Where**: project's `.env.local` (gitignored by Next.js default).
+- **Vercel**: NOT required. Generation runs locally only. Outputs are committed as static assets to `public/generated/`. Zero runtime API exposure on production.
+- **Verification**: `git check-ignore .env.local` should print the path before committing anything else.
+
+### 13.3 Claude Code script setup (per-repo footprint)
+
+| File | Purpose |
+|------|---------|
+| `scripts/gen-image.mjs` | Node 20+ ESM script. No deps. Native `fetch`, `node:fs/promises`. CLI flags: `--prompt` (required), `--out` (required), `--aspect` (default `16:9`), `--size` (default `2K`), `--model` (default `gemini-3.1-flash-image-preview`), `--ref` (repeatable, path to local image for img2img). |
+| `scripts/prompts/_templates.md` | Brand-locked starter scaffolds. Each scaffold is intentionally incomplete — must be expanded per §2 to reach 250 to 500 words before generating. |
+| `scripts/prompts/<slot>.prompt.md` | Sidecar audit trail. One per generated image. Captures: final expanded prompt, model used, date, sign-off-gate reviewer, decision (commit / regenerate / fall-back). |
+| `public/generated/.gitkeep` | Outputs land here. Committed (not gitignored) — the deployed site references them as static assets. |
+| `package.json` | Add script: `"gen-image": "node --env-file=.env.local scripts/gen-image.mjs"` |
+
+Invocation:
+
+```bash
+npm run gen-image -- \
+  --prompt "<full 250-500 word prompt expanded from §2 template>" \
+  --aspect 16:9 \
+  --size 2K \
+  --out public/generated/<slot-name>.jpg
+```
+
+For image-to-image refinement:
+
+```bash
+npm run gen-image -- \
+  --prompt "<refinement instructions>" \
+  --ref public/generated/<previous-output>.jpg \
+  --out public/generated/<slot-name>-v2.jpg
+```
+
+### 13.4 Iteration workflow with Claude Code
+
+**Critical**: every generation cycle starts by re-reading the canonical prompt-engineering content above. The `_templates.md` scaffolds are deliberately incomplete to force this step — Claude Code MUST not skip it.
+
+1. **Re-read** §2 (7-part template), §3 (photographic language), §4 (anti-AI techniques), §7 (negative constraints), and §11 (checklist) before writing the prompt.
+2. **Write the prompt** in the target slot's sidecar `.prompt.md` file under `scripts/prompts/`, expanded per §2 to 250 to 500 words. Apply the §11 checklist as a self-review.
+3. **Generate v1** (text-only) via `npm run gen-image`.
+4. **Apply the project sign-off gate** (smell test for AI tells, brand palette check, real-photographer test, owner approval). For Miozuki this is plan §5.5.
+5. **Iterate if needed**: pass v1 as `--ref` and write a refinement prompt focusing on what to fix. Up to 14 ref images supported per call. Hands and faces typically need 2 to 3 iterations per §5 and §6.
+6. **Commit** the final image to `public/generated/` along with its `.prompt.md` sidecar in `scripts/prompts/`. The commit message should reference the sidecar path so future audits can trace the prompt.
+
+### 13.5 Cost guardrails
+
+- Flash model: ~$0.045 per generation. Pro: ~$0.05.
+- Recommended sprint cap: 20 generations (~$1) for a Sprint 1 batch. Plenty of headroom for 2 to 3 candidates per slot across ~7 slots.
+- If a slot fails the sign-off gate twice, fall back to a typographic or abstract treatment instead of burning more generations. The gate is non-negotiable.
+
+### 13.6 Per-repo adoption status
+
+| Repo | Status | Notes |
+|------|--------|-------|
+| `miozuki-web` | First adopter (planned) | Sprint 1.5 sets up the script + first 3 generated images. |
+| `clinicpro-saas` | Not yet | Could adopt for marketing site assets if useful — separate scoping decision. |
+| `clinicpro-medtech` | Not in scope | Clinical product, no marketing imagery. |
+| `nexwave-rd` | Not in scope | R&D track, isolated from commercial assets. |
