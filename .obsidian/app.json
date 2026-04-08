@@ -2,5 +2,11 @@
   "defaultViewMode": "preview",
   "openBehavior": "file:dashboards/home",
   "alwaysUpdateLinks": true,
-  "promptDelete": false
+  "promptDelete": false,
+  "pdfExportSettings": {
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
 }

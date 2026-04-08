@@ -9,6 +9,7 @@ This is an **Obsidian vault** — a task/project management workspace for NexWav
 - The vault holds **what to do**; product repos hold **how it is built**
 - `context/repos.md` — authoritative route/folder map for all repos
 - `context/llm-workspace-guide.md` — full rules; read before editing anything when given Obsidian context
+- `context/design-system.md` — **read before any frontend work** — colours, typography, animation, voice/tone for all ClinicPro products
 
 ## Product repos (where code lives)
 

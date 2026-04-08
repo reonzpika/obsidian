@@ -18,7 +18,25 @@ Fine jewellery ecommerce brand (NZ) specialising in moissanite and pearl pieces.
 - No sales yet; ads running, conversion optimisation needed post-launch
 - NZD / NZ market, DTC model
 
+## Klaviyo Integration Notes
+
+- Endpoint: `POST https://a.klaviyo.com/api/profile-subscription-bulk-create-jobs/`
+- Revision header: `2024-02-15`
+- Auth: `Authorization: Klaviyo-API-Key {KLAVIYO_PRIVATE_KEY}`
+- `POST /api/lists/{id}/relationships/profiles` is deprecated — do not use
+- Profile attributes: `email`, `first_name` (optional), `subscriptions.email.marketing.consent: SUBSCRIBED`
+- List ID goes in `relationships.list.data.id` — get from Klaviyo URL when viewing the list, not from the forms page
+- Returns 202 Accepted on success
+- Env vars: `KLAVIYO_PRIVATE_KEY`, `KLAVIYO_LIST_ID` — must be set in both `.env.local` and Vercel project settings
+
 ## Weekly Progress Log
+
+### Week of 2026-04-07
+
+- Implemented Miozuki 2.0 UI/UX on branch `feat/ui-animations-2.0` — 13 files, 778 insertions: scroll-reveal animations, staggered grids, hero line-by-line reveal, animated FAQ accordion, mobile snap-scroll product rail, luxury hover overlay, CSS marquee announcement bar, nav restructure with animated dropdowns, homepage reorder, differentiator strip, stone stats bar, email capture section, section diamond dividers
+- Created `miozuki-2.0-proposal-for-ting.md` — standalone approval doc covering Phase 1 (7 quick wins) and Phase 2 (7 investment items) with evidence citations; awaiting Ting sign-off
+- Wired Klaviyo email subscribe via `/api/subscribe` — uses `profile-subscription-bulk-create-jobs` endpoint (revision 2024-02-15); name + email captured, `first_name` mapped in Klaviyo profile
+- Built site-wide email popup (`email-popup.tsx`) — 4s trigger on first visit, 7-day suppression on dismiss, permanent suppression on subscribe; uses same API route
 
 ### Week of 2026-04-06
 
