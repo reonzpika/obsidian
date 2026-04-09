@@ -49,6 +49,14 @@ Products: referral-images, ai-scribe, 12-month-prescription, acc, openmailer
 - Four post-rewrite polish fixes after side-by-side review: logomark bracket enlarged to fully frame the "RI" glyph; hand-drawn headline underline strength increased (`strokeWidth` 3→4.5, opacity /70→/90, height `h-2`→`h-3`); italic wrapper removed from "In 30 seconds." so all three headline lines render at equal weight; "How it works" dotted connector swapped from `h-px` @ 0.18 opacity to `h-1` @ 0.55 opacity in `nz-green-700` so the line between numbered chips is actually visible
 - New vault reference doc created: `context/clinicpro-context/nano-banana-pro-research.md` — 12-section prompt-engineering guide for Google Nano Banana Pro (Gemini 3 Pro Image), including the 7-part prompt template, anti-AI-look techniques, hand-handling rules, and the verbatim Referral Images hero prompt (v1 + two backup variants)
 - Final verification on the redesigned page after the polish pass: `npx tsc --noEmit` exit 0; ESLint clean with zero errors (14 cosmetic `tailwindcss/no-custom-classname` warnings remain on intentional `ri-*` keyframe utility classes)
+- Homepage (`app/page.tsx`) redesigned with letter grammar: § 00 hero with viewfinder-framed portrait, § 01 tools, § 02 story, § 03 principles, § 04 roadmap, P.S. FAQ, Caveat `— Ryo` sign-off; all copy verbatim; Inbox Intelligence waitlist form behaviour preserved
+- Shared marketing primitives extracted to `src/shared/components/marketing/letter-grammar.tsx`: useInView, Reveal, Logomark (parameterised `letters` prop), CornerBracket, HandUnderline, Marked, LETTER_GRAMMAR_STYLES
+- Referral Images landing page refactored to use shared primitives (visually byte-identical); page-scoped fonts replaced with Tailwind utilities (`font-newsreader` / `font-caveat` / `font-mono-jb`)
+- `app/layout.tsx` updated: Newsreader, Caveat, JetBrains Mono loaded globally via `next/font/google` with CSS variables
+- `tailwind.config.ts` updated: three new font families; `primary.dark` migrated to nz-green-800
+- `app/globals.css`: `--primary` migrated from HSL blue (221 83% 53%) to forest green (142 72% 29%) — all `bg-primary`/`text-primary` across SaaS now render nz-green-700
+- `clinicpro-design-system.md` sections 2, 3, and 11 updated to reflect Option 1 Native; `colour-options.md` status marked DECIDED
+- `saas-20260408-002` closed (moved to done); `saas-20260409-002` created for clinicpro-medtech palette migration
 
 ---
 

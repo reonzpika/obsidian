@@ -24,18 +24,19 @@ Research basis: 60% of healthcare software uses blue as primary (neurophysiologi
 ### ClinicPro SaaS (clinicpro.co.nz)
 *Products: Referral Images, 12-month Prescriptions, AI Scribe, ACC tools*
 
-**Primary: Deep clinical blue**
-- These are commercial GP workflow tools — modern, trustworthy, slightly warm
-- Blue is the research-validated trust colour for healthcare software in both NZ and AU
-- Warmer than institutional, cooler than consumer
+**Primary: Deep forest green** *(Option 1 Native — decided 2026-04-08)*
+- Green carries health associations (22% adoption vs 60% blue — stands out while remaining clinically credible)
+- Deep forest green (not lime, not mint) reads as serious, grounded, authoritative — not wellness
+- NZ cultural resonance: native bush, DOC green, natural landscape — culturally authentic without being cliché
+- Amber shared accent adds warmth and anchors the editorial/letter-grammar design language
 
 | Role | Name | Hex | Tailwind |
 |------|------|-----|----------|
-| Primary action | Clinical Blue | `#2563eb` | `nz-blue-600` |
-| Primary hover | — | `#1d4ed8` | `nz-blue-700` |
-| Primary light (bg tints) | — | `#dbeafe` | `nz-blue-100` |
-| Primary soft (borders, chips) | — | `#bfdbfe` | `nz-blue-200` |
-| Primary glow (shadows, accents) | — | `#3b82f6` | `nz-blue-500` |
+| Primary action | Forest Green | `#15803d` | `nz-green-700` |
+| Primary hover | — | `#166534` | `nz-green-800` |
+| Primary light (bg tints) | — | `#dcfce7` | `nz-green-100` |
+| Primary soft (borders, chips) | — | `#bbf7d0` | `nz-green-200` |
+| Primary glow (shadows, accents) | — | `#16a34a` | `nz-green-600` |
 
 ### ClinicPro Medtech (clinicpro-medtech)
 *Products: ClinicPro Capture (ALEX integration PWA)*
@@ -54,7 +55,7 @@ Research basis: 60% of healthcare software uses blue as primary (neurophysiologi
 | Primary soft (borders, chips) | — | `#99f6e4` | `teal-200` |
 | Primary glow (shadows, accents) | — | `#14b8a6` | `teal-500` |
 
-> **Tailwind note:** Add `teal` to the Medtech Tailwind config. SaaS already has `nz-blue`. Do not cross-pollinate — SaaS never uses teal as primary; Medtech never uses nz-blue as primary.
+> **Tailwind note:** SaaS uses `nz-green` as primary. Medtech uses `teal` (or chosen Option 1 charcoal — see `colour-options.md`). Do not cross-pollinate — SaaS never uses teal as primary; Medtech never uses nz-green as primary.
 
 ### Shared semantic colours (both products)
 
@@ -88,7 +89,10 @@ Research finding: sans-serif fonts are the universal standard for clinical softw
 
 | Font | Role | Loading | Where |
 |------|------|---------|-------|
-| **Oswald** | Marketing display headings only | Google Fonts (already loaded in SaaS) | Landing pages, marketing routes only — never in clinical app UI |
+| **Newsreader** | Marketing serif display (hero headlines, pull-quotes, section headings) | `next/font/google` via root layout (`--font-newsreader`) | Marketing/landing pages only — never in clinical app UI |
+| **Caveat** | Handwritten sign-off and P.S. accents only | `next/font/google` via root layout (`--font-caveat`) | Marketing sign-offs only — one or two instances per page |
+| **JetBrains Mono** | Section markers (§ 01), marginalia rails, captions | `next/font/google` via root layout (`--font-mono-jb`) | Marketing pages — letter grammar structural labels |
+| **Oswald** | Legacy marketing display headings | Google Fonts (loaded in SaaS) | Avoid for new work — Newsreader is preferred for new marketing pages |
 | **Inter** | All body text; all in-app UI | Google Fonts (already loaded in SaaS) | Everywhere, including all clinical tool UIs |
 | ~~Open Sans~~ | Deprecated | — | Do not use for new work |
 
@@ -356,8 +360,8 @@ Non-negotiable. Clinical software with poor accessibility has patient safety imp
 
 | | ClinicPro SaaS | ClinicPro Medtech |
 |---|---|---|
-| **Primary colour** | nz-blue-600 (`#2563eb`) | teal-600 (`#0d9488`) |
-| **Marketing display font** | Oswald | — (no marketing pages) |
+| **Primary colour** | nz-green-700 (`#15803d`) | teal-600 (`#0d9488`) |
+| **Marketing display font** | Newsreader (serif) + JetBrains Mono (markers) + Caveat (sign-off) | — (no marketing pages) |
 | **Body / UI font** | Inter | Inter |
 | **Tone** | Warm professional, modern | Clinical, precise, institutional |
 | **Dark hero** | Yes (marketing) | No |
@@ -366,5 +370,5 @@ Non-negotiable. Clinical software with poor accessibility has patient safety imp
 
 ---
 
-*Last updated: 2026-04-08*
+*Last updated: 2026-04-09*
 *Research basis: colour psychology in healthcare UI (JMIR, UXMatters, Naskay 2025), typography in clinical settings (Letter Hend, FontAlternatives), GP workflow UX (AMA, PMC), NZ/AU cultural context (Cultural Atlas, SBS).*

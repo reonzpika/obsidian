@@ -1,7 +1,6 @@
 # ClinicPro Colour Palette Options
 
-> Status: **UNDECIDED** — awaiting Ryo's direction.
-> Four research-backed options documented here. Once a direction is chosen, apply it to `clinicpro-design-system.md` and update both Tailwind configs.
+> Status: **DECIDED 2026-04-08** — Option 1 Native chosen. See `clinicpro-design-system.md` for live values. This document retained as decision record.
 
 ---
 
