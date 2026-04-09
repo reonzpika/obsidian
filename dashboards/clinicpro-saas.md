@@ -6,6 +6,20 @@ Products: referral-images, ai-scribe, 12-month-prescription, acc, openmailer
 
 ## Weekly Progress Log
 
+### Week of 2026-04-07
+
+- AI Scribe landing page (`app/(marketing)/ai-scribe/page.tsx`) fully rewritten — copy + letter-grammar visual migration
+- Three-pillar positioning landed: (1) cognitive load not time (NASA Task Load Index, JAMIA Open 2025), (2) multi-problem NZ consults — each complaint in its own lane, (3) NZ GP provenance as trust, not feature
+- Research citations embedded: JAMIA Open 2025 clinician pull-quote; PMC12492056 (263 physicians, 6 health systems, 2025)
+- `scripts/gen-image.mjs` created: Nano Banana Pro (Gemini 3 Pro Image via laozhang.ai) image generation script; `gen-image` npm script added to `package.json`
+- `scripts/prompts/ai-scribe-hero.prompt.md` created: full editorial 7-part GP consult hero prompt (Fujifilm X100V / Classic Chrome / 4500K venetian blind light)
+- `public/generated/ai-scribe-hero.jpg` generated (2924 KB) and wired as page hero replacing placeholder
+- Product screenshots wired: `ClinicProConsultation.jpg` in § 01 (post pull-quote); `ClinicProGenerateNote.jpg` in § 02 (pre 4-step card)
+- Profile photo added: `DrRyoEguchiProfilePicMain.jpg` (48px circle) with Caveat "— Ryo Eguchi" + mono "GP · Auckland, NZ"
+- Referral photos section: `referral_images_hero_image_3.png` replaces broken `mobile_recording_page` placeholder
+- `saas-20260409-003` created: audit trail gap on Referral Images marketing page — three false "full audit trail" claims at L700/L790/L871
+- Homepage copy analysis: Option B selected — keep "Hi, I'm Ryo" hero portrait, update subline/body with NZ specificity (15-min, 4-problem consult language); AI Scribe card and Principles section also flagged for rewrite; implementation deferred to next session
+
 ### Week of 2026-04-06
 
 - Referral Images launched 6 April 2026 on $5/month subscription model
