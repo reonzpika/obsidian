@@ -1,7 +1,7 @@
 ---
 name: daily
-description: Create today's daily note and run morning, midday, or evening routines. Surfaces active sprint tasks, blocked items, and project priorities for Ryo's founder/GP workflow.
-allowed-tools: Read, Write, Edit, Glob, Grep, TaskCreate, TaskUpdate, TaskList, TaskGet
+description: Create today's daily note and run morning, midday, or evening routines. Surfaces active sprint tasks, blocked items, project priorities, and Gmail highlights for Ryo's founder/GP workflow.
+allowed-tools: Read, Write, Edit, Glob, Grep, TaskCreate, TaskUpdate, TaskList, TaskGet, mcp__claude_ai_Gmail__gmail_search_messages, mcp__claude_ai_Gmail__gmail_read_message
 user-invocable: true
 ---
 
@@ -74,7 +74,50 @@ Today's tasks:
 
 Read `tasks/open/`. Filter where `status: blocked`. List them.
 
-### Step 5: Interactive prompts
+### Step 5: Surface Gmail highlights
+
+Search Gmail for emails received in the last 7 days using `mcp__claude_ai_Gmail__gmail_search_messages` with query `newer_than:7d`.
+
+Read the content of any email that looks actionable or is from a key contact using `mcp__claude_ai_Gmail__gmail_read_message`.
+
+**Key contacts to prioritise:**
+
+| Name | Role | Flag as |
+|------|------|---------|
+| Defne Arzanoglu / alexsupport@medtechglobal.com | Medtech ALEX support | Action — ALEX/API |
+| Ting (tingchou1988@gmail.com) | R&D Programme Manager | Action — R&D programme |
+| Lisa Pritchard | MBIE / Callaghan Innovation | Action — R&D/grant |
+| Lawrence Peterson | AU market opportunity | Action — commercial |
+
+**Triage rules:**
+
+1. **Needs action** — reply required, decision needed, or unblocks a task (e.g. Defne responding on Invoice API)
+2. **Waiting on them** — you sent something and they've responded or not yet
+3. **FYI only** — read, no action
+
+**Cross-reference against blockers:** If an email resolves or updates a blocked task in `tasks/open/`, note the task ID alongside the email entry.
+
+**Display as:**
+
+```
+Gmail (last 7 days):
+
+Needs action:
+  - [Sender] — [Subject] (received Mon Apr 8) → unblocks medtech-20260408-003
+  - [Sender] — [Subject] (received Wed Apr 10)
+
+Waiting on:
+  - Lawrence Peterson — no reply yet on AU market thread
+
+FYI:
+  - [Sender] — [Subject]
+```
+
+If no actionable emails found, display: "Gmail: nothing actionable in the last 7 days."
+
+Add the Gmail section to today's daily note under a `## Gmail` heading.
+
+### Step 6: Interactive prompts
 
 Ask (one at a time):
 - "What's the ONE thing that would make today successful?"
@@ -114,6 +157,16 @@ day: Monday
 ## Blockers
 - 
 
+## Gmail
+### Needs action
+- 
+
+### Waiting on
+- 
+
+### FYI
+- 
+
 ## Notes
 
 ## Evening Reflection
@@ -144,6 +197,7 @@ Create session tasks at skill start:
 TaskCreate: "Create daily note" — activeForm: "Creating today's note..."
 TaskCreate: "Surface sprint context" — activeForm: "Reading active sprints..."
 TaskCreate: "Surface today's tasks" — activeForm: "Scanning tasks/open/..."
+TaskCreate: "Surface Gmail highlights" — activeForm: "Scanning Gmail last 7 days..."
 TaskCreate: "Morning prompts" — activeForm: "Running morning prompts..."
 ```
 
