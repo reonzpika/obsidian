@@ -385,6 +385,12 @@ AI-maintained weekly log. Primary audit trail for MBIE claims. Hours: Ryo ~30hrs
 - Sprint goals restructured to enforce sequential dependencies across the 5-step Objective 1 roadmap
 - Inbox Helper task specification drafted — urgency taxonomy, document-type classification criteria, boundary cases, output schema, success criteria, test set design
 
+### Week of 12 April 2026
+
+- Compliance consultant outreach complete: three firms responded to 8 April emails — Catherine Miller (Buddle Findlay), Anne Arndt (Elevate Medtech), David Smyth (CARSL); CARSL noted as less relevant (device sponsorship/registration focus only); Buddle Findlay and Elevate Medtech both warm and suitable; email-based scoping to proceed (no calls)
+- RNZCGP clinical input channel: Heidi Bubendorfer referred request to Policy and Insight team, awaiting callback
+- Gareth Roberts (Comprehensive Care PHO): GP Clinical Review Brief sent 9 April; Gareth offered to circulate within his network
+
 ### Week of 5 April 2026
 
 - Inbox Helper task specification finalised (status: final) — constitutes MBIE Step 1 evidence

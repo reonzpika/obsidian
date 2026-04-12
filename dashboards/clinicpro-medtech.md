@@ -161,6 +161,10 @@ scheduleDashboardColumnSort(dv, headers);
 - Updated clinicpro-dashboard.md with API status findings and new billing completeness architecture
 - Sent follow-up to Alex Cauble-Chantrenne re Medtech partnership agreement (OOO until 10 April)
 - Sent feature request to Defne requesting patient-based Invoice search (`Invoice?subject=Patient/{id}`)
+- Confirmed invoice patient search not supported by design (Prashanth/ALEX Support 8 Apr): invoice retrieval is vendor-scoped only; can only GET by invoice ID created by same vendor — billing completeness module architectural constraint resolved
+- Lawrence Peterson replied 12 April with AU deal proposal: Medtech seeking to purchase ClinicPro licenses to bundle into AU G2M product for May; image capture + post feature only as starting point; asked for per-license pricing; two other integration partners already confirmed for AU launch
+- Alex Cauble-Chantrenne: partnership agreement draft promised 7 April but not yet received
+
 ## Active sprint tasks
 
 ```dataviewjs
