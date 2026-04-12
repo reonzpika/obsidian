@@ -1,0 +1,26 @@
+{
+  "name": "Ryo",
+  "vault": "NexWave / ClinicPro",
+  "setupDate": "2026-04-12",
+  "version": "1.0",
+  "folderMapping": {
+    "dailyNotes": "daily",
+    "tasks": "tasks/open",
+    "tasksDone": "tasks/done",
+    "sprints": "sprints/active",
+    "sprintsArchive": "sprints/archive",
+    "projects": "projects",
+    "reviewsWeekly": "reviews/weekly",
+    "reviewsMonthly": "reviews/monthly",
+    "inbox": "inbox",
+    "templates": "templates"
+  },
+  "repos": [
+    "clinicpro-saas",
+    "clinicpro-medtech",
+    "nexwave-rd",
+    "gp-fellowship"
+  ],
+  "rdIsolation": true,
+  "reviewDay": "Friday"
+}
