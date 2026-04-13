@@ -35,15 +35,45 @@ Creates daily notes and runs structured morning, midday, and evening routines ta
 | nexwave-rd | MBIE R&D (isolated) |
 | gp-fellowship | Fellowship training |
 
+## Core rule: no inline tasks
+
+**The daily note is a focus layer, not a task layer.**
+
+- All action items live in `tasks/open/` as task files — that is the single source of truth
+- The daily note references task IDs; it never owns them
+- Never write `- [ ]` checkboxes or freeform action items into a daily note
+- If an action item surfaces during any daily routine step (Gmail, reflection, conversation), create the task file in `tasks/open/` first, then reference the task ID in the daily note
+- This rule applies to Claude and to the user — if the user writes inline tasks, flag it and offer to convert them to task files
+
 ## Morning Routine
 
 ### Step 1: Create today's note
 
 Check if `daily/YYYY-MM-DD.md` exists. If yes, open it. If no, create from template below.
 
-### Step 2: Surface sprint context
+### Step 2: Carry forward from yesterday
 
-Read all files in `sprints/active/`. For each sprint where `status: active`:
+Read yesterday's daily note at `daily/YYYY-MM-DD-1.md` (subtract 1 day from today).
+
+If it exists, extract:
+- `## Evening Reflection > Tomorrow's priority` — surface this prominently at the top of today's briefing
+- `## Notes` — scan for any observations, decisions, or open questions worth carrying forward
+
+Display as a brief block before the sprint context:
+
+```
+From yesterday:
+  Priority: [tomorrow's priority text]
+  Notes: [any observations worth surfacing — skip if nothing meaningful]
+```
+
+If yesterday's note doesn't exist, skip silently.
+
+**Do not carry forward task references** — those are managed by `tasks/open/` and will surface correctly in Step 3.
+
+### Step 4: Surface sprint context
+
+Read all files in `sprints/active/`. For each sprint where today falls between `start` and `end`:
 - Extract `id`, `goal`, `end`, `repos`
 - Calculate days remaining to `end`
 - Flag sprints ending within 3 days
@@ -53,28 +83,32 @@ Display as:
 ```
 Active sprints:
   2026-04-sprint-1 — Referral Images paid model (ends Apr 18, 6 days)
-  2026-04-rd-sprint-1 — [goal] (ends [date], N days)
+  2026-04-rd-sprint-2 — [goal] (ends [date], N days)
 ```
 
-### Step 3: Surface today's tasks
+### Step 5: Surface today's tasks
 
 Read all files in `tasks/open/`. Filter where `due = today` OR `status: in-progress`. Group by repo. Exclude `status: done`.
+
+These are **references** to task files — display the task ID and title only. The daily note does not own these tasks.
 
 Display as:
 
 ```
-Today's tasks:
+Today's tasks (from tasks/open/):
   clinicpro-saas:
-    - [title] (saas-20260407-001) — due today
+    - saas-20260407-001 — Referral Images landing page copy
   nexwave-rd:
-    - [title] (rd-20260401-002) — in-progress
+    - rd-20260329-020 — Find Indici contact (overdue)
 ```
 
-### Step 4: Surface blockers
+Write these into the daily note's `## Today's Focus` section as a reference list — task IDs and titles only, no checkboxes.
 
-Read `tasks/open/`. Filter where `status: blocked`. List them.
+### Step 6: Surface blockers
 
-### Step 5: Surface Gmail highlights
+Read `tasks/open/`. Filter where `status: blocked`. List task IDs and titles. No checkboxes.
+
+### Step 7: Surface Gmail highlights
 
 Search Gmail for emails received in the last 7 days using `mcp__claude_ai_Gmail__gmail_search_messages` with query `newer_than:7d`.
 
@@ -117,12 +151,14 @@ If no actionable emails found, display: "Gmail: nothing actionable in the last 7
 
 Add the Gmail section to today's daily note under a `## Gmail` heading.
 
-### Step 6: Interactive prompts
+### Step 8: Interactive prompts
 
 Ask (one at a time):
 - "What's the ONE thing that would make today successful?"
 - "Any meetings or commitments to block time for?"
 - "Anything blocked that needs unblocking today?"
+
+If any action items emerge from these answers, create task files in `tasks/open/` immediately, then note the task ID in `## Notes`.
 
 ## Daily Note Template
 
@@ -137,11 +173,16 @@ day: Monday
 ## Focus
 > 
 
+## From Yesterday
+- Priority carried: 
+- Notes: 
+
 ## Active Sprints
 | Sprint | Goal | Ends | Days left |
 |--------|------|------|-----------|
 
-## Today's Tasks
+## Today's Focus
+<!-- Reference only — tasks live in tasks/open/. No inline checkboxes. -->
 ### clinicpro-saas
 - 
 
@@ -155,6 +196,7 @@ day: Monday
 - 
 
 ## Blockers
+<!-- Reference only — task IDs from tasks/open/ where status: blocked -->
 - 
 
 ## Gmail
@@ -168,6 +210,7 @@ day: Monday
 - 
 
 ## Notes
+<!-- Free text only. If anything here needs action, create a task file and add the ID. -->
 
 ## Evening Reflection
 - Wins:
@@ -185,9 +228,10 @@ day: Monday
 ## Evening Shutdown
 
 1. Update today's note: fill in Wins, Challenges, Tomorrow's priority
-2. For each task marked done today, confirm task file in `tasks/open/` has `status: done`
-3. Scan `inbox/` for unprocessed items — flag for tomorrow
-4. Prompt: "Any decisions or learnings worth capturing?"
+2. For each task completed today: update `status: done` in the task file in `tasks/open/`
+3. Scan `inbox/` — for each item, either create a task file or discard. No inbox items should be copied inline into the daily note.
+4. Prompt: "Any decisions or learnings worth capturing?" — capture in `## Notes` as free text only. If it creates an action item, make a task file.
+5. Prompt: "Any new action items from today?" — for each: create a task file in `tasks/open/`, then note the ID in `## Notes`.
 
 ## Task-Based Progress Tracking
 

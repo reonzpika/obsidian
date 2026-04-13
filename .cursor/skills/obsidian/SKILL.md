@@ -23,10 +23,14 @@ This session is for project management work in the Obsidian vault. There is no c
 |--------|---------|
 | `projects/` | One page per product/initiative — description, goals, key decisions |
 | `tasks/` | Task files (open, in-progress, done) — source of truth for all action items |
-| `dashboards/` | Rollup views |
+| `sprints/` | Sprint planning and tracking (active + archive) |
+| `daily/` | Daily notes — YYYY-MM-DD.md — created by `/daily`, updated by `/session-update` |
+| `reviews/weekly/` | Weekly review outputs — created by `/weekly` |
+| `reviews/monthly/` | Monthly review outputs — created by `/monthly` |
+| `dashboards/` | Dataview-powered rollup views — do not edit manually |
 | `context/` | Standing reference material |
-| `sprints/` | Sprint planning and tracking |
 | `templates/` | Page templates |
+| `inbox/` | Quick capture — unprocessed items |
 
 ## Key rules to follow
 
