@@ -211,6 +211,23 @@ Example: $10,000 reimbursement = $8,695.65 income + $1,304.35 GST payable to IRD
 |---|---|---|
 | Lisa Pritchard | MBIE contact (Callaghan Innovation) | Via Callaghan portal |
 | Ting | R&D Programme Manager (full-time, 40hrs/week) | Internal |
+| Helen Yu | Accountant (NexWave) | helen@hscg.co.nz |
+
+---
+
+## Payroll
+
+Payroll software: Xero. Paid monthly in arrears. PAYE deducted at source.
+
+| | Ryo | Ting |
+|---|---|---|
+| Annual salary | $140,160.00 | $102,194.16 |
+| Monthly gross | $11,680.00 | $8,516.18 |
+| MBIE hourly rate (cost template) | $80.00/hr | $58.33/hr |
+| MBIE eligible hourly rate (incl. 20% overhead) | $96.00/hr | $70.00/hr |
+| Hours/week on R&D | 30 | 40 |
+
+> **Action required:** Ting's employment contract currently shows $48.94/hr — this must be corrected to $58.33/hr to match the MBIE approved cost template. Ask Helen to issue a corrected employment agreement before the PAYE evidence deadline (30 April 2026). See task rd-20260413-001.
 
 ---
 
@@ -428,3 +445,4 @@ All expenses are R&D relevant and approved for Q1 claim. Records retained per 7-
 | 1 Apr 2026 | Added project overview, Current Phase section, full Q1–Q8 claim schedule, co-funding sources, NZ regulatory note, context file links. Simplified to high-level view: sprints only (no individual task view), objective column added to sprint table, archived sprints included. |
 | 1 Apr 2026 | Added Obj 1 Milestones table (Goals A–D from Notion). Migrated Weekly Progress Log (weeks of 16 & 23 Mar) and R&D Expenses (2 entries, $203.34 Q1 total) from Notion. Created missing task rd-20260401-001 (KiwiSaver savings suspension). |
 | 4 Apr 2026 | Added RAM purchase to R&D Expenses (Hynix 8GB DDR4-3200 SO-DIMM, Order CL22712, $65.54 NZD). Q1 total updated to $268.88. |
+| 13 Apr 2026 | Added Payroll section: confirmed monthly gross salaries (Ryo $11,680.00, Ting $8,516.18) from signed employment contracts. Identified discrepancy in Ting's contract hourly rate ($48.94 vs MBIE cost template $58.33) — correction requested from Helen (task rd-20260413-001). Added Helen Yu to Key Contacts. Added Xero bank feeds task (rd-20260413-002). |
