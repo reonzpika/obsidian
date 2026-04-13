@@ -12,7 +12,7 @@ stack: [aws-bedrock, claude-haiku, claude-sonnet, python, nextjs]
 
 **Signed contract:** [CONT-109091-N2RD-NSIWKC — Funding Agreement (signed 25 Mar 2026)](https://drive.google.com/file/d/1P_le7IGb8EyQtnNIJYLwfjKmeAKmU-_w/view?usp=drivesdk) — filed in Google Drive: R&D / Grant archive
 
-**Context files:** [Grant Application — Verbatim Submitted Text](Grant%20Application%20—%20Verbatim%20Submitted%20Text.md) | [Grant Compliance Guide](Grant%20Compliance%20Guide.md) | [Inbox Management — Competitor Tracker](Inbox%20Management%20—%20Competitor%20Tracker.md) | [Glossary](context/nexwave-rd-context/glossary.md)
+**Context files:** [Grant Application](../nexwave-rd/docs/programme/application-verbatim.md) | [Grant Compliance Guide](../nexwave-rd/docs/programme/compliance-guide.md) | [Competitor Tracker](../nexwave-rd/docs/programme/competitor-tracker.md) | [Glossary](../nexwave-rd/docs/programme/glossary.md)
 
 ---
 
@@ -22,10 +22,10 @@ stack: [aws-bedrock, claude-haiku, claude-sonnet, python, nextjs]
 |--|--|
 | **Objective 1** | [[nexwave-rd-obj-1]] |
 | **Active sprint** | [[2026-04-rd-sprint-1]] |
-| **Grant compliance** | [[Grant Compliance Guide]] |
-| **Grant application** | [[Grant Application — Verbatim Submitted Text]] |
-| **Competitor tracker** | [[Inbox Management — Competitor Tracker]] |
-| **Glossary** | [NexWave / R&D Glossary](context/nexwave-rd-context/glossary.md) |
+| **Grant compliance** | [Grant Compliance Guide](../nexwave-rd/docs/programme/compliance-guide.md) |
+| **Grant application** | [Grant Application](../nexwave-rd/docs/programme/application-verbatim.md) |
+| **Competitor tracker** | [Competitor Tracker](../nexwave-rd/docs/programme/competitor-tracker.md) |
+| **Glossary** | [NexWave / R&D Glossary](../nexwave-rd/docs/programme/glossary.md) |
 | **Repo map** | [[repos]] |
 
 ---

@@ -43,7 +43,7 @@ Key rule: AI assists only. Never makes a clinical decision.
 | Triage prototype hitting ≥90% accuracy on synthetic data | Not Started |
 | CVDRA prototype hitting ≥95% accuracy on synthetic data | Not Started |
 
-**Step 1 complete (5 April 2026):** Inbox Helper task spec and Care Gap Finder task spec both finalised. Stored in `context/nexwave-rd-context/`. Both constitute MBIE evidence for the Step 1 deliverable.
+**Step 1 complete (5 April 2026):** Inbox Helper task spec and Care Gap Finder task spec both finalised. Stored in `nexwave-rd/docs/obj-1/output/`. Both constitute MBIE evidence for the Step 1 deliverable.
 
 ---
 
@@ -72,7 +72,7 @@ Lock in precise definitions for both tasks:
 
 Deliverable: Clear written definition of both tasks with success criteria.
 
-**Step 1 status (5 April 2026):** Complete. Both task specs finalised and filed in `context/nexwave-rd-context/`. GP clinical review outreach initiated before proceeding to Step 2 — seeking 2-3 practising NZ GPs to validate urgency taxonomy, boundary cases, and care gap trigger logic. Contacts: Brendan Duck (Health HB PHO), Gareth Roberts (Comprehensive Care PHO), Heidi Bubendorfer (RNZCGP). Tracked in task `rd-20260405-001`. Step 2 begins once at least 2 reviewers have responded.
+**Step 1 status (5 April 2026):** Complete. Both task specs finalised and filed in `nexwave-rd/docs/obj-1/output/`. GP clinical review outreach initiated before proceeding to Step 2 — seeking 2-3 practising NZ GPs to validate urgency taxonomy, boundary cases, and care gap trigger logic. Contacts: Brendan Duck (Health HB PHO), Gareth Roberts (Comprehensive Care PHO), Heidi Bubendorfer (RNZCGP). Tracked in task `rd-20260405-001`. Step 2 begins once at least 2 reviewers have responded.
 
 ### Step 2: Literature Review and Architecture Research
 
