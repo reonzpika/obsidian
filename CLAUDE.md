@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is an **Obsidian vault** — a task/project management workspace for NexWave / ClinicPro. It holds planning, sprints, tasks, and strategy notes. It does **not** contain application code.
 
-- The vault holds **what to do**; product repos hold **how it is built**
+- The vault holds **what to do**; product repos hold **how it is built** and all R&D research/output documents
 - `context/repos.md` — authoritative route/folder map for all repos
 - `context/llm-workspace-guide.md` — full rules; read before editing anything when given Obsidian context
 - `context/clinicpro-context/clinicpro-design-system.md` — **read before any frontend work** — colours, typography, animation, voice/tone for all ClinicPro products
@@ -76,6 +76,7 @@ Sprint IDs follow `YYYY-MM-sprint-N` for cross-repo sprints, or `YYYY-MM-{repo-t
 - Sprint files move to `sprints/archive/` on completion — never deleted.
 - Never create or edit anything inside `.obsidian/`.
 - **R&D isolation:** `nexwave-rd` work must not import ClinicPro commercial code unless the user explicitly allows it.
+- **R&D research and output files belong in `nexwave-rd/docs/`, not the vault.** When producing any R&D document — research reports, task specs, clinical references, architecture decisions, evaluation frameworks — write it to `C:\Users\reonz\Cursor\nexwave-rd\docs\obj-N\research\` or `...\output\`. The vault holds task files (`tasks/open/`) and sprint plans (`sprints/`) only, not the content produced during R&D work. See `nexwave-rd/CLAUDE.md` for the folder structure and naming convention (kebab-case, `rN-` prefix for research reports).
 - Due dates: ISO 8601, no quotes — e.g. `due: 2026-04-06`
 - `title` must be short and human-readable — dashboards use `title`, not the filename.
 
