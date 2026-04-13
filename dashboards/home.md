@@ -4,17 +4,34 @@
 
 ## Dashboards
 
-| | |
-|--|--|
-| **ClinicPro Medtech** | [[clinicpro-medtech]] |
-| **ClinicPro SaaS** | [[clinicpro-saas]] |
-| **Nexwave R&D** | [[nexwave-rd]] |
-| **GP Fellowship** | [[dashboards/gp-fellowship]] |
-| **Side Projects** | [[side-projects]] |
+### ClinicPro Medtech — [[clinicpro-medtech]]
 
----
+| Project | Status |
+| --- | --- |
+| [[clinicpro-capture\|ClinicPro Capture]] | 🔵 Active |
+| [[clinicpro-dashboard\|ClinicPro Dashboard]] | 🔵 Active |
 
-## Side Projects
+### ClinicPro SaaS — [[clinicpro-saas]]
+
+| Project | Status |
+| --- | --- |
+| [[ai-scribe\|AI Scribe]] | 🔵 Active |
+| [[12-month-prescription\|12-Month Prescription]] | 🔵 Active |
+| [[referral-images\|Referral Images]] | 🔵 Active |
+
+### Nexwave R&D — [[nexwave-rd]]
+
+| Project | Status |
+| --- | --- |
+| [[nexwave-rd-obj-1\|R&D Objective 1]] | 🔵 Active |
+
+### GP Fellowship — [[dashboards/gp-fellowship]]
+
+| Project | Status |
+| --- | --- |
+| [[gp-fellowship\|GP Fellowship]] | 🔵 Active |
+
+### Side Projects — [[side-projects]]
 
 | Project | Owner | Status | Notes |
 | --- | --- | --- | --- |
