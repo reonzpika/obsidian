@@ -164,6 +164,7 @@ scheduleDashboardColumnSort(dv, headers);
 - Confirmed invoice patient search not supported by design (Prashanth/ALEX Support 8 Apr): invoice retrieval is vendor-scoped only; can only GET by invoice ID created by same vendor — billing completeness module architectural constraint resolved
 - Lawrence Peterson replied 12 April with AU deal proposal: Medtech seeking to purchase ClinicPro licenses to bundle into AU G2M product for May; image capture + post feature only as starting point; asked for per-license pricing; two other integration partners already confirmed for AU launch
 - Alex Cauble-Chantrenne: partnership agreement draft promised 7 April but not yet received
+- Lawrence Peterson: follow-up sent 13 April asking who covers infrastructure running costs under proposed license bundle model — answer needed before pricing proposal can be completed
 
 ## Active sprint tasks
 

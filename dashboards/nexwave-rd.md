@@ -407,6 +407,10 @@ AI-maintained weekly log. Primary audit trail for MBIE claims. Hours: Ryo ~30hrs
 - Compliance consultant outreach complete: three firms responded to 8 April emails — Catherine Miller (Buddle Findlay), Anne Arndt (Elevate Medtech), David Smyth (CARSL); CARSL noted as less relevant (device sponsorship/registration focus only); Buddle Findlay and Elevate Medtech both warm and suitable; email-based scoping to proceed (no calls)
 - RNZCGP clinical input channel: Heidi Bubendorfer referred request to Policy and Insight team, awaiting callback
 - Gareth Roberts (Comprehensive Care PHO): GP Clinical Review Brief sent 9 April; Gareth offered to circulate within his network
+- Payroll confirmed: monthly gross salaries sent to Helen Yu (Ryo $11,680/mo, Ting $8,516.18/mo); first pay run 16 Mar–15 Apr, pay date 16 Apr
+- Xero bank account connected; bank feed active
+- KiwiSaver savings suspension: apply via myIR after Apr 16 first pay run (both Ryo and Ting)
+- Ting employment contract rate discrepancy identified ($48.94 vs MBIE cost template $58.33); correction to be issued by Helen — task rd-20260413-001
 
 ### Week of 5 April 2026
 

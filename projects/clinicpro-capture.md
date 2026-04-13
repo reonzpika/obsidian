@@ -22,6 +22,22 @@ Mobile web app that photographs clinical images and commits them to patient reco
 - Pricing: FTE-based tiers, 30-day free trial
 - BFF mandatory: never call ALEX directly from Vercel
 
+## AU market — Lawrence Peterson (Medtech Global)
+
+**Proposal received 12 April 2026:** Lawrence proposes Medtech purchases ClinicPro Capture licenses to bundle as a value-add for AU G2M in May. Scope: image capture + post only as starting point. Two other integration partners already confirmed for AU launch.
+
+**Open questions (as of 13 April 2026):**
+
+| # | Question | Status |
+|---|---|---|
+| Q1 | Who covers infrastructure running costs under the license bundle model — baked into per-license fee or separate? | Awaiting reply (sent 13 Apr) |
+| Q2 | Which AU product specifically — Medtech Evolution AU or other? | Awaiting reply |
+| Q3 | How many practices in scope for May G2M, and rollout over 12 months? | Awaiting reply |
+| Q4 | Fully Medtech-branded or ClinicPro visible to practices? | Awaiting reply |
+| Q5 | Support routing — through Medtech or ClinicPro directly? | Awaiting reply |
+
+All five questions sent to Lawrence in two emails (12 Apr + 13 Apr). Pricing proposal to be prepared once answers received. Tracked in task medtech-20260408-004.
+
 ## Tasks
 
 ```dataviewjs
