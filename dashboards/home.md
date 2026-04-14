@@ -42,6 +42,12 @@
 | [[cloud9japan]] | Ryo | 💤 Parked | Mum's business. |
 | [[eguchi-family]] | Ryo | 💤 Parked | Family AI site. |
 
+### Partnerships
+
+| Project | Status |
+| --- | --- |
+| [[heron\|Heron]] | 🔵 Active |
+
 ---
 
 ## Quick Links
@@ -62,6 +68,9 @@
 - [Perplexity](https://www.perplexity.ai/)
 - [Yingtu](https://yingtu.ai/en)
 - [Laozhang API](https://api.laozhang.ai/token)
+
+**Vault**
+- [[daily/2026-04-15|Today's Note]]
 
 **Google**
 - [Calendar](https://calendar.google.com/calendar/u/0/r)
