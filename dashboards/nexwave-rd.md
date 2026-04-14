@@ -411,6 +411,10 @@ AI-maintained weekly log. Primary audit trail for MBIE claims. Hours: Ryo ~30hrs
 - Xero bank account connected; bank feed active
 - KiwiSaver savings suspension: apply via myIR after Apr 16 first pay run (both Ryo and Ting)
 - Ting employment contract rate discrepancy identified ($48.94 vs MBIE cost template $58.33); correction to be issued by Helen — task rd-20260413-001
+- Sprint 2 synthesis deliverables (Docs 1–4) completed and filed in `nexwave-rd/docs/obj-1/output/`: literature review, architecture shortlist with decision record, data requirements, synthetic dataset schema (provisional pending GP review). Tasks closed: rd-20260329-003, -010, -011, -022
+- Goal B architecture decision recorded: C3 (rules engine + BioClinical ModernBERT 396M / Llama 3.1 8B LoRA hybrid) primary, C1 (Bedrock Claude Haiku 4.5 + Sonnet 4.6) parallel reference; C2 and C4 deferred. Bake-off to conclude before Q1 MBIE claim 31 May 2026
+- Synthetic dataset schema v0.1: 400 items, 5×4 stratification grid (25/75/180/120), 15–20% stress items targeting NHS 6:1 contextual reasoning failure pattern, 14 QA gates, 2-stage release (v0.1 provisional → v1.1 stable post rd-20260405-001)
+- `nexwave-rd/CLAUDE.md` cleaned: unratified Inbox triage / data-residency architecture lines removed pending decision sign-off
 
 ### Week of 5 April 2026
 

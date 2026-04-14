@@ -52,8 +52,8 @@ Key rule: AI assists only. Never makes a clinical decision.
 | Goal | Description | Owner | Due | Status |
 |---|---|---|---|---|
 | Goal A — Sandbox Environments Connected | Connect Medtech and Indici sandbox environments | Ryo | — | In Progress |
-| Goal B — Architecture Decision Made and Documented | Evaluate RAG vs fine-tune vs prompt-engineering vs hybrid. Document decision with evidence for MBIE. | Ryo | April 2026 | Not Started |
-| Goal C — Data Requirements Documented | Document what data types and volumes the AI needs | Ryo | — | Not Started |
+| Goal B — Architecture Decision Made and Documented | Evaluate RAG vs fine-tune vs prompt-engineering vs hybrid. Document decision with evidence for MBIE. | Ryo | April 2026 | In Progress (Sprint 2 shortlist + decision record filed; bake-off pending) |
+| Goal C — Data Requirements Documented | Document what data types and volumes the AI needs | Ryo | — | Done (Sprint 2 data requirements filed) |
 | Goal D — Triage and CVDRA Prototypes Hitting Accuracy Targets | Prototypes on synthetic data: ≥90% triage, ≥95% CVDRA accuracy. Evidence required for Q1 MBIE claim. | Both | June 2026 | Not Started |
 
 ---
@@ -84,6 +84,8 @@ Research what's already been done:
 
 Deliverable: Literature review document.
 
+**Step 2 status (14 April 2026):** Complete. Seven research reports (r1–r7) plus sprint-2-summary filed in `nexwave-rd/docs/obj-1/research/`. Internal digest delivered as `sprint-2-literature-review.md` in `output/`. Key findings: fine-tuned 8B beats zero-shot 120B at 300–500-item scale (r1); CoT degrades 86% of clinical LLMs (r1); Bedrock ap-southeast-6 cross-Region routes ANZ-wide (r2); Catalyst C1A is the only GA NZ GPU substrate (r2); IPP 3A automated-decision disclosure in force 1 May 2026 (r2).
+
 ### Step 3: Shortlist Architecture Candidates (3–4 approaches)
 
 Document for each:
@@ -92,6 +94,8 @@ Document for each:
 - Why it's worth evaluating
 
 Deliverable: Architecture shortlist with documented rationale.
+
+**Step 3 status (14 April 2026):** Complete. Four candidates evaluated in `sprint-2-architecture-shortlist.md`: C1 Bedrock Claude Haiku/Sonnet, C2 Catalyst Llama 3.3 70B + MedGemma + ModernBERT, C3 rules engine + BioClinical ModernBERT 396M / Llama 3.1 8B LoRA hybrid, C4 agentic pipeline. **Decision: C3 primary, C1 parallel reference for Sprint 3 bake-off; C2 and C4 deferred.** Data requirements (`sprint-2-data-requirements.md`) and synthetic dataset schema v0.1 (`sprint-2-synthetic-dataset-schema.md`, provisional pending `rd-20260405-001`) also filed. Step 4 begins once GP clinical review confirms taxonomy.
 
 ### Step 4: Evaluate Candidates on Synthetic Data
 
