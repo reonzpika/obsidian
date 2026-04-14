@@ -166,6 +166,14 @@ scheduleDashboardColumnSort(dv, headers);
 - Alex Cauble-Chantrenne: partnership agreement draft promised 7 April but not yet received
 - Lawrence Peterson: follow-up sent 13 April asking who covers infrastructure running costs under proposed license bundle model — answer needed before pricing proposal can be completed
 
+### Week of 2026-04-14
+
+- Received partnership agreement draft from Alex (13 Apr): reviewed in full including Schedule 1 (fee table extracted via python-docx)
+- Schedule 1 confirmed: Commencement Date 18 Mar 2026, Initial Term 36 months, fee structure $10–$60/month per Active Facility by enrolment tier
+- Identified three issues with draft: (1) flat fee model not commission-based as verbally agreed, (2) no NZ-only geographic scope, (3) PIA/pentest timeline 3 months vs 6 months Alex stated in January
+- Replied to Alex 14 April: requested commission model (10% self-referred / 15% Medtech-referred), explicit NZ-only scope, and correction of PIA/pentest timeline to 6 months — awaiting response
+- Lawrence Peterson AU thread reviewed: all five commercial questions sent (12–13 Apr); awaiting reply before pricing proposal can proceed
+
 ## Active sprint tasks
 
 ```dataviewjs

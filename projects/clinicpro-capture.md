@@ -26,7 +26,7 @@ Mobile web app that photographs clinical images and commits them to patient reco
 
 **Proposal received 12 April 2026:** Lawrence proposes Medtech purchases ClinicPro Capture licenses to bundle as a value-add for AU G2M in May. Scope: image capture + post only as starting point. Two other integration partners already confirmed for AU launch.
 
-**Open questions (as of 13 April 2026):**
+**Open questions (as of 14 April 2026):**
 
 | # | Question | Status |
 |---|---|---|
@@ -36,7 +36,25 @@ Mobile web app that photographs clinical images and commits them to patient reco
 | Q4 | Fully Medtech-branded or ClinicPro visible to practices? | Awaiting reply |
 | Q5 | Support routing — through Medtech or ClinicPro directly? | Awaiting reply |
 
-All five questions sent to Lawrence in two emails (12 Apr + 13 Apr). Pricing proposal to be prepared once answers received. Tracked in task medtech-20260408-004.
+All five questions sent to Lawrence in two emails (12 Apr + 13 Apr). AU deal must be structured under a separate agreement from the NZ partnership. Pricing proposal to be prepared once answers received. Tracked in task medtech-20260414-002.
+
+## NZ Partnership Agreement — status (14 April 2026)
+
+Draft received from Alex Cauble-Chantrenne 13 April. Schedule 1 confirmed:
+
+- Commencement Date: 18 March 2026
+- Initial Term: 36 months (expires 18 March 2029)
+- Fee structure: $10–$60/month per Active Facility by enrolment tier
+- Permitted Purposes: direct image service only (Base + Portal without Confidential Scope + ALEX Apps)
+- Software: Medtech Artia and Medtech Evolution
+
+Three issues raised with Alex in reply (sent 14 April), tracked in task medtech-20260414-001:
+
+1. **Fee model**: flat per-facility fee not commission-based as discussed. Counter-proposal: 10% self-referred / 15% Medtech-referred of Gross Revenue
+2. **Geographic scope**: no NZ-only language; requested explicit restriction — AU market to be handled separately
+3. **PIA/pentest timeline**: draft says 3 months; Alex said 6 months in January — requested correction
+
+Awaiting Alex response before signing.
 
 ## Tasks
 
