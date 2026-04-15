@@ -128,6 +128,14 @@ Deliverable: Architecture decision document for MBIE.
 
 MBIE contact: Lisa Pritchard (Callaghan Innovation). All experiments must be logged.
 
+**Q1 claim prep (2026-04-15):** Email sent to Lisa Pritchard asking about time tracking format, progress report structure, and cost spreadsheet template. Awaiting response.
+
+**Ting employment contract:** Hourly rate corrected to $58.33/hr in Google Doc (2026-04-15). Ting re-signature pending (task `rd-20260415-001`). PAYE submission blocked until signed.
+
+**SaMD compliance outreach (2026-04-15):** Quotes requested from four firms — Elevate Medtech (Anne Arndt), Buddle Findlay (Catherine Miller), Aesculytics (Dr Arindam Bose), Bell Gully (Dr Laura Hardcastle). Tracked in `rd-20260415-002`.
+
+**Programme brief:** One-page technical brief filed at `nexwave-rd/docs/programme/nexwave-health-brief.md`. Attached to all compliance outreach emails.
+
 ---
 
 ## Sprints
