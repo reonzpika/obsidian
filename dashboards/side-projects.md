@@ -23,6 +23,26 @@ Personal and family projects outside of ClinicPro and Nexwave R&D. Maintained by
 
 ---
 
+## Weekly Progress Log
+
+### Week of 2026-04-14
+
+**miozuki**
+- Two-track collaboration workflow shipped: Ting works direct on master, Ryo on feature branches with Vercel previews. `.vscode/tasks.json` (dev server auto-start), `.vscode/settings.json` (one-click auto-push commit), `Ctrl+Alt+P` publish shortcut, `TING-GUIDE.md`, `CLAUDE.md` workflow note, `docs/ting-laptop-setup.md` checklist
+- In-person setup on Ting's laptop completed 15 Apr — miozuki-20260415-001 closed
+- Site audit cycle run: first audit results filed, audit scripts added to repo, Instagram proxy, Klaviyo subscribe + email popup a11y + contact form fixes shipped
+- LCP image perf pass: priority + responsive `sizes` added; audit re-run against fixes
+- Nano Banana Pro research context imported to miozuki repo
+
+**linkedin**
+- Major agent refactor: full cutover to skill-driven flow across Researcher → Architect → Strategist → Analyst → Picker → Planner (Phases 1–5 commits)
+- Strategist deterministic guardrails extracted to standalone module with tests
+- Architect + Researcher + Strategist prompts extracted to markdown (skill pattern)
+- MBIE N2RD LinkedIn-safe context added; loaded in Architect for Pillar 2
+- linkedin-20260415-001 (scout debug) still open pending post-refactor verification
+
+---
+
 ## Open Tasks
 
 ```dataviewjs
