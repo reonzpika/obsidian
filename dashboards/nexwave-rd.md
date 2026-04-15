@@ -227,7 +227,7 @@ Payroll software: Xero. Paid monthly in arrears. PAYE deducted at source.
 | MBIE eligible hourly rate (incl. 20% overhead) | $96.00/hr | $70.00/hr |
 | Hours/week on R&D | 30 | 40 |
 
-> **Action required:** Ting's employment contract currently shows $48.94/hr — this must be corrected to $58.33/hr to match the MBIE approved cost template. Ask Helen to issue a corrected employment agreement before the PAYE evidence deadline (30 April 2026). See task rd-20260413-001.
+> **Status (15 Apr 2026):** Corrected employment agreement received from Helen ($58.33/hr, $102,194.16 annual). PDF emailed to Ting 15 April for re-signature; signed copy due back by 20 April. Signed contract + payslip from first pay run (16 April) to be uploaded to MBIE portal before 30 April. Tracked in rd-20260415-001 (Ting signature) and rd-20260404-001 (MBIE submission).
 
 ---
 
@@ -411,6 +411,9 @@ AI-maintained weekly log. Primary audit trail for MBIE claims. Hours: Ryo ~30hrs
 - Xero bank account connected; bank feed active
 - KiwiSaver savings suspension: apply via myIR after Apr 16 first pay run (both Ryo and Ting)
 - Ting employment contract rate discrepancy identified ($48.94 vs MBIE cost template $58.33); correction to be issued by Helen — task rd-20260413-001
+- Ting employment contract corrected by Helen ($58.33/hr, $102,194.16 annual); PDF emailed to Ting for re-signature, due 20 April — rd-20260413-001 closed; rd-20260415-001 awaiting signed copy
+- Xero bank feed connected — rd-20260413-002 closed
+- Payroll process clarification requested from Helen ahead of 16 April first pay run (net amounts to Ryo/Ting, PAYE to IRD, Xero responsibilities)
 - Sprint 2 synthesis deliverables (Docs 1–4) completed and filed in `nexwave-rd/docs/obj-1/output/`: literature review, architecture shortlist with decision record, data requirements, synthetic dataset schema (provisional pending GP review). Tasks closed: rd-20260329-003, -010, -011, -022
 - Goal B architecture decision recorded: C3 (rules engine + BioClinical ModernBERT 396M / Llama 3.1 8B LoRA hybrid) primary, C1 (Bedrock Claude Haiku 4.5 + Sonnet 4.6) parallel reference; C2 and C4 deferred. Bake-off to conclude before Q1 MBIE claim 31 May 2026
 - Synthetic dataset schema v0.1: 400 items, 5×4 stratification grid (25/75/180/120), 15–20% stress items targeting NHS 6:1 contextual reasoning failure pattern, 14 QA gates, 2-stage release (v0.1 provisional → v1.1 stable post rd-20260405-001)
