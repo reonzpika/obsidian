@@ -151,14 +151,82 @@ If no actionable emails found, display: "Gmail: nothing actionable in the last 7
 
 Add the Gmail section to today's daily note under a `## Gmail` heading.
 
-### Step 8: Interactive prompts
+### Step 8: Present overview with suggested plan
 
-Ask (one at a time):
-- "What's the ONE thing that would make today successful?"
-- "Any meetings or commitments to block time for?"
-- "Anything blocked that needs unblocking today?"
+Present the briefing and a proposed plan for the day in chat. Use this structure:
 
-If any action items emerge from these answers, create task files in `tasks/open/` immediately, then note the task ID in `## Notes`.
+```
+Good morning. Here's today's picture.
+
+From yesterday: [priority carried / notes — skip if blank]
+
+Active sprints:
+  [sprint table — flag anything ending within 3 days or overdue]
+
+Gmail:
+  Needs action: [...]
+  Waiting on: [...]
+  FYI: [...]
+
+---
+
+Suggested plan for today:
+
+| # | Area | Goal |
+|---|------|------|
+| 1 | [highest priority area] | [what to achieve] |
+| 2 | ...                     | ...               |
+
+Parked: [tasks in scope but blocked or deferred — list task IDs]
+
+---
+
+Does this look right? What do you want to focus on or change?
+```
+
+**How to build the suggested plan:**
+- Prioritise by: due today > overdue > sprint deadlines within 3 days > high priority in-progress > other open
+- Respect repo isolation — don't mix R&D and commercial where they shouldn't cross
+- Do not include blocked tasks unless unblocking them is the action
+- Do not include tasks explicitly deferred by Ryo in prior notes
+- Limit to 5-7 items — a full day, not a wishlist
+- Show the task IDs + titles in the plan rows so Ryo can see exactly what's included
+
+Keep the tone tight. Flag anything urgent but don't editorialize — let Ryo decide.
+
+### Step 9: Ask one question
+
+After the overview and suggested plan, ask exactly one question:
+
+> "Does this look right? What do you want to focus on or change?"
+
+Wait for the response. Do not ask follow-up questions — one pass is enough.
+
+### Step 10: Write the plan
+
+Once Ryo responds, incorporate any changes and write the final sections of the daily note.
+
+**In the note, write:**
+
+1. `## Focus` blockquote — one crisp sentence capturing the day's intent.
+
+2. `## Today's Plan` — numbered priority table based on the confirmed plan:
+
+```markdown
+## Today's Plan
+<!-- Ordered by priority. Parked items not in scope today. -->
+
+| # | Area | Goal |
+|---|------|------|
+| 1 | miozuki-web | Finish content migration so Ting can work independently |
+| 2 | nexwave-rd admin | Xero bank feeds + KiwiSaver — clear all admin today |
+```
+
+3. `## Today's Focus` — tasks grouped by the confirmed priorities, in order. Use named priority sections (e.g. `### 1. miozuki-web — finish handover for Ting`) rather than plain repo headings. Add a `### Parked today` section at the bottom for anything deferred — do not silently drop tasks.
+
+**In chat, confirm the final plan** and flag anything urgent that wasn't included (e.g. "Note: gpf-20260330-008 is due today — parked as intended?").
+
+If any action items surface from Ryo's response, create a task file in `tasks/open/` immediately and note the ID in `## Notes`.
 
 ## Daily Note Template
 
@@ -181,19 +249,15 @@ day: Monday
 | Sprint | Goal | Ends | Days left |
 |--------|------|------|-----------|
 
+## Today's Plan
+<!-- Ordered by priority as confirmed with Ryo. Parked items at bottom. -->
+
+| # | Area | Goal |
+|---|------|------|
+
 ## Today's Focus
 <!-- Reference only — tasks live in tasks/open/. No inline checkboxes. -->
-### clinicpro-saas
-- 
-
-### clinicpro-medtech
-- 
-
-### nexwave-rd
-- 
-
-### gp-fellowship
-- 
+<!-- Grouped by Today's Plan priority order, not by repo. -->
 
 ## Blockers
 <!-- Reference only — task IDs from tasks/open/ where status: blocked -->
@@ -242,7 +306,8 @@ TaskCreate: "Create daily note" — activeForm: "Creating today's note..."
 TaskCreate: "Surface sprint context" — activeForm: "Reading active sprints..."
 TaskCreate: "Surface today's tasks" — activeForm: "Scanning tasks/open/..."
 TaskCreate: "Surface Gmail highlights" — activeForm: "Scanning Gmail last 7 days..."
-TaskCreate: "Morning prompts" — activeForm: "Running morning prompts..."
+TaskCreate: "Present overview and suggested plan" — activeForm: "Building today's briefing..."
+TaskCreate: "Write confirmed plan to note" — activeForm: "Writing today's plan..."
 ```
 
 Run sequentially. Mark each `in_progress` then `completed` as you go.
