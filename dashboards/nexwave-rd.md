@@ -229,6 +229,11 @@ Payroll software: Xero. Paid monthly in arrears. PAYE deducted at source.
 
 > **Status (15 Apr 2026):** Corrected employment agreement received from Helen ($58.33/hr, $102,194.16 annual). PDF emailed to Ting 15 April for re-signature; signed copy due back by 20 April. Signed contract + payslip from first pay run (16 April) to be uploaded to MBIE portal before 30 April. Tracked in rd-20260415-001 (Ting signature) and rd-20260404-001 (MBIE submission).
 
+### Operating rules (learnt)
+
+- **Cross-check every contract rate against the approved MBIE Cost Template before signing.** Helen's first draft of Ting's contract came in at $48.94/hr; MBIE approved rate is $58.33/hr. Discrepancy would have been locked into MBIE submission and triggered a compliance issue if not caught. Applies to any future rate change or new employee.
+- **Payroll responsibility split:** Helen runs Xero payroll + files PAYE with IRD; Ryo executes bank transfers on pay day. PAYE liability for a given pay period is due the 20th of the following month (April pay → 20 May). One pay run per month, 16th of month, covering previous 16th–15th.
+
 ---
 
 ## Open Questions

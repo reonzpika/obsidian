@@ -11,6 +11,34 @@ Automated LinkedIn agent. Runs in production with low maintenance overhead.
 ## Notes
 - Automated. Low maintenance.
 
+## Decisions
+
+### 2026-04-15 — Skill-driven agent architecture
+Full cutover from monolithic agent prompts to markdown-extracted skill files across the pipeline: Researcher, Architect, Strategist, Analyst, Picker, Planner. Strategist's deterministic guardrails split into a standalone module with tests, separate from the judgement prompt. Rationale: prompts in code are expensive to iterate; prompts as skill markdown can be edited, diffed, and versioned independently of agent wiring. Side benefit: the Architect now loads an MBIE N2RD "LinkedIn-safe" context file at runtime for Pillar 2 posts, so R&D content constraints are enforced at prompt-assembly time rather than buried in agent logic.
+
+### 2026-04-15 (later) — Eliminated Anthropic API dependency entirely
+Pushed the skill-driven architecture to its conclusion: deleted `agents/_llm.py`, `langchain-anthropic`, `langchain-core`, `config/model_config.json`. All seven agent roles (Planner, Researcher, Picker, Architect, Strategist, Analyst, Image Architect) now reason inside the active Claude Code session reading `agents/<name>.md` prompts. Cost model is now Claude Code subscription only — zero per-post API spend. Trade-off: the chat-first flow can no longer be cron-fired (it always required a Claude Code session for approval gates anyway, so this is theoretical not practical). Posting and analytics scraping remain cron-safe (Playwright, no LLM). Plan and execution diary at `temporary/plans/2026-04-15-claude-code-as-llm-refactor.md`.
+
+### 2026-04-15 — Dev-time tooling: Playwright CLI + selector-repair skill
+Installed `@playwright/cli` v0.1.8 globally, registered its skills at `.claude/skills/playwright-cli/`, and authored a project-specific `.cursor/skills/linkedin-selector-repair/SKILL.md`. Repair loop is now: drive LinkedIn live from the shell, find new selector via accessibility tree refs, update `tools/browser.py` `.or_()` chain. Production Python runtime untouched. Repair time when a selector breaks dropped from "half a day" to "~5 minutes". The CLI shares `auth/linkedin_session.json` with production via `state-load`/`state-save` (storageState format identical).
+
+### 2026-04-15 — Audit + bug sweep across 10 workflows
+Comprehensive audit at `temporary/audit/` (10 workflow markdowns + index): 7 critical, 28 significant, 36 minor issues identified. High-priority fixes shipped this session: silent `first_comment` drop in `schedule_post` (now retries URN extraction 3×, preserves text on failure), `executor_run` per-comment failure tolerance (≥4/6 success threshold), two-phase execution result merging (no more lost phase-1 comments), session cookie expiry pre-check in `playwright_settings`, auth pre-flight script (`scripts/auth_preflight.py`), nav-chrome heuristic in planner output, scheduling registry pruning + hash-based task names, em-dash check extended to Golden Hour comments, debug instrumentation purged from production. Pure-logic test coverage added for executor + scheduler.
+
+## Weekly Progress Log
+
+### Week of 2026-04-14
+
+- Phase 1–8 skill-driven flow cutover complete: Researcher → Architect → Strategist → Analyst → Picker → Planner → Image Architect; `agents/_llm.py` and langchain dependencies removed
+- Strategist judgement prompt extracted to markdown; deterministic guardrails extracted to standalone module with 14 tests
+- Architect loads MBIE N2RD LinkedIn-safe context at runtime for Pillar 2 posts
+- Anthropic API dependency eliminated entirely — engine now runs on Claude Code subscription only
+- `@playwright/cli` installed + new `linkedin-selector-repair` skill for ~5-min selector fixes via shell
+- Comprehensive audit (10 workflows) shipped at `temporary/audit/`; high-priority bugs fixed (first_comment retry, executor failure tolerance, two-phase merge, auth pre-flight, scheduling registry pruning, em-dash check on comments)
+- New scripts: `scripts/auth_preflight.py` (cron-safe session check), `scripts/append_performance_history.py` (extracted from deleted analyse_performance.py)
+- Test suite rationalised: removed Phase 2 (Redis) + Phase 4b (script integration) + Phase 5 (agent pipeline); all 7 remaining phases pass with no Anthropic API calls
+- Scout agent debug (linkedin-20260415-001) still in-progress — graph.state cause cleared, awaits live verification (pending session refresh via login.py)
+
 ## Tasks
 
 ```dataviewjs

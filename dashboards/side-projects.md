@@ -35,11 +35,16 @@ Personal and family projects outside of ClinicPro and Nexwave R&D. Maintained by
 - Nano Banana Pro research context imported to miozuki repo
 
 **linkedin**
-- Major agent refactor: full cutover to skill-driven flow across Researcher → Architect → Strategist → Analyst → Picker → Planner (Phases 1–5 commits)
-- Strategist deterministic guardrails extracted to standalone module with tests
-- Architect + Researcher + Strategist prompts extracted to markdown (skill pattern)
+- Major agent refactor: full cutover to skill-driven flow across Researcher → Architect → Strategist → Analyst → Picker → Planner → Image Architect (Phases 1–8 commits)
+- **Anthropic API dependency eliminated** — `agents/_llm.py` deleted, `langchain-anthropic` + `langchain-core` removed, `config/model_config.json` deleted. Engine now runs on Claude Code subscription only (zero per-post API spend)
+- Strategist deterministic guardrails extracted to standalone module with 14 tests
+- All 7 agent prompts extracted to `agents/*.md` — editable independently of agent wiring
 - MBIE N2RD LinkedIn-safe context added; loaded in Architect for Pillar 2
-- linkedin-20260415-001 (scout debug) still open pending post-refactor verification
+- `@playwright/cli` installed; new `linkedin-selector-repair` skill — selector fixes via shell loop, ~5 min instead of half-day
+- Comprehensive audit (10 workflows) at `temporary/audit/`; 7 critical + 28 significant fixes shipped: first_comment retry on `schedule_post`, per-comment failure tolerance in `executor_run` (≥4/6 threshold), two-phase result merging, session cookie expiry pre-check, em-dash check extended to Golden Hour comments, scheduling registry pruning + hash-based task names, debug instrumentation purged
+- New scripts: `auth_preflight.py` (cron-safe session check), `append_performance_history.py`
+- Test suite rationalised — Redis + legacy phases removed; all 7 phases pass without API
+- linkedin-20260415-001 in-progress (graph.state cause cleared; awaits live verification post session-refresh); new linkedin-20260415-002 created for verification + daily auth-preflight cron
 
 ---
 

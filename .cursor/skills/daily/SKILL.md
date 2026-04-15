@@ -292,10 +292,15 @@ day: Monday
 ## Evening Shutdown
 
 1. Update today's note: fill in Wins, Challenges, Tomorrow's priority
-2. For each task completed today: update `status: done` in the task file in `tasks/open/`
+2. For each task completed today: update `status: done` in the task file in `tasks/open/` and move the file to `tasks/done/`
 3. Scan `inbox/` — for each item, either create a task file or discard. No inbox items should be copied inline into the daily note.
-4. Prompt: "Any decisions or learnings worth capturing?" — capture in `## Notes` as free text only. If it creates an action item, make a task file.
-5. Prompt: "Any new action items from today?" — for each: create a task file in `tasks/open/`, then note the ID in `## Notes`.
+4. Prompt: "Any decisions or learnings worth capturing?" — **do not write these into the daily note.** Route each item to its proper long-lived home:
+   - **Project-specific decisions or design patterns** → `projects/{project-id}.md` under a `## Decisions` section, dated (e.g. `### YYYY-MM-DD — short title`)
+   - **R&D operating rules, payroll/compliance procedures, grant-level learnings** → `dashboards/nexwave-rd.md` under the relevant section (e.g. Payroll → `### Operating rules (learnt)`)
+   - **Cross-cutting engineering or workflow patterns** → the most relevant dashboard under a `## Decisions` or `## Rules` section
+   - The daily `## Notes` section is **only for ephemeral session observations** (what I tried, what surprised me today) — anything a future agent or future-Ryo needs to find later belongs in a project or dashboard, not buried in a daily note.
+   - If the decision creates an action item, make a task file as well.
+5. Prompt: "Any new action items from today?" — for each: create a task file in `tasks/open/`. Do **not** duplicate the action into the daily note.
 
 ## Task-Based Progress Tracking
 

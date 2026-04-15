@@ -29,6 +29,11 @@ Fine jewellery ecommerce brand (NZ) specialising in moissanite and pearl pieces.
 - Returns 202 Accepted on success
 - Env vars: `KLAVIYO_PRIVATE_KEY`, `KLAVIYO_LIST_ID` — must be set in both `.env.local` and Vercel project settings
 
+## Decisions
+
+### 2026-04-15 — Two-track collaboration model for non-dev collaborator
+Ting works directly on `master` with zero git literacy; Ryo uses feature branches + Vercel preview URLs for approval before merge. The onboarding primitives are `.vscode/tasks.json` (dev server auto-start on folder open), `.vscode/settings.json` (one-click commit auto-pushes), a `Ctrl+Alt+P` publish shortcut, and a plain-English `TING-GUIDE.md`. Trade-off explicitly accepted: coordination risk in exchange for Ting's autonomy — she can edit content end-to-end without touching a terminal or understanding branches. Pattern is reusable for any future non-dev collaborator on any repo.
+
 ## Weekly Progress Log
 
 ### Week of 2026-04-13
