@@ -31,6 +31,18 @@ Fine jewellery ecommerce brand (NZ) specialising in moissanite and pearl pieces.
 
 ## Weekly Progress Log
 
+### Week of 2026-04-13
+
+- Two-track collaboration workflow set up: Ting works directly on master (no branching); Ryo uses feature branches with Vercel preview URLs for approval before merging
+- `.vscode/tasks.json` — dev server auto-starts when project opens in Cursor (no terminal for Ting)
+- `.vscode/settings.json` — one-click commit auto-pushes to master
+- `TING-GUIDE.md` — plain-English workflow guide for Ting
+- `CLAUDE.md` updated with two-track workflow note so AI agents know not to suggest branches/terminal to Ting
+- `Ctrl+Alt+P` keyboard shortcut — one-keypress publish with timestamped commit message
+- `.env.example` committed; `.gitignore` updated to track it
+- `docs/ting-laptop-setup.md` — in-person setup checklist ready to follow on Ting's machine
+- Next: complete setup on Ting's laptop (miozuki-20260415-001)
+
 ### Week of 2026-04-07
 
 - Implemented Miozuki 2.0 UI/UX on branch `feat/ui-animations-2.0` — 13 files, 778 insertions: scroll-reveal animations, staggered grids, hero line-by-line reveal, animated FAQ accordion, mobile snap-scroll product rail, luxury hover overlay, CSS marquee announcement bar, nav restructure with animated dropdowns, homepage reorder, differentiator strip, stone stats bar, email capture section, section diamond dividers
