@@ -94,3 +94,14 @@ These Claude Code skills are configured for vault work (invoke with `/skill-name
 | `/calendar-sync` | Sync active sprint timelines to Google Calendar |
 | `/session-update` | End-of-session update — progress log, new tasks, project step status |
 | `/json-canvas` | Create/edit `.canvas` files |
+
+## Change discipline
+
+Every changed line must trace directly to the user's request.
+
+- Do not "tidy" adjacent frontmatter, reformat Dataview queries, or reorder task table columns that the task did not ask you to touch. Small formatting edits can silently break dashboards.
+- Do not rewrite task descriptions, sprint goals, or project notes the user wrote. Those are the user's words.
+- Match existing style across task files, sprint files, and dashboards. Do not introduce a new pattern into one file.
+- If you notice a broken Dataview query, a stale task status, or a misnamed file, mention it. Do not fix it without being asked.
+- Quote any frontmatter value containing `: ` (e.g. `title: "Review: Q2 plan"`). Dataview silently drops unquoted values with colons.
+- For non-trivial edits (new dashboard, sprint restructure, bulk task updates), state a brief plan before editing.
