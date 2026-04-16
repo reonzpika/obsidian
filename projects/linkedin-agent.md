@@ -25,10 +25,21 @@ Installed `@playwright/cli` v0.1.8 globally, registered its skills at `.claude/s
 ### 2026-04-15 — Audit + bug sweep across 10 workflows
 Comprehensive audit at `temporary/audit/` (10 workflow markdowns + index): 7 critical, 28 significant, 36 minor issues identified. High-priority fixes shipped this session: silent `first_comment` drop in `schedule_post` (now retries URN extraction 3×, preserves text on failure), `executor_run` per-comment failure tolerance (≥4/6 success threshold), two-phase execution result merging (no more lost phase-1 comments), session cookie expiry pre-check in `playwright_settings`, auth pre-flight script (`scripts/auth_preflight.py`), nav-chrome heuristic in planner output, scheduling registry pruning + hash-based task names, em-dash check extended to Golden Hour comments, debug instrumentation purged from production. Pure-logic test coverage added for executor + scheduler.
 
+## Decisions
+
+### 2026-04-16 — SDUI DOM selector fix for feed scraping
+LinkedIn overhauled their feed DOM to SDUI architecture (obfuscated class hashes, `componentkey` UUIDs, no more `data-id`/`data-urn` attributes). Scout was returning 0 targets for 3 weeks. Fix: auto-detect LazyColumn presence, use `[role="listitem"]` for post containers, regex `urn:li:activity:\d+` from innerHTML for post URLs, `[data-testid="expandable-text-box"]` for snippets, `a[href*="/in/"]` for author names. Legacy selectors kept as fallback if LinkedIn reverts. Changes confined to `tools/browser.py`. Verified: 20 feed targets + 1 pinned target extracted successfully.
+
+### 2026-04-16 — Daily auth pre-flight cron
+`schtasks` task `LinkedInAuthPreflight` runs `scripts/auth_preflight.py` daily at 8am NZST. Exit 0 = session valid; exit 2 = expired (run `login.py`); exit 3 = file missing. Gives 24-hour warning before any post slot. Task created via `scripts/create_auth_cron.bat`.
+
 ## Weekly Progress Log
 
 ### Week of 2026-04-14
 
+- Scout feed scraping fixed for April 2026 LinkedIn SDUI DOM overhaul: new selectors (`role="listitem"`, regex URN from innerHTML, `data-testid` for snippets), auto-detection with legacy fallback
+- Daily auth_preflight cron set up at 8am via `schtasks` (24h warning before post slots)
+- linkedin-20260415-001 and linkedin-20260415-002 closed
 - Phase 1–8 skill-driven flow cutover complete: Researcher → Architect → Strategist → Analyst → Picker → Planner → Image Architect; `agents/_llm.py` and langchain dependencies removed
 - Strategist judgement prompt extracted to markdown; deterministic guardrails extracted to standalone module with 14 tests
 - Architect loads MBIE N2RD LinkedIn-safe context at runtime for Pillar 2 posts
