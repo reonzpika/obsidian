@@ -29,6 +29,9 @@ Products: referral-images, ai-scribe, 12-month-prescription, acc, openmailer
 - Design system updated (`context/clinicpro-context/clinicpro-design-system.md`): §2 new dark bg colours (`#0c2820` forest green, `#0f172a` navy); §6 full animation rewrite (signature easing, all patterns documented); §7 section rhythm map and dark section rules
 - `colour-options.md` shared elements updated: old `#0c1628` replaced with two new dark backgrounds
 
+- saas-20260409-003 closed: "full audit trail" claim softened on Referral Images marketing page (three instances at L700/L790/L871 replaced with accurate copy)
+- saas-20260409-006 closed: editorial images generated for referral-images landing page (§ 01 problem section + § 02 workflow section)
+
 ### Week of 2026-04-07
 
 - AI Scribe landing page (`app/(marketing)/ai-scribe/page.tsx`) fully rewritten — copy + letter-grammar visual migration
