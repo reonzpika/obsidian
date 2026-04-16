@@ -11,7 +11,7 @@ Products: ClinicPro Capture (and future Medtech ALEX products)
 | **Products** | [[clinicpro-capture]], [[clinicpro-dashboard]] |
 | **API reference** | [[alex-api-docs]] |
 | **Glossary** | [Medtech / ALEX Glossary](context/medtech-context/glossary.md) |
-| **Active sprint** | [[2026-03-sprint-1]] |
+| **Active sprint** | [[2026-04-medtech-sprint-1]] |
 | **Repo map** | [[repos]] |
 
 ---

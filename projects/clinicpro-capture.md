@@ -12,15 +12,19 @@ Mobile web app that photographs clinical images and commits them to patient reco
 **API reference**: [[alex-api-docs]]
 
 ## Current goals
-- Ship /about-capture landing page
+- Ship Phase 1 marketing (landing page, refer-a-practice, in-app banner, champion email, demo Loom) by 2026-04-21
+- Warm-list blitz targeting ~60 NZ GP champions starts 2026-04-20
 - Await Medtech production sign-off
 - Onboard first paying practices after sign-off
+- Success gate: 3+ practices paying or trialling by end of week 4
 
 ## Key decisions
-- Routes: /medtech/capture (app), /about-capture (landing page)
+- URL architecture (decided 2026-04-16): marketing at `/medtech/{product}` (public, `(marketing)` route group), app at `/app/medtech/{product}/*` (authenticated, `(clinical)` route group)
+- Marketing typography: Newsreader (serif display), IBM Plex Sans (body), JetBrains Mono (mono). Inter stays in-app only.
 - Auth: Supabase OTP (6-digit code, no magic link)
-- Pricing: FTE-based tiers, 30-day free trial
+- Pricing (decided 2026-04-15): annual per practice by enrolled patient count ($299 / $799 / $1,500 / contact). No self-serve trial. Concierge trial via ryo@clinicpro.co.nz.
 - BFF mandatory: never call ALEX directly from Vercel
+- Phase 1 plan: `clinicpro-medtech/docs/superpowers/plans/2026-04-15-capture-marketing-phase1.md`
 
 ## AU market — Lawrence Peterson (Medtech Global)
 
