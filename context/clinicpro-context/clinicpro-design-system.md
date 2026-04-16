@@ -67,7 +67,9 @@ Research basis: Colour must never be the sole information carrier (WCAG 2.2, 1.4
 | Warning / caution | `#d97706` | `amber-600` | Use amber, NOT red — red elevates anxiety |
 | Error / destructive | `#dc2626` | `red-600` | Errors only; never as primary accent |
 | Quote / highlight accent | `#f59e0b` | `amber-400` | For GP quotes, callouts, human moments |
-| Dark hero bg | `#0c1628` | inline style | Marketing dark sections only |
+| Dark forest green bg | `#0c2820` | inline style | Evidence sections, featured product cards |
+| Dark navy bg | `#0f172a` | `slate-900` | Story/narrative dark sections |
+| Cream page bg | `#fafaf7` | inline style | Main page background |
 | Neutral base | `#f8fafc` | `slate-50` | Page backgrounds, light sections |
 | Neutral surface | `#f1f5f9` | `slate-100` | Cards on light bg |
 | Text primary | `#0f172a` | `slate-900` | All primary text |
@@ -233,50 +235,81 @@ Info: bg-blue-50 border-blue-200 text-blue-800 + Info icon
 ## 6. Animation Principles
 
 ### Rationale
-Research finding: Excessive animation in clinical software reduces trust scores and signals "not serious." Clinicians don't want delight — they want clarity and speed. Animations must be purposeful, fast, and invisible as a pattern (users shouldn't notice them as a feature).
+Research finding: Excessive animation in clinical software reduces trust scores and signals "not serious." Clinicians don't want delight — they want clarity and speed. Marketing pages are an exception: scroll-triggered reveals, staggered entrances, and subtle continuous motion create a modern editorial feel (inspired by Maven Clinic and Hers). All marketing animations must respect `prefers-reduced-motion`.
+
+### Signature easing curve
+All marketing page transitions use `cubic-bezier(0.33, 0, 0, 1)` (smooth deceleration, inspired by Hers). This replaces generic `ease` across the codebase. In-app clinical UI continues to use `ease` or `ease-out`.
 
 ### What to animate
 
 | Animation | Use case | Spec |
 |-----------|----------|------|
-| Scroll reveal (fade + translate) | Marketing page sections | 0.55s ease, 28px translateY, IntersectionObserver, fires once |
-| Hero entrance stagger | Marketing page hero only | CSS keyframes, 0.08s delay increments, 5 elements max |
-| Header glass effect | Sticky header on scroll | `backdrop-blur-md bg-dark/95`, transition 300ms |
-| Button hover glow | Primary CTA buttons only | `box-shadow` ring, 200ms ease |
-| Accordion expand | FAQ, collapsible panels | ChevronDown rotate 180°, 200ms |
+| Scroll reveal (fade + translate) | Marketing page sections | `0.7s cubic-bezier(0.33, 0, 0, 1)`, 28px translateY, IntersectionObserver with `rootMargin: '0px 0px -15% 0px'` (triggers at ~85% viewport), fires once |
+| Hero entrance stagger | Marketing page hero only | CSS `lg-hero-enter` class with `--hero-delay` CSS variable per element (0s portrait, 0.05s marginalia, 0.1s eyebrow, 0.18s headline, 0.32s subline, 0.48s CTAs) |
+| Portrait float | Hero portrait image only | `translateY(0 → -8px → 0)`, 6s infinite `ease-in-out`. Subtle continuous motion that makes the static photo feel alive |
+| Counter count-up | Evidence section stat numbers | `requestAnimationFrame` counter, 1.5s duration, ease-out cubic, triggers on scroll via IntersectionObserver |
+| Header glass effect | Sticky header on scroll | `backdrop-blur(12px)`, transition 300ms |
+| Button hover glow | Primary CTA buttons only | `box-shadow` ring, 250ms `cubic-bezier(0.33, 0, 0, 1)` |
+| Card lift hover | Marketing product cards | `translateY(-2px)` + shadow, 250ms `cubic-bezier(0.33, 0, 0, 1)` |
+| Accordion expand | FAQ, collapsible panels | `grid-template-rows: 0fr → 1fr`, 0.35s `cubic-bezier(0.33, 0, 0, 1)`. ChevronDown rotate 180°, 300ms same easing |
 | Loading spinner | Async states only | `animate-spin` |
 | Error/success state | Form feedback | Fade in, no translate |
 
 ### What not to animate
 - Page transitions (jarring in clinical context)
-- List items animating in sequence (distracting)
 - Hover animations on non-interactive elements
-- Looping animations on content (draws unwanted attention)
 - Any animation that delays access to information
+- In-app clinical UI (loading states only)
 
 ### Timing rules
-- Fast interactions (hover, toggle): 150–200ms
-- Reveals (scroll, modal open): 400–600ms
+- Fast interactions (hover, toggle, card lift): 200–300ms
+- Reveals (scroll, modal open): 600–900ms
+- Hero entrance sequence: 0.9s per element, staggered 0.05–0.48s
+- Continuous ambient (portrait float): 6s
 - Nothing above 600ms in clinical UI
+
+### Reduced motion
+All marketing animations wrapped in `@media (prefers-reduced-motion: reduce)` safety net. `lg-hero-enter` and `lg-float` classes set `animation: none; opacity: 1` when reduced motion is preferred.
 
 ---
 
 ## 7. Dark Sections
 
-### When to use dark backgrounds
-Dark sections (`#0c1628` navy or `bg-slate-900`) are high-impact and should be used sparingly:
+### Section rhythm
+The homepage uses dark/light alternation to create visual rhythm (inspired by Maven Clinic). Two dark sections break up the otherwise cream page:
 
-- **Marketing hero:** Yes — creates immediate visual authority
-- **Security/compliance sections:** Yes — signals seriousness, weight, institutional trust
-- **Final CTA banners:** Use product primary colour (`bg-nz-blue-600` or `bg-teal-600`) instead of dark
+```
+CREAM #fafaf7   ████████  Hero
+WHITE/60        ██        Proof strip
+DARK GREEN      ████      Evidence section (#0c2820)
+CREAM           ████████  Tools (hero card also uses #0c2820)
+DARK NAVY       ████      Story section (#0f172a / slate-900)
+CREAM           ████████  Principles, CTA, Roadmap, FAQ, Footer
+```
+
+### Two dark background colours
+
+| Name | Hex | Use |
+|------|-----|-----|
+| Dark forest green | `#0c2820` | Evidence/stats sections, featured product cards. Carries the nz-green brand into dark contexts |
+| Dark navy | `#0f172a` (slate-900) | Narrative/story sections. Neutral dark that lets amber accents and white text breathe |
+
+Do not mix these in the same section. Do not introduce additional dark colours.
+
+### When to use dark backgrounds
+- **Evidence/stats sections:** Dark forest green — signals weight and authority for data
+- **Story/narrative sections:** Dark navy — creates immersive reading context
+- **Featured product cards:** Dark forest green — differentiates the hero product from other cards
+- **Security/compliance sections:** Either dark colour appropriate
 - **In-app clinical UI:** Never — dark is for marketing only
 
 ### Dark section rules
-- Text on dark: `text-white` for headings, `text-white/70` for body, `text-white/45` for supporting
-- Borders: `border-white/10` (not `border-white` — too harsh)
-- Cards on dark: `bg-white/5 border border-white/10`
-- Grid texture (optional, subtle): `rgba(255,255,255,0.025)` grid at 48px — creates clinical precision feel
-- Subtle glow: `bg-[product-primary]/15 blur-3xl` positioned top-centre
+- Text on dark: `text-white` for headings, `text-white/60–70` for body, `text-white/30–40` for supporting/citations
+- Borders: `border-white/20` for corner brackets, `border-white/10` for card edges
+- Grain texture: `lg-grain-dark` class — `rgba(255,255,255,0.04)` dot grid at 22px, opacity 20–30%
+- Subtle glow: `bg-nz-green-700/10 blur-3xl` (green sections) or `bg-amber-500/5 blur-3xl` (navy sections)
+- Section marker labels on dark: `text-amber-400/70` (not amber-700, which is invisible on dark)
+- Blockquote accent line: `bg-amber-400` (same as cream sections — the amber reads well on both)
 
 ---
 
@@ -370,5 +403,5 @@ Non-negotiable. Clinical software with poor accessibility has patient safety imp
 
 ---
 
-*Last updated: 2026-04-09*
-*Research basis: colour psychology in healthcare UI (JMIR, UXMatters, Naskay 2025), typography in clinical settings (Letter Hend, FontAlternatives), GP workflow UX (AMA, PMC), NZ/AU cultural context (Cultural Atlas, SBS).*
+*Last updated: 2026-04-16*
+*Research basis: colour psychology in healthcare UI (JMIR, UXMatters, Naskay 2025), typography in clinical settings (Letter Hend, FontAlternatives), GP workflow UX (AMA, PMC), NZ/AU cultural context (Cultural Atlas, SBS). Animation patterns: Maven Clinic (GSAP ScrollTrigger, counter animations, dark/light rhythm), Hers (CSS-only, cubic-bezier easing, gentle float).*

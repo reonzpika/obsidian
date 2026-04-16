@@ -145,7 +145,8 @@ These do not change regardless of which option is chosen:
 | Text secondary | `#475569` | `slate-600` |
 | Text tertiary | `#94a3b8` | `slate-400` |
 | Border | `#e2e8f0` | `slate-200` |
-| Dark hero bg | `#0c1628` | inline style |
+| Dark forest green bg | `#0c2820` | inline style |
+| Dark navy bg | `#0f172a` | `slate-900` |
 | Success | `#16a34a` | `green-600` |
 | Warning | `#d97706` | `amber-600` |
 | Error | `#dc2626` | `red-600` |
