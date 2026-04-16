@@ -227,7 +227,7 @@ Payroll software: Xero. Paid monthly in arrears. PAYE deducted at source.
 | MBIE eligible hourly rate (incl. 20% overhead) | $96.00/hr | $70.00/hr |
 | Hours/week on R&D | 30 | 40 |
 
-> **Status (15 Apr 2026):** Corrected employment agreement received from Helen ($58.33/hr, $102,194.16 annual). PDF emailed to Ting 15 April for re-signature; signed copy due back by 20 April. Signed contract + payslip from first pay run (16 April) to be uploaded to MBIE portal before 30 April. Tracked in rd-20260415-001 (Ting signature) and rd-20260404-001 (MBIE submission).
+> **Status (16 Apr 2026):** First pay run executed 16 April (period 16 Mar–15 Apr). Ryo net $7,629.57, Ting net $7,440.68, PAYE $5,440.28 due 20 May. Auto-payment set up for monthly 16th. Corrected employment agreement emailed to Ting 15 April for re-signature; signed copy due 20 April. Signed contract + payslip to be uploaded to MBIE portal before 30 April. Tracked in rd-20260415-001 (Ting signature) and rd-20260404-001 (MBIE submission).
 
 ### Operating rules (learnt)
 
@@ -425,6 +425,9 @@ AI-maintained weekly log. Primary audit trail for MBIE claims. Hours: Ryo ~30hrs
 - `nexwave-rd/CLAUDE.md` cleaned: unratified Inbox triage / data-residency architecture lines removed pending decision sign-off
 - Compliance consultant outreach expanded to four firms: Elevate Medtech (Anne Arndt), Buddle Findlay (Catherine Miller), Aesculytics (Dr Arindam Bose), Bell Gully (Dr Laura Hardcastle + Kirsty Dobbs) — awaiting initial assessments and indicative costs — rd-20260415-002 tracking
 - First NexWave pay run scheduled 16 April (covering 16 Mar–15 Apr): Helen runs Xero payroll + IRD filing; Ryo executes bank transfers on the day — rd-20260415-003 created
+- First pay run executed 16 April: Ryo net $7,629.57, Ting net $7,440.68, PAYE $5,440.28 due 20 May 2026. Auto-payment configured for monthly 16th. rd-20260415-003 closed. Payslip to be downloaded from Xero for MBIE evidence (rd-20260404-001).
+- Indici outreach escalated: follow-up email to info@valentiatech.com with NexWave Health programme brief PDF attached; LinkedIn direct messages sent to Dr Ahmad Javad (President, Technical Services) and Imran Rashid (product development manager). All prior cold outreach (Apr 4 LinkedIn, Apr 9 ×3 emails) unanswered. Phone escalation (07 929 2090) if no reply by 17 April.
+- NexWave Health programme brief (`nexwave-rd/docs/programme/nexwave-health-brief.md`) frontmatter corrected: broken YAML (`## title:` instead of `title:`, missing closing `---`) was causing heading section to be swallowed in PDF export. Grant amount and Medtech market share descriptor removed from brief per Ryo's request.
 
 ### Week of 5 April 2026
 
