@@ -6,6 +6,24 @@ Products: referral-images, ai-scribe, 12-month-prescription, acc, openmailer
 
 ## Weekly Progress Log
 
+### Week of 2026-04-14
+
+- Homepage copy rewrite (Option B) completed: hero subline updated to "15-minute slots, four active problems" NZ GP specificity; AI Scribe card Heidi reference removed and replaced with multi-problem consult positioning; principles cards replaced with "GP-built / NZ-tested / Privacy-first" falsifiable claims; "Clinical Orchestration — Vision" removed from roadmap
+- Both homepage stats cited: "11.5 hours outside the consult room" (RNZCGP Workforce Survey, 2022) and "92% rate increasing patient complexity as overwhelming" (RNZCGP Burnout Survey, 2021)
+- Proof strip updated: "Built by a practising GP · Auckland, NZ · Shipping weekly" → "GP-built · NZ-tested · Privacy-first"
+- Full homepage visual redesign inspired by Maven Clinic (GSAP/ScrollTrigger patterns) and Hers (CSS-only easing):
+  - Hero: staggered entrance animation (CSS `lg-hero-enter` with variable delays, 0s–0.48s); portrait continuous float (6s `translateY` bob)
+  - NEW evidence section: dark forest green `#0c2820` full-bleed with grain texture; two animated counters (11.5 and 92%) count up on scroll via `requestAnimationFrame`
+  - Tools: reverted to single column `max-w-3xl`; Referral Images hero card gets dark green bg with grain overlay; AI Scribe trimmed to 1 paragraph
+  - Story section: flipped to dark navy `#0f172a` (slate-900) with grain and amber glow
+  - FAQ: bouncy accordion via `grid-template-rows` animation (0fr ↔ 1fr) with `cubic-bezier(0.33, 0, 0, 1)` at 0.35s
+  - Signature easing: all marketing transitions updated from `ease` to `cubic-bezier(0.33, 0, 0, 1)`; Reveal duration 0.55s → 0.7s; scroll trigger rootMargin for ~85% viewport trigger
+  - `prefers-reduced-motion` safety net added for hero entrance and portrait float
+- `ReferralImagesHomeCard` dark variant added (`dark` prop: white text, amber-400 label, inverted CTA)
+- Story section paragraph 2 rewritten: removed self-deprecating "little tools" / "just me" / "coding in spare time"; replaced with belief-driven narrative ("GPs have accepted bad software as a fact of life. We work around it, build workarounds for the workarounds...")
+- Design system updated (`context/clinicpro-context/clinicpro-design-system.md`): §2 new dark bg colours (`#0c2820` forest green, `#0f172a` navy); §6 full animation rewrite (signature easing, all patterns documented); §7 section rhythm map and dark section rules
+- `colour-options.md` shared elements updated: old `#0c1628` replaced with two new dark backgrounds
+
 ### Week of 2026-04-07
 
 - AI Scribe landing page (`app/(marketing)/ai-scribe/page.tsx`) fully rewritten — copy + letter-grammar visual migration
