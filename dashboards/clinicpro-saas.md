@@ -8,6 +8,11 @@ Products: referral-images, ai-scribe, 12-month-prescription, acc, openmailer
 
 ### Week of 2026-04-14
 
+- GP profile photo regenerated (saas-20260409-008 closed): two editorial images via Nano Banana Pro with reference-image refinement — v1d (desk/office, lived-in background) replaces `DrRyoEguchiProfilePicMain.jpg` for homepage hero + all avatar uses; alt-v2a (consultation room, candid off-camera gaze) saved as `DrRyoEguchiProfilePicClinic.jpg` for FounderSection + product pages
+- AI Scribe § 05 "Why I built this" redesigned: single-column text → two-column editorial layout with clinic portrait (left 2/5) and story text (right 3/5); copy edit removed "and iterate when something breaks"
+- Referral Images page: founder trust strip added between § 03 "Honest about everything" and § 04 "Privacy by design" — clinic portrait + founder quote ("I built this because I kept emailing clinical photos to myself")
+- `FounderSection.tsx` and `clinicpro-landing.ts` updated to reference clinic image; AI Scribe and Referral Images small avatars remain on main (desk) image
+- Prompt sidecar files created: `scripts/prompts/gp-profile-main.prompt.md`, `scripts/prompts/gp-profile-alt.prompt.md`
 - Homepage copy rewrite (Option B) completed: hero subline updated to "15-minute slots, four active problems" NZ GP specificity; AI Scribe card Heidi reference removed and replaced with multi-problem consult positioning; principles cards replaced with "GP-built / NZ-tested / Privacy-first" falsifiable claims; "Clinical Orchestration — Vision" removed from roadmap
 - Both homepage stats cited: "11.5 hours outside the consult room" (RNZCGP Workforce Survey, 2022) and "92% rate increasing patient complexity as overwhelming" (RNZCGP Burnout Survey, 2021)
 - Proof strip updated: "Built by a practising GP · Auckland, NZ · Shipping weekly" → "GP-built · NZ-tested · Privacy-first"
