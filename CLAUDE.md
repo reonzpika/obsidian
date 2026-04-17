@@ -63,6 +63,10 @@ R&D tasks add: `objective: obj-1|obj-2|obj-3|obj-4|capability` and `owner: ryo|t
 
 **Sprint** (`sprints/active/*.md`): `id`, `status`, `start`, `end`, `repos`, `projects`, `goal`.
 
+## Advanced Obsidian syntax
+
+For callouts, embeds, block references, mermaid, footnotes, or any Obsidian syntax beyond frontmatter and basic wikilinks: invoke the `/obsidian-markdown` skill before writing. The skill has the full syntax reference.
+
 ## Vault rules
 
 - **No code in the vault.** Implementation lives in the task's `repo:`, not here.
