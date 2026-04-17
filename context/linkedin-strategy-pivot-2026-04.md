@@ -252,10 +252,8 @@ See Section 7 below.
 
 ### Proposed Newsletter
 
-**Name options (pick one):**
-1. "From the Clinic Floor" (matches Pillar A, clinical grounding)
-2. "The GP Builder" (captures dual identity)
-3. "Primary Care Unpacked" (broader appeal to healthcare leaders)
+**Name:** "The GP Builder"
+Captures the unique dual identity. The main feed is audience-value (no builder content). The newsletter is where the builder identity lives, so naming it after the builder angle is correct.
 
 **Frequency:** Fortnightly (every other Friday at 12:00 PM NZST)
 - Weekly is optimal for growth but fortnightly is more sustainable alongside 2 posts/week
@@ -282,8 +280,7 @@ See Section 7 below.
 ### Recommended Profile Updates
 
 **Headline (120 chars max):**
-Current: [unknown, needs checking]
-Proposed: `GP building software to fix NZ primary care | Founder, ClinicPro | MBIE R&D`
+**Decided:** `GP building software to fix NZ primary care | Founder, ClinicPro | MBIE R&D`
 
 **Why:** Matches both pillars. 360Brew sees "GP" + "building software" + "primary care" and connects this to your post topics.
 
@@ -292,7 +289,7 @@ Structure:
 - Line 1: Who you are in one sentence ("I'm a practising GP in Auckland who also builds health technology.")
 - Line 2-3: The problem you care about ("Every day I see the gap between what GPs need and what our systems provide.")
 - Line 4-5: What you're doing about it ("I'm building ClinicPro to close that gap, funded by MBIE's New to R&D programme.")
-- Line 6: The newsletter CTA ("I write about what I see in clinic and what I learn building. Subscribe to [newsletter name].")
+- Line 6: The newsletter CTA ("I write about what works in NZ primary care and what I learn building. Subscribe to The GP Builder.")
 
 **Banner image:** Update to reflect the dual GP/builder identity. Options:
 - Split image: clinic on one side, code/product on the other
@@ -488,7 +485,7 @@ Structure:
 1. **Carousel PDF generation pipeline.** Currently the image_architect plans slides but there's no automated PDF assembly. Options: Canva API, HTML-to-PDF via Playwright, or manual Figma/Canva export.
 2. **Newsletter publishing workflow.** LinkedIn newsletter creation is manual the first time (set up via linkedin.com/newsletters). After setup, articles can be published via the regular posting flow.
 3. **Comment tracking.** Currently only Golden Hour comments are tracked. Need to track daily commenting activity and its impact on profile views/follower growth.
-4. **Google Alerts integration.** The "Worth Reading" newsletter section can pull from the context-linkedin.md curation file already created this session.
+4. **Google Alerts integration.** The "Worth Reading" newsletter section can pull from `LinkedIn/knowledge/news_feed.md` (auto-updated from Gmail Google Alerts via the daily routine).
 
 ---
 
@@ -548,7 +545,7 @@ LinkedIn's 360Brew algorithm penalises AI content through quality signals, not b
 | Hook slide | Max **8-12 words**, profile photo, contrasting colour | 2.8x more clicks with unique first slide |
 | Completion rate threshold | **35% minimum** or algorithm penalises | LinkBoost, 2026 |
 | Upload format | **PDF only** (LinkedIn removed native carousel) | Platform change 2025 |
-| Production time | **15-20 min** with Canva template | After one-time template setup |
+| Production time | **15-20 min** with Nano Banana 2 (local API, existing pipeline) | After one-time template setup |
 
 **Carousel template (7 slides, portrait):**
 
@@ -588,7 +585,7 @@ LinkedIn's 360Brew algorithm penalises AI content through quality signals, not b
 1. Process voice memos, pick 2 strongest observations (15 min)
 2. AI draft from seed content + past posts for voice (20 min)
 3. Human edit using the 7-step protocol above (15 min)
-4. Carousel production in Canva template (15 min)
+4. Carousel production in Nano Banana 2 (local API, existing pipeline) (15 min)
 5. Schedule everything via LinkedIn native scheduler (10 min)
 
 **Fortnightly newsletter add-on (30 min every other week):**

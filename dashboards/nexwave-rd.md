@@ -102,6 +102,49 @@ See tasks in the NexWave R&D Tasks database.
 
 ---
 
+## Regulatory & Compliance
+
+Central tracker for legal and regulatory advice sought from NZ health-law and SaMD firms. Sits under the Regulatory & Compliance Capability Development line ($18k). Related task: [[rd-20260415-002]].
+
+### Firms contacted
+
+| Firm | Contact | Type | Reached out | Status | Proposal |
+|---|---|---|---|---|---|
+| Bell Gully | Laura Hardcastle (Sr Associate), Kirsty Dobbs | Health law, SaMD specialist | 2026-04-15 | Proposal received 2026-04-16 | Phase 1 $2,500–$4,000 + GST. SaMD obligations under current law plus Medical Products Bill signalled obligations. Conflict check + 3 AI-output Qs required before proceeding. |
+| Buddle Findlay | Catherine Miller (Special Counsel) | Health law firm | 2026-04-07 | Proposal received 2026-04-17 | $9,000–$12,000 + GST + 3.5% service fee (20% R&D discount). Overview across 5 compliance areas: Privacy, System Standards, Professional Regulation, Contract Compliance, Marketing. Optional MTANZ/IP/Medical Products Bill notes. |
+| Elevate Medtech | Anne Arndt | SaMD regulatory consultant | 2026-04-08 | Away until 2026-04-29 | Awaiting response |
+| Aesculytics | Dr Arindam Bose | Clinical AI + Medsafe consultant | 2026-04-15 | No response | — |
+| CARSL | David Smyth | Medsafe sponsor / device registration | 2026-04-08 | Deprioritised | Not relevant — sponsor/registration focus only |
+
+### Combined summary (Bell Gully + Buddle Findlay)
+
+- **No NZ AI-specific legislation.** Core statutory framework is the Privacy Act 2020 + Health Information Privacy Code 2020. Privacy Commissioner is proactively publishing AI guidance.
+- **Recommended first step:** Privacy Impact Assessment (PIA). NexWave likely well-placed to draft; firms can review or support.
+- **SaMD question is central.** Under the Medicines Act 1981, clarity on whether assist-only clinical AI qualifies as a medical device is limited. The proposed Medical Products Bill is intended to cover SaMD + AI, but Bell Gully views introduction in this parliamentary term as increasingly unlikely given election proximity.
+- **System standards:** HISO technical standards, PHO contract obligations (back-to-back with Health NZ funding agreements), Health NZ API standards — all potentially relevant to tool design.
+- **Professional regulation:** MCNZ released new AI-in-patient-care guidance March 2026. Health (Retention of Health Information) Regulations, HDC Code of Rights, recordkeeping obligations all sit on the GP, but tools must support compliance.
+- **Contract compliance:** Overlapping obligations from MBIE grant, Medtech partnership, and ALEX FHIR API licence flow through to tool design and licensing.
+- **MTANZ Code of Ethics:** Voluntary body with consumer complaints + inter-member dispute mechanisms. Flagged by Buddle Findlay as worth considering.
+- **Marketing / Fair Trading Act 1986:** Relevant at trial-pool recruitment and commercialisation, not now.
+
+### Proposal comparison
+
+| | Bell Gully (Phase 1) | Buddle Findlay |
+|---|---|---|
+| Cost | $2,500–$4,000 + GST | $9,000–$12,000 + GST + 3.5% |
+| Scope | SaMD classification + Medical Products Bill | All 5 compliance areas overview |
+| Follow-up | Explicit Phase 2 for deeper SaMD advice | Self-directed deep-dives after overview |
+| Prerequisites | Conflict check, 3 AI-output Qs answered | None stated |
+| Best fit | If primary concern is device classification | If want full compliance landscape map |
+
+### Decision log
+
+| Date | Entry |
+|---|---|
+| 2026-04-17 | Both proposals in hand. Open question: narrow-and-cheap (Bell Gully) vs broad-and-expensive (Buddle Findlay), or both-in-parallel. Budget envelope $18k across 18 months (Capability Development line) comfortably covers either; combining both would consume most of the first engagement. Elevate Medtech may add a third view when Anne returns 2026-04-29. |
+
+---
+
 ## Critical Deadlines
 
 | Deadline | Date | Notes |
