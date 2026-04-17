@@ -1,17 +1,19 @@
-# Dashboard — All Projects
+# Dashboard: All Projects
 
 ---
 
 ## Dashboards
 
-### ClinicPro Medtech — [[clinicpro-medtech]]
+### ClinicPro Medtech: [[clinicpro-medtech]]
+Code: `./clinicpro-medtech`
 
 | Project | Status |
 | --- | --- |
 | [[clinicpro-capture\|ClinicPro Capture]] | 🔵 Active |
 | [[clinicpro-dashboard\|ClinicPro Dashboard]] | 🔵 Active |
 
-### ClinicPro SaaS — [[clinicpro-saas]]
+### ClinicPro SaaS: [[clinicpro-saas]]
+Code: `./clinicpro-saas`
 
 | Project | Status |
 | --- | --- |
@@ -19,30 +21,33 @@
 | [[12-month-prescription\|12-Month Prescription]] | 🔵 Active |
 | [[referral-images\|Referral Images]] | 🔵 Active |
 
-### Nexwave R&D — [[nexwave-rd]]
+### Nexwave R&D: [[nexwave-rd]]
+Code: `./nexwave-rd`
 
 | Project | Status |
 | --- | --- |
 | [[nexwave-rd-obj-1\|R&D Objective 1]] | 🔵 Active |
 
-### GP Fellowship — [[dashboards/gp-fellowship]]
+### GP Fellowship: [[dashboards/gp-fellowship]]
+No code repo. Personal training.
 
 | Project | Status |
 | --- | --- |
 | [[gp-fellowship\|GP Fellowship]] | 🔵 Active |
 
-### Side Projects — [[side-projects]]
+### Side Projects: [[side-projects]]
 
-| Project | Owner | Status | Notes |
-| --- | --- | --- | --- |
-| [[linkedin-agent]] | Ryo | 🟢 Production | Automated. Low maintenance. |
-| [[miozuki]] | Ting | 🔵 Active | NZ fine jewellery — Next.js headless frontend. |
-| [[ahuru]] | Ting | 🔵 Active | Ting's ecommerce SEO project. |
-| [[gp-community]] | Ryo | 💤 Parked | Parked indefinitely. |
-| [[cloud9japan]] | Ryo | 💤 Parked | Mum's business. |
-| [[eguchi-family]] | Ryo | 💤 Parked | Family AI site. |
+| Project | Owner | Repo | Status | Notes |
+| --- | --- | --- | --- | --- |
+| [[linkedin-agent]] | Ryo | `./LinkedIn` | 🟢 Production | Automated. Low maintenance. |
+| [[miozuki]] | Ting | `./miozuki-web` | 🔵 Active | NZ fine jewellery. Next.js headless frontend. |
+| [[ahuru]] | Ting | `./ahuru` | 🔵 Active | Ting's ecommerce SEO project. |
+| [[gp-community]] | Ryo | `./gp-community` | 💤 Parked | Parked indefinitely. |
+| [[cloud9japan]] | Ryo | `./cloud9japan` | 💤 Parked | Mum's business. |
+| [[eguchi-family]] | Ryo | `./eguchi-family` | 💤 Parked | Family AI site. |
 
 ### Partnerships
+No code repo yet.
 
 | Project | Status |
 | --- | --- |
