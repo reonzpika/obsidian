@@ -34,8 +34,20 @@ Personal and family projects outside of ClinicPro and Nexwave R&D. Maintained by
 - LCP image perf pass: priority + responsive `sizes` added; audit re-run against fixes
 - Nano Banana Pro research context imported to miozuki repo
 
-**linkedin**
-- Major agent refactor: full cutover to skill-driven flow across Researcher → Architect → Strategist → Analyst → Picker → Planner → Image Architect (Phases 1–8 commits)
+**linkedin (strategy pivot, Apr 16-17)**
+- Full LinkedIn strategy overhaul: audience-value-first pillars replacing infrastructure commentary. Pillar A "What Works in NZ Primary Care" (55%, save-worthy) + Pillar B "What's Changing in NZ Primary Care" (40%, share-worthy). Building content moved to newsletter only.
+- Cadence: 3x/week (1 carousel Tue + 2 text Thu/Sat) + fortnightly "The GP Builder" newsletter + daily 15-min commenting
+- Deep research completed: 360Brew algorithm (2026), carousel design (7 slides, 1080x1350, 20-30 words/slide), AI content detection (44% healthcare penalty, 7-step editing protocol), NZ competitive landscape (space is empty, no GP does LinkedIn thought leadership), content efficiency workflow (2 hrs 15 min/week)
+- Knowledge files updated to v4.0: clinicpro_strategy.md, voice_profile.md, algorithm_sop.md (all three files, 3 rounds of updates)
+- Golden Hour system redesigned: org pages eliminated, core_targets.json (12 core + 7 growth NZ/AU health profiles) replaces pinned_targets.json, 30-50 word comments with 4 structures (Expertise Add, Respectful Challenger, Story Bridge, Question Architect)
+- Code changes: scout.py (org filter, core matching, freshness scoring), executor.py (company branch removed), picker.md + architect.md (new criteria + comment structures)
+- Two new workflows: linkedin-grow (daily commenting skill), linkedin-newsletter (fortnightly newsletter skill)
+- AGENTS.md updated with new cadence, pillars, workflows, quality gate
+- First post ready: ManageMyHealth patient portal login UX (Pillar A, text), 6 Golden Hour comments drafted with new 30-50 word structures
+- Strategy doc: `context/linkedin-strategy-pivot-2026-04.md` (16 sections + research addendum), Google Alerts curated at `context/context-linkedin.md`
+
+**linkedin (prior week)**
+- Major agent refactor: full cutover to skill-driven flow across Researcher → Architect → Strategist → Analyst → Picker → Planner → Image Architect (Phases 1-8 commits)
 - **Anthropic API dependency eliminated** — `agents/_llm.py` deleted, `langchain-anthropic` + `langchain-core` removed, `config/model_config.json` deleted. Engine now runs on Claude Code subscription only (zero per-post API spend)
 - Strategist deterministic guardrails extracted to standalone module with 14 tests
 - All 7 agent prompts extracted to `agents/*.md` — editable independently of agent wiring

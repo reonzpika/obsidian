@@ -225,15 +225,15 @@ TBD — pending research (note any obvious tie-in to NexWave / ClinicPro / R&D w
 
 **Do not deep-research each tool automatically** — that happens on-demand when Ryo asks ("research X"). Skeleton files are the queue.
 
-**After processing all tool emails**, archive each from the inbox and mark read:
+**After processing all tool emails**, move each to Trash — the skeleton file is now the permanent record:
 
 ```bash
-gws gmail users messages modify --params '{"userId":"me","id":"<MSG_ID>"}' --json '{"removeLabelIds":["UNREAD","INBOX"]}'
+gws gmail users messages trash --params '{"userId":"me","id":"<MSG_ID>"}'
 ```
 
-Archive (not trash) so the original email stays searchable. Run one call per message, including non-tool emails you skipped — they shouldn't stay unread indefinitely.
+Only trash emails you created skeleton files for. Leave non-tool emails (Zoom invites, own-app links, meeting forwards) untouched — Ryo will handle those.
 
-Report in the Step 10 briefing: `Tool tips: N new skeleton files created, M duplicates appended, K emails archived`. If nothing unread, report `Tool tips: inbox empty`.
+Report in the Step 10 briefing: `Tool tips: N new skeleton files created, M duplicates appended, K emails trashed`. If nothing unread, report `Tool tips: inbox empty`.
 
 ### Step 10: Present overview with suggested plan
 
@@ -262,7 +262,7 @@ News feed (from Google Alerts):
 Tool tips (from personal Gmail):
   New skeleton files in context/tools/:
     - [Tool name] — [category]
-  Totals: N new, M duplicates appended, K emails archived
+  Totals: N new, M duplicates appended, K emails trashed
   (or: "Tool tips: inbox empty")
 
 ---
