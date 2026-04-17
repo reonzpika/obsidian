@@ -151,7 +151,37 @@ If no actionable emails found, display: "Gmail: nothing actionable in the last 7
 
 Add the Gmail section to today's daily note under a `## Gmail` heading.
 
-### Step 8: Present overview with suggested plan
+### Step 8: Update LinkedIn news feed from Google Alerts
+
+Scan Gmail for **all unread** Google Alerts, regardless of age: `from:googlealerts-noreply@google.com is:unread`. Ryo may skip /daily for several days at a time, so the queue is the source of truth, not a rolling window.
+
+For each alert:
+- Read the message with `mcp__claude_ai_Gmail__gmail_read_message`
+- Extract article titles, sources, and URLs
+- Filter for NZ health / primary care / GP / AI-in-healthcare relevance (skip generic global AI hype and non-health items)
+- Dedupe against existing URLs in `C:/Users/reonz/cursor/LinkedIn/knowledge/news_feed.md`
+
+Append new items under a dated heading `## YYYY-MM-DD` inserted at the top of the file (after the intro block, before the existing Tier sections). Format each entry as:
+
+```
+- [Article Title](URL) — Source
+```
+
+Use today's date in the heading, not the alert's original date.
+
+**After all alerts have been read and processed**, move every processed alert message to Trash so the unread queue is cleared:
+
+```bash
+gws gmail users messages trash --params '{"userId":"me","id":"<MESSAGE_ID>"}'
+```
+
+Run one call per message — do not batch. Trash (not permanent delete) so the action is reversible for 30 days if anything is lost.
+
+**List every entry added to `news_feed.md`** in the Step 9 briefing under a dedicated `News feed` block — title + source per line. Also report totals: `N new entries added, M alerts trashed`. If no alerts were unread, report `News feed: no unread alerts`.
+
+Do not modify existing Tier sections — they are curated manually.
+
+### Step 9: Present overview with suggested plan
 
 Present the briefing and a proposed plan for the day in chat. Use this structure:
 
@@ -167,6 +197,13 @@ Gmail:
   Needs action: [...]
   Waiting on: [...]
   FYI: [...]
+
+News feed (from Google Alerts):
+  Added to LinkedIn/knowledge/news_feed.md:
+    - [Title] — [Source]
+    - [Title] — [Source]
+  Totals: N new entries added, M alerts trashed
+  (or: "News feed: no unread alerts")
 
 ---
 
@@ -194,7 +231,7 @@ Does this look right? What do you want to focus on or change?
 
 Keep the tone tight. Flag anything urgent but don't editorialize — let Ryo decide.
 
-### Step 9: Ask one question
+### Step 10: Ask one question
 
 After the overview and suggested plan, ask exactly one question:
 
@@ -202,7 +239,7 @@ After the overview and suggested plan, ask exactly one question:
 
 Wait for the response. Do not ask follow-up questions — one pass is enough.
 
-### Step 10: Write the plan
+### Step 11: Write the plan
 
 Once Ryo responds, incorporate any changes and write the final sections of the daily note.
 
@@ -343,6 +380,7 @@ TaskCreate: "Create daily note" — activeForm: "Creating today's note..."
 TaskCreate: "Surface sprint context" — activeForm: "Reading active sprints..."
 TaskCreate: "Surface today's tasks" — activeForm: "Scanning tasks/open/..."
 TaskCreate: "Surface Gmail highlights" — activeForm: "Scanning Gmail last 7 days..."
+TaskCreate: "Update LinkedIn news feed" — activeForm: "Scanning Google Alerts..."
 TaskCreate: "Present overview and suggested plan" — activeForm: "Building today's briefing..."
 TaskCreate: "Write confirmed plan to note" — activeForm: "Writing today's plan..."
 ```
