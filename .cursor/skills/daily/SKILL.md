@@ -181,7 +181,61 @@ Run one call per message — do not batch. Trash (not permanent delete) so the a
 
 Do not modify existing Tier sections — they are curated manually.
 
-### Step 9: Present overview with suggested plan
+### Step 9: Process personal tool-tip emails
+
+Scan Gmail for unread emails from Ryo's personal address: `from:reonzpika@gmail.com is:unread`.
+
+Ryo forwards interesting tools, YouTube videos, and tech resources from his personal Gmail. This step captures them as skeleton files under `C:/Users/reonz/cursor/obsidian/context/tools/` for later research.
+
+For each email:
+- Read the message with `mcp__claude_ai_Gmail__gmail_read_message`
+- Extract the URL and the resource name (usually clear from the subject, e.g. `docling`, `Scrapling`, `Claude Mem`)
+- Classify as one of: `claude-code` / `rag` / `ai-memory` / `ai-research` / `ai-scraping` / `ai-image` / `ai-workflow` / `document-parsing` / `directory` / `claude-code-tips` / `industry-news` / `other`
+- **Skip** non-tool emails (his own app links, Zoom invites, Vercel logs, meeting forwards, unrelated shopping) — do not create a file for these
+- **Derive a kebab-case filename** from the tool name (e.g. `docling.md`, `rag-anything.md`)
+- **If the file already exists** (same tool mentioned before), append the new source to `additional-sources` in the frontmatter instead of creating a duplicate
+- **If not**, create a new skeleton file with this schema:
+
+```yaml
+---
+name: Tool or resource name
+category: one of the values above
+status: new
+source-email-date: YYYY-MM-DD
+source-email-id: GMAIL_MSG_ID
+source-url: URL
+added: YYYY-MM-DD (today)
+researched: false
+---
+
+# Tool name
+
+Video/source title: "..."
+
+## Summary
+TBD — pending research
+
+## Relevance
+TBD — pending research (note any obvious tie-in to NexWave / ClinicPro / R&D workflow)
+
+## Links
+- Source URL
+- GitHub/Docs: TBD
+```
+
+**Do not deep-research each tool automatically** — that happens on-demand when Ryo asks ("research X"). Skeleton files are the queue.
+
+**After processing all tool emails**, archive each from the inbox and mark read:
+
+```bash
+gws gmail users messages modify --params '{"userId":"me","id":"<MSG_ID>"}' --json '{"removeLabelIds":["UNREAD","INBOX"]}'
+```
+
+Archive (not trash) so the original email stays searchable. Run one call per message, including non-tool emails you skipped — they shouldn't stay unread indefinitely.
+
+Report in the Step 10 briefing: `Tool tips: N new skeleton files created, M duplicates appended, K emails archived`. If nothing unread, report `Tool tips: inbox empty`.
+
+### Step 10: Present overview with suggested plan
 
 Present the briefing and a proposed plan for the day in chat. Use this structure:
 
@@ -204,6 +258,12 @@ News feed (from Google Alerts):
     - [Title] — [Source]
   Totals: N new entries added, M alerts trashed
   (or: "News feed: no unread alerts")
+
+Tool tips (from personal Gmail):
+  New skeleton files in context/tools/:
+    - [Tool name] — [category]
+  Totals: N new, M duplicates appended, K emails archived
+  (or: "Tool tips: inbox empty")
 
 ---
 
@@ -231,7 +291,7 @@ Does this look right? What do you want to focus on or change?
 
 Keep the tone tight. Flag anything urgent but don't editorialize — let Ryo decide.
 
-### Step 10: Ask one question
+### Step 11: Ask one question
 
 After the overview and suggested plan, ask exactly one question:
 
@@ -239,7 +299,7 @@ After the overview and suggested plan, ask exactly one question:
 
 Wait for the response. Do not ask follow-up questions — one pass is enough.
 
-### Step 11: Write the plan
+### Step 12: Write the plan
 
 Once Ryo responds, incorporate any changes and write the final sections of the daily note.
 
@@ -381,6 +441,7 @@ TaskCreate: "Surface sprint context" — activeForm: "Reading active sprints..."
 TaskCreate: "Surface today's tasks" — activeForm: "Scanning tasks/open/..."
 TaskCreate: "Surface Gmail highlights" — activeForm: "Scanning Gmail last 7 days..."
 TaskCreate: "Update LinkedIn news feed" — activeForm: "Scanning Google Alerts..."
+TaskCreate: "Process personal tool tips" — activeForm: "Scanning personal Gmail..."
 TaskCreate: "Present overview and suggested plan" — activeForm: "Building today's briefing..."
 TaskCreate: "Write confirmed plan to note" — activeForm: "Writing today's plan..."
 ```
