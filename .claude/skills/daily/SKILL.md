@@ -284,10 +284,42 @@ day: Monday
 
 ## Midday Check-in
 
-1. Review morning task list — what's done, what's not
-2. Identify anything to reschedule or drop
-3. Check inbox for urgent items
-4. Ask: "What's the most important thing for this afternoon?"
+### Step 1: Review morning task list
+
+Read all files in `tasks/open/` that appear in today's daily note `## Today's Focus`. Compare against the morning plan — what's done, what's in-progress, what hasn't started.
+
+### Step 2: Update task statuses
+
+For every task completed since the morning review:
+- Update `status: done` in the task file frontmatter
+- Move the file from `tasks/open/` to `tasks/done/`
+
+For tasks that have progressed but aren't done:
+- Update `status: in-progress` if still `open`
+
+Do not wait for the user to ask — update statuses proactively based on what you can see in the daily note `## Notes` and conversation context.
+
+### Step 3: Check for sprint status changes
+
+Read `sprints/active/`. If a sprint's tasks are all done or the sprint end date has passed, flag it. Update sprint `status` frontmatter if appropriate (e.g. `active` → `completed`).
+
+### Step 4: Check inbox for urgent items
+
+Search Gmail for unread emails in the last 2 days. Read anything from key contacts or that looks actionable. Cross-reference against blocked tasks.
+
+### Step 5: Create task files for new action items
+
+For every actionable item surfaced during the review (emails needing replies, follow-ups, new work identified), create a task file in `tasks/open/` immediately. Do not leave action items as prose in the daily note or chat — they must become task files.
+
+### Step 6: Identify anything to reschedule or drop
+
+Flag tasks that are overdue, at risk, or should be deferred. Suggest reprioritisation if the afternoon looks overloaded.
+
+### Step 7: Present and ask
+
+Present the status update (done / remaining / new tasks created) and ask:
+
+> "What's the most important thing for this afternoon?"
 
 ## Evening Shutdown
 
