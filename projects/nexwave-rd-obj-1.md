@@ -126,7 +126,7 @@ Deliverable: Architecture decision document for MBIE.
 | Q1 MBIE claim due | 31 May 2026 |
 | Obj 1 deliverables due | End of June 2026 |
 
-MBIE contact: Lisa Pritchard (Callaghan Innovation). All experiments must be logged.
+MBIE contact: Lisa Pritchard (MBIE Innovation Services). All experiments must be logged.
 
 **Q1 claim prep (2026-04-15):** Email sent to Lisa Pritchard asking about time tracking format, progress report structure, and cost spreadsheet template. Awaiting response.
 
