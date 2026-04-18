@@ -51,6 +51,73 @@ Composition:
 - AU GST registration: not needed for B2B supply to GST-registered Medtech AU.
 - AU permanent establishment: no risk given no AU physical presence or dependent agent.
 
+### 3.1 Detailed line-item breakdown
+
+**Summary**
+
+| Category | NZD/year |
+|---|---|
+| One-off costs amortised over 3-year term | ~14,370 |
+| Ongoing annual costs | ~7,100 |
+| **Total attributable annual cost** | **~21,470 ≈ 21,500** |
+
+**A. One-off costs (3-year term, ÷3 to get per-year)**
+
+| Line | One-off NZD | /year | Source / reasoning | Confidence |
+|---|---|---|---|---|
+| AU contract legal | 15,000 | 5,000 | NZ mid-tier firm (Hudson Gavin Martin, Kindrik Partners, Duncan Cotterill) partner rate NZD 500-800/hr, senior associate 400-550/hr. Counterparty-drafted B2B license, 3-year term, $50-150k/yr deal value. Research estimated 16-27 hours total (read, issues memo, negotiation, WHT clause, finalisation). Mid-point $15k. | Medium-high |
+| AU tax scoping | 3,000 | 1,000 | One-off international tax advisor consultation: PE risk, royalty WHT treatment, NZ-AU DTA application, GST position. 4-8 hours at NZD 350-500/hr partner (Baker Tilly Staples Rodway, BDO NZ, Grant Thornton). Mid-point $3k. | Medium |
+| AU PIA extension | 6,000 | 2,000 | Extension of existing NZ PIA to APP framework (not fresh AU PIA). Re-map APPs 1-13, add APP 8 cross-border, NDB process, AU controller-processor structure. 2-4 consulting days at AU senior privacy rate AUD 2,000-2,800/day = NZD 4,400-12,300. Mid-point $6k. Providers: Privacy 108, Salinger/Helios, IIS Partners. | Medium |
+| AU privacy policy + DPA + IRP | 3,500 | 1,200 | AU-facing privacy policy (Sprintlaw AUD 700-2,500 fixed fee) + Data Processing Agreement (Sprintlaw AUD 700-2,000) + Incident Response Plan (AUD 1,500-4,000 or free via OAIC template). Using Sprintlaw-style fixed fee total ~AUD 3,000 = NZD 3,500. | High |
+| AU regionalisation engineering | 15,000 | 5,000 | 60-120h work: NHI→IHI identifier swap, AU facility ID format, date/terminology, AU ALEX environment credentials and testing, AU privacy copy. Central 80h at NZ senior contractor NZD 180/hr = NZD 14,400. Rounded to $15k. | Medium |
+| Wise setup + misc | 500 | 170 | Wise Business setup NZD 40 + AU invoicing admin + onboarding misc. Rounded to $500. | High |
+| **One-off subtotal** | **43,000** | **14,370** | | |
+
+**B. Ongoing annual costs**
+
+| Line | NZD/year | Source / reasoning | Confidence |
+|---|---|---|---|
+| Insurance AU territorial extension | 1,500 | NZ baseline combined tech liability (PI + cyber) NZD 2,500-8,000/yr. AU territorial extension adds +15-30% (source: Kindrik Partners tech insurance guide, broker benchmarks from Delta Insurance via Apollo/Gallagher). NZD 500-2,500 delta, central $1,500. | Medium |
+| Pentest (AU scope) | 0 | CREST Australia New Zealand operates jointly. NZ pentest by CREST ANZ-approved firm (Insomnia Security, Aura, Lateral Security) accepted for AU partner procurement. **Subject to written confirmation from Medtech AU.** If separate AU pentest required, budget AUD 6,000-20,000 annually. | High (subject to confirmation) |
+| Engineering maintenance (AU-specific portion) | 3,000 | 4-10 hours/month steady-state. Most shared with NZ code path. 25% attributed to AU-specific work = ~1 hour/month × 12 × NZD 250/hr (opportunity cost) = $3,000. | Low-Medium |
+| Compliance reporting time | 1,800 | Quarterly usage/SLA/security reports to Medtech. 2-4 hours/quarter at NZD 150-200/hr opportunity cost = 8-16 hours/year. Mid-point $1,800. | Low-Medium (depends on Medtech requirements) |
+| Infrastructure overage | 0 | Below 500 AU practices, combined NZ+AU workload stays within existing Vercel/Supabase/Lightsail tiers. At 500+ practices, incremental ~USD 98/mo = NZD 2,000/year kicks in. **Assumes Year 1-2 scale below 500.** | High |
+| Banking / FX | 300 | Wise Business on AUD 50k annual volume: 0.4-0.7% FX margin + small fees = NZD 200-400/yr. Mid-point $300. | High |
+| Annual AU compliance checks | 500 | Annual tax advisor check-in, privacy policy refresh, minor admin. $300-500. | Medium |
+| **Ongoing subtotal** | **7,100** | | |
+
+### 3.2 What is NOT in the cost model (and why)
+
+1. **NZ partnership costs** (NZ PIA, NZ pentest, NZ contract legal). These exist regardless of the AU deal. Not incremental.
+2. **Base infrastructure** (Vercel Pro $20 USD, Supabase Pro $25 USD, Lightsail $12 USD per month). Already paid for NZ operation. Zero incremental cost to add AU up to 500 practices.
+3. **Royalty withholding tax (5% of revenue)**. Cash flow drag, not a cost. WHT deducted at source by Medtech AU is reclaimable as NZ foreign tax credit. Net-zero to profitability. Address via gross-up clause in contract.
+4. **Ryo's founder time on deal management** (negotiation, relationship, strategic decisions). Real opportunity cost but not a cash cost. Handled via annual minimum and margin structure, not inflated into the cost model.
+
+### 3.3 Confidence caveat
+
+Most numbers are **benchmarks from research**, not actual quotes. Realistic variance is +/- 30%. Before signing, get real quotes on the three largest line items:
+
+1. **AU contract legal** (biggest one-off: $15k at risk). Indicative quotes from Hudson Gavin Martin AND Kindrik Partners.
+2. **AU regionalisation engineering** ($15k at risk). Scope with actual developer or self-estimate honestly.
+3. **Insurance AU territorial extension** (biggest recurring: $1,500/yr). Broker quote from Apollo Insurance Brokers or Gallagher NZ.
+
+### 3.4 Low / central / high sensitivity
+
+| Scenario | One-off NZD | Annual NZD | Total/yr NZD |
+|---|---|---|---|
+| **Low-cost** (Sprintlaw-style fixed fees hold, no AU pentest, low insurance uplift) | 28,000 | 5,000 | ~14,300 |
+| **Central (used in model)** | 43,000 | 7,100 | **~21,500** |
+| **High-cost** (top-tier legal, higher engineering hours, AU pentest required, higher insurance uplift) | 68,000 | 22,000 | ~44,700 |
+
+**What shifts the scenario**: the answers Lawrence gives on Wed to questions 1-7 (vendor security requirements, pentest reuse acceptance, MHR scope, WHT gross-up position). Each answer can move the cost model by thousands.
+
+**Implications for floor pricing at 150 practices:**
+- Low-cost scenario: floor could drop to AUD ~16/practice/month.
+- Central: AUD 20-25/practice/month.
+- High-cost: AUD 30+/practice/month.
+
+This is why the proposal opens at AUD 30: it covers the central scenario comfortably and holds up under the high scenario.
+
 ## 4. Break-even analysis at AUD 30 per practice per month
 
 | Scenario | Break-even practices |
