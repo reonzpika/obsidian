@@ -28,6 +28,10 @@ Mobile web app that photographs clinical images and commits them to patient reco
 
 ## AU market — Lawrence Peterson (Medtech Global)
 
+**Execution sprint**: [[2026-04-medtech-sprint-2]] (21 Apr - 16 May 2026)
+**Strategy and pricing analysis**: [[clinicpro-capture-au-strategy]]
+**External proposal one-pager**: [[clinicpro-capture-au-proposal]]
+
 **Proposal received 12 April 2026:** Lawrence proposes Medtech purchases ClinicPro Capture licenses to bundle as a value-add for AU G2M in May. Scope: image capture + post only as starting point. Two other integration partners already confirmed for AU launch.
 
 **Open questions (as of 14 April 2026):**
