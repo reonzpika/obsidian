@@ -38,11 +38,11 @@ Facilitates Ryo's monthly review. Rolls up sprints completed in the month, asses
 ### Phase 1: Collect monthly data
 
 **Sprints completed this month:**
-- Read `sprints/archive/*.md` — filter where `end` is within this calendar month
-- Read `sprints/active/*.md` — flag any that started this month but are still running
+- Read `sprints/archive/*.md`, filter where `end` is within this calendar month
+- Read `sprints/active/*.md`, flag any that started this month but are still running
 
 **Tasks done this month:**
-- Read `tasks/done/*.md` — filter by file mtime or `created` within the month
+- Read `tasks/done/*.md`, filter by file mtime or `created` within the month
 
 **Weekly reviews:**
 - Read all `reviews/weekly/*.md` from this month
@@ -54,19 +54,19 @@ Facilitates Ryo's monthly review. Rolls up sprints completed in the month, asses
 
 Create session task:
 ```
-TaskCreate: "Phase 1: Collect" — activeForm: "Collecting sprint and task data for the month..."
+TaskCreate: "Phase 1: Collect", activeForm: "Collecting sprint and task data for the month..."
 ```
 
 ### Phase 2: Reflect
 
 **Commercial stream (clinicpro-saas + clinicpro-medtech):**
-- Sprints completed — goals met or not?
+- Sprints completed: goals met or not?
 - Tasks done vs tasks left open at month end
 - Key decisions made
 - Blockers that recurred across multiple weeks
 - Project status changes
 
-**R&D stream (nexwave-rd — MBIE isolated):**
+**R&D stream (nexwave-rd, MBIE isolated):**
 - Sprints completed against R&D objectives (Obj 1-4)
 - Research outputs: reports, datasets, experiments, findings
 - Programme timeline health: are we on track for the MBIE reporting schedule?
@@ -90,12 +90,12 @@ TaskCreate: "Phase 1: Collect" — activeForm: "Collecting sprint and task data 
 
 Create session task:
 ```
-TaskCreate: "Phase 2: Reflect" — blocked by Phase 1
+TaskCreate: "Phase 2: Reflect", blocked by Phase 1
 ```
 
 ### Phase 3: Plan next month
 
-1. Review sprints still active — do they carry over or need closing?
+1. Review sprints still active, do they carry over or need closing?
 2. For each project in `projects/*.md`: set next month's focus (one line)
 3. Identify any new sprints to create
 4. Set next month's ONE focus per stream (commercial / R&D)
@@ -108,7 +108,7 @@ TaskCreate: "Phase 2: Reflect" — blocked by Phase 1
 
 Create session task:
 ```
-TaskCreate: "Phase 3: Plan" — blocked by Phase 2
+TaskCreate: "Phase 3: Plan", blocked by Phase 2
 ```
 
 ## Output Format
@@ -152,7 +152,7 @@ month: YYYY-MM
 
 ---
 
-## R&D Stream (nexwave-rd — MBIE isolated)
+## R&D Stream (nexwave-rd, MBIE isolated)
 
 ### Sprints
 | Sprint | Objective | Outcome |
@@ -195,7 +195,7 @@ month: YYYY-MM
 
 ## Integration
 
-- `/weekly` — weekly reviews feed this rollup
-- `/calendar-sync` — sync new sprints to Google Calendar after planning
-- `/obsidian-task-table` — create tasks for next month's priorities
-- `/session-update` — log the review session itself
+- `/weekly`: weekly reviews feed this rollup
+- `/calendar-sync`: sync new sprints to Google Calendar after planning
+- `/obsidian-task-table`: create tasks for next month's priorities
+- `/session-update`: log the review session itself
