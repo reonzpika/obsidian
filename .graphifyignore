@@ -1,0 +1,10 @@
+daily/
+temp/
+tasks/
+reviews/
+templates/
+inbox/
+.claude/worktrees/
+.obsidian/
+All Tasks.base
+vault-config.json
