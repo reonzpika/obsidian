@@ -120,7 +120,7 @@ Read the content of any email that looks actionable or is from a key contact usi
 |------|------|---------|
 | Defne Arzanoglu / alexsupport@medtechglobal.com | Medtech ALEX support | Action — ALEX/API |
 | Ting (tingchou1988@gmail.com) | R&D Programme Manager | Action — R&D programme |
-| Lisa Pritchard | MBIE / Callaghan Innovation | Action — R&D/grant |
+| Lisa Pritchard | MBIE Innovation Services | Action — R&D/grant |
 | Lawrence Peterson | AU market opportunity | Action — commercial |
 
 **Triage rules:**

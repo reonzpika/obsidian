@@ -43,7 +43,7 @@ stack: [aws-bedrock, claude-haiku, claude-sonnet, python, nextjs]
 | Required co-funding (60%) | $430,155.60 |
 | Contract start | 12 March 2026 |
 | Contract end | 11 March 2028 |
-| MBIE contact | Lisa Pritchard (Callaghan Innovation) |
+| MBIE contact | Lisa Pritchard (MBIE Innovation Services) |
 | Q1 claim due | 31 May 2026 (PAYE evidence due 30 Apr 2026) |
 
 **Co-funding sources (approved):**
@@ -173,7 +173,7 @@ MBIE will not fund any work by internal employees until payslip or employment ag
 
 ### Quarterly Claim Requirements
 
-> **Contract condition, not just admin.** Missing the quarterly claim is a potential breach of agreement. If the report is not received, Callaghan Innovation is not obliged to make payment.
+> **Contract condition, not just admin.** Missing the quarterly claim is a potential breach of agreement. If the report is not received, MBIE is not obliged to make payment.
 
 Each claim must include:
 
@@ -193,7 +193,7 @@ Each claim must include:
 Any event resulting in someone acquiring >50% of voting shares, board control, or majority benefit requires **prior written consent from MBIE**. Notify MBIE before any investor or restructure discussion reaches this threshold.
 
 ### Co-funding Rule (clauses 3.3–3.4)
-Your 60% co-funding ($430,155.60) must not come from any public sector agency or entity. If co-funding drops below 60% at any time, it is a Change Event — notify Callaghan Innovation immediately.
+Your 60% co-funding ($430,155.60) must not come from any public sector agency or entity. If co-funding drops below 60% at any time, it is a Change Event — notify MBIE immediately.
 
 ### Records Retention (clause 6.4)
 All records relating to funding use must be kept for **7 years** from expiry or termination. Includes all invoices, timesheets, and supporting documentation.
@@ -252,7 +252,7 @@ Example: $10,000 reimbursement = $8,695.65 income + $1,304.35 GST payable to IRD
 
 | Person | Role | Contact |
 |---|---|---|
-| Lisa Pritchard | MBIE contact (Callaghan Innovation) | Via Callaghan portal |
+| Lisa Pritchard | MBIE Innovation Services contact | Via Forge portal |
 | Ting | R&D Programme Manager (full-time, 40hrs/week) | Internal |
 | Helen Yu | Accountant (NexWave) | helen@hscg.co.nz |
 
@@ -287,7 +287,7 @@ Payroll software: Xero. Paid monthly in arrears. PAYE deducted at source.
 | Q2 | What is the medical device software classification for assist-only AI under NZ Medsafe framework? | Regulatory | High |
 | Q3 | What is the current status of the Medical Products Bill — does it apply during the grant period? | Regulatory | High |
 | Q4 | How to structure the ground truth annotation process for 500–1,000 inbox items? | Technical | High |
-| Q5 | Reporting cadence and format required by Callaghan Innovation for Q1 — confirm with Lisa Pritchard | Programme | High |
+| Q5 | Reporting cadence and format required by MBIE for Q1 — confirm with Lisa Pritchard | Programme | High |
 | Q6 | What does the GP-facing UI look like for reviewing AI triage suggestions? | Product | Medium |
 | Q7 | How does the system handle a case where AI confidence is below the auto-action threshold? | Product | Medium |
 | Q8 | Which GP annotators to recruit for inter-rater reliability study? | Technical | Medium |

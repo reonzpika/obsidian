@@ -31,7 +31,7 @@ Facilitates Ryo's monthly review. Rolls up sprints completed in the month, asses
 
 ## R&D isolation rule
 
-**Critical:** `nexwave-rd` sprints, tasks, and outputs must be reviewed in a fully separate section. MBIE audits R&D activity independently of commercial work. The R&D section of the monthly review is a source of truth for programme progress reporting to Lisa (MBIE/Callaghan) and Ting (Programme Manager).
+**Critical:** `nexwave-rd` sprints, tasks, and outputs must be reviewed in a fully separate section. MBIE audits R&D activity independently of commercial work. The R&D section of the monthly review is a source of truth for programme progress reporting to Lisa (MBIE) and Ting (Programme Manager).
 
 ## Review Process
 
@@ -71,7 +71,7 @@ TaskCreate: "Phase 1: Collect" — activeForm: "Collecting sprint and task data 
 - Research outputs: reports, datasets, experiments, findings
 - Programme timeline health: are we on track for the MBIE reporting schedule?
 - Ting coordination: any blockers or items needing escalation to Ting?
-- Any items to surface to Lisa (MBIE/Callaghan)?
+- Any items to surface to Lisa (MBIE)?
 
 **gp-fellowship:**
 - Fellowship sprint progress
