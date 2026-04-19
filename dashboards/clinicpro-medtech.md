@@ -13,6 +13,7 @@ Products: ClinicPro Capture (and future Medtech ALEX products)
 | **Glossary** | [Medtech / ALEX Glossary](context/medtech-context/glossary.md) |
 | **Active sprints** | [[2026-04-medtech-sprint-1]] (Phase 1 marketing), [[2026-04-medtech-sprint-2]] (AU bundle deal) |
 | **Repo map** | [[repos]] |
+| **Finance & accounting** | Helen Yu (accountant, all entities) — see [people.md](../context/people.md#helen-yu) for scope |
 
 ---
 

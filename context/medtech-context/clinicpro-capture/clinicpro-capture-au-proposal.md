@@ -51,25 +51,19 @@ Where onboarded active practices exceed 75 in any year, the full per-active-prac
 
 **AUD 4,000 on contract execution**, to cover AU onboarding and compliance setup. Offsets against Year 1 minimum.
 
-## Term and renewal
+## Term
 
-- **Initial term**: 3 years, locked, from contract execution. Neither party may terminate for convenience during this period.
-- **After the initial term**: the agreement continues on a rolling 12-month basis unless either party gives 90 days written notice to terminate.
-- **Pricing review**: annual adjustment indexed to Australian CPI during and after the initial term.
+3-year initial term from contract execution. Renewal and termination mechanics to be detailed in the contract.
 
 ## Support model
 
-- **Tier 1 (practice-facing)**: Medtech Australia support team
-- **Tier 2 (escalations)**: ClinicPro, response within 2 business days NZT
-- **Incident management**: OAIC-compliant Notifiable Data Breach process, co-ordinated with Medtech
+- **Medtech Australia**: tier-1 support for practices using the product.
+- **ClinicPro**: technical escalations and product issues.
+- **Initial training for Medtech support staff** included in the setup fee: 2 x 1-hour online sessions, handover documentation, and one round of Q&A follow-up. Extended training programmes scoped separately if required.
 
 ## Data residency and compliance
 
-- All data processing in AWS ap-southeast-2 (Sydney) and Vercel syd1 (Sydney). No processing outside Australia.
-- **Zero PHI at rest**: images are pass-through only (client to BFF to ALEX).
-- Audit log uses HMAC-SHA256 hashed patient identifiers; no plaintext PHI is stored.
-- Annual penetration test by a CREST Australia New Zealand-approved provider.
-- AU Privacy Impact Assessment completed pre-launch.
+ClinicPro Capture is hosted in Sydney (AWS ap-southeast-2) and will meet Australian privacy, data residency, and security requirements. Specific compliance artefacts (privacy policy, pentest evidence, Privacy Impact Assessment) provided as part of contract execution.
 
 ## Branding
 

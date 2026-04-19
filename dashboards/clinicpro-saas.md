@@ -106,6 +106,7 @@ Products: referral-images, ai-scribe, 12-month-prescription, acc, openmailer
 |--|--|
 | **Products** | [[ai-scribe]] · [[referral-images]] · [[12-month-prescription]] |
 | **Repo map** | [[repos]] |
+| **Finance & accounting** | Helen Yu (accountant, all entities) — see [people.md](../context/people.md#helen-yu) for scope |
 
 ---
 
