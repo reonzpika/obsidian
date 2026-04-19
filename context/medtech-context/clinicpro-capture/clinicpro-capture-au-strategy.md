@@ -35,15 +35,15 @@ Comprehensive background, cost model, negotiation tactics, and pre-meeting check
 
 ## 3. Cost model (verified via research 18 April 2026, revised for Ryo's scope decisions)
 
-**Annual attributable cost of AU deal**: NZD ~13,000 (~AUD 11,800)
+**Annual attributable cost of AU deal**: NZD ~13,500 (~AUD 12,300)
 
 Composition:
 - Fixed ongoing: insurance AU territorial extension, engineering maintenance (AU share), compliance reporting time, FX/banking, annual compliance checks
-- One-off amortised over 3 years: AU contract legal, AU PIA (DIY), AU privacy policy, Wise setup
+- One-off amortised over 3 years: AU contract legal, AU tax scoping (Helen), AU PIA (DIY), AU privacy policy, Wise setup
 - Per-practice onboarding (first 24 months only): AUD ~11.30 per practice per month
 
 **Scope decisions reducing cost from initial $21,500 estimate:**
-- AU tax scoping absorbed by Ryo's NZ accountant (existing fee arrangement).
+- AU tax scoping handled by Helen (NZ accountant) at her billable rate — cheaper than specialist firm but not free.
 - AU regionalisation engineering (~80 hours) done by Ryo himself. Cash cost $0, opportunity cost ~2 weeks of founder time.
 - AU PIA done DIY using OAIC free template (6-8 hours of Ryo's time). Budget $1k for external review if Medtech AU pushes back.
 - Privacy policy adapted from NZ version at low cost; DPA typically in main contract; IRP via free OAIC template.
@@ -63,22 +63,22 @@ Composition:
 
 | Category | NZD/year |
 |---|---|
-| One-off costs amortised over 3-year term | ~5,836 |
+| One-off costs amortised over 3-year term | ~6,336 |
 | Ongoing annual costs | ~7,100 |
-| **Total attributable annual cost** | **~12,936 ≈ 13,000** |
+| **Total attributable annual cost** | **~13,436 ≈ 13,500** |
 
 **A. One-off costs (3-year term, ÷3 to get per-year)**
 
 | Line | One-off NZD | /year | Source / reasoning | Confidence |
 |---|---|---|---|---|
-| AU contract legal | 15,000 | 5,000 | NZ mid-tier firm (Hudson Gavin Martin, Kindrik Partners, Duncan Cotterill) partner rate NZD 500-800/hr. Counterparty-drafted B2B license, 3-year term, $50-150k/yr deal value. 16-27 hours total. Mid-point $15k. | Medium-high |
+| AU contract legal | 15,000 | 5,000 | NZ mid-tier firm (Hudson Gavin Martin, Kindrik Partners, Duncan Cotterill) partner rate NZD 500-800/hr. Counterparty-drafted B2B license, 3-year term, $50-150k/yr deal value. 16-27 hours total. Covers read + issues memo + markup + WHT clause + negotiation + finalisation. | Medium-high |
+| AU tax scoping (Helen) | 1,500 | 500 | Helen (Ryo's NZ accountant) billable rate NZD 200-250/hr × 4-6 hours to confirm WHT treatment under TR 2024/D1, NZ-AU DTA, GST B2B exemption, PE confirmation, and WHT gross-up wording for lawyer. If Helen refers to AU specialist, cost could be $3k. | Medium |
 | AU PIA (DIY + external review) | 1,000 | 333 | DIY PIA using OAIC free template (6-8 hours Ryo's time, no cash cost). Budget $1k for external review from Privacy 108 or Salinger if Medtech AU pushes back on self-conducted PIA. | Medium |
 | AU-facing privacy policy | 1,000 | 333 | Adapted from NZ privacy policy with APP alignment. Sprintlaw AU fixed fee AUD 700-2,500 or DIY. DPA typically included in main contract (no separate cost). IRP via free OAIC template. | High |
 | Wise setup + misc | 500 | 170 | Wise Business setup NZD 40 + AU invoicing admin + onboarding misc. | High |
-| **One-off subtotal** | **17,500** | **5,836** | | |
+| **One-off subtotal** | **19,000** | **6,336** | | |
 
 **Removed from model (Ryo doing himself):**
-- **AU tax scoping**: Ryo's NZ accountant handles WHT / DTA / GST / PE analysis within existing fee arrangement. One short validation consultation before signing still recommended.
 - **AU regionalisation engineering** (~80 hours): Ryo writing it himself. Cash cost zero. Opportunity cost ~2 weeks of founder time (trade-off against NexWave R&D pace, flagged for deal-level decision).
 
 **B. Ongoing annual costs**
@@ -100,9 +100,8 @@ Composition:
 2. **Base infrastructure** (Vercel Pro, Supabase Pro, Lightsail). Already paid for NZ. Zero incremental cost up to 500 AU practices.
 3. **Base insurance policy** (~NZD 2,500-4,500/yr combined PI + cyber). Ryo currently has none, but needs it for NZ partnership anyway. Medtech AU forces the timing, not the attribution. Must be purchased before signing AU contract.
 4. **Founder engineering time on AU regionalisation** (~80 hours). Cash cost zero. Opportunity cost ~2 weeks of founder time impacting NexWave R&D pace. Real but not cash.
-5. **Tax scoping consultation with existing accountant**. Absorbed in existing fee arrangement.
-6. **Royalty withholding tax (5% of revenue)**. Cash flow drag, not a cost. Reclaimable as NZ foreign tax credit. Net-zero to profitability. Address via gross-up clause.
-7. **Founder time on deal management** (negotiation, relationship, reporting). Real opportunity cost, not cash cost. Handled via annual minimum and margin structure.
+5. **Royalty withholding tax (5% of revenue)**. Cash flow drag, not a cost. Reclaimable as NZ foreign tax credit. Net-zero to profitability. Address via gross-up clause.
+6. **Founder time on deal management** (negotiation, relationship, reporting). Real opportunity cost, not cash cost. Handled via annual minimum and margin structure.
 
 ### 3.3 Confidence caveat
 
@@ -162,25 +161,25 @@ Revised model significantly improves margins at every scale vs the original $21,
 
 ## 6. Minimum license commitment strategy
 
-**Proposal** (opening ask, in one-pager): 75 / 150 / 250 practices = AUD 27k / 54k / 90k.
+**Proposal** (opening ask, in one-pager): **flat 75 practices per year across all 3 years = AUD 27,000/year minimum**. 3-year minimum total: AUD 81,000.
 
-**Revised softer than earlier versions** to reflect: (a) priority of closing fast, (b) weak BATNA, (c) strategic relationship value, (d) low actual cash cost of running the deal. These are floor numbers Medtech should easily accept.
+**Why flat, not incrementing**: simplicity. Aligned with priority of closing fast. Flat minimums are easier for Lawrence to approve internally and remove ramp-schedule complexity. Upside is NOT capped — per-active-practice fees apply fully when practices exceed 75.
 
-| Year | Opening ask | Acceptable landing |
-|---|---|---|
-| 1 | 75 practices / AUD 27k | 50-75 practices / AUD 18-27k |
-| 2 | 150 practices / AUD 54k | 100-150 practices / AUD 36-54k |
-| 3 | 250 practices / AUD 90k | 175-250 practices / AUD 63-90k |
+**Revenue scenarios under flat minimum:**
 
-**Hard floor minimums** (below these, deal economics are uncomfortable but survivable):
+| Scenario | Year 1 practices | Year 2 practices | Year 3 practices | 3-year revenue (AUD) |
+|---|---|---|---|---|
+| Minimum floor only | 75 | 75 | 75 | 81,000 |
+| Ramp as hoped | 75 | 150 | 250 | 162,000 |
+| Over-delivery | 100 | 200 | 400 | 252,000 |
 
-- Year 1: AUD 15,000 minimum. Paired with AUD 4k setup fee = AUD 19k Year 1 cash. Covers ongoing costs thin.
-- Year 2: AUD 25,000 minimum.
-- Year 3: AUD 45,000 minimum.
+Upside captured fully whether Medtech under-delivers, hits target, or accelerates. Minimum only establishes downside protection floor.
 
-**Payment structure**: annual minimum billed quarterly in advance, equal instalments (25%/quarter). Per-active-practice excess invoiced quarterly in arrears. Net 30 terms.
+**Hard floor** (absolute walk-away): if Lawrence cannot commit to 75 practices per year in any year, deal does not work economically.
 
-**Setup fee**: AUD 4,000 at contract execution, offsets Year 1 minimum. Covers PIA, privacy policy adaptation, IRP, onboarding admin. Reduced from earlier $15k given engineering work is founder-absorbed, not contractor spend.
+**Payment structure**: annual minimum billed quarterly in advance, equal instalments (25%/quarter = AUD 6,750/quarter). Per-active-practice excess invoiced quarterly in arrears. Net 30 terms.
+
+**Setup fee**: AUD 4,000 at contract execution, offsets Year 1 minimum. Covers PIA, privacy policy adaptation, IRP, onboarding admin. Reduced from earlier $15k given engineering work is founder-absorbed.
 
 ## 7. Non-negotiable contract clauses
 

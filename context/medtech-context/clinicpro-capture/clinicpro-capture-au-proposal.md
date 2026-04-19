@@ -39,8 +39,10 @@ ClinicPro Capture, bundled white-label into Medtech Evolution Australia as a pra
 | Year | Period | Min. active practices | Min. annual payment (AUD) |
 |---|---|---|---|
 | 1 | May 2026 - Apr 2027 | 75 | 27,000 |
-| 2 | May 2027 - Apr 2028 | 150 | 54,000 |
-| 3 | May 2028 - Apr 2029 | 250 | 90,000 |
+| 2 | May 2027 - Apr 2028 | 75 | 27,000 |
+| 3 | May 2028 - Apr 2029 | 75 | 27,000 |
+
+*Flat minimum reflects a conservative revenue floor. Medtech's per-active-practice fees apply fully above minimum, so upside scales when onboarding exceeds 75 practices.*
 
 Where onboarded active practices exceed the minimum in any given year, the full per-active-practice fee applies. Where onboarded practices fall short, the minimum payment applies.
 
