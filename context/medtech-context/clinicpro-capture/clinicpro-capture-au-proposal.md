@@ -34,17 +34,11 @@ ClinicPro Capture, bundled white-label into Medtech Evolution Australia as a pra
 
 *Active practice* = one with at least one registered user AND at least one successful capture commit in the billing month.
 
-## Annual minimum commitments
+## Annual minimum commitment
 
-| Year | Period | Min. active practices | Min. annual payment (AUD) |
-|---|---|---|---|
-| 1 | May 2026 - Apr 2027 | 75 | 27,000 |
-| 2 | May 2027 - Apr 2028 | 75 | 27,000 |
-| 3 | May 2028 - Apr 2029 | 75 | 27,000 |
+Medtech commits to a minimum of **75 active practices per year, equivalent to AUD 27,000 annually**, for each of the 3 years of the initial term.
 
-*Flat minimum reflects a conservative revenue floor. Medtech's per-active-practice fees apply fully above minimum, so upside scales when onboarding exceeds 75 practices.*
-
-Where onboarded active practices exceed the minimum in any given year, the full per-active-practice fee applies. Where onboarded practices fall short, the minimum payment applies.
+Where onboarded active practices exceed 75 in any year, the full per-active-practice fee applies to all practices above the minimum. Where onboarded practices fall short, the minimum payment still applies.
 
 ## Payment structure
 
@@ -55,18 +49,13 @@ Where onboarded active practices exceed the minimum in any given year, the full 
 
 ## One-off setup fee
 
-**AUD 4,000 on contract execution**. Offsets against Year 1 minimum. Covers:
-
-- AU Privacy Impact Assessment (APP-aligned, extension of NZ PIA)
-- AU-facing privacy policy adaptation
-- AU incident response plan documentation
-- Onboarding admin and project coordination
+**AUD 4,000 on contract execution**, to cover AU onboarding and compliance setup. Offsets against Year 1 minimum.
 
 ## Term and renewal
 
-- **Initial term**: 3 years from contract execution
-- **Renewal**: 12 months rolling, by mutual written agreement
-- **Pricing review**: annual adjustment indexed to Australian CPI
+- **Initial term**: 3 years, locked, from contract execution. Neither party may terminate for convenience during this period.
+- **After the initial term**: the agreement continues on a rolling 12-month basis unless either party gives 90 days written notice to terminate.
+- **Pricing review**: annual adjustment indexed to Australian CPI during and after the initial term.
 
 ## Support model
 
@@ -88,7 +77,7 @@ Medtech Australia may white-label the product within Evolution AU. ClinicPro req
 
 ## Tax treatment
 
-Payments subject to the NZ-AU Double Tax Agreement royalty provisions. Contract to include a standard gross-up clause so that the fees set out above are received by ClinicPro net of any AU withholding tax deductions.
+Australian tax law requires a 5% withholding on cross-border software licence payments under the NZ-AU Double Tax Agreement. The contract will include a gross-up provision so that Medtech pays enough to cover the withholding, and ClinicPro receives the fees set out above in full.
 
 ## Delivery
 
