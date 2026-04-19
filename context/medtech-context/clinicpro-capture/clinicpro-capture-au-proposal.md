@@ -63,7 +63,7 @@ Where onboarded active practices exceed 75 in any year, the full per-active-prac
 
 ## Data residency and compliance
 
-ClinicPro Capture is hosted in Sydney (AWS ap-southeast-2) and will meet Australian privacy, data residency, and security requirements. Specific compliance artefacts (privacy policy, pentest evidence, Privacy Impact Assessment) provided as part of contract execution.
+ClinicPro Capture is hosted in Sydney (AWS ap-southeast-2) and will meet Australian privacy, data residency, and security requirements. Compliance milestones and timelines to be agreed in the contract.
 
 ## Branding
 
