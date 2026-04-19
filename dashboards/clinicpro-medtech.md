@@ -167,6 +167,13 @@ scheduleDashboardColumnSort(dv, headers);
 - Alex Cauble-Chantrenne: partnership agreement draft promised 7 April but not yet received
 - Lawrence Peterson: follow-up sent 13 April asking who covers infrastructure running costs under proposed license bundle model — answer needed before pricing proposal can be completed
 
+### Week of 2026-04-14 (continued 19 Apr)
+
+- `/medtech/capture` landing page shipped (Phase 1 Task 1, commit 64788af): 7-section server-rendered page, editorial-clinical aesthetic, Newsreader + IBM Plex Sans + JetBrains Mono, teal-600 accent, mailto CTA, full spec copy
+- `/refer-a-practice` bounty page + Resend API route shipped (Phase 1 Task 2, commit 4326d34): $200 credit / 3-months-free referral incentive, smoke-tested end-to-end
+- `resend` package added to clinicpro-medtech; RESEND_API_KEY added to .env (same account as clinicpro-saas)
+- Landing page copy/design review scheduled before champion email send (task medtech-20260419-001)
+
 ### Week of 2026-04-14
 
 - Received partnership agreement draft from Alex (13 Apr): reviewed in full including Schedule 1 (fee table extracted via python-docx)
