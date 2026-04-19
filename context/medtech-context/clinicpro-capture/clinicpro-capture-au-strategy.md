@@ -198,9 +198,9 @@ Minimum establishes downside protection at breakeven. Profit comes from volume g
 - AUD 25 at 75 minimum: acceptable trade (AUD 22,500 revenue at floor, ~AUD 3,150 margin).
 - AUD 25 at 50 minimum: **do NOT accept**. AUD 15,000 revenue at floor = ~AUD 4,000/year loss.
 
-**Payment structure**: monthly, default arrears, true-up monthly. Specific cadence to be discussed in meeting, not locked in one-pager.
+**Payment structure**: monthly invoicing in arrears, 30-day terms, minimum floor applied. Signals cashflow confidence, avoids "quarterly in advance" BATNA tell.
 
-**Setup fee**: dropped from one-pager. Will be discussed in term sheet drafting post-meeting if needed.
+**Setup fee**: AUD 4,000 on contract execution, offsets Year 1 minimum. Covers AU onboarding, compliance setup, and initial Medtech support enablement (runbook, escalation matrix, shared ticketing, training). Included in one-pager.
 
 ## 7. Non-negotiable contract clauses
 
@@ -314,7 +314,7 @@ Research (18 April 2026) confirmed AUD 30 is inside AU industry bundle pricing n
 ## 10. Pre-meeting checklist (before Wed 22 April)
 
 **Must do before Monday send:**
-- [ ] Send stripped one-pager to Lawrence, CC Alex, Monday AM. Frame email as direct response to Lawrence's 12 April question.
+- [ ] Send email to Lawrence, CC Alex, Monday AM. Email only, no PDF attachment. Body carries headline terms (price, minimum, term, scope, launch, data residency, infrastructure cost answer). Frame as direct response to Lawrence's 12 April question.
 
 **Must do between Monday and Wednesday:**
 - [ ] 2 hours of discovery calls with Bp Premier / Best Practice / MedicalDirector partner teams. Convert BATNA from bluff to real.
@@ -322,11 +322,11 @@ Research (18 April 2026) confirmed AUD 30 is inside AU industry bundle pricing n
 - [ ] Email broker (Apollo Insurance or Gallagher NZ) to flag need for AU territorial extension on PI + cyber policies. Ask about medical device / clinical software exclusions.
 - [ ] Call Helen to book phone consultation on TR 2024/D1 royalty classification and services fee restructure option.
 
-**Bring to meeting:**
-- [ ] Print cost model showing break-even at AUD 30 × 50 practices.
-- [ ] Print price/volume trade rules (section 6) and linkage trade rules (section 7b).
-- [ ] Print the AU one-pager (not for handover unless asked; Lawrence already has it via email).
-- [ ] Lawrence decision authority question as first agenda item.
+**Bring to Wednesday meeting:**
+- [ ] One-pager (comprehensive version) as Ryo's own reference and potential handout if Lawrence asks for detail.
+- [ ] Cost model showing break-even at AUD 30 × 50 practices.
+- [ ] Price/volume trade rules (section 6) and linkage trade rules (section 7b).
+- [ ] Lawrence decision authority question prepared as first agenda item.
 
 ## 11. Post-Wed actions
 
