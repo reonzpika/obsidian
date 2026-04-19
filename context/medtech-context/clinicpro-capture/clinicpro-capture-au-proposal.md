@@ -11,7 +11,7 @@ project: clinicpro-capture
 
 # ClinicPro Capture: Australian Market Bundle Proposal
 
-**From**: Dr Ryo Eguchi, Founder, ClinicPro (ClinicPro Ltd, NZ)
+**From**: Dr Ryo Eguchi, Founder, ClinicPro (NexWave Solutions Ltd, NZ)
 **To**: Lawrence Peterson, GM Integration & Infrastructure, Medtech Global
 **Date**: 19 April 2026
 **Reference**: Follow-up to email thread "AU market for Capture app"
@@ -90,24 +90,9 @@ Payments subject to the NZ-AU Double Tax Agreement royalty provisions. Contract 
 
 ## Delivery
 
-- AU regionalisation engineering: 6 to 8 weeks from contract execution
-- Launch target: aligned with Medtech Evolution AU G2M, May to June 2026
+AU regionalisation engineering work commences on contract execution. Launch window May to June 2026.
 
-## Open items requiring Medtech confirmation
 
-Before final term sheet:
-
-1. **Vendor security requirements**. Confirm whether Medtech AU requires formal certification (ISO 27001, SOC 2) or accepts SIG Lite / CAIQ self-attestation plus annual CREST ANZ pentest.
-2. **My Health Record scope**. Confirm MHR integration remains Medtech-side; Capture does not write to MHR.
-3. **Medtech AU entity details**. Confirm ABN and GST registration status (for correct GST and invoicing treatment).
-4. **Governing law and dispute forum**. Medtech preference (Victoria, NSW, or other).
-
-## Next steps
-
-1. Medtech confirms the four open items above by end of April.
-2. Term sheet signed by mid-May.
-3. Full contract drafting and execution by end of May.
-4. Engineering work commences on contract execution. Launch window May to June 2026.
 
 ---
 

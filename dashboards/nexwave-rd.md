@@ -277,6 +277,27 @@ Payroll software: Xero. Paid monthly in arrears. PAYE deducted at source.
 - **Cross-check every contract rate against the approved MBIE Cost Template before signing.** Helen's first draft of Ting's contract came in at $48.94/hr; MBIE approved rate is $58.33/hr. Discrepancy would have been locked into MBIE submission and triggered a compliance issue if not caught. Applies to any future rate change or new employee.
 - **Payroll responsibility split:** Helen runs Xero payroll + files PAYE with IRD; Ryo executes bank transfers on pay day. PAYE liability for a given pay period is due the 20th of the following month (April pay → 20 May). One pay run per month, 16th of month, covering previous 16th–15th.
 
+### Helen's scope (agreed 2026-04-19)
+
+Helen is NexWave's accountant, not a personal assistant, not a programme manager, not a document preparer. Her remit is financial only.
+
+**In scope:**
+- Owns the Xero file day-to-day: bookkeeping, bank recs, chart of accounts, invoice coding
+- Payroll runs, PAYE filing, GST returns, income tax, end-of-year accounts
+- Produces cost reports (including MBIE quarterly R&D cost reports) from Xero
+- First call for any NZ tax or financial question (R&D tax credits, fringe benefits, WHT, etc.). She may refer out if outside her expertise (e.g. cross-border tax).
+- Advises on banking / credit card setup; Ryo executes at the bank
+
+**Out of scope:**
+- MBIE grant submissions, technical reports, or any programme documentation. Ryo does these.
+- Legal, compliance, or clinical/regulatory questions. Route to Buddle Findlay / Bell Gully / Medsafe contacts.
+- Admin, calendar, email triage, or personal-assistant-style tasks.
+- Document drafting (contracts, proposals, privacy policies, etc.).
+
+**To make Helen's R&D cost reporting easy (Ryo's side):**
+- Separate NZ business bank account for R&D spend (so Xero can code cleanly, tracked in follow-up task)
+- Decide (via Helen) if one shared business credit card is acceptable or if R&D needs a separate card (follow-up task)
+
 ---
 
 ## Open Questions
