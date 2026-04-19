@@ -18,6 +18,7 @@ Comprehensive background, cost model, negotiation tactics, and pre-meeting check
 
 - **NexWave Health R&D is the primary founder bet.** ClinicPro Capture is secondary: cash generator plus PMS partnership foothold for future tools.
 - **AU market entry via Medtech is channel-only.** No direct AU sales planned. Partnership with PMS is crucial for selling clinical tools into AU given no local presence.
+- **Medtech is the only PMS without a native image capture tool.** Indici, Bp Premier, Best Practice, MedicalDirector already have this solved. Medtech uniquely needs Capture to plug a competitive gap. BATNA inversion: they need us on this product specifically more than we need them, which strengthens the AU bundle posture too.
 - **Wed meeting will discuss NZ commission AND AU bundle together.** Alex was CC'd on Lawrence's earlier AU emails. Expect attempted deal linkage.
 
 ## 2. Deal framing
