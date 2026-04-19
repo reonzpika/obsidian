@@ -4,7 +4,7 @@ type: proposal
 audience: external
 counterparty: Medtech Global Australia
 author: Dr Ryo Eguchi
-date: 2026-04-18
+date: 2026-04-19
 status: draft
 project: clinicpro-capture
 ---
@@ -13,7 +13,7 @@ project: clinicpro-capture
 
 **From**: Dr Ryo Eguchi, Founder, ClinicPro (ClinicPro Ltd, NZ)
 **To**: Lawrence Peterson, GM Integration & Infrastructure, Medtech Global
-**Date**: 18 April 2026
+**Date**: 19 April 2026
 **Reference**: Follow-up to email thread "AU market for Capture app"
 
 ---
@@ -38,20 +38,27 @@ ClinicPro Capture, bundled white-label into Medtech Evolution Australia as a pra
 
 | Year | Period | Min. active practices | Min. annual payment (AUD) |
 |---|---|---|---|
-| 1 | May 2026 - Apr 2027 | 150 | 54,000 |
-| 2 | May 2027 - Apr 2028 | 250 | 90,000 |
-| 3 | May 2028 - Apr 2029 | 400 | 144,000 |
+| 1 | May 2026 - Apr 2027 | 75 | 27,000 |
+| 2 | May 2027 - Apr 2028 | 150 | 54,000 |
+| 3 | May 2028 - Apr 2029 | 250 | 90,000 |
 
-Where onboarded active practices exceed the minimum in any given year, the full per-active-practice fee applies. Where onboarded practices fall short, the minimum payment applies, invoiced annually in advance with reconciliation at year-end.
+Where onboarded active practices exceed the minimum in any given year, the full per-active-practice fee applies. Where onboarded practices fall short, the minimum payment applies.
+
+## Payment structure
+
+- Annual minimum billed **quarterly in advance**, in equal instalments (25% per quarter).
+- Per-active-practice fees above the minimum invoiced **quarterly in arrears** (true-up).
+- Payment terms: 30 days from invoice date.
+- All amounts in AUD, exclusive of GST where applicable.
 
 ## One-off setup fee
 
-**AUD 15,000 on contract execution**. Offsets against Year 1 minimum. Covers:
+**AUD 4,000 on contract execution**. Offsets against Year 1 minimum. Covers:
 
-- AU regionalisation engineering (IHI integration, AU facility ID formats, AU-specific ALEX endpoint testing)
-- AU Privacy Impact Assessment (extension of existing NZ PIA to APP framework)
-- AU-facing privacy policy and data processing agreement
-- AU incident response plan
+- AU Privacy Impact Assessment (APP-aligned, extension of NZ PIA)
+- AU-facing privacy policy adaptation
+- AU incident response plan documentation
+- Onboarding admin and project coordination
 
 ## Term and renewal
 

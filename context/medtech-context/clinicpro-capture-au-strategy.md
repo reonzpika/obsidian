@@ -152,44 +152,95 @@ Revised model significantly improves margins at every scale vs the original $21,
 ## 5. Pricing strategy
 
 - **Opening ask** (in proposal to Medtech): **AUD 30** per practice per month.
-- **Walk-away floor**: AUD 17 per practice per month (revised from $20 given lower cost basis).
-- **Likely landing zone** after negotiation: AUD 22-27 per practice per month.
+- **Public floor** (as stated internally and defended publicly): AUD 25 per practice per month.
+- **Private soft floor** (with non-price concessions): AUD 20 per practice per month.
+- **Likely landing zone** after negotiation: AUD 25-30 per practice per month.
+
+**Framing to Lawrence**: do NOT anchor on "% of NZ retail." Anchor on cost + value + AU market benchmarks. Cubiko QuickCheck retails at AUD 50/practice/month direct; $30 as wholesale to PMS bundle sits in the expected 50-60% band. Halo Connect (Best Practice's partner API) uses the identical structural model Medtech is proposing.
 
 **Framing to Lawrence**: do NOT anchor on "% of NZ retail." Anchor on cost + margin. Your number is defensible on unit economics, not relative discount. Stronger negotiation posture.
 
 ## 6. Minimum license commitment strategy
 
-**Proposal** (opening ask): 150 / 250 / 400 practices = AUD 54k / 90k / 144k.
+**Proposal** (opening ask, in one-pager): 75 / 150 / 250 practices = AUD 27k / 54k / 90k.
 
-**Expect pushback.** Lawrence will argue Medtech cannot guarantee rollout volume. Reasonable landing zone:
+**Revised softer than earlier versions** to reflect: (a) priority of closing fast, (b) weak BATNA, (c) strategic relationship value, (d) low actual cash cost of running the deal. These are floor numbers Medtech should easily accept.
 
-| Year | Opening ask | Likely landing |
+| Year | Opening ask | Acceptable landing |
 |---|---|---|
-| 1 | 150 practices / AUD 54k | 100-120 practices / AUD 36-43k |
-| 2 | 250 practices / AUD 90k | 175-200 practices / AUD 63-72k |
-| 3 | 400 practices / AUD 144k | 275-325 practices / AUD 99-117k |
+| 1 | 75 practices / AUD 27k | 50-75 practices / AUD 18-27k |
+| 2 | 150 practices / AUD 54k | 100-150 practices / AUD 36-54k |
+| 3 | 250 practices / AUD 90k | 175-250 practices / AUD 63-90k |
 
-**Hard floor minimums** (below these, economics do not work). Revised downward given lower cost basis:
+**Hard floor minimums** (below these, deal economics are uncomfortable but survivable):
 
-- Year 1: AUD 20,000 minimum. Covers fixed cost + thin margin.
-- Year 2: AUD 35,000 minimum.
-- Year 3: AUD 60,000 minimum.
+- Year 1: AUD 15,000 minimum. Paired with AUD 4k setup fee = AUD 19k Year 1 cash. Covers ongoing costs thin.
+- Year 2: AUD 25,000 minimum.
+- Year 3: AUD 45,000 minimum.
 
-If Medtech cannot commit to the hard floor, walk away.
+**Payment structure**: annual minimum billed quarterly in advance, equal instalments (25%/quarter). Per-active-practice excess invoiced quarterly in arrears. Net 30 terms.
+
+**Setup fee**: AUD 4,000 at contract execution, offsets Year 1 minimum. Covers PIA, privacy policy adaptation, IRP, onboarding admin. Reduced from earlier $15k given engineering work is founder-absorbed, not contractor spend.
 
 ## 7. Non-negotiable contract clauses
 
-Identified through research, must appear in final contract:
+Reduced to six essentials for simplicity (aligned with priority of closing fast):
 
-1. **WHT gross-up clause**. AU royalty withholding tax under NZ-AU DTA is 5% (draft ruling TR 2024/D1 treats software bundle payments as royalties). Without gross-up, Ryo loses 5% of every payment. Critical.
+1. **WHT gross-up clause**. AU royalty withholding tax under NZ-AU DTA is 5% (draft ruling TR 2024/D1 treats software bundle payments as royalties). Without gross-up, ClinicPro loses 5% of every payment. **Critical.**
 2. **Pentest reuse confirmed in writing**. NZ CREST ANZ pentest acceptable as AU compliance evidence. Saves ~AUD 15k/year.
-3. **Scope locked to image capture and ALEX post**. Future ClinicPro tools (Inbox Helper, Care Gap Finder) require separate commercial agreements.
+3. **Scope locked to image capture and ALEX post**. Future ClinicPro tools require separate commercial agreements.
 4. **"Powered by ClinicPro" attribution** in about/help panel. Minimum brand presence.
-5. **No exclusivity on ClinicPro's side**. Freedom to partner with Bp Premier or other AU PMS later. Medtech can claim to be an AU partner but cannot bind ClinicPro to exclusivity.
-6. **Right to direct AU sales post-term**. Exit optionality. If partnership ends, ClinicPro can sell direct.
-7. **Active practice definition favourable**. "1 user + 1 successful capture per month" (not heavy usage thresholds that let Medtech stall practices into non-payment).
-8. **Governing law accepted AU**, but NZ-qualified lawyer with ANZ experience handles review. Not a problem.
-9. **Annual CPI pricing review**. Protects margin over 3 years from inflation.
+5. **No exclusivity on ClinicPro's side**. Freedom to partner with Bp Premier or other AU PMS later.
+6. **30-day payment terms, quarterly in advance**. Protects cash flow.
+
+**Standard contract language (do not fight for explicit clauses, accept Medtech's template)**: force majeure, late payment interest, acceleration on material breach, governing law (accept AU), dispute resolution, confidentiality.
+
+**Simplification rationale**: originally identified 14 clauses. Dropped eight for closing speed. The six retained are load-bearing; losing any one of them compromises the deal economics materially. Everything else is in the contract template as standard language and can be accepted without negotiation.
+
+## 7a. Market benchmark validation
+
+Research (18 April 2026) confirmed AUD 30 is inside AU industry bundle pricing norms:
+
+**Medtech Evolution AU unit economics** (source: ITQlick, Jan 2026):
+- List price AUD 240 per license per month
+- Typical practice (~7 licenses) = AUD 1,680 per month revenue
+- Estimated central gross profit per practice per month: ~AUD 1,180
+- Industry rule: bundled partner COGS absorb 10-25% of gross profit
+- Medtech's rational bundling budget per practice: **AUD 118-355 per month**
+- AUD 30 is only 2.5% of central gross profit. Very affordable for Medtech.
+
+**Direct AU comparable — Cubiko QuickCheck**:
+- Direct retail AUD 50 per practice per month
+- Single-module add-on integrated with Best Practice
+- Closest analogue in scope and depth to Capture
+- At typical wholesale discount of 40-50%, wholesale equivalent = **AUD 25-30/practice/month**
+
+**Structural fit — Halo Connect (Best Practice partner API)**:
+- Uses identical "set fee per practice per month, tiered by usage" model Medtech is proposing
+- Top tier estimated at AUD 20-50/practice/month
+- AUD 30 sits squarely in the band
+
+**Global analogue** (Epic App Orchard historical):
+- 15-30% revenue share on partner apps
+- On a AUD 200 retail product, Epic took AUD 30-60. AUD 30 on a narrower-scope tool is consistent.
+
+**Bottom line**: AUD 30 is defensible as opener. Market supports it. Lawrence's rational pushback band is AUD 22-28. Our floor of AUD 25 is well inside defensible territory.
+
+## 7b. Revised strategy framework (19 April 2026)
+
+**Ryo's priorities (confirmed)**:
+1. Getting the deal (weak BATNA: kill AU entirely if this fails)
+2. Maximising margin
+3. Cash flow (NexWave R&D has runway, AU cash is bonus)
+
+**Strategic context**:
+- Medtech is THE long-term integration partner for ClinicPro (5+ year horizon, multiple future tools)
+- Relationship capital matters more than squeezing this single deal
+- Close fast, keep simple
+
+**Timeline goal**: contract signed by end April 2026 (10 days from Wed meeting).
+
+**BATNA bluff**: if Lawrence pushes price hard, reference emerging AU PMS vendors and option to go direct later. **Never admit you'd kill AU entirely if this fails** (which is the truth).
 
 ## 8. Strategic risks to manage
 
