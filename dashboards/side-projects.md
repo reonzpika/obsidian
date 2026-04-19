@@ -34,6 +34,13 @@ Personal and family projects outside of ClinicPro and Nexwave R&D. Maintained by
 - LCP image perf pass: priority + responsive `sizes` added; audit re-run against fixes
 - Nano Banana Pro research context imported to miozuki repo
 
+**linkedin (automation go-live, Apr 19)**
+- First post on new strategy scheduled: ManageMyHealth patient portal login UX (Pillar A, text), publishes Tue 21 Apr 10:00 NZST, executor fires 09:40
+- Golden Hour Windows automation shipped and verified: `LinkedInWake_<session_id>` at T-40min (`WakeToRun=True`, `StartWhenAvailable=True`) launches Claude Desktop; `LinkedInPost_<hash>` at T-20min runs `python execute_post.py <session_id>`
+- Bug fixed: `scripts/ensure_claude_desktop.bat` was probing `%LOCALAPPDATA%\Programs\Claude\Claude.exe` but Claude Desktop on this machine is an MSIX/UWP package (`PackageFamilyName=Claude_pzs8sxrjxfjjc`); rewrote to launch via `start "" "explorer.exe" "shell:AppsFolder\Claude_pzs8sxrjxfjjc!Claude"`
+- Wake timers enabled on AC + DC; auth session valid; schedule registry + task actions verified end-to-end
+- Stale `2026-03-23` entry in `temporary/schedule_registry.json` still marked `scheduled` — non-blocking, clean up later
+
 **linkedin (strategy pivot, Apr 16-17)**
 - Full LinkedIn strategy overhaul: audience-value-first pillars replacing infrastructure commentary. Pillar A "What Works in NZ Primary Care" (55%, save-worthy) + Pillar B "What's Changing in NZ Primary Care" (40%, share-worthy). Building content moved to newsletter only.
 - Cadence: 3x/week (1 carousel Tue + 2 text Thu/Sat) + fortnightly "The GP Builder" newsletter + daily 15-min commenting
