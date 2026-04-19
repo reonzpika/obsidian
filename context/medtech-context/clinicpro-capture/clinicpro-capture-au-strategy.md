@@ -5,7 +5,7 @@ audience: internal
 project: clinicpro-capture
 related: clinicpro-capture-au-proposal
 author: Dr Ryo Eguchi
-date: 2026-04-18
+date: 2026-04-19
 status: active
 meeting: 2026-04-22 Wed with Lawrence Peterson + Alex Cauble-Chantrenne
 ---
@@ -33,20 +33,17 @@ Comprehensive background, cost model, negotiation tactics, and pre-meeting check
 - Houston may build equivalent. Competitive time pressure implied.
 - Lawrence is "stretched thin". Wants simple clean commercials.
 
-## 3. Cost model (verified via research 18 April 2026, revised for Ryo's scope decisions)
+## 3. Cost model (revised 19 April 2026 with honest founder-time cost at NZD 145/hr)
 
-**Annual attributable cost of AU deal**: NZD ~13,500 (~AUD 12,300)
+**Annual attributable cost of AU deal**: **NZD ~21,300 (~AUD 19,350)**
 
 Composition:
-- Fixed ongoing: insurance AU territorial extension, engineering maintenance (AU share), compliance reporting time, FX/banking, annual compliance checks
-- One-off amortised over 3 years: AU contract legal, AU tax scoping (Helen), AU PIA (DIY), AU privacy policy, Wise setup
-- Per-practice onboarding (first 24 months only): AUD ~11.30 per practice per month
+- Cash one-off amortised over 3 years: AU contract legal, AU tax scoping (Helen), AU PIA (DIY), AU privacy policy, Wise setup.
+- Founder engineering one-off amortised: 80 hours × NZD 145 = NZD 11,600 total / 3 years.
+- Ongoing cash: insurance AU territorial extension, compliance reporting, FX/banking, annual compliance checks.
+- Ongoing founder maintenance: 4 hours/month × NZD 145 × 12.
 
-**Scope decisions reducing cost from initial $21,500 estimate:**
-- AU tax scoping handled by Helen (NZ accountant) at her billable rate — cheaper than specialist firm but not free.
-- AU regionalisation engineering (~80 hours) done by Ryo himself. Cash cost $0, opportunity cost ~2 weeks of founder time.
-- AU PIA done DIY using OAIC free template (6-8 hours of Ryo's time). Budget $1k for external review if Medtech AU pushes back.
-- Privacy policy adapted from NZ version at low cost; DPA typically in main contract; IRP via free OAIC template.
+**Change from earlier model (NZD 13,500/yr):** previous model excluded founder time as "opportunity cost, not cash cost." At Ryo's actual billable rate of NZD 145/hr, that is intellectually dishonest and hides the real economics of the deal. Revised model includes founder time at this rate. If Lawrence pushes below AUD 25, founder time is the hidden variable that tips the deal loss-making.
 
 **Infrastructure is effectively free** up to 500 AU practices (existing Sydney-region stack already covers it). Above 500, modest Lightsail bandwidth overage kicks in.
 
@@ -63,9 +60,11 @@ Composition:
 
 | Category | NZD/year |
 |---|---|
-| One-off costs amortised over 3-year term | ~6,336 |
-| Ongoing annual costs | ~7,100 |
-| **Total attributable annual cost** | **~13,436 ≈ 13,500** |
+| Cash one-off amortised over 3-year term | ~6,336 |
+| Founder engineering one-off amortised | ~3,867 |
+| Ongoing cash costs | ~4,100 |
+| Ongoing founder maintenance | ~6,960 |
+| **Total attributable annual cost** | **~21,263 ≈ 21,300** |
 
 **A. One-off costs (3-year term, ÷3 to get per-year)**
 
@@ -78,8 +77,11 @@ Composition:
 | Wise setup + misc | 500 | 170 | Wise Business setup NZD 40 + AU invoicing admin + onboarding misc. | High |
 | **One-off subtotal** | **19,000** | **6,336** | | |
 
-**Removed from model (Ryo doing himself):**
-- **AU regionalisation engineering** (~80 hours): Ryo writing it himself. Cash cost zero. Opportunity cost ~2 weeks of founder time (trade-off against NexWave R&D pace, flagged for deal-level decision).
+**Founder engineering (now in model, previously excluded):**
+
+| Line | One-off NZD | /year | Source / reasoning |
+|---|---|---|---|
+| AU regionalisation engineering (80h × NZD 145) | 11,600 | 3,867 | NHI → IHI identifier swap, AU facility ID handling, AU-specific terminology, separate AU ALEX sandbox credentials, AU privacy copy. Rate is Ryo's actual billable rate. |
 
 **B. Ongoing annual costs**
 
@@ -87,21 +89,20 @@ Composition:
 |---|---|---|---|
 | Insurance AU territorial extension | 1,500 | Ryo currently has NO insurance. Combined tech liability policy (PI + cyber) needs to be purchased before signing AU contract, ~NZD 2,500-4,500/yr base. AU territorial extension adds 15-30% (NZD 500-2,500). Base NOT attributed to AU (needed for NZ anyway); extension IS AU-incremental. Mid-point $1,500. Must resolve clinical/medical exclusion with underwriter. | Medium |
 | Pentest (AU scope) | 0 | CREST Australia New Zealand operates jointly. NZ CREST ANZ pentest accepted for AU partner procurement. **Subject to Medtech AU written confirmation.** Budget AUD 6,000-20,000 contingency if separate AU pentest demanded. | High (subject to confirmation) |
-| Engineering maintenance (AU-specific portion) | 3,000 | ~1 hour/month of AU-specific maintenance × 12 × NZD 250/hr opportunity cost. Most maintenance shared with NZ code path. | Low-Medium |
-| Compliance reporting time | 1,800 | Quarterly usage/SLA/security reports to Medtech. 2-4 hours/quarter at NZD 150-200/hr opportunity cost. | Low-Medium (depends on Medtech requirements) |
+| Founder engineering maintenance | 6,960 | ~4 hours/month of AU-specific maintenance × 12 × NZD 145/hr. Includes AU sandbox credential rotation, AU-specific bug reports from Medtech tier-1, AU feature requests, IHI/HI Service monitoring, AU privacy law monitoring. | Low-Medium |
+| Compliance reporting time | 1,800 | Quarterly usage/SLA/security reports to Medtech. 2-4 hours/quarter at NZD 150-200/hr. | Low-Medium (depends on Medtech requirements) |
 | Infrastructure overage | 0 | Below 500 AU practices, combined NZ+AU workload stays within existing Vercel/Supabase/Lightsail tiers. At 500+ practices, incremental ~USD 98/mo = NZD 2,000/year kicks in. | High |
 | Banking / FX | 300 | Wise Business on AUD 50k annual volume. | High |
 | Annual AU compliance checks | 500 | Annual privacy policy refresh, OAIC guidance monitoring, minor admin. | Medium |
-| **Ongoing subtotal** | **7,100** | | |
+| **Ongoing subtotal** | **11,060** | | |
 
 ### 3.2 What is NOT in the cost model (and why)
 
 1. **NZ partnership costs** (NZ PIA, NZ pentest, NZ contract legal). Exist regardless of AU deal.
 2. **Base infrastructure** (Vercel Pro, Supabase Pro, Lightsail). Already paid for NZ. Zero incremental cost up to 500 AU practices.
 3. **Base insurance policy** (~NZD 2,500-4,500/yr combined PI + cyber). Ryo currently has none, but needs it for NZ partnership anyway. Medtech AU forces the timing, not the attribution. Must be purchased before signing AU contract.
-4. **Founder engineering time on AU regionalisation** (~80 hours). Cash cost zero. Opportunity cost ~2 weeks of founder time impacting NexWave R&D pace. Real but not cash.
-5. **Royalty withholding tax (5% of revenue)**. Cash flow drag, not a cost. Reclaimable as NZ foreign tax credit. Net-zero to profitability. Address via gross-up clause.
-6. **Founder time on deal management** (negotiation, relationship, reporting). Real opportunity cost, not cash cost. Handled via annual minimum and margin structure.
+4. **Royalty withholding tax (5% of revenue)**. Cash flow drag, not a cost. Reclaimable as NZ foreign tax credit. Net-zero to profitability, *if* we negotiate gross-up or restructure as services fee to minimise exposure.
+5. **Founder time on deal management** (negotiation, relationship, reporting). Real opportunity cost, not cash cost. Handled via annual minimum and margin structure.
 
 ### 3.3 Confidence caveat
 
@@ -112,41 +113,52 @@ Most numbers are benchmarks from research, not actual quotes. Realistic variance
 
 ### 3.4 Low / central / high sensitivity
 
-| Scenario | One-off NZD | Ongoing NZD | Total/yr NZD |
-|---|---|---|---|
-| Low-cost (Sprintlaw fixed fees hold, insurance already held, no AU pentest demand) | 12,000 | 5,000 | ~9,000 |
-| **Central (used in model)** | 17,500 | 7,100 | **~12,936** |
-| High-cost (top-tier legal, AU pentest required, ISO 27001 demanded, higher insurance uplift) | 45,000 | 22,000 | ~37,000 |
+| Scenario | Cash one-off NZD | Founder eng. one-off NZD | Ongoing NZD/yr | Total NZD/yr |
+|---|---|---|---|---|
+| Low-cost (Sprintlaw fixed fees, insurance exclusion resolved cheap, no AU pentest demand, lighter maintenance load) | 12,000 | 8,000 | 8,000 | ~14,700 |
+| **Central (used in model)** | 19,000 | 11,600 | 11,060 | **~21,263** |
+| High-cost (top-tier legal, AU pentest required, ISO 27001 demanded, heavy AU support requests, higher insurance uplift) | 45,000 | 20,000 | 25,000 | ~46,700 |
 
-**What shifts the scenario**: answers Lawrence gives Wed on questions 1-7 (security requirements, pentest reuse, MHR scope, WHT gross-up position). Each answer moves the cost model by thousands.
+**What shifts the scenario**: answers Lawrence gives Wed on security requirements, pentest reuse, and volume forecast. Each answer moves the cost model by thousands.
 
-**Implications for floor pricing at 150 practices:**
-- Low-cost scenario: floor could drop to AUD ~12/practice/month.
-- Central: AUD ~17/practice/month.
-- High-cost: AUD ~28/practice/month.
+**Implications for floor pricing at 50 practices:**
+- Low-cost scenario: floor ≈ AUD 22/practice/month.
+- Central: AUD 30/practice/month is breakeven.
+- High-cost: AUD 65/practice/month needed.
 
-Opening at AUD 30 holds up comfortably in central AND high scenarios. Leaves comfortable negotiation room.
+AUD 30 with 50-practice minimum is breakeven central-case. Upside is entirely in volume growth above minimum: every practice above 50 at AUD 30 is near-100% margin in steady state.
 
 ## 4. Break-even analysis at AUD 30 per practice per month
 
-Annual fixed cost NZD ~12,936 = AUD ~11,760. Per-practice onboarding AUD 11.30/month in years 1-2.
+Annual cost NZD ~21,300 = AUD ~19,350 (central case, honest founder time).
 
-| Scenario | Break-even practices |
+| Price | Break-even practices/year |
 |---|---|
-| Years 1-2 (including onboarding cost) | ~52 |
-| Year 3+ steady state (onboarding drops off) | ~33 |
+| AUD 30/month | ~54 |
+| AUD 25/month | ~65 |
+| AUD 22/month | ~73 |
 
 **Margin at different volumes at AUD 30/month:**
 
-| Practices | Yr 1-2 annual margin (AUD) | Yr 3+ annual margin (AUD) |
+| Practices | Annual revenue (AUD) | Annual margin (AUD) |
 |---|---|---|
-| 50 | -540 (slight loss) | +6,240 (35%) |
-| 100 | +10,680 (30%) | +24,240 (67%) |
-| 150 | +21,906 (41%) | +42,240 (78%) |
-| 300 | +55,548 (51%) | +96,240 (89%) |
-| 500 | +100,440 (56%) | +168,240 (93%) |
+| 50 | 18,000 | -1,350 (slight loss) |
+| 75 | 27,000 | +7,650 (28%) |
+| 100 | 36,000 | +16,650 (46%) |
+| 150 | 54,000 | +34,650 (64%) |
+| 300 | 108,000 | +88,650 (82%) |
 
-Revised model significantly improves margins at every scale vs the original $21,500/yr cost basis.
+**Important caveat:** this is steady-state annual math. Year 1 includes the full cash one-off spend (~NZD 19,000 legal + tax + PIA + privacy + Wise) hitting in the first 12 months. Actual Y1 cash outlay is front-loaded. Steady-state economics from Y2 onwards are what matter for the 3-year deal.
+
+**3-year totals at 50-practice flat minimum × AUD 30:**
+
+| Scenario | 3-yr revenue (AUD) | 3-yr cost (AUD) | 3-yr net (AUD) |
+|---|---|---|---|
+| Flat at 50 all 3 years | 54,000 | ~58,000 | -4,000 (loss) |
+| Ramp 50 → 75 → 100 | 81,000 | ~58,000 | +23,000 |
+| Ramp 50 → 100 → 150 | 108,000 | ~58,000 | +50,000 |
+
+50-practice floor makes the deal break-even on minimum performance, profitable on any growth. Acceptable risk posture given weak BATNA and strategic value.
 
 ## 5. Pricing strategy
 
@@ -161,40 +173,51 @@ Revised model significantly improves margins at every scale vs the original $21,
 
 ## 6. Minimum license commitment strategy
 
-**Proposal** (opening ask, in one-pager): **flat 75 practices per year across all 3 years = AUD 27,000/year minimum**. 3-year minimum total: AUD 81,000.
+**Opening ask (in one-pager): flat 50 practices per year across all 3 years = AUD 18,000/year minimum.** 3-year minimum total: AUD 54,000.
 
-**Why flat, not incrementing**: simplicity. Aligned with priority of closing fast. Flat minimums are easier for Lawrence to approve internally and remove ramp-schedule complexity. Upside is NOT capped — per-active-practice fees apply fully when practices exceed 75.
+**Why 50, not 75**: closing speed and deal probability. Lawrence has 2 other partners already signed and his AU Y1 practice volume is unknown. 75 was anchored on cost recovery at margin; 50 is anchored on deal probability with breakeven-at-floor economics. We give up ~AUD 6,000/year of guaranteed margin at floor in exchange for substantially higher P(close).
 
-**Revenue scenarios under flat minimum:**
+**Why flat, not incrementing**: simplicity. Flat minimums are easier for Lawrence to approve internally and remove ramp-schedule complexity. Upside is NOT capped: per-active-practice fees apply fully when practices exceed 50.
 
-| Scenario | Year 1 practices | Year 2 practices | Year 3 practices | 3-year revenue (AUD) |
+**Revenue scenarios under 50 flat minimum at AUD 30:**
+
+| Scenario | Y1 practices | Y2 practices | Y3 practices | 3-year revenue (AUD) |
 |---|---|---|---|---|
-| Minimum floor only | 75 | 75 | 75 | 81,000 |
-| Ramp as hoped | 75 | 150 | 250 | 162,000 |
-| Over-delivery | 100 | 200 | 400 | 252,000 |
+| Minimum floor only | 50 | 50 | 50 | 54,000 |
+| Modest ramp | 50 | 75 | 100 | 81,000 |
+| Target ramp | 50 | 100 | 150 | 108,000 |
+| Over-delivery | 75 | 150 | 250 | 162,000 |
 
-Upside captured fully whether Medtech under-delivers, hits target, or accelerates. Minimum only establishes downside protection floor.
+Minimum establishes downside protection at breakeven. Profit comes from volume growth.
 
-**Hard floor** (absolute walk-away): if Lawrence cannot commit to 75 practices per year in any year, deal does not work economically.
+**Hard floor (absolute walk-away)**: if Lawrence cannot commit to **40 practices/year minimum at AUD 30**, deal does not work (even honest-cost break-even is 54 at this price). Below that, either price has to move up or walk.
 
-**Payment structure**: annual minimum billed quarterly in advance, equal instalments (25%/quarter = AUD 6,750/quarter). Per-active-practice excess invoiced quarterly in arrears. Net 30 terms.
+**Price/volume trade rules** (pre-decided for Wednesday):
+- Hold AUD 30 at 50 minimum: default.
+- AUD 30 at 40 minimum: acceptable only if Lawrence confirms Y2+ growth path.
+- AUD 25 at 75 minimum: acceptable trade (AUD 22,500 revenue at floor, ~AUD 3,150 margin).
+- AUD 25 at 50 minimum: **do NOT accept**. AUD 15,000 revenue at floor = ~AUD 4,000/year loss.
 
-**Setup fee**: AUD 4,000 at contract execution, offsets Year 1 minimum. Covers PIA, privacy policy adaptation, IRP, onboarding admin. Reduced from earlier $15k given engineering work is founder-absorbed.
+**Payment structure**: monthly, default arrears, true-up monthly. Specific cadence to be discussed in meeting, not locked in one-pager.
+
+**Setup fee**: dropped from one-pager. Will be discussed in term sheet drafting post-meeting if needed.
 
 ## 7. Non-negotiable contract clauses
 
-Reduced to six essentials for simplicity (aligned with priority of closing fast):
+Trimmed for closing speed. Only four hard non-negotiables:
 
-1. **WHT gross-up clause**. AU royalty withholding tax under NZ-AU DTA is 5% (draft ruling TR 2024/D1 treats software bundle payments as royalties). Without gross-up, ClinicPro loses 5% of every payment. **Critical.**
+1. **Tax treatment resolved to ClinicPro receiving net AUD 30/practice**. Method negotiable: either WHT gross-up, OR restructure deal as services fee (not royalty) to avoid WHT classification under TR 2024/D1, OR shared burden as last resort. Let Medtech's treasury propose preferred structure; we care about the net outcome, not the mechanism. **Do not raise in one-pager. Discuss in meeting or term sheet.**
 2. **Pentest reuse confirmed in writing**. NZ CREST ANZ pentest acceptable as AU compliance evidence. Saves ~AUD 15k/year.
 3. **Scope locked to image capture and ALEX post**. Future ClinicPro tools require separate commercial agreements.
-4. **"Powered by ClinicPro" attribution** in about/help panel. Minimum brand presence.
-5. **No exclusivity on ClinicPro's side**. Freedom to partner with Bp Premier or other AU PMS later.
-6. **30-day payment terms, quarterly in advance**. Protects cash flow.
+4. **No exclusivity on ClinicPro's side**. Freedom to partner with Bp Premier or other AU PMS later.
 
-**Standard contract language (do not fight for explicit clauses, accept Medtech's template)**: force majeure, late payment interest, acceleration on material breach, governing law (accept AU), dispute resolution, confidentiality.
+**Dropped from non-negotiables (acceptable concessions):**
+- **"Powered by ClinicPro" attribution**. Acceptable to drop if it smooths Medtech approval. Not worth fighting for.
+- **Quarterly in advance payment**. Monthly in arrears is fine. Signals cashflow confidence rather than need.
 
-**Simplification rationale**: originally identified 14 clauses. Dropped eight for closing speed. The six retained are load-bearing; losing any one of them compromises the deal economics materially. Everything else is in the contract template as standard language and can be accepted without negotiation.
+**Standard contract language (accept Medtech's template unless it harms us materially)**: force majeure, late payment interest, acceleration on material breach, governing law (accept AU), dispute resolution, confidentiality.
+
+**Items to raise at term sheet stage (not one-pager, not meeting)**: liability cap, IP ownership, termination for cause/convenience, SLA, data portability, change of control, clinical risk pathway, practitioner-level audit, professional indemnity alignment.
 
 ## 7a. Market benchmark validation
 
@@ -233,13 +256,28 @@ Research (18 April 2026) confirmed AUD 30 is inside AU industry bundle pricing n
 3. Cash flow (NexWave R&D has runway, AU cash is bonus)
 
 **Strategic context**:
-- Medtech is THE long-term integration partner for ClinicPro (5+ year horizon, multiple future tools)
-- Relationship capital matters more than squeezing this single deal
-- Close fast, keep simple
+- Medtech is the priority long-term integration partner for ClinicPro (5+ year horizon, multiple future tools).
+- AU bundle deal is **guaranteed distribution**. NZ partnership is channel access where ClinicPro still has to acquire customers.
+- **Priority inversion: AU bundle > NZ commission.** If forced to trade in a linked offer on Wednesday, concede NZ terms to protect AU economics, not vice versa.
+- Relationship capital matters more than squeezing this single deal.
+- Close fast, keep simple.
 
-**Timeline goal**: contract signed by end April 2026 (10 days from Wed meeting).
+**Timeline goal**: agreement in principle from Wednesday meeting, contract signed by mid-May 2026 (3-4 weeks from Wed).
 
-**BATNA bluff**: if Lawrence pushes price hard, reference emerging AU PMS vendors and option to go direct later. **Never admit you'd kill AU entirely if this fails** (which is the truth).
+**BATNA framing**: if Lawrence pushes price hard, reference emerging AU PMS vendors (Bp Premier, Best Practice, MedicalDirector, Zedmed) as option to go direct later. **Never admit you'd kill AU entirely if this fails** (which is the truth). Do 2 hours of discovery calls with these vendors between Monday and Wednesday so the BATNA is real, not pure bluff.
+
+**Pre-decided price/volume trade rules** (locked before meeting):
+- Default: AUD 30 at 50 minimum (one-pager opener).
+- If Lawrence pushes volume: AUD 30 at 40 minimum acceptable if Y2+ ramp committed.
+- If Lawrence pushes price: AUD 25 acceptable only if minimum moves up to 75+ to protect Y1 economics.
+- AUD 25 at 50 minimum = loss position, DO NOT accept.
+- AUD 22 or below: walk, cite cost basis.
+
+**Pre-decided linkage trade rule** (if Alex/Lawrence propose integrated NZ+AU offer):
+- Acknowledge linkage in room, defer written response to 48 hours post-meeting.
+- Acceptable trade: concede on NZ per-facility fee tiers (accept Alex's current draft) IF Medtech drops AU minimum to 40 OR accepts no minimum for Year 1.
+- Acceptable trade: concede on NZ commission rate (accept <15% if still in commission model) IF AU price bumps or term shortens.
+- **NOT acceptable**: concede on BOTH NZ fee model AND AU price in a single linked trade.
 
 ## 8. Strategic risks to manage
 
@@ -260,12 +298,12 @@ Research (18 April 2026) confirmed AUD 30 is inside AU industry bundle pricing n
 ## 9. Questions to bring to Wed meeting
 
 **For Lawrence (AU):**
-1. What vendor security requirements does Medtech AU impose on bundled partners? ISO 27001, SIG Lite, CAIQ, self-attestation?
-2. Who are the two already-signed AU partners? Understand benchmarks and relative positioning.
-3. What practice volume forecast does Medtech have for AU Year 1? Push him on internal number. This sets annual minimum negotiation.
+1. **First 5 minutes:** what is your approval path for a deal of this size, and realistic execution timeline from handshake to signed contract? This sets everything else.
+2. What vendor security requirements does Medtech AU impose on bundled partners? ISO 27001, SIG Lite, CAIQ, self-attestation? Will NZ CREST ANZ pentest be accepted?
+3. What practice volume forecast does Medtech have for AU Year 1? Push him on internal number. Sets minimum licence negotiation.
 4. Does My Health Record integration sit within Capture scope, or stays Medtech-side?
 5. Can Medtech confirm ABN and GST registration in writing? (GST B2B exemption hinges on this.)
-6. What is Medtech's position on gross-up for AU royalty withholding tax?
+6. What is Medtech treasury's preferred approach to cross-border tax treatment? Gross-up on royalty or restructure as services fee?
 7. What is the proposed governing law for the AU contract (Victoria, NSW, other)?
 
 **For Alex (NZ):**
@@ -275,13 +313,20 @@ Research (18 April 2026) confirmed AUD 30 is inside AU industry bundle pricing n
 
 ## 10. Pre-meeting checklist (before Wed 22 April)
 
-- [ ] Send AU bundle proposal (one-pager) to Lawrence, CC Alex. Tuesday AM latest.
-- [ ] Get pre-quote indications from 2 NZ law firms (Hudson Gavin Martin, Kindrik Partners) for AU contract review scope.
+**Must do before Monday send:**
+- [ ] Send stripped one-pager to Lawrence, CC Alex, Monday AM. Frame email as direct response to Lawrence's 12 April question.
+
+**Must do between Monday and Wednesday:**
+- [ ] 2 hours of discovery calls with Bp Premier / Best Practice / MedicalDirector partner teams. Convert BATNA from bluff to real.
+- [ ] Get pre-quote indications from 2 NZ law firms (Hudson Gavin Martin, Kindrik Partners) for AU contract review scope. In parallel with the above.
 - [ ] Email broker (Apollo Insurance or Gallagher NZ) to flag need for AU territorial extension on PI + cyber policies. Ask about medical device / clinical software exclusions.
-- [ ] Phone consultation with a NZ international tax advisor (Baker Tilly Staples Rodway, BDO NZ) on TR 2024/D1 royalty classification. Confirm before any signing.
-- [ ] Print cost model showing break-even curve at AUD 30.
-- [ ] Print NZ retail tier comparison table ($299/$799/$1,500 tiers → AUD equivalents).
-- [ ] Print the AU proposal one-pager for handover.
+- [ ] Call Helen to book phone consultation on TR 2024/D1 royalty classification and services fee restructure option.
+
+**Bring to meeting:**
+- [ ] Print cost model showing break-even at AUD 30 × 50 practices.
+- [ ] Print price/volume trade rules (section 6) and linkage trade rules (section 7b).
+- [ ] Print the AU one-pager (not for handover unless asked; Lawrence already has it via email).
+- [ ] Lawrence decision authority question as first agenda item.
 
 ## 11. Post-Wed actions
 
@@ -312,4 +357,4 @@ Depending on outcome:
 
 ---
 
-*Last updated: 2026-04-18. Numbers based on research completed this date. Revalidate cost model annually.*
+*Last updated: 2026-04-19. Revised cost model includes honest founder time at NZD 145/hr. Minimum licence reduced to 50 practices to improve P(close). Non-negotiables trimmed. AU > NZ priority inversion added to linkage framework. Revalidate cost model annually.*
