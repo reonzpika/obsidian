@@ -39,7 +39,18 @@ Landing page copy/design review (task medtech-20260419-001) must complete before
 - BFF mandatory: never call ALEX directly from Vercel
 - Phase 1 plan: `clinicpro-medtech/docs/superpowers/plans/2026-04-15-capture-marketing-phase1.md`
 
-## AU market — Lawrence Peterson (Medtech Global)
+## Two-contract architecture with Medtech (locked 19 April 2026)
+
+Two separate contracts, two commercial logics. Both land at Wed 22 April 2026 meeting with Lawrence Peterson + Alex Cauble-Chantrenne. Medtech may attempt to link them; refuse linkage.
+
+1. **AU bundle deal** (Lawrence-led). Medtech Global purchases ClinicPro Capture licences to bundle into the Evolution AU launch. Per-licence fee model. Distinct product track (Evolution AU, a new launch separate from Medtech Evolution).
+2. **Integration contract** (Alex-led, NZ + AU direct sales). Commission on ClinicPro-direct Capture sales. Covers both NZ and AU (revised 19 April; earlier 14 April position was NZ-only).
+
+Bundle practices and direct-sales practices are largely distinct sets. Double-dipping carve-out clause to be written as belt-and-suspenders.
+
+**Strategic context note (19 April 2026):** Medtech is the only PMS without a native image capture tool — Indici, Bp Premier, Best Practice, MedicalDirector have this solved. BATNA inversion: they need Capture to plug a competitive gap more than Ryo needs Medtech on this specific product. Strengthens posture on both contracts.
+
+## AU bundle — Lawrence Peterson (Medtech Global)
 
 **Execution sprint**: [[2026-04-medtech-sprint-2]] (21 Apr - 16 May 2026)
 **Strategy and pricing analysis**: [[clinicpro-capture-au-strategy]]
@@ -47,35 +58,57 @@ Landing page copy/design review (task medtech-20260419-001) must complete before
 
 **Proposal received 12 April 2026:** Lawrence proposes Medtech purchases ClinicPro Capture licenses to bundle as a value-add for AU G2M in May. Scope: image capture + post only as starting point. Two other integration partners already confirmed for AU launch.
 
-**Open questions (as of 14 April 2026):**
+**Terms sent to Lawrence 19 April 2026** (CC Alex, existing thread 19cfe204467d0370):
 
-| # | Question | Status |
-|---|---|---|
-| Q1 | Who covers infrastructure running costs under the license bundle model — baked into per-license fee or separate? | Awaiting reply (sent 13 Apr) |
-| Q2 | Which AU product specifically — Medtech Evolution AU or other? | Awaiting reply |
-| Q3 | How many practices in scope for May G2M, and rollout over 12 months? | Awaiting reply |
-| Q4 | Fully Medtech-branded or ClinicPro visible to practices? | Awaiting reply |
-| Q5 | Support routing — through Medtech or ClinicPro directly? | Awaiting reply |
+- AUD 30 per active practice per month
+- 50 active practices per year minimum → AUD 18,000/year floor
+- 3-year initial term
+- Scope: image capture and ALEX /DocumentReference POST
+- Launch target May–June 2026 to align with Evolution AU G2M
+- Sydney AWS hosting, AU data residency covered
 
-All five questions sent to Lawrence in two emails (12 Apr + 13 Apr). AU deal must be structured under a separate agreement from the NZ partnership. Pricing proposal to be prepared once answers received. Tracked in task medtech-20260414-002.
+## NZ + AU Integration Contract — Alex Cauble-Chantrenne (Medtech NZ)
 
-## NZ Partnership Agreement — status (14 April 2026)
+**Strategy and pricing analysis**: [[clinicpro-capture-medtech-integration-strategy]]
 
-Draft received from Alex Cauble-Chantrenne 13 April. Schedule 1 confirmed:
+Draft received from Alex 13 April 2026. Schedule 1 confirmed:
 
 - Commencement Date: 18 March 2026
 - Initial Term: 36 months (expires 18 March 2029)
-- Fee structure: $10–$60/month per Active Facility by enrolment tier
+- Fee structure (draft): $10–$60/month per Active Facility by enrolment tier — being renegotiated
 - Permitted Purposes: direct image service only (Base + Portal without Confidential Scope + ALEX Apps)
 - Software: Medtech Artia and Medtech Evolution
 
-Three issues raised with Alex in reply (sent 14 April), tracked in task medtech-20260414-001:
+**Commercial position (confirmed 19 April 2026):**
 
-1. **Fee model**: flat per-facility fee not commission-based as discussed. Counter-proposal: 10% self-referred / 15% Medtech-referred of Gross Revenue
-2. **Geographic scope**: no NZ-only language; requested explicit restriction — AU market to be handled separately
-3. **PIA/pentest timeline**: draft says 3 months; Alex said 6 months in January — requested correction
+- Opening ask: 15% flat commission on Gross Revenue. Simplified from earlier 10/15% self-referred / Medtech-referred split (14 April email), consolidated on 16 April call.
+- Fallback: 20% flat commission.
+- Walkaway: above 20%.
+- Scope: both NZ and AU direct sales (revised from 14 April NZ-only position).
+- PIA/pentest timeline: 6 months from go-live (not draft's 3 months).
 
-Awaiting Alex response before signing.
+Alex signalled personally on 16 April call that 30% was always "too much internally" and took 15% back to her team. Scope-revision email sent to Alex 19 April on existing thread (19cdf07cdcd3c13b) pulling back NZ-only line, keeping integration contract separate from AU bundle. 15% not re-mentioned in scope email — Alex already in team discussion.
+
+Non-negotiables (full list in strategy doc):
+1. Explicit NZ + AU geographic scope
+2. Double-dipping carve-out (bundle practices excluded from commission until they convert to direct)
+3. WHT on AU-sourced commission (services fee restructure, same as AU bundle)
+4. Scope locked to ClinicPro Capture (future tools separate)
+5. No exclusivity on ClinicPro side
+6. Termination + integration IP with 6-month wind-down
+7. PIA/pentest at 6 months from go-live
+
+Tracked in task medtech-20260414-001.
+
+## Open questions / blockers
+
+| # | Question | Status |
+|---|---|---|
+| Q1 | Does Medtech team accept 15% flat commission on NZ + AU direct sales? | Awaiting team response; Alex taking 15% to team since 16 Apr |
+| Q2 | Does Lawrence accept AUD 30/practice/month + 50-practice floor for AU bundle? | Sent 19 Apr, landing Wed 22 Apr meeting |
+| Q3 | Double-dipping carve-out language — operational definition of "bundle practice" vs "direct-sales practice"? | To draft post-meeting |
+| Q4 | Reporting cadence for commission (quarterly acceptable, monthly burdensome) | To confirm Wed meeting |
+| Q5 | WHT services-fee restructure applied to both contracts — Helen briefing | Task medtech-20260418-004 |
 
 ## Tasks
 

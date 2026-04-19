@@ -173,6 +173,11 @@ scheduleDashboardColumnSort(dv, headers);
 - `/refer-a-practice` bounty page + Resend API route shipped (Phase 1 Task 2, commit 4326d34): $200 credit / 3-months-free referral incentive, smoke-tested end-to-end
 - `resend` package added to clinicpro-medtech; RESEND_API_KEY added to .env (same account as clinicpro-saas)
 - Landing page copy/design review scheduled before champion email send (task medtech-20260419-001)
+- AU bundle proposal sent to Lawrence Peterson (CC Alex) ahead of Wed 22 April meeting: AUD 30/active practice/month, 50-practice floor (AUD 18k/year), 3-year term, May-June 2026 launch, AU data residency via Sydney AWS
+- Integration-contract scope revised: pulled back 14 April NZ-only line via follow-up email to Alex. Integration contract (commission on direct ClinicPro sales) now covers NZ + AU, sits separate from Lawrence-led AU bundle. Two-contract architecture locked.
+- NZ integration commercial position: 15% flat commission (opening ask), 20% fallback, walkaway above 20%. Alex already taking 15% back to her team since 16 Apr call.
+- NZ integration strategy doc shipped: `context/medtech-context/clinicpro-capture/clinicpro-capture-medtech-integration-strategy.md` (commission math, non-negotiables including double-dipping carve-out and 6-month PIA timeline, Wed meeting plan)
+- AU strategy doc annotated with PMS-only insight: Medtech is the only PMS without a native image capture tool (Indici, Bp Premier, Best Practice, MedicalDirector already have it). BATNA inversion strengthens posture on both deals
 
 ### Week of 2026-04-14
 
