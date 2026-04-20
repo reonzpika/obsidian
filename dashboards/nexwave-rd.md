@@ -162,7 +162,7 @@ See tasks in the NexWave R&D Tasks database.
 
 $18,000 Capability Development line (Feb 2026–Jul 2027). Gap analyses, DPIA methodology, compliance frameworks. Related task: [[rd-20260415-002]].
 
-Full detail, compliance landscape, sequencing guidance, and firm proposals: [[regulatory-compliance]]
+Full detail, compliance landscape, sequencing guidance, and firm proposals: [[nexwave-rd-compliance]]
 
 | Firm | Status | Next action |
 |---|---|---|
@@ -292,8 +292,8 @@ Payroll software: Xero. Paid monthly in arrears. PAYE deducted at source.
 
 | | Ryo | Ting |
 |---|---|---|
-| Annual salary | $140,160.00 | $102,194.16 |
-| Monthly gross | $11,680.00 | $8,516.18 |
+| Annual salary | $124,800.00 | $121,326.40 |
+| Monthly gross | $10,400.00 | $10,110.53 |
 | MBIE hourly rate (cost template) | $80.00/hr | $58.33/hr |
 | MBIE eligible hourly rate (incl. 20% overhead) | $96.00/hr | $70.00/hr |
 | Hours/week on R&D | 30 | 40 |
@@ -522,6 +522,10 @@ AI-maintained weekly log. Primary audit trail for MBIE claims. Hours: Ryo ~30hrs
 - Ting's signed corrected employment contract (re-signed 16 Apr) confirmed filed in nexwave-rd/docs/inbox/
 - Contract salary discrepancy identified: stated annual salaries in both contracts do not reconcile with actual payroll rates; payroll correctly runs at MBIE Cost Template rates ($80/hr Ryo, $58.33/hr Ting); corrected contracts required from Helen before Q1 claim — rd-20260420-004
 - PAYE condition gate cleared ahead of 30 April deadline; Q1 internal labour costs now claimable
+- Compliance email threads fully triaged: Bell Gully (proposal received, 3 AI-output questions answered in principle, conflict check pending), Buddle Findlay (proposal received, on hold), Elevate Medtech (away until 29 Apr, no quote yet), Aesculytics (no response)
+- NZ regulatory compliance landscape documented in full: terms categorised across 5 stages (foundational now through to commercialisation) with sequencing guidance mapped to Obj 1–4 timeline
+- Created `projects/nexwave-rd-compliance.md` as dedicated project file for the Regulatory & Compliance Capability Development line; rd-20260415-002 and rd-20260420-002 re-homed under it
+- Dashboard Regulatory & Compliance section condensed to compact status overview with link to project file
 
 ---
 

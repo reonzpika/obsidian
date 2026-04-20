@@ -138,6 +138,13 @@ Identify Gmail threads containing actionable items (reply required, decision nee
 1. Create a task file in `tasks/open/` using the Task Schema below
 2. Track: K tasks created
 
+**Factual-only rule:** Task files must contain only information directly present in the source email. Specifically:
+- `title`: the action required, stated as a plain fact (e.g. "Reply to Anna Bell, Kerikeri Medical")
+- Task body: quote or paraphrase the email content only — sender, subject, date, what they asked or said
+- Cross-references: link to existing task or sprint IDs where the email is clearly related (e.g. `Related: [[medtech-20260414-001]]`)
+- Never add reply guidance, suggested wording, how-to advice, "Next steps", or any context not present in the source email
+- If you don't know something, leave it blank or omit it — do not invent it
+
 These new task IDs will appear in the Urgent table in Phase 3.
 
 ---
