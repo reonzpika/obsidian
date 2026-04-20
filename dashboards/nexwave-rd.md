@@ -522,6 +522,7 @@ AI-maintained weekly log. Primary audit trail for MBIE claims. Hours: Ryo ~30hrs
 - Ting's signed corrected employment contract (re-signed 16 Apr) confirmed filed in nexwave-rd/docs/inbox/
 - Contract salary discrepancy identified: stated annual salaries in both contracts do not reconcile with actual payroll rates; payroll correctly runs at MBIE Cost Template rates ($80/hr Ryo, $58.33/hr Ting); corrected contracts required from Helen before Q1 claim — rd-20260420-004
 - PAYE condition gate cleared ahead of 30 April deadline; Q1 internal labour costs now claimable
+- Payroll table corrected: annual salary and monthly gross updated to reflect actual payroll rates ($80/hr × 30hrs = $124,800/yr Ryo; $58.33/hr × 40hrs = $121,326.40/yr Ting)
 - Compliance email threads fully triaged: Bell Gully (proposal received, 3 AI-output questions answered in principle, conflict check pending), Buddle Findlay (proposal received, on hold), Elevate Medtech (away until 29 Apr, no quote yet), Aesculytics (no response)
 - NZ regulatory compliance landscape documented in full: terms categorised across 5 stages (foundational now through to commercialisation) with sequencing guidance mapped to Obj 1–4 timeline
 - Created `projects/nexwave-rd-compliance.md` as dedicated project file for the Regulatory & Compliance Capability Development line; rd-20260415-002 and rd-20260420-002 re-homed under it
