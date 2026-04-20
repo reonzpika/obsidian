@@ -75,7 +75,7 @@ No code repo yet.
 - [Laozhang API](https://api.laozhang.ai/token)
 
 **Vault**
-- [[daily/2026-04-15|Today's Note]]
+- [[daily/2026-04-20|Today's Note]]
 
 **Google**
 - [Calendar](https://calendar.google.com/calendar/u/0/r)

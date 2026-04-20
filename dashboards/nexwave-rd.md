@@ -64,14 +64,41 @@ See [[nexwave-rd-obj-1]] for full detail — goals, execution roadmap, deliverab
 
 ---
 
+## Programme Timeline
+
+```mermaid
+gantt
+    dateFormat  YYYY-MM-DD
+    axisFormat  %b %y
+    tickInterval 1month
+
+    section Objectives
+    Obj 1 Foundation Architecture   :active, 2026-03-12, 2026-06-30
+    Obj 2 Inbox Data Handling       :2026-06-12, 2027-03-11
+    Obj 3 Care Gap Detection        :2026-09-12, 2027-06-11
+    Obj 4 Real-World Deployment     :2027-06-12, 2028-03-11
+
+    section Milestones
+    PAYE evidence due               :milestone, 2026-04-30, 0d
+    Q1 claim due                    :milestone, 2026-05-31, 0d
+    Obj 1 deliverables              :milestone, 2026-06-30, 0d
+
+    section Sprints Obj 1
+    Launch admin and ops setup      :done,   2026-03-15, 2026-03-28
+    S1 Define the problems          :done,   2026-03-29, 2026-04-11
+    S2 Architecture research        :active, 2026-04-12, 2026-04-25
+```
+
+---
+
 ## Objective Timeline
 
 | Objective | Title | Period | Status |
 |---|---|---|---|
-| [[nexwave-rd-obj-1\|Obj 1]] | Foundation AI Architecture | Months 1–6 (Jan–Jun 2026) | Active |
-| Obj 2 | Real-World Inbox Data Handling | Months 4–12 (Apr–Dec 2026) | Not Started |
-| Obj 3 | Care Gap Detection Validation | Months 7–16 (Jul 2026–Apr 2027) | Not Started |
-| Obj 4 | Real-World Deployment | Months 16–24 (Apr 2027–Jan 2028) | Not Started |
+| [[nexwave-rd-obj-1\|Obj 1]] | Foundation AI Architecture | Months 1–6 (Mar–Jun 2026) | Active |
+| Obj 2 | Real-World Inbox Data Handling | Months 4–12 (Jun 2026–Mar 2027) | Not Started |
+| Obj 3 | Care Gap Detection Validation | Months 7–16 (Sep 2026–Jun 2027) | Not Started |
+| Obj 4 | Real-World Deployment | Months 16–24 (Jun 2027–Mar 2028) | Not Started |
 
 ---
 
