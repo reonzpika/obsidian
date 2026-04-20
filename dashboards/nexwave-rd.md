@@ -160,45 +160,16 @@ See tasks in the NexWave R&D Tasks database.
 
 ## Regulatory & Compliance
 
-Central tracker for legal and regulatory advice sought from NZ health-law and SaMD firms. Sits under the Regulatory & Compliance Capability Development line ($18k). Related task: [[rd-20260415-002]].
+$18,000 Capability Development line (Feb 2026–Jul 2027). Gap analyses, DPIA methodology, compliance frameworks. Related task: [[rd-20260415-002]].
 
-### Firms contacted
+Full detail, compliance landscape, sequencing guidance, and firm proposals: [[regulatory-compliance]]
 
-| Firm | Contact | Type | Reached out | Status | Proposal |
-|---|---|---|---|---|---|
-| Bell Gully | Laura Hardcastle (Sr Associate), Kirsty Dobbs | Health law, SaMD specialist | 2026-04-15 | Proposal received 2026-04-16 | Phase 1 $2,500–$4,000 + GST. SaMD obligations under current law plus Medical Products Bill signalled obligations. Conflict check + 3 AI-output Qs required before proceeding. |
-| Buddle Findlay | Catherine Miller (Special Counsel) | Health law firm | 2026-04-07 | Proposal received 2026-04-17 | $9,000–$12,000 + GST + 3.5% service fee (20% R&D discount). Overview across 5 compliance areas: Privacy, System Standards, Professional Regulation, Contract Compliance, Marketing. Optional MTANZ/IP/Medical Products Bill notes. |
-| Elevate Medtech | Anne Arndt | SaMD regulatory consultant | 2026-04-08 | Away until 2026-04-29 | Awaiting response |
-| Aesculytics | Dr Arindam Bose | Clinical AI + Medsafe consultant | 2026-04-15 | No response | — |
-| CARSL | David Smyth | Medsafe sponsor / device registration | 2026-04-08 | Deprioritised | Not relevant — sponsor/registration focus only |
-
-### Combined summary (Bell Gully + Buddle Findlay)
-
-- **No NZ AI-specific legislation.** Core statutory framework is the Privacy Act 2020 + Health Information Privacy Code 2020. Privacy Commissioner is proactively publishing AI guidance.
-- **Recommended first step:** Privacy Impact Assessment (PIA). NexWave likely well-placed to draft; firms can review or support.
-- **SaMD question is central.** Under the Medicines Act 1981, clarity on whether assist-only clinical AI qualifies as a medical device is limited. The proposed Medical Products Bill is intended to cover SaMD + AI, but Bell Gully views introduction in this parliamentary term as increasingly unlikely given election proximity.
-- **System standards:** HISO technical standards, PHO contract obligations (back-to-back with Health NZ funding agreements), Health NZ API standards — all potentially relevant to tool design.
-- **Professional regulation:** MCNZ released new AI-in-patient-care guidance March 2026. Health (Retention of Health Information) Regulations, HDC Code of Rights, recordkeeping obligations all sit on the GP, but tools must support compliance.
-- **Contract compliance:** Overlapping obligations from MBIE grant, Medtech partnership, and ALEX FHIR API licence flow through to tool design and licensing.
-- **MTANZ Code of Ethics:** Voluntary body with consumer complaints + inter-member dispute mechanisms. Flagged by Buddle Findlay as worth considering.
-- **Marketing / Fair Trading Act 1986:** Relevant at trial-pool recruitment and commercialisation, not now.
-
-### Proposal comparison
-
-| | Bell Gully (Phase 1) | Buddle Findlay |
+| Firm | Status | Next action |
 |---|---|---|
-| Cost | $2,500–$4,000 + GST | $9,000–$12,000 + GST + 3.5% |
-| Scope | SaMD classification + Medical Products Bill | All 5 compliance areas overview |
-| Follow-up | Explicit Phase 2 for deeper SaMD advice | Self-directed deep-dives after overview |
-| Prerequisites | Conflict check, 3 AI-output Qs answered | None stated |
-| Best fit | If primary concern is device classification | If want full compliance landscape map |
-
-### Decision log
-
-| Date | Entry |
-|---|---|
-| 2026-04-17 | Both proposals in hand. Open question: narrow-and-cheap (Bell Gully) vs broad-and-expensive (Buddle Findlay), or both-in-parallel. Budget envelope $18k across 18 months (Capability Development line) comfortably covers either; combining both would consume most of the first engagement. Elevate Medtech may add a third view when Anne returns 2026-04-29. |
-| 2026-04-20 | Full thread review completed. Bell Gully 3-question answers drafted (Inbox Helper: urgency suggestions only, not prescriptive actions; Care Gap Finder: identifies overdue checks, no treatment recommendations; urgent items: inbox reorder only, no push notifications) — reply pending Ryo sign-off on rd-20260420-002. Aesculytics: no response after 5 days, consider follow-up or deprioritise. Elevate Medtech: await Anne Arndt quote after 2026-04-29 return before deciding on Buddle Findlay. |
+| Bell Gully | Proposal received 2026-04-16 | Answer 3 AI-output questions to unlock conflict check — rd-20260420-002 |
+| Buddle Findlay | Proposal received 2026-04-17 | On hold — awaiting Elevate Medtech quote |
+| Elevate Medtech | Away until 2026-04-29 | Re-engage after 29 Apr for SaMD technical quote |
+| Aesculytics | No response after 5 days | Consider follow-up or deprioritise |
 
 ---
 
@@ -328,6 +299,10 @@ Payroll software: Xero. Paid monthly in arrears. PAYE deducted at source.
 | Hours/week on R&D | 30 | 40 |
 
 > **Status (16 Apr 2026):** First pay run executed 16 April (period 16 Mar–15 Apr). Ryo net $7,629.57, Ting net $7,440.68, PAYE $5,440.28 due 20 May. Auto-payment set up for monthly 16th. Corrected employment agreement emailed to Ting 15 April for re-signature; signed copy due 20 April. Signed contract + payslip to be uploaded to MBIE portal before 30 April. Tracked in rd-20260415-001 (Ting signature) and rd-20260404-001 (MBIE submission).
+>
+> **Status (20 Apr 2026):** PAYE condition submitted to Forge portal. Uploaded: Monthly Pay Summary (IRD, 16 Apr pay run), ryo-employment-contract-final.pdf, ting-employment-contract-final.pdf. Notes field stated Developer role unfilled; evidence to follow when hired. Condition gate cleared ahead of 30 Apr deadline. rd-20260420-001 done.
+>
+> **Contract salary discrepancy (action required before Q1 claim):** Payroll is running at MBIE Cost Template hourly rates (Ryo $80/hr × 30hrs = $10,400/mo; Ting $58.33/hr × 40hrs = $10,110.53/mo), which is correct for grant purposes. However, the stated annual salaries in both employment contracts do not match these figures (contracts show $140,160 and $102,194.16 respectively). Helen needs to issue corrected contracts with annual salaries that reconcile to the actual payroll rates before the Q1 claim.
 
 ### Operating rules (learnt)
 
@@ -540,6 +515,13 @@ AI-maintained weekly log. Primary audit trail for MBIE claims. Hours: Ryo ~30hrs
 - GP Clinical Review Brief revised before reviewer outreach: BP monitoring trigger restructured into 4-tier stratification (target / mildly elevated / moderately elevated / severe — replaces blanket 6-monthly); CVDRA exclusions added; scope note added clarifying MVP classifies on incoming document only without longitudinal chart context; table cell readability improved
 - Gareth Roberts (Comprehensive Care PHO) outreach actioned: reply drafted with brief PDF attached, scheduled to send 2026-04-09 08:00 NZST via Gmail native Schedule Send. Gareth has offered to circulate within his network and asked about funding (answered: voluntary collegial input, no formal reimbursement budget)
 - Brendan Duck and Heidi Bubendorfer outreach held pending Gareth's network response — strategic decision to preserve warm-intro yield over parallel cold outreach in small Auckland GP community. Heidi (RNZCGP College channel) reserved as next escalation if <2 reviewers confirmed by 2026-04-14
+
+### Week of 20 April 2026
+
+- PAYE condition submitted to Forge portal: Monthly Pay Summary (IRD, 16 Apr pay run), ryo-employment-contract-final.pdf, and ting-employment-contract-final.pdf uploaded with explanatory note covering Developer role (unfilled)
+- Ting's signed corrected employment contract (re-signed 16 Apr) confirmed filed in nexwave-rd/docs/inbox/
+- Contract salary discrepancy identified: stated annual salaries in both contracts do not reconcile with actual payroll rates; payroll correctly runs at MBIE Cost Template rates ($80/hr Ryo, $58.33/hr Ting); corrected contracts required from Helen before Q1 claim — rd-20260420-004
+- PAYE condition gate cleared ahead of 30 April deadline; Q1 internal labour costs now claimable
 
 ---
 
