@@ -1,6 +1,7 @@
 {
   "cssTheme": "PLN",
   "enabledCssSnippets": [
-    "meta-bind-dashboard-selects"
+    "meta-bind-dashboard-selects",
+    "mermaid-zoom"
   ]
 }

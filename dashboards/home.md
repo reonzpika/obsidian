@@ -1,5 +1,7 @@
 # Dashboard: All Projects
 
+[[daily/2026-04-20]]
+
 ---
 
 ## Dashboards
@@ -73,9 +75,6 @@ No code repo yet.
 - [Perplexity](https://www.perplexity.ai/)
 - [Yingtu](https://yingtu.ai/en)
 - [Laozhang API](https://api.laozhang.ai/token)
-
-**Vault**
-- [[daily/2026-04-20|Today's Note]]
 
 **Google**
 - [Calendar](https://calendar.google.com/calendar/u/0/r)

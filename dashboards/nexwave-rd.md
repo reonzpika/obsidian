@@ -89,6 +89,34 @@ gantt
     S2 Architecture research        :active, 2026-04-12, 2026-04-25
 ```
 
+```dataviewjs
+function attachZoom() {
+  document.querySelectorAll('.mermaid:not([data-zoom-bound])').forEach(el => {
+    el.setAttribute('data-zoom-bound', '1');
+    el.style.cursor = 'zoom-in';
+    el.addEventListener('click', () => {
+      const svg = el.querySelector('svg');
+      if (!svg) return;
+      const overlay = document.createElement('div');
+      overlay.className = 'mermaid-zoom-overlay';
+      const box = document.createElement('div');
+      box.className = 'mermaid-zoom-box';
+      const clone = svg.cloneNode(true);
+      clone.setAttribute('width', '100%');
+      clone.removeAttribute('height');
+      box.appendChild(clone);
+      overlay.appendChild(box);
+      overlay.addEventListener('click', () => overlay.remove());
+      document.body.appendChild(overlay);
+    });
+  });
+}
+attachZoom();
+const obs = new MutationObserver(attachZoom);
+obs.observe(document.body, { childList: true, subtree: true });
+setTimeout(() => obs.disconnect(), 8000);
+```
+
 ---
 
 ## Objective Timeline
