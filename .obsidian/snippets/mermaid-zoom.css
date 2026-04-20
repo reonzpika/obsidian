@@ -14,14 +14,14 @@
   background: var(--background-primary);
   padding: 2rem;
   border-radius: 8px;
-  max-width: 95vw;
-  max-height: 95vh;
+  width: 90vw;
+  max-height: 90vh;
   overflow: auto;
 }
 
 .mermaid-zoom-box svg {
-  width: 85vw !important;
+  width: 100% !important;
   height: auto !important;
-  max-height: 85vh;
+  max-width: none !important;
   display: block;
 }

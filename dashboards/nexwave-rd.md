@@ -102,8 +102,9 @@ function attachZoom() {
       const box = document.createElement('div');
       box.className = 'mermaid-zoom-box';
       const clone = svg.cloneNode(true);
-      clone.setAttribute('width', '100%');
+      clone.removeAttribute('width');
       clone.removeAttribute('height');
+      clone.style.cssText = 'width: 100% !important; height: auto !important; max-width: none !important; display: block;';
       box.appendChild(clone);
       overlay.appendChild(box);
       overlay.addEventListener('click', () => overlay.remove());
@@ -197,6 +198,7 @@ Central tracker for legal and regulatory advice sought from NZ health-law and Sa
 | Date | Entry |
 |---|---|
 | 2026-04-17 | Both proposals in hand. Open question: narrow-and-cheap (Bell Gully) vs broad-and-expensive (Buddle Findlay), or both-in-parallel. Budget envelope $18k across 18 months (Capability Development line) comfortably covers either; combining both would consume most of the first engagement. Elevate Medtech may add a third view when Anne returns 2026-04-29. |
+| 2026-04-20 | Full thread review completed. Bell Gully 3-question answers drafted (Inbox Helper: urgency suggestions only, not prescriptive actions; Care Gap Finder: identifies overdue checks, no treatment recommendations; urgent items: inbox reorder only, no push notifications) — reply pending Ryo sign-off on rd-20260420-002. Aesculytics: no response after 5 days, consider follow-up or deprioritise. Elevate Medtech: await Anne Arndt quote after 2026-04-29 return before deciding on Buddle Findlay. |
 
 ---
 
