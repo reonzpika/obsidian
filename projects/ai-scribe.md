@@ -4,6 +4,9 @@ status: active
 type: product
 repo: clinicpro-saas
 stack: [nextjs, typescript, tailwind, vercel, neon, clerk]
+title: "AI Scribe"
+description: "AI-powered clinical scribe for NZ GPs."
+dashboard: clinicpro-saas
 ---
 
 ## Description

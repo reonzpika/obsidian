@@ -9,6 +9,7 @@ repos:
 projects:
   - clinicpro-capture
 goal: "Capture Phase 1 marketing: ship landing page, refer-a-practice, in-app banner, champion email, demo Loom"
+dashboard: clinicpro-medtech
 ---
 
 ## Plan reference

@@ -1,0 +1,213 @@
+{
+  "nodes": [
+    {
+      "id": "home",
+      "type": "text",
+      "text": "# Home",
+      "x": -90,
+      "y": -25,
+      "width": 180,
+      "height": 50
+    },
+    {
+      "id": "saas",
+      "type": "file",
+      "file": "dashboards/clinicpro-saas.md",
+      "x": 420,
+      "y": -25,
+      "width": 270,
+      "height": 50,
+      "color": "5"
+    },
+    {
+      "id": "medtech",
+      "type": "file",
+      "file": "dashboards/clinicpro-medtech.md",
+      "x": 145,
+      "y": -501,
+      "width": 290,
+      "height": 50,
+      "color": "2"
+    },
+    {
+      "id": "rd",
+      "type": "file",
+      "file": "dashboards/nexwave-rd.md",
+      "x": -420,
+      "y": -501,
+      "width": 240,
+      "height": 50,
+      "color": "6"
+    },
+    {
+      "id": "gpf",
+      "type": "file",
+      "file": "dashboards/gp-fellowship.md",
+      "x": -690,
+      "y": -25,
+      "width": 260,
+      "height": 50,
+      "color": "4"
+    },
+    {
+      "id": "side",
+      "type": "file",
+      "file": "dashboards/side-projects.md",
+      "x": -420,
+      "y": 451,
+      "width": 260,
+      "height": 50,
+      "color": "3"
+    },
+    {
+      "id": "partnerships",
+      "type": "text",
+      "text": "Partnerships",
+      "x": 145,
+      "y": 451,
+      "width": 200,
+      "height": 50,
+      "color": "1"
+    },
+    {
+      "id": "p-ai-scribe",
+      "type": "file",
+      "file": "projects/ai-scribe.md",
+      "x": 860,
+      "y": -105,
+      "width": 220,
+      "height": 50,
+      "color": "5"
+    },
+    {
+      "id": "p-12month",
+      "type": "file",
+      "file": "projects/12-month-prescription.md",
+      "x": 860,
+      "y": -25,
+      "width": 220,
+      "height": 50,
+      "color": "5"
+    },
+    {
+      "id": "p-referral",
+      "type": "file",
+      "file": "projects/referral-images.md",
+      "x": 860,
+      "y": 55,
+      "width": 220,
+      "height": 50,
+      "color": "5"
+    },
+    {
+      "id": "p-capture",
+      "type": "file",
+      "file": "projects/clinicpro-capture.md",
+      "x": 500,
+      "y": -720,
+      "width": 230,
+      "height": 50,
+      "color": "2"
+    },
+    {
+      "id": "p-dashboard",
+      "type": "file",
+      "file": "projects/clinicpro-dashboard.md",
+      "x": 580,
+      "y": -600,
+      "width": 240,
+      "height": 50,
+      "color": "2"
+    },
+    {
+      "id": "p-rd-obj1",
+      "type": "file",
+      "file": "projects/nexwave-rd-obj-1.md",
+      "x": -730,
+      "y": -720,
+      "width": 220,
+      "height": 50,
+      "color": "6"
+    },
+    {
+      "id": "p-rd-compliance",
+      "type": "file",
+      "file": "projects/nexwave-rd-compliance.md",
+      "x": -820,
+      "y": -600,
+      "width": 220,
+      "height": 50,
+      "color": "6"
+    },
+    {
+      "id": "p-gpf",
+      "type": "file",
+      "file": "projects/gp-fellowship.md",
+      "x": -1060,
+      "y": -25,
+      "width": 220,
+      "height": 50,
+      "color": "4"
+    },
+    {
+      "id": "p-linkedin",
+      "type": "file",
+      "file": "projects/linkedin-agent.md",
+      "x": -730,
+      "y": 680,
+      "width": 220,
+      "height": 50,
+      "color": "3"
+    },
+    {
+      "id": "p-miozuki",
+      "type": "file",
+      "file": "projects/miozuki.md",
+      "x": -420,
+      "y": 780,
+      "width": 220,
+      "height": 50,
+      "color": "3"
+    },
+    {
+      "id": "p-ahuru",
+      "type": "file",
+      "file": "projects/ahuru.md",
+      "x": -100,
+      "y": 680,
+      "width": 220,
+      "height": 50,
+      "color": "3"
+    },
+    {
+      "id": "p-heron",
+      "type": "file",
+      "file": "projects/heron.md",
+      "x": 490,
+      "y": 680,
+      "width": 220,
+      "height": 50,
+      "color": "1"
+    }
+  ],
+  "edges": [
+    {"id": "e-home-saas", "fromNode": "home", "toNode": "saas", "fromSide": "right", "toSide": "left"},
+    {"id": "e-home-medtech", "fromNode": "home", "toNode": "medtech", "fromSide": "top", "toSide": "bottom"},
+    {"id": "e-home-rd", "fromNode": "home", "toNode": "rd", "fromSide": "top", "toSide": "left"},
+    {"id": "e-home-gpf", "fromNode": "home", "toNode": "gpf", "fromSide": "left", "toSide": "right"},
+    {"id": "e-home-side", "fromNode": "home", "toNode": "side", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e-home-partnerships", "fromNode": "home", "toNode": "partnerships", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e-saas-aiscribe", "fromNode": "saas", "toNode": "p-ai-scribe", "fromSide": "right", "toSide": "left"},
+    {"id": "e-saas-12month", "fromNode": "saas", "toNode": "p-12month", "fromSide": "right", "toSide": "left"},
+    {"id": "e-saas-referral", "fromNode": "saas", "toNode": "p-referral", "fromSide": "right", "toSide": "left"},
+    {"id": "e-medtech-capture", "fromNode": "medtech", "toNode": "p-capture", "fromSide": "top", "toSide": "bottom"},
+    {"id": "e-medtech-dashboard", "fromNode": "medtech", "toNode": "p-dashboard", "fromSide": "right", "toSide": "left"},
+    {"id": "e-rd-obj1", "fromNode": "rd", "toNode": "p-rd-obj1", "fromSide": "left", "toSide": "right"},
+    {"id": "e-rd-compliance", "fromNode": "rd", "toNode": "p-rd-compliance", "fromSide": "left", "toSide": "right"},
+    {"id": "e-gpf-gpf", "fromNode": "gpf", "toNode": "p-gpf", "fromSide": "left", "toSide": "right"},
+    {"id": "e-side-linkedin", "fromNode": "side", "toNode": "p-linkedin", "fromSide": "left", "toSide": "right"},
+    {"id": "e-side-miozuki", "fromNode": "side", "toNode": "p-miozuki", "fromSide": "bottom", "toSide": "top"},
+    {"id": "e-side-ahuru", "fromNode": "side", "toNode": "p-ahuru", "fromSide": "right", "toSide": "left"},
+    {"id": "e-partnerships-heron", "fromNode": "partnerships", "toNode": "p-heron", "fromSide": "right", "toSide": "left"}
+  ]
+}

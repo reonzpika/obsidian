@@ -4,6 +4,9 @@ status: active
 type: side-project
 owner: ting
 sprint:
+title: "Ahuru"
+description: "Ting's ecommerce SEO project."
+dashboard: side-projects
 ---
 
 ## Description

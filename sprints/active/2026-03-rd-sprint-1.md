@@ -9,6 +9,7 @@ projects:
   - nexwave-rd
 goal: Programme launch — legal, grant admin, operations setup
 objective: setup
+dashboard: nexwave-rd
 ---
 
 ## Tasks

@@ -4,6 +4,9 @@ status: active
 type: product
 repo: clinicpro-medtech
 stack: [nextjs, typescript, tailwind, vercel, supabase, aws-lightsail-bff]
+title: "ClinicPro Dashboard"
+description: "GP clinical dashboard centralising missed-action risks."
+dashboard: clinicpro-medtech
 ---
 
 ## Description

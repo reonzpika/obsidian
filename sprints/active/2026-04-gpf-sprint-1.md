@@ -8,6 +8,7 @@ repos:
 projects:
   - gp-fellowship
 goal: Fellowship application prep — admin and compliance checks
+dashboard: gp-fellowship
 ---
 
 ## Tasks

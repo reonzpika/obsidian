@@ -9,6 +9,7 @@ projects:
   - nexwave-rd
 goal: Accuracy testing and architecture decision
 objective: obj-1
+dashboard: nexwave-rd
 ---
 
 ## Tasks

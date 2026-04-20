@@ -8,6 +8,7 @@ repos:
 projects:
   - referral-images
 goal: Referral Images marketing — website ready, strategy, execution
+dashboard: clinicpro-saas
 ---
 
 ## Tasks

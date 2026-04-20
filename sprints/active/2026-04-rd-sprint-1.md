@@ -9,6 +9,7 @@ projects:
   - nexwave-rd
 goal: "Define the problems clearly: Inbox Helper and Care Gap Finder"
 objective: obj-1
+dashboard: nexwave-rd
 ---
 
 ## Tasks

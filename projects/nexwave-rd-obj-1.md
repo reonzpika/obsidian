@@ -4,6 +4,9 @@ status: active
 type: rd
 repo: nexwave-rd
 stack: [aws-bedrock, claude-haiku, claude-sonnet, python]
+title: "R&D Objective 1"
+description: "Foundation AI architecture for NexWave Health."
+dashboard: nexwave-rd
 ---
 
 # NexWave Health R&D — Objective 1: Foundation AI Architecture

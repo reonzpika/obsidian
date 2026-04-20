@@ -8,6 +8,7 @@ repos:
 projects:
   - miozuki
 goal: Content migration — replicate all existing Shopify storefront content in the Next.js frontend
+dashboard: side-projects
 ---
 
 ## Context

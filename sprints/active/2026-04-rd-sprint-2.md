@@ -9,6 +9,7 @@ projects:
   - nexwave-rd
 goal: Literature review and architecture research
 objective: obj-1
+dashboard: nexwave-rd
 ---
 
 ## Tasks

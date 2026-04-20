@@ -34,6 +34,25 @@ inbox/            quick capture
 - **Task completion.** Use the `/complete-task` Templater macro. Do not manually move files or edit `status: done` alone.
 - **Sprint IDs.** `YYYY-MM-sprint-N` for cross-repo sprints. `YYYY-MM-{repo-tag}-sprint-N` for single-repo (e.g. `2026-04-rd-sprint-1`, `2026-04-gpf-sprint-1`). Mismatched IDs break Dataview filters silently.
 
+## Information hierarchy rules
+
+**Dashboard** (`dashboards/*.md`)
+- Represents an independent area of work
+- Must wikilink to every project in the area
+- Must wikilink to every area-level sprint (sprints not tied to a specific project)
+
+**Project** (`projects/*.md`)
+- Belongs to exactly one dashboard
+- Must wikilink to every sprint associated with it
+
+**Sprint** (`sprints/active/*.md` or `sprints/archive/*.md`)
+- Belongs to either a dashboard (area-level) or a project (scoped), never both, never neither
+
+**Task** (`tasks/open/*.md`)
+- Links to either a `project:` OR a `sprint:`, never both
+- Area-level sprint tasks (no project) are valid
+- Never attached directly to a dashboard
+
 ## Choosing the repo for a task
 
 Priority order:
@@ -48,9 +67,9 @@ Priority order:
 ```yaml
 id: {repo-prefix}-{YYYYMMDD}-{NNN}
 title: Short human-readable description
-project: {project-id}                    # must match filename in projects/ (no .md)
+project: {project-id}                    # must match filename in projects/ (no .md) — set OR sprint, never both
 repo: clinicpro-saas | clinicpro-medtech | nexwave-rd | gp-fellowship
-sprint: {sprint-id}                      # must match filename in sprints/ (no .md)
+sprint: {sprint-id}                      # must match filename in sprints/ (no .md) — set OR project, never both
 status: open | in-progress | blocked | done
 priority: high | medium | low
 created: YYYY-MM-DD
@@ -59,9 +78,29 @@ due: YYYY-MM-DD
 
 R&D tasks add: `objective: obj-1|obj-2|obj-3|obj-4|capability` and `owner: ryo|ting|both`.
 
-**Project** (`projects/*.md`): `id`, `status`, `type: product|rd|training`, `repo`, `stack`.
+**Project** (`projects/*.md`):
+```yaml
+id: {project-id}
+title: "Human-readable name"
+status: active | parked | production
+type: product | rd | training | side-project | partnership
+repo: clinicpro-saas | clinicpro-medtech | nexwave-rd | gp-fellowship | miozuki-web   # omit if no repo
+stack: [...]
+description: "One-line description for home.md display."
+dashboard: clinicpro-saas | clinicpro-medtech | nexwave-rd | gp-fellowship | side-projects | partnerships
+```
 
-**Sprint** (`sprints/active/*.md`): `id`, `status`, `start`, `end`, `repos`, `projects`, `goal`.
+**Sprint** (`sprints/active/*.md`):
+```yaml
+id: {sprint-id}
+status: active
+start: YYYY-MM-DD
+end: YYYY-MM-DD
+repos: [repo-name, ...]
+projects: [project-id, ...]
+goal: "One-line sprint goal"
+dashboard: clinicpro-saas | clinicpro-medtech | nexwave-rd | gp-fellowship | side-projects | partnerships
+```
 
 ## Advanced Obsidian syntax
 
@@ -75,6 +114,8 @@ For callouts, embeds, block references, mermaid, footnotes, or any Obsidian synt
 - **R&D research output lives in `../nexwave-rd/docs/`.** The vault holds task files and sprint plans for R&D; research reports, specs, and architecture decisions go in the product repo under `docs/obj-N/research/` or `docs/obj-N/output/`.
 - **Sprint files are append-only.** Move to `sprints/archive/` on completion. Never delete.
 - **Never edit anything inside `.obsidian/`.**
+- **`dashboards/home.md` is Dataview-powered.** Project lists, sprint lists, and active counts are generated from frontmatter. Do not manually add or edit project or sprint entries in home.md. To update what appears there, update the relevant project or sprint frontmatter fields (`title`, `description`, `status`, `dashboard`).
+- **`dashboards/portfolio-map.canvas` is the visual portfolio map.** Update it when projects are added or archived.
 
 ## Gotchas
 

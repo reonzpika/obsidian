@@ -4,6 +4,9 @@ status: active
 type: rd
 repo: nexwave-rd
 stack: []
+title: "R&D Compliance"
+description: "Regulatory and compliance track for NexWave Health."
+dashboard: nexwave-rd
 ---
 
 # Regulatory & Compliance — NexWave Health

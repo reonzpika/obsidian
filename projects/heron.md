@@ -2,6 +2,9 @@
 id: heron
 status: active
 type: partnership
+title: "Heron"
+description: "NZ AI health tech startup. Advisory and product collaboration."
+dashboard: partnerships
 ---
 
 ## Description

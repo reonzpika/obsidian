@@ -9,6 +9,7 @@ projects:
   - nexwave-rd
 goal: Synthetic data design and architecture evaluation
 objective: obj-1
+dashboard: nexwave-rd
 ---
 
 ## Tasks

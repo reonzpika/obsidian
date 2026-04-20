@@ -4,6 +4,9 @@ status: active
 type: product
 repo: clinicpro-medtech
 stack: [nextjs, typescript, tailwind, vercel, supabase, aws-lightsail-bff]
+title: "ClinicPro Capture"
+description: "Mobile web app to capture clinical images into Medtech via ALEX API."
+dashboard: clinicpro-medtech
 ---
 
 ## Description

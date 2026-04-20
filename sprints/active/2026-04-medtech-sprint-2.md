@@ -8,6 +8,7 @@ repos:
 projects:
   - clinicpro-capture
 goal: "Execute AU bundle deal with Medtech Global: Wed meeting with Lawrence + Alex, term sheet, contract prep, AU PIA + privacy policy, begin regionalisation engineering"
+dashboard: clinicpro-medtech
 ---
 
 ## Context

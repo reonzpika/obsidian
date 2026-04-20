@@ -4,6 +4,9 @@ status: active
 type: product
 repo: clinicpro-saas
 stack: [nextjs, typescript, tailwind, vercel, neon, clerk, stripe]
+title: "Referral Images"
+description: "Referral image tool. Transitioning from free to paid."
+dashboard: clinicpro-saas
 ---
 
 ## Description

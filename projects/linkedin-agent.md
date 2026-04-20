@@ -3,6 +3,9 @@ id: linkedin-agent
 status: production
 type: side-project
 owner: ryo
+title: "LinkedIn Agent"
+description: "Automated LinkedIn agent. Production, low maintenance."
+dashboard: side-projects
 ---
 
 ## Description

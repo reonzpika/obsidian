@@ -1,59 +1,269 @@
-# Dashboard: All Projects
-
-[[daily/2026-04-20]]
+> [!info]+
+> `= dateformat(date(today), "d MMMM yyyy")` · `= link("daily/" + dateformat(date(today), "yyyy-MM-dd"), "Today's Note")`
+>
+> [[clinicpro-saas|ClinicPro SaaS]] · [[clinicpro-medtech|ClinicPro Medtech]] · [[nexwave-rd|Nexwave R&D]] · [[gp-fellowship|GP Fellowship]] · [[side-projects|Side Projects]] · Partnerships
+>
+> [[dashboards/portfolio-map|🗺 Portfolio Map]] · [[#Quick Links|↓ Quick Links]]
 
 ---
 
-## Dashboards
+### [[clinicpro-saas|ClinicPro SaaS]] · `./clinicpro-saas`
 
-### ClinicPro Medtech: [[clinicpro-medtech]]
-Code: `./clinicpro-medtech`
+`$= dv.pages('"projects"').where(p => p.dashboard == "clinicpro-saas" && p.status != "parked").length + " active projects"`
 
-| Project | Status |
-| --- | --- |
-| [[clinicpro-capture\|ClinicPro Capture]] | 🔵 Active |
-| [[clinicpro-dashboard\|ClinicPro Dashboard]] | 🔵 Active |
+> [!note]- Projects & Sprints
+>
+> #### Projects
+>
+> ```dataviewjs
+> const active = dv.pages('"projects"')
+>   .where(p => p.dashboard == "clinicpro-saas" && p.status != "parked")
+>   .sort(p => p.title ?? p.file.name);
+> for (let p of active) {
+>   const badge = p.status == "production" ? "🟢" : "🔵";
+>   dv.paragraph(`${badge} [[${p.file.name}|${p.title ?? p.file.name}]] · ${p.description ?? ""}`);
+> }
+> const parked = dv.pages('"projects"')
+>   .where(p => p.dashboard == "clinicpro-saas" && p.status == "parked");
+> if (parked.length > 0) {
+>   dv.paragraph("**Parked**");
+>   for (let p of parked) {
+>     dv.paragraph(`💤 [[${p.file.name}|${p.title ?? p.file.name}]] · ${p.description ?? ""}`);
+>   }
+> }
+> ```
+>
+> #### Active Sprints
+>
+> ```dataviewjs
+> const sprints = dv.pages('"sprints/active"')
+>   .where(s => s.dashboard == "clinicpro-saas" && s.status == "active")
+>   .sort(s => s.start, "desc");
+> if (sprints.length === 0) {
+>   dv.paragraph("_No active sprints._");
+> } else {
+>   for (let s of sprints) {
+>     dv.paragraph(`[[${s.file.name}|${s.id}]] · ${s.goal ?? ""}`);
+>   }
+> }
+> ```
 
-### ClinicPro SaaS: [[clinicpro-saas]]
-Code: `./clinicpro-saas`
+---
 
-| Project | Status |
-| --- | --- |
-| [[ai-scribe\|AI Scribe]] | 🔵 Active |
-| [[12-month-prescription\|12-Month Prescription]] | 🔵 Active |
-| [[referral-images\|Referral Images]] | 🔵 Active |
+### [[clinicpro-medtech|ClinicPro Medtech]] · `./clinicpro-medtech`
 
-### Nexwave R&D: [[nexwave-rd]]
-Code: `./nexwave-rd`
+`$= dv.pages('"projects"').where(p => p.dashboard == "clinicpro-medtech" && p.status != "parked").length + " active projects"`
 
-| Project | Status |
-| --- | --- |
-| [[nexwave-rd-obj-1\|R&D Objective 1]] | 🔵 Active |
+> [!note]- Projects & Sprints
+>
+> #### Projects
+>
+> ```dataviewjs
+> const active = dv.pages('"projects"')
+>   .where(p => p.dashboard == "clinicpro-medtech" && p.status != "parked")
+>   .sort(p => p.title ?? p.file.name);
+> for (let p of active) {
+>   const badge = p.status == "production" ? "🟢" : "🔵";
+>   dv.paragraph(`${badge} [[${p.file.name}|${p.title ?? p.file.name}]] · ${p.description ?? ""}`);
+> }
+> const parked = dv.pages('"projects"')
+>   .where(p => p.dashboard == "clinicpro-medtech" && p.status == "parked");
+> if (parked.length > 0) {
+>   dv.paragraph("**Parked**");
+>   for (let p of parked) {
+>     dv.paragraph(`💤 [[${p.file.name}|${p.title ?? p.file.name}]] · ${p.description ?? ""}`);
+>   }
+> }
+> ```
+>
+> #### Active Sprints
+>
+> ```dataviewjs
+> const sprints = dv.pages('"sprints/active"')
+>   .where(s => s.dashboard == "clinicpro-medtech" && s.status == "active")
+>   .sort(s => s.start, "desc");
+> if (sprints.length === 0) {
+>   dv.paragraph("_No active sprints._");
+> } else {
+>   for (let s of sprints) {
+>     dv.paragraph(`[[${s.file.name}|${s.id}]] · ${s.goal ?? ""}`);
+>   }
+> }
+> ```
 
-### GP Fellowship: [[dashboards/gp-fellowship]]
-No code repo. Personal training.
+---
 
-| Project | Status |
-| --- | --- |
-| [[gp-fellowship\|GP Fellowship]] | 🔵 Active |
+### [[nexwave-rd|Nexwave R&D]] · `./nexwave-rd`
 
-### Side Projects: [[side-projects]]
+`$= dv.pages('"projects"').where(p => p.dashboard == "nexwave-rd" && p.status != "parked").length + " active projects"`
 
-| Project | Owner | Repo | Status | Notes |
-| --- | --- | --- | --- | --- |
-| [[linkedin-agent]] | Ryo | `./LinkedIn` | 🟢 Production | Automated. Low maintenance. |
-| [[miozuki]] | Ting | `./miozuki-web` | 🔵 Active | NZ fine jewellery. Next.js headless frontend. |
-| [[ahuru]] | Ting | `./ahuru` | 🔵 Active | Ting's ecommerce SEO project. |
-| [[gp-community]] | Ryo | `./gp-community` | 💤 Parked | Parked indefinitely. |
-| [[cloud9japan]] | Ryo | `./cloud9japan` | 💤 Parked | Mum's business. |
-| [[eguchi-family]] | Ryo | `./eguchi-family` | 💤 Parked | Family AI site. |
+> [!note]- Projects & Sprints
+>
+> #### Projects
+>
+> ```dataviewjs
+> const active = dv.pages('"projects"')
+>   .where(p => p.dashboard == "nexwave-rd" && p.status != "parked")
+>   .sort(p => p.title ?? p.file.name);
+> for (let p of active) {
+>   const badge = p.status == "production" ? "🟢" : "🔵";
+>   dv.paragraph(`${badge} [[${p.file.name}|${p.title ?? p.file.name}]] · ${p.description ?? ""}`);
+> }
+> const parked = dv.pages('"projects"')
+>   .where(p => p.dashboard == "nexwave-rd" && p.status == "parked");
+> if (parked.length > 0) {
+>   dv.paragraph("**Parked**");
+>   for (let p of parked) {
+>     dv.paragraph(`💤 [[${p.file.name}|${p.title ?? p.file.name}]] · ${p.description ?? ""}`);
+>   }
+> }
+> ```
+>
+> #### Active Sprints
+>
+> ```dataviewjs
+> const sprints = dv.pages('"sprints/active"')
+>   .where(s => s.dashboard == "nexwave-rd" && s.status == "active")
+>   .sort(s => s.start, "desc");
+> if (sprints.length === 0) {
+>   dv.paragraph("_No active sprints._");
+> } else {
+>   for (let s of sprints) {
+>     dv.paragraph(`[[${s.file.name}|${s.id}]] · ${s.goal ?? ""}`);
+>   }
+> }
+> ```
+
+---
+
+### [[gp-fellowship|GP Fellowship]]
+
+`$= dv.pages('"projects"').where(p => p.dashboard == "gp-fellowship" && p.status != "parked").length + " active projects"`
+
+> [!note]- Projects & Sprints
+>
+> #### Projects
+>
+> ```dataviewjs
+> const active = dv.pages('"projects"')
+>   .where(p => p.dashboard == "gp-fellowship" && p.status != "parked")
+>   .sort(p => p.title ?? p.file.name);
+> for (let p of active) {
+>   const badge = p.status == "production" ? "🟢" : "🔵";
+>   dv.paragraph(`${badge} [[${p.file.name}|${p.title ?? p.file.name}]] · ${p.description ?? ""}`);
+> }
+> const parked = dv.pages('"projects"')
+>   .where(p => p.dashboard == "gp-fellowship" && p.status == "parked");
+> if (parked.length > 0) {
+>   dv.paragraph("**Parked**");
+>   for (let p of parked) {
+>     dv.paragraph(`💤 [[${p.file.name}|${p.title ?? p.file.name}]] · ${p.description ?? ""}`);
+>   }
+> }
+> ```
+>
+> #### Active Sprints
+>
+> ```dataviewjs
+> const sprints = dv.pages('"sprints/active"')
+>   .where(s => s.dashboard == "gp-fellowship" && s.status == "active")
+>   .sort(s => s.start, "desc");
+> if (sprints.length === 0) {
+>   dv.paragraph("_No active sprints._");
+> } else {
+>   for (let s of sprints) {
+>     dv.paragraph(`[[${s.file.name}|${s.id}]] · ${s.goal ?? ""}`);
+>   }
+> }
+> ```
+
+---
+
+### [[side-projects|Side Projects]]
+
+`$= dv.pages('"projects"').where(p => p.dashboard == "side-projects" && p.status != "parked").length + " active projects"`
+
+> [!note]- Projects & Sprints
+>
+> #### Projects
+>
+> ```dataviewjs
+> const active = dv.pages('"projects"')
+>   .where(p => p.dashboard == "side-projects" && p.status != "parked")
+>   .sort(p => p.title ?? p.file.name);
+> for (let p of active) {
+>   const badge = p.status == "production" ? "🟢" : "🔵";
+>   dv.paragraph(`${badge} [[${p.file.name}|${p.title ?? p.file.name}]] · ${p.description ?? ""}`);
+> }
+> const parked = dv.pages('"projects"')
+>   .where(p => p.dashboard == "side-projects" && p.status == "parked");
+> if (parked.length > 0) {
+>   dv.paragraph("**Parked**");
+>   for (let p of parked) {
+>     dv.paragraph(`💤 [[${p.file.name}|${p.title ?? p.file.name}]] · ${p.description ?? ""}`);
+>   }
+> }
+> ```
+>
+> #### Active Sprints
+>
+> ```dataviewjs
+> const sprints = dv.pages('"sprints/active"')
+>   .where(s => s.dashboard == "side-projects" && s.status == "active")
+>   .sort(s => s.start, "desc");
+> if (sprints.length === 0) {
+>   dv.paragraph("_No active sprints._");
+> } else {
+>   for (let s of sprints) {
+>     dv.paragraph(`[[${s.file.name}|${s.id}]] · ${s.goal ?? ""}`);
+>   }
+> }
+> ```
+
+---
 
 ### Partnerships
-No code repo yet.
 
-| Project | Status |
-| --- | --- |
-| [[heron\|Heron]] | 🔵 Active |
+_No code repo._
+
+`$= dv.pages('"projects"').where(p => p.dashboard == "partnerships" && p.status != "parked").length + " active projects"`
+
+> [!note]- Projects & Sprints
+>
+> #### Projects
+>
+> ```dataviewjs
+> const active = dv.pages('"projects"')
+>   .where(p => p.dashboard == "partnerships" && p.status != "parked")
+>   .sort(p => p.title ?? p.file.name);
+> for (let p of active) {
+>   const badge = p.status == "production" ? "🟢" : "🔵";
+>   dv.paragraph(`${badge} [[${p.file.name}|${p.title ?? p.file.name}]] · ${p.description ?? ""}`);
+> }
+> const parked = dv.pages('"projects"')
+>   .where(p => p.dashboard == "partnerships" && p.status == "parked");
+> if (parked.length > 0) {
+>   dv.paragraph("**Parked**");
+>   for (let p of parked) {
+>     dv.paragraph(`💤 [[${p.file.name}|${p.title ?? p.file.name}]] · ${p.description ?? ""}`);
+>   }
+> }
+> ```
+>
+> #### Active Sprints
+>
+> ```dataviewjs
+> const sprints = dv.pages('"sprints/active"')
+>   .where(s => s.dashboard == "partnerships" && s.status == "active")
+>   .sort(s => s.start, "desc");
+> if (sprints.length === 0) {
+>   dv.paragraph("_No active sprints._");
+> } else {
+>   for (let s of sprints) {
+>     dv.paragraph(`[[${s.file.name}|${s.id}]] · ${s.goal ?? ""}`);
+>   }
+> }
+> ```
 
 ---
 
@@ -80,4 +290,3 @@ No code repo yet.
 - [Calendar](https://calendar.google.com/calendar/u/0/r)
 - [Gmail](https://mail.google.com/mail/u/0/#inbox)
 - [Drive](https://drive.google.com/drive/u/0/home)
-

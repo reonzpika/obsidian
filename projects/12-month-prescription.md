@@ -4,6 +4,9 @@ status: active
 type: product
 repo: clinicpro-saas
 stack: [nextjs, typescript, tailwind, vercel, neon, clerk]
+title: "12-Month Prescription"
+description: "12-month prescription tool for GPs. Currently in beta."
+dashboard: clinicpro-saas
 ---
 
 ## Description

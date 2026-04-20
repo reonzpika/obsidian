@@ -3,6 +3,9 @@ id: gp-community
 status: parked
 type: side-project
 owner: ryo
+title: "GP Community"
+description: "GP community platform. Parked indefinitely."
+dashboard: side-projects
 ---
 
 ## Description

@@ -3,6 +3,9 @@ id: cloud9japan
 status: parked
 type: side-project
 owner: ryo
+title: "Cloud9Japan"
+description: "Mum's business website. Parked."
+dashboard: side-projects
 ---
 
 ## Description

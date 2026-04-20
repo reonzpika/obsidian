@@ -4,6 +4,9 @@ status: active
 type: training
 repo: gp-fellowship
 stack: [rnzcgp, gpep3, amp]
+title: "GP Fellowship"
+description: "RNZCGP Fellowship application. Final stage: Assessment Visit."
+dashboard: gp-fellowship
 ---
 
 ## Description

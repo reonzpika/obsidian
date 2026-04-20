@@ -5,6 +5,9 @@ type: side-project
 owner: ting
 repo: miozuki-web
 stack: Next.js, TypeScript, Tailwind, Vercel, Shopify Storefront API
+title: "Miozuki"
+description: "NZ fine jewellery ecommerce. Next.js headless frontend over Shopify."
+dashboard: side-projects
 ---
 ## Quick Links ##
 - [Shopify](https://admin.shopify.com/store/miozuki/)
