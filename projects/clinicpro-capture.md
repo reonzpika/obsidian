@@ -35,7 +35,10 @@ Landing page copy/design review (task medtech-20260419-001) must complete before
 - Success gate: 3+ practices paying or trialling by end of week 4
 
 ## Key decisions
-- URL architecture (decided 2026-04-16): marketing at `/medtech/{product}` (public, `(marketing)` route group), app at `/app/medtech/{product}/*` (authenticated, `(clinical)` route group)
+- Deployment (decided 2026-04-22): dedicated subdomain `capture.clinicpro.co.nz`. Not path-based under `clinicpro.co.nz`. Vercel project owns the subdomain via CNAME. `clinicpro.co.nz` (SaaS) and `capture.clinicpro.co.nz` (Capture) are independent Vercel projects with no routing dependency between them.
+- URL architecture (revised 2026-04-22): PMS-specific landing at `capture.clinicpro.co.nz/[pms]` (public, `(marketing)` route group) — build only when second PMS is added; authenticated app at `capture.clinicpro.co.nz/app/[pms]` (`(clinical)` route group, auth middleware covers all `/app/*`).
+- Multi-PMS architecture (decided 2026-04-22): one repo (`clinicpro-medtech`), PMS adapters as modules. API and light UI differences per PMS are handled by the adapter, not separate repos or deployments. Adding a new PMS = new adapter module, no new repo.
+- AU white-label deployment (decided 2026-04-22): separate Vercel project, same codebase, Lawrence's domain via CNAME (e.g. Medtech's own domain). Brand config via env vars. All product updates ship to NZ and AU from the same codebase.
 - Marketing typography: Newsreader (serif display), IBM Plex Sans (body), JetBrains Mono (mono). Inter stays in-app only.
 - Auth: Supabase OTP (6-digit code, no magic link)
 - Pricing (decided 2026-04-15): annual per practice by enrolled patient count ($299 / $799 / $1,500 / contact). No self-serve trial. Concierge trial via ryo@clinicpro.co.nz.

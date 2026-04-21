@@ -1,6 +1,6 @@
 ---
 id: 2026-04-miozuki-sprint-2
-status: active
+status: done
 start: 2026-04-04
 end: 2026-04-10
 repos:
