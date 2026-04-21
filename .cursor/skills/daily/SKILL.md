@@ -23,10 +23,22 @@ Evening shutdown is handled by `/session-update`.
 ## Vault paths
 
 - Daily notes: `daily/YYYY-MM-DD.md`
-- Active tasks: `tasks/open/*.md`
+- Active tasks: `tasks/open/*.md` (frontmatter: id, title, project, repo, sprint, status, priority, due — `project` OR `sprint` set, never both)
 - Done tasks: `tasks/done/*.md`
-- Active sprints: `sprints/active/*.md`
+- Active sprints: `sprints/active/*.md` (frontmatter: id, status, start, end, repos, projects, goal, dashboard)
+- Projects: `projects/*.md` (frontmatter: id, title, status, type, repo, description, dashboard)
 - Inbox: `inbox/`
+
+## Dashboard areas
+
+| dashboard value | display name |
+|---|---|
+| clinicpro-saas | ClinicPro SaaS |
+| clinicpro-medtech | ClinicPro Medtech |
+| nexwave-rd | Nexwave R&D |
+| gp-fellowship | GP Fellowship |
+| side-projects | Side Projects |
+| partnerships | Partnerships |
 
 ## Repos
 
@@ -72,7 +84,7 @@ Run these three searches simultaneously:
 Then read any threads that look actionable: replies from external contacts, anything unread, anything from key contacts (see Key Contacts section).
 
 **Sprints:**
-Glob `sprints/active/*.md`, read all sprint files. Extract `id`, `goal`, `start`, `end`, `repos` for each.
+Glob `sprints/active/*.md`, read all sprint files. Extract `id`, `goal`, `start`, `end`, `repos`, `dashboard` for each.
 
 **Tasks:**
 Glob `tasks/open/*.md`, read all task files. Note `id`, `title`, `status`, `priority`, `due`, `sprint`, `repo`, and approximate body length for each.
@@ -181,6 +193,15 @@ Background: [summary line]
 ```
 
 ---
+
+**Off-radar logic:**
+After computing the sprint table, identify which dashboard areas are off radar:
+1. Collect `dashboard` values from all active sprints (today between `start` and `end`). These are on radar.
+2. Any of the 6 areas (clinicpro-saas, clinicpro-medtech, nexwave-rd, gp-fellowship, side-projects, partnerships) not in that set = off radar.
+3. If any off-radar areas exist, add one line immediately after the Sprint table:
+   `**Off radar** (no active sprint): ClinicPro SaaS, Partnerships`
+   Use the display name from the Dashboard areas table, not the dashboard value.
+4. If all areas have active sprints, omit this line entirely.
 
 **Sprint table rules:**
 - One row per sprint where today falls between `start` and `end`
