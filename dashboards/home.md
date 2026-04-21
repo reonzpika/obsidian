@@ -8,7 +8,9 @@
 `$= dv.pages('"tasks/open"').where(t => (dv.page("projects/" + t.project)?.dashboard == "clinicpro-saas" || dv.page("sprints/active/" + t.sprint)?.dashboard == "clinicpro-saas")).length + " open"`
 
 > [!note]- Projects & Sprints
+>
 > #### Projects
+>
 > ```dataviewjs
 > const active = dv.pages('"projects"')
 >   .where(p => p.dashboard == "clinicpro-saas" && p.status != "parked")
@@ -26,7 +28,9 @@
 >   }
 > }
 > ```
+>
 > #### Active Sprints
+>
 > ```dataviewjs
 > const sprints = dv.pages('"sprints/active"')
 >   .where(s => s.dashboard == "clinicpro-saas" && s.status == "active")
@@ -35,7 +39,8 @@
 >   dv.paragraph("_No active sprints._");
 > } else {
 >   for (let s of sprints) {
->     dv.paragraph(`[[${s.file.name}|${s.id}]] · ${s.goal ?? ""}`);
+>     const n = dv.pages('"tasks/open"').where(t => t.sprint === s.id).length;
+>     dv.paragraph(`[[${s.file.name}|${s.id}]] · ${s.goal ?? ""} · **${n} open**`);
 >   }
 > }
 > ```
@@ -44,7 +49,9 @@
 `$= dv.pages('"tasks/open"').where(t => (dv.page("projects/" + t.project)?.dashboard == "clinicpro-medtech" || dv.page("sprints/active/" + t.sprint)?.dashboard == "clinicpro-medtech")).length + " open"`
 
 > [!note]- Projects & Sprints
+>
 > #### Projects
+>
 > ```dataviewjs
 > const active = dv.pages('"projects"')
 >   .where(p => p.dashboard == "clinicpro-medtech" && p.status != "parked")
@@ -62,7 +69,9 @@
 >   }
 > }
 > ```
+>
 > #### Active Sprints
+>
 > ```dataviewjs
 > const sprints = dv.pages('"sprints/active"')
 >   .where(s => s.dashboard == "clinicpro-medtech" && s.status == "active")
@@ -71,7 +80,8 @@
 >   dv.paragraph("_No active sprints._");
 > } else {
 >   for (let s of sprints) {
->     dv.paragraph(`[[${s.file.name}|${s.id}]] · ${s.goal ?? ""}`);
+>     const n = dv.pages('"tasks/open"').where(t => t.sprint === s.id).length;
+>     dv.paragraph(`[[${s.file.name}|${s.id}]] · ${s.goal ?? ""} · **${n} open**`);
 >   }
 > }
 > ```
@@ -80,7 +90,9 @@
 `$= dv.pages('"tasks/open"').where(t => (dv.page("projects/" + t.project)?.dashboard == "nexwave-rd" || dv.page("sprints/active/" + t.sprint)?.dashboard == "nexwave-rd")).length + " open"`
 
 > [!note]- Projects & Sprints
+>
 > #### Projects
+>
 > ```dataviewjs
 > const active = dv.pages('"projects"')
 >   .where(p => p.dashboard == "nexwave-rd" && p.status != "parked")
@@ -98,7 +110,9 @@
 >   }
 > }
 > ```
+>
 > #### Active Sprints
+>
 > ```dataviewjs
 > const sprints = dv.pages('"sprints/active"')
 >   .where(s => s.dashboard == "nexwave-rd" && s.status == "active")
@@ -107,7 +121,8 @@
 >   dv.paragraph("_No active sprints._");
 > } else {
 >   for (let s of sprints) {
->     dv.paragraph(`[[${s.file.name}|${s.id}]] · ${s.goal ?? ""}`);
+>     const n = dv.pages('"tasks/open"').where(t => t.sprint === s.id).length;
+>     dv.paragraph(`[[${s.file.name}|${s.id}]] · ${s.goal ?? ""} · **${n} open**`);
 >   }
 > }
 > ```
@@ -116,7 +131,9 @@
 `$= dv.pages('"tasks/open"').where(t => (dv.page("projects/" + t.project)?.dashboard == "gp-fellowship" || dv.page("sprints/active/" + t.sprint)?.dashboard == "gp-fellowship")).length + " open"`
 
 > [!note]- Projects & Sprints
+>
 > #### Projects
+>
 > ```dataviewjs
 > const active = dv.pages('"projects"')
 >   .where(p => p.dashboard == "gp-fellowship" && p.status != "parked")
@@ -134,7 +151,9 @@
 >   }
 > }
 > ```
+>
 > #### Active Sprints
+>
 > ```dataviewjs
 > const sprints = dv.pages('"sprints/active"')
 >   .where(s => s.dashboard == "gp-fellowship" && s.status == "active")
@@ -143,7 +162,8 @@
 >   dv.paragraph("_No active sprints._");
 > } else {
 >   for (let s of sprints) {
->     dv.paragraph(`[[${s.file.name}|${s.id}]] · ${s.goal ?? ""}`);
+>     const n = dv.pages('"tasks/open"').where(t => t.sprint === s.id).length;
+>     dv.paragraph(`[[${s.file.name}|${s.id}]] · ${s.goal ?? ""} · **${n} open**`);
 >   }
 > }
 > ```
@@ -152,7 +172,9 @@
 `$= dv.pages('"tasks/open"').where(t => (dv.page("projects/" + t.project)?.dashboard == "side-projects" || dv.page("sprints/active/" + t.sprint)?.dashboard == "side-projects")).length + " open"`
 
 > [!note]- Projects & Sprints
+>
 > #### Projects
+>
 > ```dataviewjs
 > const active = dv.pages('"projects"')
 >   .where(p => p.dashboard == "side-projects" && p.status != "parked")
@@ -170,7 +192,9 @@
 >   }
 > }
 > ```
+>
 > #### Active Sprints
+>
 > ```dataviewjs
 > const sprints = dv.pages('"sprints/active"')
 >   .where(s => s.dashboard == "side-projects" && s.status == "active")
@@ -179,7 +203,8 @@
 >   dv.paragraph("_No active sprints._");
 > } else {
 >   for (let s of sprints) {
->     dv.paragraph(`[[${s.file.name}|${s.id}]] · ${s.goal ?? ""}`);
+>     const n = dv.pages('"tasks/open"').where(t => t.sprint === s.id).length;
+>     dv.paragraph(`[[${s.file.name}|${s.id}]] · ${s.goal ?? ""} · **${n} open**`);
 >   }
 > }
 > ```
@@ -188,7 +213,9 @@
 `$= dv.pages('"tasks/open"').where(t => (dv.page("projects/" + t.project)?.dashboard == "partnerships" || dv.page("sprints/active/" + t.sprint)?.dashboard == "partnerships")).length + " open"`
 
 > [!note]- Projects & Sprints
+>
 > #### Projects
+>
 > ```dataviewjs
 > const active = dv.pages('"projects"')
 >   .where(p => p.dashboard == "partnerships" && p.status != "parked")
@@ -206,7 +233,9 @@
 >   }
 > }
 > ```
+>
 > #### Active Sprints
+>
 > ```dataviewjs
 > const sprints = dv.pages('"sprints/active"')
 >   .where(s => s.dashboard == "partnerships" && s.status == "active")
@@ -215,7 +244,8 @@
 >   dv.paragraph("_No active sprints._");
 > } else {
 >   for (let s of sprints) {
->     dv.paragraph(`[[${s.file.name}|${s.id}]] · ${s.goal ?? ""}`);
+>     const n = dv.pages('"tasks/open"').where(t => t.sprint === s.id).length;
+>     dv.paragraph(`[[${s.file.name}|${s.id}]] · ${s.goal ?? ""} · **${n} open**`);
 >   }
 > }
 > ```
