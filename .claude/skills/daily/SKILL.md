@@ -257,13 +257,14 @@ day: [Day name]
 [[dashboards/home]] | [[daily/YYYY-MM-DD-1]]
 
 ## Focus
-> [user's stated focus, verbatim or lightly cleaned]
+- [user's stated focus, verbatim or lightly cleaned — one bullet per distinct goal]
 
 ## Today
 
 ### Sprints
-| Project | Sprint | Goal | Days left |
-|---------|--------|------|-----------|
+
+**[[dashboards/{dashboard}|Display Name]]**
+- [[sprints/active/{sprint-id}|Sprint goal]] — N days
 
 ### Urgent
 - [[task-id]] — title
@@ -280,7 +281,7 @@ day: [Day name]
 ```
 
 **Writing rules:**
-- Sprint table: same as the report. If user narrowed scope (e.g. "only medtech today"), include only relevant sprints. Columns: Project (`[[projects/{id}]]` if sprint has projects listed, else `[[dashboards/{dashboard}]]`), Sprint (`[[sprints/active/{sprint.id}|{display-label}]]`), Goal (trimmed sprint goal), Days left.
+- Sprints section: group active sprints by dashboard. Each group = bold wikilink header `**[[dashboards/{dashboard}|Display Name]]**` using the display name from the Dashboard areas table. Under each group, one bullet per sprint: `- [[sprints/active/{sprint.id}|sprint goal]] — N days`. Append ⚠ when ≤2 days left. If user narrowed scope, include only relevant streams.
 - Urgent and Quick wins: wikilinks `[[task-id]]`, no checkboxes, only tasks in scope of the user's stated focus.
 - Blockers: up to 5, only tasks where `status: blocked` pulled from `tasks/open/`. Format: `[[task-id]] — waiting on X`
 - If the user's reply surfaces a new action item: create the task file first, then wikilink it in the note.
