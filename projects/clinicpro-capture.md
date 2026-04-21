@@ -16,14 +16,14 @@ Mobile web app that photographs clinical images and commits them to patient reco
 
 ## Phase 1 marketing — status (19 April 2026)
 
-| Task | Status |
-|---|---|
-| Task 0: URL refactor + (marketing) route group | Complete (commit prior to 64788af) |
-| Task 1: `/medtech/capture` landing page | Complete (commit 64788af, 19 Apr) |
-| Task 2: `/refer-a-practice` bounty page + API | Complete (commit 4326d34, 19 Apr) |
+| Task                                            | Status                                  |
+| ----------------------------------------------- | --------------------------------------- |
+| Task 0: URL refactor + (marketing) route group  | Complete (commit prior to 64788af)      |
+| Task 1: `/medtech/capture` landing page         | Complete (commit 64788af, 19 Apr)       |
+| Task 2: `/refer-a-practice` bounty page + API   | Complete (commit 4326d34, 19 Apr)       |
 | Task 3: Capture upsell banner in clinicpro-saas | Open (unblocked; planned end of sprint) |
-| Task 4: Champion email v1 | Open (pending landing page review) |
-| Task 5: Demo Loom script + case-study template | Open |
+| Task 4: Champion email v1                       | Open (pending landing page review)      |
+| Task 5: Demo Loom script + case-study template  | Open                                    |
 
 Landing page copy/design review (task medtech-20260419-001) must complete before champion email send.
 
