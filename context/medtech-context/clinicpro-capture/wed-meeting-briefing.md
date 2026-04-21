@@ -28,6 +28,15 @@ project: clinicpro-capture
 
 **Break-even reminder:** 54 practices at AUD 30. The 50-practice floor is near-breakeven. Any volume growth above 50 is near-100% margin.
 
+
+what I said to him in the email:
+- **AUD 30** per active practice per month
+- **50 active practices per year minimum**, so **AUD 18,000/year** as the floor
+- **3-year initial term**
+- Scope as you flagged: **image capture and ALEX `/DocumentReference` POST**
+- Launch target **May to June 2026** to line up with AU G2M
+- **Sydney AWS hosting**, AU data residency covered
+
 ---
 
 ## Deal 2: NZ Integration Contract (Alex)
