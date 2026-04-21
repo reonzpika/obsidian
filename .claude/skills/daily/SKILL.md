@@ -222,6 +222,7 @@ Note column = brief reason: `"due today"` / `"sprint ends tomorrow"` / `"blocked
 - OR body word count is under ~120 words
 - AND `status` is not `blocked`
 - AND title does NOT contain: build, implement, migrate, design, write (as in "write code/feature")
+- AND task does NOT already appear in the Urgent table
 
 Note column = brief cue: `"reply needed"` / `"2-min review"` / `"quick confirm"`
 
