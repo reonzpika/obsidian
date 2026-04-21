@@ -28,6 +28,28 @@ project: clinicpro-capture
 
 **Break-even reminder:** 54 practices at AUD 30. The 50-practice floor is near-breakeven. Any volume growth above 50 is near-100% margin.
 
+### If Lawrence tables high volume and pushes price down
+
+Annual revenue / margin at central cost (AUD 19,350/year):
+
+| Price/month | 50 practices | 100 practices | 150 practices | 200 practices | 300 practices |
+|---|---|---|---|---|---|
+| AUD 30 | 18k / -1.4k | 36k / +16.7k (46%) | 54k / +34.7k (64%) | 72k / +52.7k (73%) | 108k / +88.7k (82%) |
+| AUD 25 | 15k / -4.4k | 30k / +10.7k (36%) | 45k / +25.7k (57%) | 60k / +40.7k (68%) | 90k / +70.7k (79%) |
+| AUD 22 | 13.2k / -6.2k | 26.4k / +7.1k (27%) | 39.6k / +20.3k (51%) | 52.8k / +33.5k (63%) | 79.2k / +59.9k (76%) |
+| AUD 20 | 12k / -7.4k | 24k / +4.7k (19%) | 36k / +16.7k (46%) | 48k / +28.7k (60%) | 72k / +52.7k (73%) |
+| AUD 18 | 10.8k / loss | 21.6k / +2.3k (10%) | 32.4k / +13.1k (40%) | 43.2k / +23.9k (55%) | 64.8k / +45.5k (70%) |
+| AUD 15 | 9k / loss | 18k / loss | 27k / +7.7k (28%) | 36k / +16.7k (46%) | 54k / +34.7k (64%) |
+
+**Floor by volume (absolute minimums — protect against high-cost scenario):**
+- 50 practices: AUD 30 (no room to move)
+- 100 practices: AUD 25
+- 150 practices: AUD 22
+- 200 practices: AUD 22 (AUD 20 is the true floor but risky if costs blow out)
+- 300 practices: AUD 18
+
+**Framing for volume discount ask:** "AUD 30 is already wholesale. If you can confirm the volume commitment in writing, I can move to AUD 25. Below that the unit economics don't work at our cost base."
+
 
 what I said to him in the email:
 - **AUD 30** per active practice per month
