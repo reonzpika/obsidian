@@ -23,7 +23,7 @@ This session is for project management work in the Obsidian vault. There is no c
 |--------|---------|
 | `projects/` | One page per product/initiative — description, goals, key decisions |
 | `tasks/` | Task files (open, in-progress, done) — source of truth for all action items |
-| `sprints/` | Sprint planning and tracking (active + archive) |
+| `sprints/archive/` | Completed sprint records — read-only reference |
 | `daily/` | Daily notes — YYYY-MM-DD.md — created by `/daily`, updated by `/session-update` |
 | `reviews/weekly/` | Weekly review outputs — created by `/weekly` |
 | `reviews/monthly/` | Monthly review outputs — created by `/monthly` |

@@ -6,20 +6,27 @@ type: side-project
 
 # Side Projects
 
-Personal and family projects outside of ClinicPro and Nexwave R&D. Maintained by Ryo and Ting.
+Personal and family projects outside of ClinicPro and NexWave R&D. Maintained by Ryo and Ting.
 
 ---
 
 ## Projects
 
-| Project            | Owner | Status        | Notes                                 |
-| ------------------ | ----- | ------------- | ------------------------------------- |
-| [[linkedin-agent]] | Ryo   | 🟢 Production | Automated. Low maintenance.           |
-| [[gp-community]]   | Ryo   | 💤 Parked     | Parked indefinitely.                  |
-| [[cloud9japan]]    | Ryo   | 💤 Parked     | Mum's business. Horse Messe complete. |
-| [[ahuru]]          | Ting  | 🟡 Active     | Ting's ecommerce SEO project.         |
-| [[miozuki]]        | Ting  | 🟡 Active     | —                                     |
-| [[eguchi-family]]  | Ryo   | 💤 Parked     | Family AI site.                       |
+```dataviewjs
+const active = dv.pages('"projects"')
+  .where(p => p.dashboard == "side-projects" && p.status != "parked")
+  .sort(p => p.title ?? p.file.name);
+for (let p of active) {
+  const badge = p.status == "production" ? "🟢" : "🔵";
+  const taskCount = dv.pages('"tasks/open"').where(t => t.project === p.id && t.status !== "done").length;
+  const phase = p.phase ? `\n  _${p.phase}_` : "";
+  dv.paragraph(`${badge} [[${p.file.name}|${p.title ?? p.file.name}]] · ${p.description ?? ""} · **${taskCount} open**${phase}`);
+}
+const parked = dv.pages('"projects"').where(p => p.dashboard == "side-projects" && p.status == "parked");
+if (parked.length > 0) {
+  dv.paragraph("💤 **Parked:** " + parked.map(p => `[[${p.file.name}|${p.title ?? p.file.name}]]`).join(" · "));
+}
+```
 
 ---
 
@@ -32,141 +39,13 @@ Personal and family projects outside of ClinicPro and Nexwave R&D. Maintained by
 - In-person setup on Ting's laptop completed 15 Apr — miozuki-20260415-001 closed
 - Site audit cycle run: first audit results filed, audit scripts added to repo, Instagram proxy, Klaviyo subscribe + email popup a11y + contact form fixes shipped
 - LCP image perf pass: priority + responsive `sizes` added; audit re-run against fixes
-- Nano Banana Pro research context imported to miozuki repo
 
 **linkedin (automation go-live, Apr 19)**
-- First post on new strategy scheduled: ManageMyHealth patient portal login UX (Pillar A, text), publishes Tue 21 Apr 10:00 NZST, executor fires 09:40
-- Golden Hour Windows automation shipped and verified: `LinkedInWake_<session_id>` at T-40min (`WakeToRun=True`, `StartWhenAvailable=True`) launches Claude Desktop; `LinkedInPost_<hash>` at T-20min runs `python execute_post.py <session_id>`
-- Bug fixed: `scripts/ensure_claude_desktop.bat` was probing `%LOCALAPPDATA%\Programs\Claude\Claude.exe` but Claude Desktop on this machine is an MSIX/UWP package (`PackageFamilyName=Claude_pzs8sxrjxfjjc`); rewrote to launch via `start "" "explorer.exe" "shell:AppsFolder\Claude_pzs8sxrjxfjjc!Claude"`
-- Wake timers enabled on AC + DC; auth session valid; schedule registry + task actions verified end-to-end
-- Stale `2026-03-23` entry in `temporary/schedule_registry.json` still marked `scheduled` — non-blocking, clean up later
+- First post on new strategy scheduled: ManageMyHealth patient portal login UX (Pillar A, text), publishes Tue 21 Apr 10:00 NZST
+- Golden Hour Windows automation shipped and verified: wake timers enabled on AC + DC; auth session valid; schedule registry + task actions verified end-to-end
+- Bug fixed: `scripts/ensure_claude_desktop.bat` Claude Desktop MSIX/UWP package path resolved
 
 **linkedin (strategy pivot, Apr 16-17)**
-- Full LinkedIn strategy overhaul: audience-value-first pillars replacing infrastructure commentary. Pillar A "What Works in NZ Primary Care" (55%, save-worthy) + Pillar B "What's Changing in NZ Primary Care" (40%, share-worthy). Building content moved to newsletter only.
-- Cadence: 3x/week (1 carousel Tue + 2 text Thu/Sat) + fortnightly "The GP Builder" newsletter + daily 15-min commenting
-- Deep research completed: 360Brew algorithm (2026), carousel design (7 slides, 1080x1350, 20-30 words/slide), AI content detection (44% healthcare penalty, 7-step editing protocol), NZ competitive landscape (space is empty, no GP does LinkedIn thought leadership), content efficiency workflow (2 hrs 15 min/week)
-- Knowledge files updated to v4.0: clinicpro_strategy.md, voice_profile.md, algorithm_sop.md (all three files, 3 rounds of updates)
-- Golden Hour system redesigned: org pages eliminated, core_targets.json (12 core + 7 growth NZ/AU health profiles) replaces pinned_targets.json, 30-50 word comments with 4 structures (Expertise Add, Respectful Challenger, Story Bridge, Question Architect)
-- Code changes: scout.py (org filter, core matching, freshness scoring), executor.py (company branch removed), picker.md + architect.md (new criteria + comment structures)
-- Two new workflows: linkedin-grow (daily commenting skill), linkedin-newsletter (fortnightly newsletter skill)
-- AGENTS.md updated with new cadence, pillars, workflows, quality gate
-- First post ready: ManageMyHealth patient portal login UX (Pillar A, text), 6 Golden Hour comments drafted with new 30-50 word structures
-- Strategy doc: `context/linkedin-strategy-pivot-2026-04.md` (16 sections + research addendum), Google Alerts curated at `context/context-linkedin.md`
-
-**linkedin (prior week)**
-- Major agent refactor: full cutover to skill-driven flow across Researcher → Architect → Strategist → Analyst → Picker → Planner → Image Architect (Phases 1-8 commits)
-- **Anthropic API dependency eliminated** — `agents/_llm.py` deleted, `langchain-anthropic` + `langchain-core` removed, `config/model_config.json` deleted. Engine now runs on Claude Code subscription only (zero per-post API spend)
-- Strategist deterministic guardrails extracted to standalone module with 14 tests
-- All 7 agent prompts extracted to `agents/*.md` — editable independently of agent wiring
-- MBIE N2RD LinkedIn-safe context added; loaded in Architect for Pillar 2
-- `@playwright/cli` installed; new `linkedin-selector-repair` skill — selector fixes via shell loop, ~5 min instead of half-day
-- Comprehensive audit (10 workflows) at `temporary/audit/`; 7 critical + 28 significant fixes shipped: first_comment retry on `schedule_post`, per-comment failure tolerance in `executor_run` (≥4/6 threshold), two-phase result merging, session cookie expiry pre-check, em-dash check extended to Golden Hour comments, scheduling registry pruning + hash-based task names, debug instrumentation purged
-- New scripts: `auth_preflight.py` (cron-safe session check), `append_performance_history.py`
-- Test suite rationalised — Redis + legacy phases removed; all 7 phases pass without API
-- linkedin-20260415-001 in-progress (graph.state cause cleared; awaits live verification post session-refresh); new linkedin-20260415-002 created for verification + daily auth-preflight cron
-
----
-
-## Open Tasks
-
-```dataviewjs
-const mb = app.plugins.getPlugin('obsidian-meta-bind-plugin')?.api;
-const lifecycle = this.component;
-const statusOpts = [
-  { name: 'option', value: ['open'] },
-  { name: 'option', value: ['in-progress'] },
-  { name: 'option', value: ['blocked'] },
-  { name: 'option', value: ['done'] }
-];
-const priorityOpts = [
-  { name: 'option', value: ['high'] },
-  { name: 'option', value: ['medium'] },
-  { name: 'option', value: ['low'] }
-];
-const ownerOpts = [
-  { name: 'option', value: ['ryo'] },
-  { name: 'option', value: ['ting'] },
-  { name: 'option', value: ['both'] }
-];
-function statusSelect(filePath) {
-  const el = dv.el('span', '');
-  const field = mb.createInputFieldMountable(filePath, {
-    renderChildType: 'inline',
-    declaration: { inputFieldType: 'inlineSelect', bindTarget: mb.parseBindTarget('status', filePath), arguments: [{ name: 'class', value: ['vault-dash-select'] }, { name: 'class', value: ['vault-dash-select--status'] }, ...statusOpts] }
-  });
-  mb.wrapInMDRC(field, el, lifecycle);
-  return el;
-}
-function prioritySelect(filePath) {
-  const el = dv.el('span', '');
-  const field = mb.createInputFieldMountable(filePath, {
-    renderChildType: 'inline',
-    declaration: { inputFieldType: 'inlineSelect', bindTarget: mb.parseBindTarget('priority', filePath), arguments: [{ name: 'class', value: ['vault-dash-select'] }, { name: 'class', value: ['vault-dash-select--priority'] }, ...priorityOpts] }
-  });
-  mb.wrapInMDRC(field, el, lifecycle);
-  return el;
-}
-function scheduleDashboardColumnSort(dv, headerNames) {
-  const bind = (table) => {
-    if (table.dataset.vaultDashSortBound) return;
-    const thead = table.querySelector('thead');
-    const tbody = table.tBodies[0] ?? table.querySelector('tbody');
-    if (!thead || !tbody || tbody.rows.length === 0) return;
-    table.dataset.vaultDashSortBound = '1';
-    const ths = thead.querySelectorAll('th');
-    const stripArrows = (s) => String(s).replace(/\s*[\u25B2\u25BC]\s*$/, '').trim();
-    const state = { col: -1, dir: 'asc' };
-    ths.forEach((th) => { th.dataset.sortLabel = stripArrows(th.textContent); });
-    ths.forEach((th, colIndex) => {
-      th.style.cursor = 'pointer';
-      th.title = 'Sort column';
-      th.classList.add('vault-dash-sortable-th');
-      th.addEventListener('click', (ev) => {
-        ev.preventDefault(); ev.stopPropagation();
-        const nextDir = state.col === colIndex && state.dir === 'asc' ? 'desc' : 'asc';
-        state.col = colIndex; state.dir = nextDir;
-        const headerName = headerNames[colIndex] ?? '';
-        const sortKey = (row) => {
-          const cell = row.cells[colIndex];
-          if (!cell) return '';
-          if (/due/i.test(headerName)) {
-            const raw = cell.innerText?.trim() ?? '';
-            const L = dv.luxon.DateTime;
-            const iso = L.fromISO(raw);
-            if (iso.isValid) return iso.toMillis();
-            const fmts = ['MMMM d, yyyy', 'd MMMM yyyy', 'yyyy-MM-dd', 'dd/MM/yyyy', 'd/MM/yyyy'];
-            for (const f of fmts) { const d = L.fromFormat(raw, f, { locale: 'en-NZ' }); if (d.isValid) return d.toMillis(); }
-            const ms = Date.parse(raw);
-            if (!isNaN(ms)) return ms;
-            return raw.toLowerCase();
-          }
-          const sel = cell.querySelector('select');
-          if (sel) { const opt = sel.options[sel.selectedIndex]; return (opt?.textContent ?? opt?.innerText ?? sel.value ?? '').trim().toLowerCase(); }
-          return (cell.innerText?.trim() ?? '').toLowerCase();
-        };
-        const tb = table.tBodies[0] ?? table.querySelector('tbody');
-        if (!tb) return;
-        const rows = Array.from(tb.rows);
-        rows.sort((a, b) => { const ka = sortKey(a), kb = sortKey(b); let cmp = (typeof ka === 'number' && typeof kb === 'number') ? ka - kb : String(ka).localeCompare(String(kb), undefined, { numeric: true, sensitivity: 'base' }); return nextDir === 'asc' ? cmp : -cmp; });
-        rows.forEach((r) => tb.appendChild(r));
-        ths.forEach((h, i) => { const base = h.dataset.sortLabel || stripArrows(h.textContent); h.textContent = base + (i === colIndex ? (nextDir === 'asc' ? ' ▲' : ' ▼') : ''); });
-      });
-    });
-  };
-  const tryBind = () => { const table = dv.container.querySelector('table'); if (!table) return false; const tbody = table.tBodies[0] ?? table.querySelector('tbody'); if (!tbody || tbody.rows.length === 0) return false; bind(table); return true; };
-  if (tryBind()) return;
-  const obs = new MutationObserver(() => { if (tryBind()) obs.disconnect(); });
-  obs.observe(dv.container, { childList: true, subtree: true });
-  setTimeout(() => obs.disconnect(), 8000);
-}
-const sideProjects = ["gp-community", "cloud9japan", "linkedin-agent", "ahuru", "miozuki", "eguchi-family"];
-const pages = dv.pages('"tasks/open"')
-  .where(p => sideProjects.includes(p.project) && p.status !== "done")
-  .sort(p => p.priority === "high" ? 0 : p.priority === "medium" ? 1 : 2);
-const headers = ['Task', 'Project', 'Owner', 'Status', 'Priority', 'Due'];
-dv.table(headers, pages.map(p => [
-  dv.fileLink(p.file.path, false, p.title || p.file.name),
-  p.project, p.owner, statusSelect(p.file.path), prioritySelect(p.file.path), p.due
-]));
-scheduleDashboardColumnSort(dv, headers);
-```
+- Full LinkedIn strategy overhaul: Pillar A "What Works in NZ Primary Care" (55%) + Pillar B "What's Changing in NZ Primary Care" (40%)
+- Cadence: 3x/week (1 carousel Tue + 2 text Thu/Sat) + fortnightly "The GP Builder" newsletter
+- Knowledge files updated to v4.0; Golden Hour system redesigned with core_targets.json

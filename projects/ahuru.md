@@ -6,6 +6,7 @@ owner: ting
 sprint:
 title: "Ahuru"
 description: "Ting's ecommerce SEO project."
+phase:
 dashboard: side-projects
 ---
 

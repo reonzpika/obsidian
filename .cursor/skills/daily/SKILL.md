@@ -1,6 +1,6 @@
 ---
 name: daily
-description: Morning routine and midday check-in for Ryo's NexWave/ClinicPro workflow. Reads last 3 days of context in parallel (daily notes, Gmail, sprints, tasks), presents a tight briefing with sprint status, urgent tasks, and quick wins, waits for focus declaration, then writes a minimal focused daily note. Use whenever the user says /daily, "morning routine", "daily note", "start my day", "what's on today", "daily briefing", or wants a snapshot of sprint status and priorities.
+description: Morning routine and midday check-in for Ryo's NexWave/ClinicPro workflow. Reads last 3 days of context in parallel (daily notes, Gmail, projects, tasks), presents a tight briefing with project status, urgent tasks, and quick wins, waits for focus declaration, then writes a minimal focused daily note. Use whenever the user says /daily, "morning routine", "daily note", "start my day", "what's on today", "daily briefing", or wants a snapshot of project status and priorities.
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash, TaskCreate, TaskUpdate, TaskList, TaskGet, mcp__claude_ai_Gmail__search_threads, mcp__claude_ai_Gmail__get_thread
 user-invocable: true
 ---
@@ -23,10 +23,9 @@ Evening shutdown is handled by `/session-update`.
 ## Vault paths
 
 - Daily notes: `daily/YYYY-MM-DD.md`
-- Active tasks: `tasks/open/*.md` (frontmatter: id, title, project, repo, sprint, status, priority, due — `project` OR `sprint` set, never both)
+- Active tasks: `tasks/open/*.md` (frontmatter: id, title, project, repo, milestone, status, priority, due — `project` always set; `milestone` optional grouping label)
 - Done tasks: `tasks/done/*.md`
-- Active sprints: `sprints/active/*.md` (frontmatter: id, status, start, end, repos, projects, goal, dashboard)
-- Projects: `projects/*.md` (frontmatter: id, title, status, type, repo, description, dashboard)
+- Projects: `projects/*.md` (frontmatter: id, title, status, type, repo, description, phase, dashboard — `phase` is current focus area)
 - Inbox: `inbox/`
 
 ## Dashboard areas

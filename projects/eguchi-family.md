@@ -5,6 +5,7 @@ type: side-project
 owner: ryo
 title: "Eguchi Family"
 description: "Family AI site. Parked."
+phase:
 dashboard: side-projects
 ---
 

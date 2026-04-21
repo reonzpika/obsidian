@@ -1,6 +1,6 @@
 ---
 name: weekly
-description: Weekly sprint review and planning for NexWave/ClinicPro. Rolls up sprint progress, surfaces wins/blockers, and plans the next sprint. Run on Fridays or at end of a sprint cycle. Keeps R&D and commercial streams separate.
+description: Weekly project review and planning for NexWave/ClinicPro. Rolls up task progress across projects and milestones, surfaces wins/blockers, and plans the next week. Run on Fridays. Keeps R&D and commercial streams separate.
 allowed-tools: Read, Write, Edit, Glob, Grep, TaskCreate, TaskUpdate, TaskList, TaskGet
 model: sonnet
 user-invocable: true
@@ -20,11 +20,10 @@ Facilitates Ryo's weekly sprint review. Rolls up task progress across all active
 
 ## Vault paths
 
-- Active sprints: `sprints/active/*.md`
-- Archived sprints: `sprints/archive/*.md`
+- Projects: `projects/*.md` (includes `phase:` field for current focus area)
 - Open tasks: `tasks/open/*.md`
 - Done tasks: `tasks/done/*.md`
-- Projects: `projects/*.md`
+- Sprint archive: `sprints/archive/*.md` (read-only reference; no active sprints folder)
 - Daily notes: `daily/*.md`
 - Review output: `reviews/weekly/YYYY-MM-DD.md`
 

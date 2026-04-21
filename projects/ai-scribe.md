@@ -6,6 +6,7 @@ repo: clinicpro-saas
 stack: [nextjs, typescript, tailwind, vercel, neon, clerk]
 title: "AI Scribe"
 description: "AI-powered clinical scribe for NZ GPs."
+phase:
 dashboard: clinicpro-saas
 ---
 

@@ -20,8 +20,7 @@ Facilitates Ryo's monthly review. Rolls up sprints completed in the month, asses
 
 ## Vault paths
 
-- Sprints (active): `sprints/active/*.md`
-- Sprints (archived): `sprints/archive/*.md`
+- Sprint archive: `sprints/archive/*.md` (read-only reference; no active sprints folder)
 - Open tasks: `tasks/open/*.md`
 - Done tasks: `tasks/done/*.md`
 - Projects: `projects/*.md`
@@ -37,9 +36,9 @@ Facilitates Ryo's monthly review. Rolls up sprints completed in the month, asses
 
 ### Phase 1: Collect monthly data
 
-**Sprints completed this month:**
-- Read `sprints/archive/*.md`, filter where `end` is within this calendar month
-- Read `sprints/active/*.md`, flag any that started this month but are still running
+**Projects:**
+- Read `projects/*.md`
+- Note `id`, `title`, `status`, `phase`, `dashboard`, `type` for each
 
 **Tasks done this month:**
 - Read `tasks/done/*.md`, filter by file mtime or `created` within the month

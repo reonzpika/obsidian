@@ -5,6 +5,7 @@ type: side-project
 owner: ryo
 title: "LinkedIn Agent"
 description: "Automated LinkedIn agent. Production, low maintenance."
+phase: "Strategy execution and automation"
 dashboard: side-projects
 ---
 

@@ -8,6 +8,22 @@ stack: [aws-bedrock, claude-haiku, claude-sonnet, python, nextjs]
 
 # NexWave Health
 
+## Projects
+
+```dataviewjs
+const active = dv.pages('"projects"')
+  .where(p => p.dashboard == "nexwave-rd" && p.status != "parked")
+  .sort(p => p.title ?? p.file.name);
+for (let p of active) {
+  const badge = p.status == "production" ? "🟢" : "🔵";
+  const taskCount = dv.pages('"tasks/open"').where(t => (t.project === p.id || t.project === "nexwave-rd") && t.status !== "done").length;
+  const phase = p.phase ? `\n  _${p.phase}_` : "";
+  dv.paragraph(`${badge} [[${p.file.name}|${p.title ?? p.file.name}]] · ${p.description ?? ""} · **${taskCount} open**${phase}`);
+}
+```
+
+---
+
 **NexWave Health** is the MBIE-funded R&D programme of NexWave Solutions Limited, working to determine whether AI can achieve clinical-grade performance for two core GP workflow problems: **Inbox Helper** (triaging lab results, discharge summaries, and clinical correspondence by urgency) and **Care Gap Finder** (identifying patients overdue for diabetes and cardiovascular risk management). The founder is a practising GP and full-stack developer, bringing direct clinical domain knowledge to the research. NexWave Health has a formal partnership with Medtech (NZ's largest PMS provider, ~60% market share), giving real-world integration access. The ultimate goal is NZ-sovereign clinical AI — built and operated within NZ under Privacy Act constraints, not dependent on overseas cloud infrastructure. Success would free an estimated 900,000 GP hours per year across the NZ workforce.
 
 **Signed contract:** [CONT-109091-N2RD-NSIWKC — Funding Agreement (signed 25 Mar 2026)](https://drive.google.com/file/d/1P_le7IGb8EyQtnNIJYLwfjKmeAKmU-_w/view?usp=drivesdk) — filed in Google Drive: R&D / Grant archive
@@ -327,136 +343,6 @@ Payroll software: Xero. Paid monthly in arrears. PAYE deducted at source.
 | Q9 | What is the exact MVP scope for Inbox Helper to release during Obj 2? | Product | Medium |
 
 *Resolved: Which AI architecture to evaluate first (→ Llama/RAG stack on Runpod); Which payroll software (→ Xero)*
-
----
-
-## Sprints
-
-```dataviewjs
-const active = dv.pages('"sprints/active"')
-  .where(p => p.projects && p.projects.includes("nexwave-rd"));
-const archived = dv.pages('"sprints/archive"')
-  .where(p => p.projects && p.projects.includes("nexwave-rd"));
-const pages = active.concat(archived).sort(p => p.start);
-const headers = ['Goal', 'Objective', 'Start', 'End', 'Status'];
-dv.table(headers, pages.map(p => [
-  dv.fileLink(p.file.path, false, p.goal), p.objective, p.start, p.end, p.status
-]));
-```
-
----
-
-## Unassigned Tasks
-
-```dataviewjs
-const mb = app.plugins.getPlugin('obsidian-meta-bind-plugin')?.api;
-const lifecycle = this.component;
-const statusOpts = [
-  { name: 'option', value: ['open'] },
-  { name: 'option', value: ['in-progress'] },
-  { name: 'option', value: ['blocked'] },
-  { name: 'option', value: ['done'] }
-];
-const priorityOpts = [
-  { name: 'option', value: ['high'] },
-  { name: 'option', value: ['medium'] },
-  { name: 'option', value: ['low'] }
-];
-const ownerOpts = [
-  { name: 'option', value: ['ryo'] },
-  { name: 'option', value: ['ting'] },
-  { name: 'option', value: ['both'] }
-];
-function statusSelect(filePath) {
-  const el = dv.el('span', '');
-  const field = mb.createInputFieldMountable(filePath, {
-    renderChildType: 'inline',
-    declaration: { inputFieldType: 'inlineSelect', bindTarget: mb.parseBindTarget('status', filePath), arguments: [{ name: 'class', value: ['vault-dash-select'] }, { name: 'class', value: ['vault-dash-select--status'] }, ...statusOpts] }
-  });
-  mb.wrapInMDRC(field, el, lifecycle);
-  return el;
-}
-function prioritySelect(filePath) {
-  const el = dv.el('span', '');
-  const field = mb.createInputFieldMountable(filePath, {
-    renderChildType: 'inline',
-    declaration: { inputFieldType: 'inlineSelect', bindTarget: mb.parseBindTarget('priority', filePath), arguments: [{ name: 'class', value: ['vault-dash-select'] }, { name: 'class', value: ['vault-dash-select--priority'] }, ...priorityOpts] }
-  });
-  mb.wrapInMDRC(field, el, lifecycle);
-  return el;
-}
-function ownerSelect(filePath) {
-  const el = dv.el('span', '');
-  const field = mb.createInputFieldMountable(filePath, {
-    renderChildType: 'inline',
-    declaration: { inputFieldType: 'inlineSelect', bindTarget: mb.parseBindTarget('owner', filePath), arguments: [{ name: 'class', value: ['vault-dash-select'] }, { name: 'class', value: ['vault-dash-select--owner'] }, ...ownerOpts] }
-  });
-  mb.wrapInMDRC(field, el, lifecycle);
-  return el;
-}
-function scheduleDashboardColumnSort(dv, headerNames) {
-  const bind = (table) => {
-    if (table.dataset.vaultDashSortBound) return;
-    const thead = table.querySelector('thead');
-    const tbody = table.tBodies[0] ?? table.querySelector('tbody');
-    if (!thead || !tbody || tbody.rows.length === 0) return;
-    table.dataset.vaultDashSortBound = '1';
-    const ths = thead.querySelectorAll('th');
-    const stripArrows = (s) => String(s).replace(/\s*[\u25B2\u25BC]\s*$/, '').trim();
-    const state = { col: -1, dir: 'asc' };
-    ths.forEach((th) => { th.dataset.sortLabel = stripArrows(th.textContent); });
-    ths.forEach((th, colIndex) => {
-      th.style.cursor = 'pointer';
-      th.title = 'Sort column';
-      th.classList.add('vault-dash-sortable-th');
-      th.addEventListener('click', (ev) => {
-        ev.preventDefault(); ev.stopPropagation();
-        const nextDir = state.col === colIndex && state.dir === 'asc' ? 'desc' : 'asc';
-        state.col = colIndex; state.dir = nextDir;
-        const headerName = headerNames[colIndex] ?? '';
-        const sortKey = (row) => {
-          const cell = row.cells[colIndex];
-          if (!cell) return '';
-          if (/due/i.test(headerName)) {
-            const raw = cell.innerText?.trim() ?? '';
-            const L = dv.luxon.DateTime;
-            const iso = L.fromISO(raw);
-            if (iso.isValid) return iso.toMillis();
-            const fmts = ['MMMM d, yyyy', 'd MMMM yyyy', 'yyyy-MM-dd', 'dd/MM/yyyy', 'd/MM/yyyy'];
-            for (const f of fmts) { const d = L.fromFormat(raw, f, { locale: 'en-NZ' }); if (d.isValid) return d.toMillis(); }
-            const ms = Date.parse(raw);
-            if (!isNaN(ms)) return ms;
-            return raw.toLowerCase();
-          }
-          const sel = cell.querySelector('select');
-          if (sel) { const opt = sel.options[sel.selectedIndex]; return (opt?.textContent ?? opt?.innerText ?? sel.value ?? '').trim().toLowerCase(); }
-          return (cell.innerText?.trim() ?? '').toLowerCase();
-        };
-        const tb = table.tBodies[0] ?? table.querySelector('tbody');
-        if (!tb) return;
-        const rows = Array.from(tb.rows);
-        rows.sort((a, b) => { const ka = sortKey(a), kb = sortKey(b); let cmp = (typeof ka === 'number' && typeof kb === 'number') ? ka - kb : String(ka).localeCompare(String(kb), undefined, { numeric: true, sensitivity: 'base' }); return nextDir === 'asc' ? cmp : -cmp; });
-        rows.forEach((r) => tb.appendChild(r));
-        ths.forEach((h, i) => { const base = h.dataset.sortLabel || stripArrows(h.textContent); h.textContent = base + (i === colIndex ? (nextDir === 'asc' ? ' ▲' : ' ▼') : ''); });
-      });
-    });
-  };
-  const tryBind = () => { const table = dv.container.querySelector('table'); if (!table) return false; const tbody = table.tBodies[0] ?? table.querySelector('tbody'); if (!tbody || tbody.rows.length === 0) return false; bind(table); return true; };
-  if (tryBind()) return;
-  const obs = new MutationObserver(() => { if (tryBind()) obs.disconnect(); });
-  obs.observe(dv.container, { childList: true, subtree: true });
-  setTimeout(() => obs.disconnect(), 8000);
-}
-const pages = dv.pages('"tasks/open"')
-  .where(p => p.project === "nexwave-rd" && (!p.sprint || p.sprint === ""))
-  .sort(p => p.priority === "high" ? 0 : p.priority === "medium" ? 1 : 2);
-const headers = ['Task', 'Owner', 'Status', 'Priority', 'Due'];
-dv.table(headers, pages.map(p => [
-  dv.fileLink(p.file.path, false, p.title || p.file.name),
-  ownerSelect(p.file.path), statusSelect(p.file.path), prioritySelect(p.file.path), p.due
-]));
-scheduleDashboardColumnSort(dv, headers);
-```
 
 ---
 
