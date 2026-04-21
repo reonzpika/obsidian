@@ -48,10 +48,6 @@ Where onboarded active practices exceed 50 in any year, the full per-active-prac
 - 30-day payment terms from invoice date.
 - All amounts in AUD, exclusive of GST where applicable.
 
-## One-off setup fee
-
-**AUD 4,000 on contract execution**, to cover AU onboarding and compliance setup. Offsets against Year 1 minimum.
-
 ## Term
 
 3-year initial term from contract execution. Renewal and termination mechanics to be detailed in the contract.
@@ -60,7 +56,7 @@ Where onboarded active practices exceed 50 in any year, the full per-active-prac
 
 - **Medtech Australia**: tier-1 support for practices using the product.
 - **ClinicPro**: technical escalations and product issues.
-- **Initial support enablement included in the setup fee**: runbook and playbook for Medtech support staff, escalation matrix with named ClinicPro contacts, shared ticketing or email integration, handover documentation, and initial training sessions. Specific cadence and scope to be agreed.
+- **Initial support enablement**: runbook and playbook for Medtech support staff, escalation matrix with named ClinicPro contacts, shared ticketing or email integration, handover documentation, and initial training sessions. Specific cadence, scope, and any associated setup cost to be agreed at term sheet stage.
 
 ## Data residency and compliance
 

@@ -15,7 +15,9 @@ project: clinicpro-capture
 
 ## Deal 1: AU Bundle (Lawrence)
 
-**Your opener:** AUD 30/practice/month · 50-practice floor · 3-year term · AUD 4,000 setup fee.
+**Your opener:** AUD 30/practice/month · 50-practice floor · 3-year term.
+
+**Setup fee:** removed from one-pager. Raise verbally after the technical questions (domain, auth, update control). Say: "There'll be a setup fee in the term sheet to cover AU engineering. Amount depends on a few technical decisions we need to walk through. Won't be large, but this isn't a flip-a-switch deployment." Firm number goes in the term sheet once scope is known.
 
 **Trade rules (pre-decided — do not deviate in room):**
 
@@ -131,12 +133,42 @@ Get answers to these before leaving the room.
 
 ---
 
-## Bring to the meeting
+## Meeting checklist
 
-- This doc
-- AU proposal one-pager (`clinicpro-capture-au-proposal.md`)
-- Commission math (strategy doc §3 table)
-- Non-negotiables checklist (strategy doc §6)
+### Before
+
+- [ ] This briefing open and reviewed
+- [ ] Trade rules memorised (AU and NZ)
+- [ ] AU proposal one-pager on hand
+
+### During — Lawrence (AU)
+
+- [ ] Asked: decision authority and timeline to signed contract
+- [ ] Asked: Y1 practice volume forecast
+- [ ] Asked: security requirements (ISO 27001? CREST ANZ pentest accepted?)
+- [ ] Asked: tax treatment preference (services fee or royalty?)
+- [ ] Asked: domain (their domain vs ClinicPro subdomain)
+- [ ] Asked: auth model (Medtech SSO vs ClinicPro auth)
+- [ ] Asked: update control (approval process vs auto-deploy)
+- [ ] Raised setup fee verbally after technical questions
+
+### During — Alex (NZ)
+
+- [ ] Asked: fee model landing (% commission or still flat fee?)
+- [ ] Asked: 6-month PIA/pentest timeline confirmed
+- [ ] Asked: quarterly reporting cadence acceptable
+
+### During — both
+
+- [ ] Confirmed two-contract structure with both
+- [ ] Refused deal linkage (if raised)
+- [ ] Did not deviate from trade rules
+
+### After
+
+- [ ] Send follow-up email confirming key points and any agreement in principle
+- [ ] Scope setup fee based on technical answers (domain, auth, update control)
+- [ ] If agreed in principle: draft term sheet within 5 working days
 
 ---
 

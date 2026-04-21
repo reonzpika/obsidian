@@ -205,7 +205,7 @@ After computing the sprint table, identify which dashboard areas are off radar:
 
 **Sprint table rules:**
 - One row per sprint where today falls between `start` and `end`
-- Project = sprint's `repos` value (or project name)
+- Project = wikilink. Use `[[dashboards/{sprint.dashboard}]]` if the label matches the repo/dashboard name. If the sprint has a custom display label (e.g. "Capture AU bundle"), use `[[sprints/active/{sprint.id}|{label}]]` instead.
 - Current task = title of the first `in-progress` or `due-today` task for that sprint. If none: `—`
 - Flag sprints ending in ≤2 days with ⚠ in the Days left cell
 
@@ -279,7 +279,7 @@ day: [Day name]
 ```
 
 **Writing rules:**
-- Sprint table: same as the report. If user narrowed scope (e.g. "only medtech today"), include only relevant sprints.
+- Sprint table: same as the report. If user narrowed scope (e.g. "only medtech today"), include only relevant sprints. Project cell must always be a wikilink: use `[[dashboards/{sprint.dashboard}]]` for standard repo/stream rows; use `[[sprints/active/{sprint.id}|{display-label}]]` for distinctly-named sprints (e.g. "Capture AU bundle").
 - Urgent and Quick wins: wikilinks `[[task-id]]`, no checkboxes, only tasks in scope of the user's stated focus.
 - Blockers: up to 5, only tasks where `status: blocked` pulled from `tasks/open/`. Format: `[[task-id]] — waiting on X`
 - If the user's reply surfaces a new action item: create the task file first, then wikilink it in the note.

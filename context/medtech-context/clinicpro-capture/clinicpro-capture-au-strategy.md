@@ -201,7 +201,7 @@ Minimum establishes downside protection at breakeven. Profit comes from volume g
 
 **Payment structure**: monthly invoicing in arrears, 30-day terms, minimum floor applied. Signals cashflow confidence, avoids "quarterly in advance" BATNA tell.
 
-**Setup fee**: AUD 4,000 on contract execution, offsets Year 1 minimum. Covers AU onboarding, compliance setup, and initial Medtech support enablement (runbook, escalation matrix, shared ticketing, training). Included in one-pager.
+**Setup fee**: removed from one-pager. Raise verbally after technical questions (domain, auth, update control) are answered in the Wed meeting. Firm number goes in the term sheet once scope is known. Signal in room: "There'll be a setup fee in the term sheet to cover AU engineering. Amount depends on deployment decisions — won't be large, but this isn't a flip-a-switch deployment."
 
 ## 7. Non-negotiable contract clauses
 
