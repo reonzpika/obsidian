@@ -1,20 +1,14 @@
 > [!info]+
-> `= dateformat(date(today), "d MMMM yyyy")` · `= link("daily/" + dateformat(date(today), "yyyy-MM-dd"), "Today's Note")`
->
-> [[clinicpro-saas|ClinicPro SaaS]] · [[clinicpro-medtech|ClinicPro Medtech]] · [[nexwave-rd|Nexwave R&D]] · [[gp-fellowship|GP Fellowship]] · [[side-projects|Side Projects]] · Partnerships
->
+> `= dateformat(date(today), "d MMMM yyyy")` · `= link("daily/" + dateformat(date(today), "yyyy-MM-dd"), "Today's Note")` · [[clinicpro-saas|ClinicPro SaaS]] · [[clinicpro-medtech|ClinicPro Medtech]] · [[nexwave-rd|Nexwave R&D]] · [[gp-fellowship|GP Fellowship]] · [[side-projects|Side Projects]] · Partnerships
 > [[dashboards/portfolio-map|🗺 Portfolio Map]] · [[#Quick Links|↓ Quick Links]]
 
 ---
 
 ### [[clinicpro-saas|ClinicPro SaaS]] · `./clinicpro-saas`
-
-`$= dv.pages('"projects"').where(p => p.dashboard == "clinicpro-saas" && p.status != "parked").length + " active projects"`
+`$= dv.pages('"tasks/open"').where(t => (dv.page("projects/" + t.project)?.dashboard == "clinicpro-saas" || dv.page("sprints/active/" + t.sprint)?.dashboard == "clinicpro-saas")).length + " open"`
 
 > [!note]- Projects & Sprints
->
 > #### Projects
->
 > ```dataviewjs
 > const active = dv.pages('"projects"')
 >   .where(p => p.dashboard == "clinicpro-saas" && p.status != "parked")
@@ -32,9 +26,7 @@
 >   }
 > }
 > ```
->
 > #### Active Sprints
->
 > ```dataviewjs
 > const sprints = dv.pages('"sprints/active"')
 >   .where(s => s.dashboard == "clinicpro-saas" && s.status == "active")
@@ -48,16 +40,11 @@
 > }
 > ```
 
----
-
 ### [[clinicpro-medtech|ClinicPro Medtech]] · `./clinicpro-medtech`
-
-`$= dv.pages('"projects"').where(p => p.dashboard == "clinicpro-medtech" && p.status != "parked").length + " active projects"`
+`$= dv.pages('"tasks/open"').where(t => (dv.page("projects/" + t.project)?.dashboard == "clinicpro-medtech" || dv.page("sprints/active/" + t.sprint)?.dashboard == "clinicpro-medtech")).length + " open"`
 
 > [!note]- Projects & Sprints
->
 > #### Projects
->
 > ```dataviewjs
 > const active = dv.pages('"projects"')
 >   .where(p => p.dashboard == "clinicpro-medtech" && p.status != "parked")
@@ -75,9 +62,7 @@
 >   }
 > }
 > ```
->
 > #### Active Sprints
->
 > ```dataviewjs
 > const sprints = dv.pages('"sprints/active"')
 >   .where(s => s.dashboard == "clinicpro-medtech" && s.status == "active")
@@ -91,16 +76,11 @@
 > }
 > ```
 
----
-
 ### [[nexwave-rd|Nexwave R&D]] · `./nexwave-rd`
-
-`$= dv.pages('"projects"').where(p => p.dashboard == "nexwave-rd" && p.status != "parked").length + " active projects"`
+`$= dv.pages('"tasks/open"').where(t => (dv.page("projects/" + t.project)?.dashboard == "nexwave-rd" || dv.page("sprints/active/" + t.sprint)?.dashboard == "nexwave-rd")).length + " open"`
 
 > [!note]- Projects & Sprints
->
 > #### Projects
->
 > ```dataviewjs
 > const active = dv.pages('"projects"')
 >   .where(p => p.dashboard == "nexwave-rd" && p.status != "parked")
@@ -118,9 +98,7 @@
 >   }
 > }
 > ```
->
 > #### Active Sprints
->
 > ```dataviewjs
 > const sprints = dv.pages('"sprints/active"')
 >   .where(s => s.dashboard == "nexwave-rd" && s.status == "active")
@@ -134,16 +112,11 @@
 > }
 > ```
 
----
-
 ### [[gp-fellowship|GP Fellowship]]
-
-`$= dv.pages('"projects"').where(p => p.dashboard == "gp-fellowship" && p.status != "parked").length + " active projects"`
+`$= dv.pages('"tasks/open"').where(t => (dv.page("projects/" + t.project)?.dashboard == "gp-fellowship" || dv.page("sprints/active/" + t.sprint)?.dashboard == "gp-fellowship")).length + " open"`
 
 > [!note]- Projects & Sprints
->
 > #### Projects
->
 > ```dataviewjs
 > const active = dv.pages('"projects"')
 >   .where(p => p.dashboard == "gp-fellowship" && p.status != "parked")
@@ -161,9 +134,7 @@
 >   }
 > }
 > ```
->
 > #### Active Sprints
->
 > ```dataviewjs
 > const sprints = dv.pages('"sprints/active"')
 >   .where(s => s.dashboard == "gp-fellowship" && s.status == "active")
@@ -177,16 +148,11 @@
 > }
 > ```
 
----
-
 ### [[side-projects|Side Projects]]
-
-`$= dv.pages('"projects"').where(p => p.dashboard == "side-projects" && p.status != "parked").length + " active projects"`
+`$= dv.pages('"tasks/open"').where(t => (dv.page("projects/" + t.project)?.dashboard == "side-projects" || dv.page("sprints/active/" + t.sprint)?.dashboard == "side-projects")).length + " open"`
 
 > [!note]- Projects & Sprints
->
 > #### Projects
->
 > ```dataviewjs
 > const active = dv.pages('"projects"')
 >   .where(p => p.dashboard == "side-projects" && p.status != "parked")
@@ -204,9 +170,7 @@
 >   }
 > }
 > ```
->
 > #### Active Sprints
->
 > ```dataviewjs
 > const sprints = dv.pages('"sprints/active"')
 >   .where(s => s.dashboard == "side-projects" && s.status == "active")
@@ -220,18 +184,11 @@
 > }
 > ```
 
----
-
 ### Partnerships
-
-_No code repo._
-
-`$= dv.pages('"projects"').where(p => p.dashboard == "partnerships" && p.status != "parked").length + " active projects"`
+`$= dv.pages('"tasks/open"').where(t => (dv.page("projects/" + t.project)?.dashboard == "partnerships" || dv.page("sprints/active/" + t.sprint)?.dashboard == "partnerships")).length + " open"`
 
 > [!note]- Projects & Sprints
->
 > #### Projects
->
 > ```dataviewjs
 > const active = dv.pages('"projects"')
 >   .where(p => p.dashboard == "partnerships" && p.status != "parked")
@@ -249,9 +206,7 @@ _No code repo._
 >   }
 > }
 > ```
->
 > #### Active Sprints
->
 > ```dataviewjs
 > const sprints = dv.pages('"sprints/active"')
 >   .where(s => s.dashboard == "partnerships" && s.status == "active")
