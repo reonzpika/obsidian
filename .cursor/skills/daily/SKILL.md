@@ -178,8 +178,8 @@ Present the following structure — nothing else, no preamble, no "good morning"
 - [third — only include if genuinely distinct]
 
 **Sprints:**
-| Project | Goal | Current task | Days left |
-|---------|------|-------------|-----------|
+| Project | Sprint | Goal | Days left |
+|---------|--------|------|-----------|
 
 **Urgent:**
 | Project | Task | Note |
@@ -205,8 +205,9 @@ After computing the sprint table, identify which dashboard areas are off radar:
 
 **Sprint table rules:**
 - One row per sprint where today falls between `start` and `end`
-- Project = wikilink. Use `[[dashboards/{sprint.dashboard}]]` if the label matches the repo/dashboard name. If the sprint has a custom display label (e.g. "Capture AU bundle"), use `[[sprints/active/{sprint.id}|{label}]]` instead.
-- Current task = title of the first `in-progress` or `due-today` task for that sprint. If none: `—`
+- Project = `[[projects/{sprint.projects[0]}]]` if the sprint has one or more projects listed; else `[[dashboards/{sprint.dashboard}]]`
+- Sprint = `[[sprints/active/{sprint.id}|{display-label}]]`. Display label: use the sprint ID short form (e.g. `saas-sprint-1`) for standard sprints; use a descriptive name (e.g. `Capture AU bundle`) for distinctly-named sprints
+- Goal = sprint's `goal` field, trimmed to ~8 words if long
 - Flag sprints ending in ≤2 days with ⚠ in the Days left cell
 
 **Urgent table rules — include a task if ANY of these are true:**
@@ -261,8 +262,8 @@ day: [Day name]
 ## Today
 
 ### Sprints
-| Project | Goal | Current task | Days left |
-|---------|------|-------------|-----------|
+| Project | Sprint | Goal | Days left |
+|---------|--------|------|-----------|
 
 ### Urgent
 - [[task-id]] — title
@@ -279,7 +280,7 @@ day: [Day name]
 ```
 
 **Writing rules:**
-- Sprint table: same as the report. If user narrowed scope (e.g. "only medtech today"), include only relevant sprints. Project cell must always be a wikilink: use `[[dashboards/{sprint.dashboard}]]` for standard repo/stream rows; use `[[sprints/active/{sprint.id}|{display-label}]]` for distinctly-named sprints (e.g. "Capture AU bundle").
+- Sprint table: same as the report. If user narrowed scope (e.g. "only medtech today"), include only relevant sprints. Columns: Project (`[[projects/{id}]]` if sprint has projects listed, else `[[dashboards/{dashboard}]]`), Sprint (`[[sprints/active/{sprint.id}|{display-label}]]`), Goal (trimmed sprint goal), Days left.
 - Urgent and Quick wins: wikilinks `[[task-id]]`, no checkboxes, only tasks in scope of the user's stated focus.
 - Blockers: up to 5, only tasks where `status: blocked` pulled from `tasks/open/`. Format: `[[task-id]] — waiting on X`
 - If the user's reply surfaces a new action item: create the task file first, then wikilink it in the note.
