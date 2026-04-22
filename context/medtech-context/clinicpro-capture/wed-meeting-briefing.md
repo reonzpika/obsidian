@@ -137,25 +137,26 @@ Get answers to these before leaving the room.
 
 ### Before
 
-- [ ] This briefing open and reviewed
+- [x] This briefing open and reviewed
 - [ ] Trade rules memorised (AU and NZ)
 - [ ] AU proposal one-pager on hand
 
 ### During — Lawrence (AU)
 
-- [ ] Asked: decision authority and timeline to signed contract
+- [x] Asked: decision authority and timeline to signed contract
+- [ ] Asked: happy with the per practice cost (AUD 30)?
+- [ ] Asked: minimum year commitment - happy with 3 years?
 - [ ] Asked: Y1 practice volume forecast
-- [ ] Asked: security requirements (ISO 27001? CREST ANZ pentest accepted?)
-- [ ] Asked: tax treatment preference (services fee or royalty?)
-- [ ] Asked: domain (their domain vs ClinicPro subdomain)
-- [ ] Asked: auth model (Medtech SSO vs ClinicPro auth)
+- [ ] Asked: security requirements - same as the Medtech NZ ALEX partnership?
+- [ ] Asked: tax treatment preference (services fee or royalty?) - defer for the second meeting. first meeting is going over the major points to head to the closing phase. 
+- [ ] Asked: domain (their domain vs ClinicPro subdomain) - defer
 - [ ] Asked: update control (approval process vs auto-deploy)
-- [ ] Raised setup fee verbally after technical questions
+- [ ] Raised: setup fee, whether they want UI customisation, and auth model (bundle after confirming commercial terms)
 
 ### During — Alex (NZ)
 
 - [ ] Asked: fee model landing (% commission or still flat fee?)
-- [ ] Asked: 6-month PIA/pentest timeline confirmed
+- [ ] Asked: 3-month PIA/pentest timeline confirmed
 - [ ] Asked: quarterly reporting cadence acceptable
 
 ### During — both

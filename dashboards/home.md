@@ -84,6 +84,19 @@ for (let p of active) {
 
 ---
 
+## Reviews
+
+```dataviewjs
+const weekly = dv.pages('"reviews/weekly"').sort(p => p.file.name, 'desc').slice(0, 4);
+const monthly = dv.pages('"reviews/monthly"').sort(p => p.file.name, 'desc').slice(0, 2);
+if (weekly.length > 0)
+  dv.paragraph("**Weekly:** " + weekly.map(p => `[[reviews/weekly/${p.file.name}|${p.title ?? p.file.name}]]`).join(" · "));
+if (monthly.length > 0)
+  dv.paragraph("**Monthly:** " + monthly.map(p => `[[reviews/monthly/${p.file.name}|${p.title ?? p.file.name}]]`).join(" · "));
+```
+
+---
+
 ## Quick Links
 
 **Dev**
