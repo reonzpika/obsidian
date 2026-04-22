@@ -1,7 +1,7 @@
 > [!info]+
 > `= dateformat(date(today), "d MMMM yyyy")` · `= link("daily/" + dateformat(date(today), "yyyy-MM-dd"), "Today's Note")` · [[dashboards/portfolio-map|🗺 Portfolio Map]] · [[#Quick Links|↓ Quick Links]]
 >
-> [[clinicpro-saas|ClinicPro SaaS]] · [[clinicpro-medtech|ClinicPro Medtech]] · [[nexwave-rd|Nexwave R&D]] · [[gp-fellowship|GP Fellowship]] · [[side-projects|Side Projects]] · Partnerships
+> [[clinicpro-saas|ClinicPro SaaS]] · [[clinicpro-medtech|ClinicPro Medtech]] · [[nexwave-rd|Nexwave R&D]] · [[other-projects|Other Projects]] · Partnerships
 
 ---
 
@@ -52,31 +52,18 @@ for (let p of active) {
 }
 ```
 
-### [[gp-fellowship|GP Fellowship]]
+### [[other-projects|Other Projects]]
 
 ```dataviewjs
 const active = dv.pages('"projects"')
-  .where(p => p.dashboard == "gp-fellowship" && p.status != "parked")
+  .where(p => p.dashboard == "other-projects" && p.status != "parked")
   .sort(p => p.title ?? p.file.name);
 for (let p of active) {
   const badge = p.status == "production" ? "🟢" : "🔵";
   const phase = p.phase ? ` · _${p.phase}_` : "";
   dv.paragraph(`${badge} [[${p.file.name}|${p.title ?? p.file.name}]] · ${p.description ?? ""}${phase}`);
 }
-```
-
-### [[side-projects|Side Projects]]
-
-```dataviewjs
-const active = dv.pages('"projects"')
-  .where(p => p.dashboard == "side-projects" && p.status != "parked")
-  .sort(p => p.title ?? p.file.name);
-for (let p of active) {
-  const badge = p.status == "production" ? "🟢" : "🔵";
-  const phase = p.phase ? ` · _${p.phase}_` : "";
-  dv.paragraph(`${badge} [[${p.file.name}|${p.title ?? p.file.name}]] · ${p.description ?? ""}${phase}`);
-}
-const parked = dv.pages('"projects"').where(p => p.dashboard == "side-projects" && p.status == "parked");
+const parked = dv.pages('"projects"').where(p => p.dashboard == "other-projects" && p.status == "parked");
 if (parked.length > 0) {
   dv.paragraph("💤 **Parked:** " + parked.map(p => `[[${p.file.name}|${p.title ?? p.file.name}]]`).join(" · "));
 }

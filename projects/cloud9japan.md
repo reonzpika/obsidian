@@ -6,7 +6,7 @@ owner: ryo
 title: "Cloud9Japan"
 description: "Mum's business website. Parked."
 phase:
-dashboard: side-projects
+dashboard: other-projects
 ---
 
 ## Description

@@ -1,5 +1,5 @@
 ---
-id: gp-fellowship
+id: fellowship-application
 status: active
 type: training
 repo: gp-fellowship
@@ -7,7 +7,7 @@ stack: [rnzcgp, gpep3, amp]
 title: "GP Fellowship"
 description: "RNZCGP Fellowship application. Final stage: Assessment Visit."
 phase: "Fellowship audit and application submission"
-dashboard: gp-fellowship
+dashboard: other-projects
 ---
 
 ## Description
@@ -87,7 +87,7 @@ function prioritySelect(filePath) {
   return el;
 }
 const all = dv.pages('"tasks/open"')
-  .where(p => p.project === "gp-fellowship" && p.status !== "done")
+  .where(p => p.project === "fellowship-application" && p.status !== "done")
   .sort(p => p.priority === "high" ? 0 : p.priority === "medium" ? 1 : 2);
 const groups = {};
 const unassigned = [];

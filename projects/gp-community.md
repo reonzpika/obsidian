@@ -6,7 +6,7 @@ owner: ryo
 title: "GP Community"
 description: "GP community platform. Parked indefinitely."
 phase:
-dashboard: side-projects
+dashboard: other-projects
 ---
 
 ## Description

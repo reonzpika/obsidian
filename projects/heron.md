@@ -5,7 +5,7 @@ type: partnership
 title: "Heron"
 description: "NZ AI health tech startup. Advisory and product collaboration."
 phase: "Initial advisory engagement"
-dashboard: partnerships
+dashboard: other-projects
 ---
 
 ## Description

@@ -35,8 +35,7 @@ Evening shutdown is handled by `/session-update`.
 | clinicpro-saas | ClinicPro SaaS |
 | clinicpro-medtech | ClinicPro Medtech |
 | nexwave-rd | Nexwave R&D |
-| gp-fellowship | GP Fellowship |
-| side-projects | Side Projects |
+| other-projects | Other Projects |
 | partnerships | Partnerships |
 
 ## Repos

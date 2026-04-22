@@ -1,12 +1,12 @@
 ---
-id: side-projects
+id: other-projects
 status: active
 type: side-project
 ---
 
-# Side Projects
+# Other Projects
 
-Personal and family projects outside of ClinicPro and NexWave R&D. Maintained by Ryo and Ting.
+Personal, family, and training projects outside of ClinicPro and NexWave R&D. Maintained by Ryo and Ting.
 
 ---
 
@@ -14,7 +14,7 @@ Personal and family projects outside of ClinicPro and NexWave R&D. Maintained by
 
 ```dataviewjs
 const active = dv.pages('"projects"')
-  .where(p => p.dashboard == "side-projects" && p.status != "parked")
+  .where(p => p.dashboard == "other-projects" && p.status != "parked")
   .sort(p => p.title ?? p.file.name);
 for (let p of active) {
   const badge = p.status == "production" ? "🟢" : "🔵";
@@ -22,7 +22,7 @@ for (let p of active) {
   const phase = p.phase ? `\n  _${p.phase}_` : "";
   dv.paragraph(`${badge} [[${p.file.name}|${p.title ?? p.file.name}]] · ${p.description ?? ""} · **${taskCount} open**${phase}`);
 }
-const parked = dv.pages('"projects"').where(p => p.dashboard == "side-projects" && p.status == "parked");
+const parked = dv.pages('"projects"').where(p => p.dashboard == "other-projects" && p.status == "parked");
 if (parked.length > 0) {
   dv.paragraph("💤 **Parked:** " + parked.map(p => `[[${p.file.name}|${p.title ?? p.file.name}]]`).join(" · "));
 }
@@ -49,3 +49,15 @@ if (parked.length > 0) {
 - Full LinkedIn strategy overhaul: Pillar A "What Works in NZ Primary Care" (55%) + Pillar B "What's Changing in NZ Primary Care" (40%)
 - Cadence: 3x/week (1 carousel Tue + 2 text Thu/Sat) + fortnightly "The GP Builder" newsletter
 - Knowledge files updated to v4.0; Golden Hour system redesigned with core_targets.json
+
+### Week of 2026-04-21
+
+**vault restructure**
+- Sprint layer eliminated: `sprints/active/` removed from vault, replaced with `phase:` on projects and `milestone:` on tasks
+- GP Fellowship wikilink ambiguity resolved: `projects/gp-fellowship.md` renamed to `projects/fellowship-application.md` (`id: fellowship-application`); 15 gpf-* task files updated
+- `dashboards/gp-fellowship.md` deleted; GP Fellowship project absorbed into Other Projects dashboard
+- `dashboards/side-projects.md` renamed to `dashboards/other-projects.md`; all Dataview queries and project frontmatter updated
+- Heron project moved from Partnerships to Other Projects (`dashboard: other-projects`)
+- `home.md` nav and section headers updated: GP Fellowship removed, Side Projects → Other Projects
+- All skill files updated (daily, weekly, monthly, obsidian, obsidian-task-table, adopt): sprint references removed, project/phase/milestone pattern adopted throughout
+- Vault `CLAUDE.md` updated: hierarchy rules, task schema, project schema, gotchas
