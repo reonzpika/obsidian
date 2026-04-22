@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation Demos — ClinicPro SaaS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --green-700: #15803d;
+      --green-800: #166534;
+      --green-600: #16a34a;
+      --green-400: #4ade80;
+      --green-100: #dcfce7;
+      --green-200: #bbf7d0;
+      --amber-400: #f59e0b;
+      --amber-700: #b45309;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-400: #94a3b8;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+      --bg: #fafaf7;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--slate-900);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250,250,247,0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--slate-200);
+      padding: 0.75rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .nav-brand {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--slate-900);
+      margin-right: auto;
+      white-space: nowrap;
+    }
+    .nav-brand span {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--slate-400);
+      display: block;
+      margin-top: 2px;
+    }
+    .nav a {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--slate-500);
+      text-decoration: none;
+      padding: 4px 10px;
+      border-radius: 4px;
+      transition: color 150ms, background 150ms;
+      white-space: nowrap;
+    }
+    .nav a:hover { color: var(--green-700); background: var(--green-100); }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      padding: 5rem 2rem 4rem;
+      max-width: 860px;
+      margin: 0 auto;
+      border-bottom: 1px solid var(--slate-200);
+    }
+    .page-header .eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--amber-700);
+      margin-bottom: 1rem;
+    }
+    .page-header h1 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 600;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .page-header p {
+      font-size: 0.95rem;
+      color: var(--slate-600);
+      max-width: 560px;
+      line-height: 1.75;
+    }
+
+    /* ── DEMO SECTION ── */
+    .demo-section {
+      padding: 5rem 2rem 5.5rem;
+      max-width: 860px;
+      margin: 0 auto;
+      border-bottom: 1px solid var(--slate-200);
+    }
+    .demo-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .demo-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--amber-700);
+    }
+    .demo-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--green-700);
+      background: var(--green-100);
+      border: 1px solid var(--green-200);
+      border-radius: 99px;
+      padding: 2px 8px;
+    }
+    .demo-h2 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: clamp(1.6rem, 3vw, 2.25rem);
+      font-weight: 600;
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+    }
+    .demo-desc {
+      font-size: 0.875rem;
+      color: var(--slate-600);
+      line-height: 1.75;
+      max-width: 580px;
+      margin-bottom: 2.5rem;
+    }
+    .demo-stage {
+      background: white;
+      border: 1px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 3.5rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 200px;
+      position: relative;
+      overflow: hidden;
+    }
+    .demo-stage.bg-slate { background: var(--slate-50); }
+    .demo-stage.bg-dark { background: #0c1628; }
+
+    /* ── 1. MAGNETIC BUTTON ── */
+    .magnetic-zone {
+      padding: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: none;
+    }
+    .magnetic-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--green-700);
+      color: white;
+      border: none;
+      border-radius: 999px;
+      padding: 15px 36px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: none;
+      position: relative;
+      will-change: transform;
+      user-select: none;
+    }
+    .magnetic-btn-arrow {
+      display: inline-block;
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+    .magnetic-shadow {
+      position: absolute;
+      inset: 0;
+      border-radius: 999px;
+      background: rgba(21,128,61,0.3);
+      filter: blur(14px);
+      transform: translateY(6px) scaleX(0.9);
+      opacity: 0;
+      transition: opacity 250ms ease;
+    }
+    .magnetic-btn:hover .magnetic-shadow,
+    .magnetic-zone:hover .magnetic-shadow { opacity: 1; }
+
+    /* ── 2. WORD REVEAL ── */
+    .word-reveal-wrapper {
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      padding: 4rem 0;
+    }
+    .reveal-text {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: clamp(1.35rem, 2.5vw, 2rem);
+      line-height: 1.65;
+      font-weight: 500;
+      max-width: 680px;
+    }
+    .rw {
+      display: inline;
+      color: rgba(15,23,42,0.12);
+      transition: color 80ms ease;
+    }
+    .rw.lit  { color: rgba(15,23,42,1);    }
+    .rw.past { color: rgba(15,23,42,0.35); }
+
+    /* ── 3. TEXT MASK ── */
+    .text-mask-demo { text-align: center; width: 100%; }
+
+    .headline-gradient-auto {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: clamp(2.6rem, 6vw, 4.5rem);
+      font-weight: 700;
+      line-height: 1.05;
+      background: linear-gradient(120deg,
+        #0c2820 0%,
+        #15803d 25%,
+        #16a34a 45%,
+        #f59e0b 55%,
+        #15803d 75%,
+        #0c2820 100%
+      );
+      background-size: 250% 250%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      animation: grad-flow 5s ease-in-out infinite;
+    }
+    @keyframes grad-flow {
+      0%   { background-position: 0% 50%;   }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%;   }
+    }
+
+    .headline-gradient-hover {
+      display: inline-block;
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.1;
+      background: linear-gradient(90deg,
+        #0c2820 0%,
+        #15803d 20%,
+        #16a34a 40%,
+        #f59e0b 60%,
+        #16a34a 80%,
+        #15803d 100%
+      );
+      background-size: 300% 100%;
+      background-position: 100% 0%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      transition: background-position 900ms cubic-bezier(0.33,0,0,1);
+      cursor: default;
+    }
+    .headline-gradient-hover:hover {
+      background-position: 0% 0%;
+    }
+
+    .mask-divider {
+      width: 1px;
+      height: 60px;
+      background: var(--slate-200);
+      margin: 1.5rem auto;
+    }
+    .mask-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--slate-400);
+      margin-bottom: 0.75rem;
+    }
+
+    /* ── 4. 3D CARD TILT ── */
+    .cards-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.1rem;
+      width: 100%;
+    }
+    .tilt-card {
+      background: white;
+      border: 1px solid var(--slate-200);
+      border-radius: 12px;
+      padding: 1.6rem;
+      position: relative;
+      overflow: hidden;
+      will-change: transform;
+      cursor: default;
+    }
+    .tilt-card .corner-tl,
+    .tilt-card .corner-br {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      opacity: 0.25;
+    }
+    .tilt-card .corner-tl {
+      top: 8px; left: 8px;
+      border-top: 1.5px solid var(--slate-900);
+      border-left: 1.5px solid var(--slate-900);
+    }
+    .tilt-card .corner-br {
+      bottom: 8px; right: 8px;
+      border-bottom: 1.5px solid var(--slate-900);
+      border-right: 1.5px solid var(--slate-900);
+    }
+    .card-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--amber-700);
+      margin-bottom: 0.65rem;
+    }
+    .card-title {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--slate-900);
+      margin-bottom: 0.4rem;
+    }
+    .card-body {
+      font-size: 0.8rem;
+      color: var(--slate-600);
+      line-height: 1.65;
+    }
+    .tilt-glow {
+      position: absolute;
+      inset: 0;
+      border-radius: 12px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 200ms;
+    }
+
+    /* ── 5. SVG PATH DRAW ── */
+    .path-stage {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.5rem;
+    }
+    .draw-svg {
+      width: 100%;
+      max-width: 580px;
+      height: 140px;
+      overflow: visible;
+    }
+    .path-btns {
+      display: flex;
+      gap: 0.75rem;
+    }
+    .path-btn {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      background: none;
+      border: 1px solid var(--slate-200);
+      border-radius: 6px;
+      padding: 9px 18px;
+      color: var(--slate-700);
+      cursor: pointer;
+      transition: all 180ms ease;
+    }
+    .path-btn:hover, .path-btn.active {
+      background: var(--green-700);
+      color: white;
+      border-color: var(--green-700);
+    }
+
+    /* ── 5b. SCROLL-LINKED PATH ── */
+    .scroll-path-wrapper {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .scroll-path-sticky {
+      width: 100%;
+      max-width: 680px;
+    }
+    .scroll-path-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--amber-700);
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    .scroll-path-hint {
+      font-size: 0.78rem;
+      color: var(--slate-400);
+      text-align: center;
+      margin-top: 0.75rem;
+    }
+
+    /* ── 6. TEXT SCRAMBLE ── */
+    .scramble-stage {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      min-height: 180px;
+      justify-content: center;
+    }
+    .scramble-headline {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: clamp(1.3rem, 2.5vw, 2rem);
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: var(--slate-900);
+      min-height: 2.5rem;
+      text-align: center;
+    }
+    .scramble-sub {
+      font-size: 0.8rem;
+      color: var(--slate-400);
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.05em;
+      text-align: center;
+    }
+    .scramble-trigger-btn {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      background: none;
+      border: 1px solid var(--slate-200);
+      border-radius: 6px;
+      padding: 9px 18px;
+      color: var(--slate-700);
+      cursor: pointer;
+      transition: all 180ms ease;
+    }
+    .scramble-trigger-btn:hover {
+      background: var(--slate-900);
+      color: white;
+      border-color: var(--slate-900);
+    }
+
+    /* ── FOOTER ── */
+    .page-footer {
+      text-align: center;
+      padding: 3.5rem 2rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--slate-400);
+      border-top: 1px solid var(--slate-200);
+    }
+
+    @media (max-width: 640px) {
+      .cards-row { grid-template-columns: 1fr; }
+      .nav a { display: none; }
+      .demo-stage { padding: 2rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-brand">
+      ClinicPro
+      <span>Animation reference · 2026</span>
+    </div>
+    <a href="#magnetic">① Magnetic</a>
+    <a href="#word-reveal">② Word reveal</a>
+    <a href="#text-mask">③ Text mask</a>
+    <a href="#card-tilt">④ Card tilt</a>
+    <a href="#svg-draw">⑤ Path draw</a>
+    <a href="#scramble">⑥ Scramble</a>
+  </nav>
+
+  <header class="page-header">
+    <p class="eyebrow">Animation demos · ClinicPro SaaS</p>
+    <h1>Six animations that<br><em>stop the scroll.</em></h1>
+    <p>Live demos using vanilla JS and CSS — same effects available in Framer Motion. Each is rated for impact and difficulty. Scroll slowly for #2.</p>
+  </header>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       1. MAGNETIC BUTTON
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="magnetic" class="demo-section">
+    <div class="demo-label">
+      <span class="demo-num">Demo 01</span>
+      <span class="demo-badge">Highest impact</span>
+    </div>
+    <h2 class="demo-h2">Magnetic CTA button</h2>
+    <p class="demo-desc">The button physically pulls toward your cursor as it approaches, then springs back on leave. Spring physics — not a CSS transition. Almost never seen on clinical SaaS. Move your cursor slowly toward the button from outside the white box.</p>
+
+    <div class="demo-stage">
+      <div class="magnetic-zone" id="magnetic-zone">
+        <button class="magnetic-btn" id="magnetic-btn">
+          <div class="magnetic-shadow"></div>
+          Start your free trial
+          <span class="magnetic-btn-arrow" id="mag-arrow">→</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       2. WORD-BY-WORD SCROLL REVEAL
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="word-reveal" class="demo-section">
+    <div class="demo-label">
+      <span class="demo-num">Demo 02</span>
+      <span class="demo-badge">Highest impact</span>
+    </div>
+    <h2 class="demo-h2">Word-by-word scroll reveal</h2>
+    <p class="demo-desc">Each word brightens as your scroll position reaches it — linked to scroll depth, not a timer. Used by Linear.app and Vercel. Makes copy feel spoken. <strong>Scroll slowly through the quote below to see it.</strong></p>
+
+    <div class="word-reveal-wrapper">
+      <p class="reveal-text" id="reveal-text">
+        I kept emailing clinical photos to myself before referrals, and I knew it wasn't right.
+        Not for privacy. Not for workflow. Every time a referral bounced back because the file was too large,
+        or in the wrong format, I lost five minutes I didn't have.
+        Referral Images is the tool I wished existed on my desk every time I needed a photo in a letter.
+        So I built it. For five dollars a month, or free for the first month to try.
+        No credit card. No surprises. Cancel any time.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       3. TEXT AS MASK / GRADIENT TEXT
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="text-mask" class="demo-section">
+    <div class="demo-label">
+      <span class="demo-num">Demo 03</span>
+      <span class="demo-badge">Medium impact</span>
+    </div>
+    <h2 class="demo-h2">Gradient text fill</h2>
+    <p class="demo-desc">The headline is filled with a gradient rather than flat colour. Two variants: (A) auto-animated — always moving, and (B) hover-triggered — the gradient sweeps across only when your cursor moves over it.</p>
+
+    <div class="demo-stage" style="flex-direction: column; gap: 0;">
+      <div class="text-mask-demo">
+        <p class="mask-label">A — Auto-animated (always in motion)</p>
+        <p class="headline-gradient-auto">Clinical photos.<br>In 5 seconds.</p>
+
+        <div class="mask-divider"></div>
+
+        <p class="mask-label">B — Hover to trigger (move cursor over text)</p>
+        <p class="headline-gradient-hover">On your desktop.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       4. 3D CARD TILT
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="card-tilt" class="demo-section">
+    <div class="demo-label">
+      <span class="demo-num">Demo 04</span>
+      <span class="demo-badge">Strong signal</span>
+    </div>
+    <h2 class="demo-h2">3D perspective card tilt</h2>
+    <p class="demo-desc">Cards tilt in 3D toward your cursor with a soft light-reflection that tracks mouse position. Rare on clinical SaaS. Gracefully degrades to standard shadow lift on mobile. Move your cursor slowly over each card.</p>
+
+    <div class="demo-stage bg-slate">
+      <div class="cards-row">
+        <div class="tilt-card" data-tilt>
+          <div class="corner-tl"></div>
+          <div class="corner-br"></div>
+          <div class="tilt-glow" aria-hidden="true"></div>
+          <p class="card-num">№ 01</p>
+          <h3 class="card-title">Multi-step transfer</h3>
+          <p class="card-body">Email to self → download → find file → resize → attach. Up to 30 min when things go wrong.</p>
+        </div>
+        <div class="tilt-card" data-tilt>
+          <div class="corner-tl"></div>
+          <div class="corner-br"></div>
+          <div class="tilt-glow" aria-hidden="true"></div>
+          <p class="card-num">№ 02</p>
+          <h3 class="card-title">File size rejections</h3>
+          <p class="card-body">Full-res phone photos are 3–8 MB. ERMS and HealthLink have strict limits.</p>
+        </div>
+        <div class="tilt-card" data-tilt>
+          <div class="corner-tl"></div>
+          <div class="corner-br"></div>
+          <div class="tilt-glow" aria-hidden="true"></div>
+          <p class="card-num">№ 03</p>
+          <h3 class="card-title">Wrong format</h3>
+          <p class="card-body">Specialists request JPEGs. Most tools produce PDFs. Back-and-forth delays the referral.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       5. SVG PATH DRAW (triggered + scroll-linked)
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="svg-draw" class="demo-section">
+    <div class="demo-label">
+      <span class="demo-num">Demo 05</span>
+      <span class="demo-badge">Strong signal</span>
+    </div>
+    <h2 class="demo-h2">SVG workflow path draw</h2>
+    <p class="demo-desc">A workflow path draws itself step-by-step — either triggered on entry (Play button below) or linked to scroll position (second demo, scroll through it). More dramatic than a simple clipPath reveal.</p>
+
+    <div class="demo-stage" style="flex-direction: column; gap: 0; padding: 3rem 2rem 2.5rem;">
+
+      <!-- TRIGGERED VERSION -->
+      <div class="path-stage">
+        <p style="font-family:'JetBrains Mono',monospace;font-size:9.5px;text-transform:uppercase;letter-spacing:.18em;color:var(--slate-400);margin-bottom:1rem;">Trigger on entry (click Play)</p>
+        <svg class="draw-svg" viewBox="0 0 580 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Background step circles -->
+          <circle cx="60"  cy="65" r="30" fill="#f1f5f9" stroke="var(--slate-200)" stroke-width="1.5"/>
+          <circle cx="290" cy="65" r="30" fill="#f1f5f9" stroke="var(--slate-200)" stroke-width="1.5"/>
+          <circle cx="520" cy="65" r="30" fill="#f1f5f9" stroke="var(--slate-200)" stroke-width="1.5"/>
+
+          <!-- Filled circles (draw-animated, start opacity 0) -->
+          <circle id="c1" cx="60"  cy="65" r="30" fill="white" stroke="var(--green-700)" stroke-width="2" opacity="0"/>
+          <circle id="c2" cx="290" cy="65" r="30" fill="white" stroke="var(--green-700)" stroke-width="2" opacity="0"/>
+          <circle id="c3" cx="520" cy="65" r="30" fill="white" stroke="var(--green-700)" stroke-width="2" opacity="0"/>
+
+          <!-- Labels -->
+          <text x="60"  y="70" text-anchor="middle" font-family="Newsreader,serif" font-weight="600" font-size="17" fill="var(--green-700)" opacity="0" id="l1">01</text>
+          <text x="290" y="70" text-anchor="middle" font-family="Newsreader,serif" font-weight="600" font-size="17" fill="var(--green-700)" opacity="0" id="l2">02</text>
+          <text x="520" y="70" text-anchor="middle" font-family="Newsreader,serif" font-weight="600" font-size="17" fill="var(--green-700)" opacity="0" id="l3">03</text>
+
+          <!-- Step captions -->
+          <text x="60"  y="116" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" text-transform="uppercase" fill="var(--slate-500)" opacity="0" id="t1">Capture</text>
+          <text x="290" y="116" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--slate-500)" opacity="0" id="t2">Compress</text>
+          <text x="520" y="116" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--slate-500)" opacity="0" id="t3">Attach</text>
+
+          <!-- Path segments (animated) -->
+          <path id="seg1" d="M90 65 C 140 65, 165 38, 195 38 S 245 65, 260 65"
+            stroke="var(--green-700)" stroke-width="2" stroke-linecap="round"
+            stroke-dasharray="4 9" fill="none"
+            style="stroke-dashoffset:220; transition: none;"/>
+          <path id="seg2" d="M320 65 C 370 65, 395 92, 425 92 S 475 65, 490 65"
+            stroke="var(--green-700)" stroke-width="2" stroke-linecap="round"
+            stroke-dasharray="4 9" fill="none"
+            style="stroke-dashoffset:220; transition: none;"/>
+
+          <!-- Solid overlay (draws) -->
+          <path id="draw1" d="M90 65 C 140 65, 165 38, 195 38 S 245 65, 260 65"
+            stroke="var(--green-600)" stroke-width="2.5" stroke-linecap="round" fill="none"
+            stroke-dasharray="220" stroke-dashoffset="220"/>
+          <path id="draw2" d="M320 65 C 370 65, 395 92, 425 92 S 475 65, 490 65"
+            stroke="var(--green-600)" stroke-width="2.5" stroke-linecap="round" fill="none"
+            stroke-dasharray="220" stroke-dashoffset="220"/>
+        </svg>
+        <div class="path-btns">
+          <button class="path-btn" id="play-btn" onclick="playDraw()">▶ Play</button>
+          <button class="path-btn" onclick="resetDraw()">↺ Reset</button>
+        </div>
+      </div>
+
+      <hr style="border:none;border-top:1px solid var(--slate-200);width:100%;margin:2.5rem 0;">
+
+      <!-- SCROLL-LINKED VERSION -->
+      <div style="width:100%;">
+        <p style="font-family:'JetBrains Mono',monospace;font-size:9.5px;text-transform:uppercase;letter-spacing:.18em;color:var(--slate-400);text-align:center;margin-bottom:1rem;">Scroll-linked (scroll through this section)</p>
+        <div class="scroll-path-wrapper" id="scroll-path-wrapper">
+          <div class="scroll-path-sticky">
+            <svg viewBox="0 0 580 130" fill="none" style="width:100%;max-width:580px;height:130px;overflow:visible;display:block;margin:0 auto;">
+              <circle cx="60"  cy="65" r="30" fill="white" stroke="var(--slate-200)" stroke-width="1.5"/>
+              <circle cx="290" cy="65" r="30" fill="white" stroke="var(--slate-200)" stroke-width="1.5"/>
+              <circle cx="520" cy="65" r="30" fill="white" stroke="var(--slate-200)" stroke-width="1.5"/>
+              <text x="60"  y="70" text-anchor="middle" font-family="Newsreader,serif" font-weight="600" font-size="17" fill="var(--slate-400)">01</text>
+              <text x="290" y="70" text-anchor="middle" font-family="Newsreader,serif" font-weight="600" font-size="17" fill="var(--slate-400)">02</text>
+              <text x="520" y="70" text-anchor="middle" font-family="Newsreader,serif" font-weight="600" font-size="17" fill="var(--slate-400)">03</text>
+              <text x="60"  y="116" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--slate-400)">Capture</text>
+              <text x="290" y="116" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--slate-400)">Compress</text>
+              <text x="520" y="116" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--slate-400)">Attach</text>
+              <!-- Scroll draw path -->
+              <path id="scroll-draw1" d="M90 65 C 140 65, 165 38, 195 38 S 245 65, 260 65"
+                stroke="var(--green-600)" stroke-width="2.5" stroke-linecap="round" fill="none"
+                stroke-dasharray="220" stroke-dashoffset="220"/>
+              <path id="scroll-draw2" d="M320 65 C 370 65, 395 92, 425 92 S 475 65, 490 65"
+                stroke="var(--green-600)" stroke-width="2.5" stroke-linecap="round" fill="none"
+                stroke-dasharray="220" stroke-dashoffset="220"/>
+            </svg>
+            <p class="scroll-path-hint">↕ Scroll to draw the path</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       6. TEXT SCRAMBLE
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="scramble" class="demo-section">
+    <div class="demo-label">
+      <span class="demo-num">Demo 06</span>
+      <span class="demo-badge">Accent use only</span>
+    </div>
+    <h2 class="demo-h2">Text decode / scramble</h2>
+    <p class="demo-desc">Text cycles through random characters before landing on the real word. Signals technical precision. Works on section headings or security credentials. Auto-cycles every 3s, or click the button.</p>
+
+    <div class="demo-stage bg-dark">
+      <div class="scramble-stage">
+        <div id="scramble-text" class="scramble-headline" style="color:white;"></div>
+        <p class="scramble-sub" style="color:rgba(255,255,255,0.35);">Auto-cycles through 6 phrases</p>
+        <button class="scramble-trigger-btn" style="border-color:rgba(255,255,255,0.15);color:rgba(255,255,255,0.6);" onclick="triggerScramble()">↻ Next phrase</button>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="page-footer">
+    ClinicPro SaaS &nbsp;·&nbsp; Animation reference &nbsp;·&nbsp; 2026-04-22 &nbsp;·&nbsp; All effects implementable via Framer Motion v12
+  </footer>
+
+
+  <script>
+  // ─────────────────────────────────────────────────────────────────────────────
+  // 1. MAGNETIC BUTTON
+  // ─────────────────────────────────────────────────────────────────────────────
+
+  (function() {
+    const zone = document.getElementById('magnetic-zone');
+    const btn  = document.getElementById('magnetic-btn');
+    const arr  = document.getElementById('mag-arrow');
+
+    let targetX = 0, targetY = 0;
+    let currentX = 0, currentY = 0;
+    let isNear = false;
+    let raf = null;
+
+    const REACH = 90;    // px radius around button that activates magnet
+    const PULL  = 0.42;  // strength 0-1
+    const EASE  = 0.14;  // lerp factor per frame
+
+    function lerp(a, b, t) { return a + (b - a) * t; }
+
+    function tick() {
+      currentX = lerp(currentX, targetX, EASE);
+      currentY = lerp(currentY, targetY, EASE);
+
+      btn.style.transform = `translate(${currentX}px, ${currentY}px)`;
+
+      const stillMoving = Math.abs(currentX - targetX) > 0.05 || Math.abs(currentY - targetY) > 0.05
+                       || Math.abs(currentX) > 0.05 || Math.abs(currentY) > 0.05;
+      if (stillMoving) {
+        raf = requestAnimationFrame(tick);
+      } else {
+        btn.style.transform = `translate(0px, 0px)`;
+        raf = null;
+      }
+    }
+
+    function start() { if (!raf) raf = requestAnimationFrame(tick); }
+
+    zone.addEventListener('mousemove', (e) => {
+      const r = btn.getBoundingClientRect();
+      const cx = r.left + r.width  / 2;
+      const cy = r.top  + r.height / 2;
+      const dx = e.clientX - cx;
+      const dy = e.clientY - cy;
+      const dist = Math.hypot(dx, dy);
+
+      if (dist < REACH) {
+        isNear = true;
+        const factor = 1 - dist / REACH;
+        targetX = dx * PULL * factor;
+        targetY = dy * PULL * factor;
+        btn.style.boxShadow = `0 0 0 ${4 + factor * 6}px rgba(21,128,61,${0.1 + factor * 0.15})`;
+        arr.style.transform = `translateX(${3 * factor}px)`;
+        start();
+      } else {
+        targetX = 0;
+        targetY = 0;
+        isNear = false;
+        start();
+      }
+    });
+
+    zone.addEventListener('mouseleave', () => {
+      isNear = false;
+      targetX = 0;
+      targetY = 0;
+      btn.style.boxShadow = '';
+      arr.style.transform = '';
+      start();
+    });
+  })();
+
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // 2. WORD-BY-WORD SCROLL REVEAL
+  // ─────────────────────────────────────────────────────────────────────────────
+
+  (function() {
+    const container = document.getElementById('reveal-text');
+    const raw = container.textContent.replace(/\s+/g, ' ').trim();
+    const words = raw.split(' ');
+
+    container.innerHTML = words
+      .map((w, i) => `<span class="rw" data-i="${i}">${w} </span>`)
+      .join('');
+
+    const spans = Array.from(container.querySelectorAll('.rw'));
+    const WINDOW = 3; // how many words in the "lit" window
+
+    function update() {
+      const rect = container.getBoundingClientRect();
+      const vh   = window.innerHeight;
+      // progress 0 = top of element at bottom of viewport; 1 = bottom at top
+      const scroll  = vh - rect.top;
+      const total   = rect.height + vh * 0.6;
+      const progress = Math.max(0, Math.min(1, scroll / total));
+      const lit = Math.round(progress * spans.length);
+
+      spans.forEach((s, i) => {
+        if (i < lit - WINDOW) {
+          s.className = 'rw past';
+        } else if (i < lit) {
+          s.className = 'rw lit';
+        } else {
+          s.className = 'rw';
+        }
+      });
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // 4. 3D CARD TILT
+  // ─────────────────────────────────────────────────────────────────────────────
+
+  (function() {
+    const cards = document.querySelectorAll('[data-tilt]');
+    const MAX = 14;
+    const P   = 750;
+
+    cards.forEach(card => {
+      const glow = card.querySelector('.tilt-glow');
+
+      card.addEventListener('mousemove', (e) => {
+        const r   = card.getBoundingClientRect();
+        const x   = e.clientX - r.left;
+        const y   = e.clientY - r.top;
+        const rx  = -((y - r.height / 2) / r.height) * MAX;
+        const ry  =  ((x - r.width  / 2) / r.width)  * MAX;
+        const gx  = (x / r.width)  * 100;
+        const gy  = (y / r.height) * 100;
+
+        card.style.transform    = `perspective(${P}px) rotateX(${rx}deg) rotateY(${ry}deg) scale(1.03)`;
+        card.style.boxShadow    = `0 24px 48px -12px rgba(15,23,42,0.18), 0 0 0 1px rgba(21,128,61,0.08)`;
+        card.style.transition   = 'transform 80ms linear, box-shadow 80ms linear';
+        glow.style.background   = `radial-gradient(circle at ${gx}% ${gy}%, rgba(21,128,61,0.08) 0%, transparent 65%)`;
+        glow.style.opacity      = '1';
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transition   = 'transform 500ms cubic-bezier(0.33,0,0,1), box-shadow 500ms ease';
+        card.style.transform    = 'perspective(750px) rotateX(0) rotateY(0) scale(1)';
+        card.style.boxShadow    = '';
+        glow.style.opacity      = '0';
+      });
+    });
+  })();
+
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // 5a. SVG PATH DRAW — triggered
+  // ─────────────────────────────────────────────────────────────────────────────
+
+  function playDraw() {
+    const d1  = document.getElementById('draw1');
+    const d2  = document.getElementById('draw2');
+    const c1  = document.getElementById('c1');
+    const c2  = document.getElementById('c2');
+    const c3  = document.getElementById('c3');
+    const l1  = document.getElementById('l1');
+    const l2  = document.getElementById('l2');
+    const l3  = document.getElementById('l3');
+    const t1  = document.getElementById('t1');
+    const t2  = document.getElementById('t2');
+    const t3  = document.getElementById('t3');
+    const btn = document.getElementById('play-btn');
+
+    btn.classList.add('active');
+    btn.textContent = '▶ Playing...';
+
+    // Step 1 circle
+    c1.style.transition = 'opacity 0.3s ease'; c1.style.opacity = '1';
+    l1.style.transition = 'opacity 0.3s ease'; l1.style.opacity = '1';
+    t1.style.transition = 'opacity 0.3s ease'; t1.style.opacity = '1';
+
+    // Path 1 draw
+    setTimeout(() => {
+      d1.style.transition = 'stroke-dashoffset 0.75s cubic-bezier(0.33,0,0,1)';
+      d1.style.strokeDashoffset = '0';
+    }, 200);
+
+    // Step 2 circle
+    setTimeout(() => {
+      c2.style.transition = 'opacity 0.3s ease'; c2.style.opacity = '1';
+      l2.style.transition = 'opacity 0.3s ease'; l2.style.opacity = '1';
+      t2.style.transition = 'opacity 0.3s ease'; t2.style.opacity = '1';
+    }, 900);
+
+    // Path 2 draw
+    setTimeout(() => {
+      d2.style.transition = 'stroke-dashoffset 0.75s cubic-bezier(0.33,0,0,1)';
+      d2.style.strokeDashoffset = '0';
+    }, 1100);
+
+    // Step 3 circle
+    setTimeout(() => {
+      c3.style.transition = 'opacity 0.3s ease'; c3.style.opacity = '1';
+      l3.style.transition = 'opacity 0.3s ease'; l3.style.opacity = '1';
+      t3.style.transition = 'opacity 0.3s ease'; t3.style.opacity = '1';
+      btn.classList.remove('active');
+      btn.textContent = '▶ Play';
+    }, 1800);
+  }
+
+  function resetDraw() {
+    ['draw1','draw2','c1','c2','c3','l1','l2','l3','t1','t2','t3'].forEach(id => {
+      const el = document.getElementById(id);
+      el.style.transition = 'none';
+      if (id.startsWith('draw')) {
+        el.style.strokeDashoffset = '220';
+      } else {
+        el.style.opacity = '0';
+      }
+    });
+  }
+
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // 5b. SVG PATH DRAW — scroll-linked
+  // ─────────────────────────────────────────────────────────────────────────────
+
+  (function() {
+    const wrapper  = document.getElementById('scroll-path-wrapper');
+    const sd1      = document.getElementById('scroll-draw1');
+    const sd2      = document.getElementById('scroll-draw2');
+    const DASH     = 220;
+
+    function update() {
+      const rect     = wrapper.getBoundingClientRect();
+      const vh       = window.innerHeight;
+      const scroll   = vh - rect.top;
+      const total    = rect.height + vh * 0.4;
+      const progress = Math.max(0, Math.min(1, scroll / total));
+
+      // Split progress: 0-0.5 = path1, 0.5-1 = path2
+      const p1 = Math.min(1, progress / 0.5);
+      const p2 = Math.max(0, (progress - 0.5) / 0.5);
+
+      sd1.style.strokeDashoffset = String(DASH * (1 - p1));
+      sd2.style.strokeDashoffset = String(DASH * (1 - p2));
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // 6. TEXT SCRAMBLE
+  // ─────────────────────────────────────────────────────────────────────────────
+
+  (function() {
+    const el = document.getElementById('scramble-text');
+    const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789·—/\\@#$';
+    const PHRASES = [
+      'HIPC compliant',
+      'Encrypted in transit',
+      'Auto-deleted 24h',
+      'No AI training',
+      'NZ Privacy Act 2020',
+      'Built by a GP',
+    ];
+    let idx = 0;
+    let timer = null;
+
+    window.triggerScramble = function() {
+      idx = (idx + 1) % PHRASES.length;
+      scramble(PHRASES[idx]);
+    };
+
+    function scramble(target, ms = 1100) {
+      if (timer) clearInterval(timer);
+      const steps = 22;
+      const delay = ms / steps;
+      let step = 0;
+
+      timer = setInterval(() => {
+        step++;
+        const progress = step / steps;
+        let out = '';
+        for (let i = 0; i < target.length; i++) {
+          if (target[i] === ' ') { out += ' '; continue; }
+          out += i < target.length * progress
+            ? target[i]
+            : CHARS[Math.floor(Math.random() * CHARS.length)];
+        }
+        el.textContent = out;
+        if (step >= steps) {
+          clearInterval(timer);
+          el.textContent = target;
+        }
+      }, delay);
+    }
+
+    // Boot
+    el.textContent = PHRASES[0];
+    setTimeout(() => scramble(PHRASES[0]), 600);
+
+    // Auto-cycle
+    setInterval(() => {
+      idx = (idx + 1) % PHRASES.length;
+      scramble(PHRASES[idx]);
+    }, 3200);
+  })();
+  </script>
+</body>
+</html>
