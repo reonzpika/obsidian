@@ -48,6 +48,15 @@ for (let p of active) {
 - Alex Cauble-Chantrenne: partnership agreement draft promised 7 April but not yet received
 - Lawrence Peterson: follow-up sent 13 April re infrastructure running costs
 
+### Week of 2026-04-21
+- Held Wed 22 April meeting with Lawrence Peterson (AU) and Alex Cauble-Chantrenne (NZ)
+- AU: Lawrence confirmed strong interest. No objection to AUD 30/practice. Flagged 50-practice minimum too high, taking to boss. Floor is 40 at AUD 30.
+- AU: product confirmed as G2M, entirely new software. Same ALEX backend. Capture API available. White-label confirmed. Medtech handling all marketing.
+- AU: Lawrence raised management dashboard with tenancy/licence model. Confirmed as out-of-bundle scope, separate one-off build engagement.
+- NZ: Alex confirmed 15% flat commission covering NZ + AU direct sales. Default position held, no concession.
+- Meeting briefing updated with notes and checklist ticks; pricing table updated with +10k profit threshold per price scenario.
+- Task `medtech-20260422-001` created: scope and ideate management dashboard.
+
 ### Week of 2026-04-14 (continued 19 Apr)
 - `/medtech/capture` landing page shipped (Phase 1 Task 1, commit 64788af): 7-section server-rendered page, editorial-clinical aesthetic, Newsreader + IBM Plex Sans + JetBrains Mono, teal-600 accent, mailto CTA, full spec copy
 - `/refer-a-practice` bounty page + Resend API route shipped (Phase 1 Task 2, commit 4326d34): $200 credit / 3-months-free referral incentive, smoke-tested end-to-end
