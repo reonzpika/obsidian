@@ -34,14 +34,14 @@ project: clinicpro-capture
 
 Annual revenue / margin at central cost (AUD 19,350/year):
 
-| Price/month | 50 practices | 100 practices | 150 practices | 200 practices | 300 practices |
-|---|---|---|---|---|---|
-| AUD 30 | 18k / -1.4k | 36k / +16.7k (46%) | 54k / +34.7k (64%) | 72k / +52.7k (73%) | 108k / +88.7k (82%) |
-| AUD 25 | 15k / -4.4k | 30k / +10.7k (36%) | 45k / +25.7k (57%) | 60k / +40.7k (68%) | 90k / +70.7k (79%) |
-| AUD 22 | 13.2k / -6.2k | 26.4k / +7.1k (27%) | 39.6k / +20.3k (51%) | 52.8k / +33.5k (63%) | 79.2k / +59.9k (76%) |
-| AUD 20 | 12k / -7.4k | 24k / +4.7k (19%) | 36k / +16.7k (46%) | 48k / +28.7k (60%) | 72k / +52.7k (73%) |
-| AUD 18 | 10.8k / loss | 21.6k / +2.3k (10%) | 32.4k / +13.1k (40%) | 43.2k / +23.9k (55%) | 64.8k / +45.5k (70%) |
-| AUD 15 | 9k / loss | 18k / loss | 27k / +7.7k (28%) | 36k / +16.7k (46%) | 54k / +34.7k (64%) |
+| Price/month | 50 practices  | 100 practices       | 150 practices        | 200 practices        | 300 practices        | Min for +10k profit |
+| ----------- | ------------- | ------------------- | -------------------- | -------------------- | -------------------- | ------------------- |
+| AUD 30      | 18k / -1.4k   | 36k / +16.7k (46%)  | 54k / +34.7k (64%)   | 72k / +52.7k (73%)   | 108k / +88.7k (82%)  | 82                  |
+| AUD 25      | 15k / -4.4k   | 30k / +10.7k (36%)  | 45k / +25.7k (57%)   | 60k / +40.7k (68%)   | 90k / +70.7k (79%)   | 98                  |
+| AUD 22      | 13.2k / -6.2k | 26.4k / +7.1k (27%) | 39.6k / +20.3k (51%) | 52.8k / +33.5k (63%) | 79.2k / +59.9k (76%) | 112                 |
+| AUD 20      | 12k / -7.4k   | 24k / +4.7k (19%)   | 36k / +16.7k (46%)   | 48k / +28.7k (60%)   | 72k / +52.7k (73%)   | 123                 |
+| AUD 18      | 10.8k / loss  | 21.6k / +2.3k (10%) | 32.4k / +13.1k (40%) | 43.2k / +23.9k (55%) | 64.8k / +45.5k (70%) | 136                 |
+| AUD 15      | 9k / //loss   | 18k / loss          | 27k / +7.7k (28%)    | 36k / +16.7k (46%)   | 54k / +34.7k (64%)   | 164                 |
 
 **Floor by volume (absolute minimums — protect against high-cost scenario):**
 - 50 practices: AUD 30 (no room to move)
@@ -144,14 +144,15 @@ Get answers to these before leaving the room.
 ### During — Lawrence (AU)
 
 - [x] Asked: decision authority and timeline to signed contract
-- [ ] Asked: happy with the per practice cost (AUD 30)?
-- [ ] Asked: minimum year commitment - happy with 3 years?
-- [ ] Asked: Y1 practice volume forecast
-- [ ] Asked: security requirements - same as the Medtech NZ ALEX partnership?
+- [ ] **Is this G2M medtech evolution? or something completely new?**
+- [ ] **Asked: Y1 practice volume forecast**
+- [ ] **Asked: happy with the per practice cost (AUD 30)?**
+- [ ] **Asked: minimum year commitment - happy with 3 years?**
+- [ ] **Asked: security requirements - same as the Medtech NZ ALEX partnership?**
 - [ ] Asked: tax treatment preference (services fee or royalty?) - defer for the second meeting. first meeting is going over the major points to head to the closing phase. 
 - [ ] Asked: domain (their domain vs ClinicPro subdomain) - defer
 - [ ] Asked: update control (approval process vs auto-deploy)
-- [ ] Raised: setup fee, whether they want UI customisation, and auth model (bundle after confirming commercial terms)
+- [ ] Raised: setup fee, whether they want **UI customisation, and auth model** (bundle after confirming commercial terms)
 
 ### During — Alex (NZ)
 

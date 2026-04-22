@@ -32,7 +32,7 @@ ClinicPro Capture, bundled white-label into Medtech Evolution Australia as a pra
 
 **AUD 30 per active practice per month** (AUD 360 per practice per year).
 
-*Active practice* = one with at least one registered user AND at least one successful capture commit in the billing month.
+***Active practice* = one with at least one registered user AND at least one successful capture commit in the billing month.**
 
 Per-practice fee is inclusive of cloud infrastructure running costs on the ClinicPro side. No separate infrastructure charge.
 
