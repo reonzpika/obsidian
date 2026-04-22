@@ -144,21 +144,21 @@ Get answers to these before leaving the room.
 ### During — Lawrence (AU)
 
 - [x] Asked: decision authority and timeline to signed contract
-- [ ] **Is this G2M medtech evolution? or something completely new?**
-- [ ] **Asked: Y1 practice volume forecast**
-- [ ] **Asked: happy with the per practice cost (AUD 30)?**
-- [ ] **Asked: minimum year commitment - happy with 3 years?**
-- [ ] **Asked: security requirements - same as the Medtech NZ ALEX partnership?**
+- [x] **Is this G2M medtech evolution? or something completely new?** — yes, G2M, entirely new software
+- [ ] **Asked: Y1 practice volume forecast** — flagged 50 minimum as too high; going to boss. Pending.
+- [x] **Asked: happy with the per practice cost (AUD 30)?** — no objection raised
+- [ ] **Asked: minimum year commitment - happy with 3 years?** — not discussed
+- [ ] **Asked: security requirements - same as the Medtech NZ ALEX partnership?** — not discussed
 - [ ] Asked: tax treatment preference (services fee or royalty?) - defer for the second meeting. first meeting is going over the major points to head to the closing phase. 
 - [ ] Asked: domain (their domain vs ClinicPro subdomain) - defer
-- [ ] Asked: update control (approval process vs auto-deploy)
-- [ ] Raised: setup fee, whether they want **UI customisation, and auth model** (bundle after confirming commercial terms)
+- [ ] Asked: update control (approval process vs auto-deploy) — not discussed
+- [x] Raised: setup fee verbally — no cost given in room. Management dashboard and tenancy model raised by Lawrence (new scope item).
 
 ### During — Alex (NZ)
 
-- [ ] Asked: fee model landing (% commission or still flat fee?)
-- [ ] Asked: 3-month PIA/pentest timeline confirmed
-- [ ] Asked: quarterly reporting cadence acceptable
+- [x] Asked: fee model landing (% commission or still flat fee?) — confirmed 15% flat, NZ + AU. Default position held.
+- [ ] Asked: 3-month PIA/pentest timeline confirmed — not discussed
+- [ ] Asked: quarterly reporting cadence acceptable — not discussed
 
 ### During — both
 
@@ -171,6 +171,32 @@ Get answers to these before leaving the room.
 - [ ] Send follow-up email confirming key points and any agreement in principle
 - [ ] Scope setup fee based on technical answers (domain, auth, update control)
 - [ ] If agreed in principle: draft term sheet within 5 working days
+
+---
+
+## Meeting notes — 22 April 2026
+
+### Alex (NZ)
+- 15% flat commission confirmed, contract covering both NZ and AU. Default position held, no concession.
+- NZ deal still pending on their side.
+
+### Lawrence (AU)
+- Strong interest. Deal looks likely to proceed.
+- Confirmed: G2M product, entirely new software (Medtech AU revamp). Same ALEX backend but not all APIs accessible; capture API is available.
+- White-label confirmed.
+- No objection to AUD 30/practice.
+- Flagged 50-practice minimum as potentially too high. Taking to his boss. This is the main open number.
+- Setup fee acknowledged in principle verbally. No cost discussed in room.
+- Medtech will handle all marketing.
+- Lawrence raised a management dashboard for Medtech to manage practices, with a tenancy/licence expansion model. This is new scope beyond image capture + ALEX post. Needs separate commercial terms.
+- Competitor context: another image tool vendor flagged issues but has been slow. Lawrence prefers ClinicPro. Do not raise this.
+- Not discussed: 3-year term, auth model, update control, security requirements, domain, tax treatment.
+
+### Open items after this meeting
+- Minimum practice number: wait for Lawrence to come back after talking to his boss. Floor is 40 at AUD 30.
+- Management dashboard scope: confirm it is out of scope for this agreement. Separate commercial terms required.
+- Auth, update control, security, domain: must be resolved before engineering starts. Raise in next meeting.
+- Alex: PIA/pentest timeline and reporting cadence still to confirm.
 
 ---
 

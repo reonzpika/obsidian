@@ -73,6 +73,14 @@ Fire all of the following tool calls in a single message. Do not wait between th
 **Daily notes (last 3 days):**
 Read `daily/YYYY-MM-DD.md`, `daily/YYYY-MM-DD-1.md`, `daily/YYYY-MM-DD-2.md`. Skip silently if a file doesn't exist.
 
+**Weekly and monthly reviews:**
+Glob `reviews/weekly/*.md` — read the most recent file (highest date). Glob `reviews/monthly/*.md` — read the file matching the current month (YYYY-MM.md), or the most recent if none matches.
+
+If neither folder exists or is empty, note this as a flag: emit one line in Phase 3 after the Projects table: `**No weekly/monthly review found** — consider creating reviews/weekly/YYYY-MM-DD.md`
+
+Extract from weekly review: the daily plan for today and adjacent days, deferred items, open blockers, upcoming external deadlines within 7 days.
+Extract from monthly review: the month's focus headline per stream, external deadline table.
+
 **Gmail (last 3 days):**
 Run these three searches simultaneously:
 - `newer_than:3d` — received
@@ -191,6 +199,11 @@ Background: [summary line]
 ```
 
 ---
+
+**Timeline cue (from weekly/monthly reviews):**
+After the Off-radar line (or Projects table if no off-radar areas), add one line listing external deadlines due within 7 days that are not already surfaced in the Urgent table. Format:
+`**Upcoming:** 25 Apr — AMP collegial meeting | 27 Apr — Bell Gully reply deadline`
+Pull from the monthly review's external deadline table and the weekly review's day plans. If nothing new, omit this line.
 
 **Off-radar logic:**
 After computing the projects table, identify which dashboard areas are off radar:
