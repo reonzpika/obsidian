@@ -52,6 +52,9 @@ Option 3 chosen: scout deferred from creation time to execution day. `linkedin-p
 ### 2026-04-22 — Full automated pipeline design agreed
 Architecture for fully autonomous posting pipeline with Telegram human-in-loop. Three zones: (1) Automated idea generation: weekly Telegram suggestions from NZ health news scan; (2) In-session creation: topic selection, research, draft review, schedule — one laptop session per post; (3) Autonomous execution: Task Scheduler fires Python script at T-40min, runs scout + `claude -p` GH draft, sends comments to Telegram for approval (15 min timeout, posts as-is on no reply), assembles and executes. Additional: Telegram auth health check weekly, automated 48h review via Telegram. Build order: autonomous execute script + Telegram bot first.
 
+### 2026-04-22 — Autonomous execute pipeline built
+`scripts/execute_scheduled.py` ships as the unattended posting entry point. Phases: (1) scout via `agents.scout.run()` — aborts with Telegram alert on 0 targets; (2) draft 6 GH comments via `claude -p` + `agents/gh_commenter.md` — continues without GH comments on failure; (3) Telegram approval loop: 15 min total budget, natural-language edits parsed via second `claude -p` call, posts as-is on timeout; (4) write `engagement.json`; (5) assemble `session_state.json`; (6) run `execute_post.py`. `tools/scheduler.py` updated: `schedule_execution` now registers `execute_scheduled.py` at T-40min with WakeToRun + StartWhenAvailable. `tools/telegram.py` added (send + poll utility). `agents/gh_commenter.md` added (self-contained picker + drafter prompt). Dry-run verified: 19 live feed targets found; GH draft gracefully degrades when `claude -p` unavailable in nested session. Pending user action: add TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID to .env.
+
 ## Weekly Progress Log
 
 ### Week of 2026-04-21
@@ -61,6 +64,12 @@ Architecture for fully autonomous posting pipeline with Telegram human-in-loop. 
 - Fixed: grow live scout wired in `grow_run.py` (removed `return 2` gate); execute phase hardened so log and digest email always run even on browser crash
 - Post execute workflow redesigned: scout deferred to posting day; `linkedin-post-execute` rebuilt with scout, GH approval gate, assemble, and execute phases
 - Full autonomous pipeline agreed: Task Scheduler + `claude -p` GH drafting + Telegram approval loop; build starts next session
+- `tools/telegram.py` built: send message + long-poll utility for Bot API
+- `agents/gh_commenter.md` built: self-contained picker + GH comment drafter prompt for headless `claude -p` calls
+- `scripts/execute_scheduled.py` built: full autonomous execute orchestration (scout, GH draft, Telegram approval, assemble, execute)
+- `tools/scheduler.py` updated: `schedule_execution` now fires `execute_scheduled.py` at T-40min with WakeToRun and StartWhenAvailable
+- Dry-run confirmed: scout finds 19 live targets; GH draft degrades gracefully if `claude -p` unavailable; Telegram abort/approval/edit loop designed and tested
+- Pending: add TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID to `.env` before next live post
 
 ### Week of 2026-04-14
 
