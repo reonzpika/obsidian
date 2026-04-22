@@ -266,6 +266,10 @@ Install: `pnpm add framer-motion`
 | Counter count-up | `useMotionValue` + `useTransform` or `animate()` imperative |
 | Ambient float | CSS keyframe (`@keyframes float`) — keep outside Framer for perf |
 | Reduced motion | Wrap with `useReducedMotion()` hook — set all durations to `0` |
+| Line mask reveal | `overflow: hidden` parent + `motion.div` animating `y: '110%' → 0` |
+| Character stagger | `useInView` + per-char `overflow: hidden` span + `motion.span` animating `y: '105%' → 0` |
+| Scramble rotate | `useInView` + `setInterval` at 33ms, random chars revealed left-to-right over 650ms, auto-cycles |
+| Scroll-linked draw | `useEffect` scroll listener + `getBoundingClientRect()` + `useMotionValue.set()` + `useTransform` → `clipPath: inset()` |
 
 ### Signature easing curve
 All marketing transitions: `cubic-bezier(0.33, 0, 0, 1)`. Pass as `ease: [0.33, 0, 0, 1]` in Framer Motion. In-app clinical UI: `"easeOut"`.
@@ -292,6 +296,51 @@ All marketing transitions: `cubic-bezier(0.33, 0, 0, 1)`. Pass as `ease: [0.33, 
 | Button glow | `box-shadow` ring, 250ms signature easing | Hover |
 | Card lift | `translateY(-2px)` + shadow, 250ms signature easing | Hover |
 | Accordion | `grid-template-rows: 0fr → 1fr`, 0.35s signature easing. ChevronDown rotate 180°, 300ms | Click |
+| Line mask reveal | Per-line `overflow: hidden` div + `motion.div` with `y: '110%' → 0`, 0.85s signature easing, stagger 0.15s per line. Use for hero H1 only. | Page load |
+| Character stagger (`CharStagger`) | Per-char `overflow: hidden` span + `motion.span` with `y: '105%' → 0`, 0.55s signature easing, 0.028s stagger per char. Spaces animate instantly. `useInView` triggered, fires once. Component in `letter-grammar.tsx`. | Scroll into view |
+| Scramble rotate (`ScrambleRotate`) | Cycles through a `phrases` array. Each transition: random chars revealed left-to-right at 33ms tick over 650ms, then holds 2800ms before next phrase. `useInView` starts the loop. Reduced motion: plain crossfade at `holdMs` interval. Component in `letter-grammar.tsx`. | Scroll into view (loops indefinitely) |
+| Scroll-linked connector | `useEffect` scroll listener (passive) reads `getBoundingClientRect().top`, maps to 0–1 progress via `useMotionValue.set()`, piped through `useTransform` to `clipPath: inset(0 X% 0 0)`. Do NOT use `useScroll` with a `target` ref — it uses `useLayoutEffect` internally and fails SSR hydration in Next.js App Router. | Scroll |
+
+### Reusable animation components
+
+`src/shared/components/marketing/letter-grammar.tsx` exports ready-to-use components. Use these; do not re-implement.
+
+| Component | Purpose | Key props |
+|---|---|---|
+| `Reveal` | Scroll-triggered fade + translate wrapper | `delay`, `from: 'bottom' | 'left' | 'right' | 'none'` |
+| `Marked` | Inline hand-underline SVG accent, draw-on-scroll | — |
+| `CharStagger` | Character-by-character mask reveal | `children: string`, `delay` (ms) |
+| `ScrambleRotate` | Cycling scramble/decode heading | `phrases: readonly string[]`, `holdMs`, `scrambleDurationMs` |
+| `Logomark` | Viewfinder bracket + lettermark SVG | `size`, `letters` |
+| `CornerBracket` | Single corner bracket SVG | `position: 'tl' | 'tr' | 'bl' | 'br'`, `size` |
+| `HandUnderline` | Standalone hand-underline SVG | — |
+
+### SSR gotcha: do not use `useScroll` with a target ref
+
+`useScroll` uses `useLayoutEffect` internally. In Next.js App Router, `'use client'` components are still SSR'd, so `useLayoutEffect` fires before the ref is attached to the DOM — causing a hydration runtime error.
+
+Use this pattern instead for scroll-linked animations tied to a specific element:
+
+```tsx
+const elRef = useRef<HTMLDivElement>(null);
+const progress = useMotionValue(0);
+useEffect(() => {
+  const el = elRef.current;
+  if (!el) return;
+  const onScroll = () => {
+    const { top } = el.getBoundingClientRect();
+    const wh = window.innerHeight;
+    const p = Math.max(0, Math.min(1, (wh * 0.7 - top) / (wh * 0.45)));
+    progress.set(p);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  return () => window.removeEventListener('scroll', onScroll);
+// eslint-disable-next-line react-hooks/exhaustive-deps
+}, []);
+```
+
+Adjust the `0.7` and `0.45` constants to control when the animation starts and over what scroll distance it completes.
 
 ### Do not animate
 - Page transitions
@@ -300,7 +349,7 @@ All marketing transitions: `cubic-bezier(0.33, 0, 0, 1)`. Pass as `ease: [0.33, 
 - Any in-app clinical UI (loading states excepted)
 
 ### Reduced motion
-All marketing animations use `@media (prefers-reduced-motion: reduce)`. `lg-hero-enter` and `lg-float` set `animation: none; opacity: 1`.
+All marketing animations use `@media (prefers-reduced-motion: reduce)`. `lg-hero-enter` and `lg-float` set `animation: none; opacity: 1`. All `letter-grammar.tsx` components respect `useReducedMotion()` — set duration to 0 or use plain crossfade.
 
 ---
 
@@ -407,4 +456,4 @@ Non-negotiable. Clinical software accessibility has patient safety implications.
 ---
 
 *Last updated: 2026-04-22*
-*Research basis: colour psychology in healthcare UI (JMIR, UXMatters, Naskay 2025), typography in clinical settings, GP workflow UX (AMA, PMC), NZ/AU cultural context. Animation patterns: Maven Clinic, Hers.*
+*Research basis: colour psychology in healthcare UI (JMIR, UXMatters, Naskay 2025), typography in clinical settings, GP workflow UX (AMA, PMC), NZ/AU cultural context. Animation patterns: Maven Clinic, Hers. New animation components (CharStagger, ScrambleRotate, scroll-linked connector) implemented on `/referral-images` landing page.*

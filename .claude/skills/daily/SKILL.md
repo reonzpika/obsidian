@@ -16,7 +16,7 @@ Tight morning briefing and midday check-in for Ryo's NexWave/ClinicPro workflow.
 /daily midday     # midday check-in
 ```
 
-Evening shutdown is handled by `/session-update`.
+Evening review and tomorrow planning is handled by `/daily-review`.
 
 ---
 
