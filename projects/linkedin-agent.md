@@ -43,7 +43,24 @@ Full automation for "post while away from computer" in production. Two scheduled
 ### 2026-04-16 — Daily auth pre-flight cron
 `schtasks` task `LinkedInAuthPreflight` runs `scripts/auth_preflight.py` daily at 8am NZST. Exit 0 = session valid; exit 2 = expired (run `login.py`); exit 3 = file missing. Gives 24-hour warning before any post slot. Task created via `scripts/create_auth_cron.bat`.
 
+### 2026-04-22 — Bug fixes: post content and grow email
+Two production bugs found and fixed. (1) `scripts/assemble_session_state.py` was reading the entire `draft_final.md` including metadata headers, causing those headers to be posted to LinkedIn verbatim. Fixed with `_extract_post_body()` regex parser that extracts only the `## Post Body` section, with fallback to full file for plain-format drafts. (2) `scripts/grow_run.py` live scout was gated by `return 2` (never wired), meaning Task Scheduler runs exited immediately with no log and no digest email. Fixed: removed gate, opens a browser context and calls `scout_targets_live()`. Execute phase also hardened: exception in `get_browser_context()` no longer crashes the process before `append_grow_log` and `send_digest` are reached.
+
+### 2026-04-22 — Post execute workflow redesigned: fresh scout on posting day
+Option 3 chosen: scout deferred from creation time to execution day. `linkedin-post-create` skill now covers post body, first comment, hashtags, and scheduling only — no scout, no GH comment drafting, no assemble. `linkedin-post-execute` skill rebuilt as four phases: (1) scout, (2) picker + GH draft + approval gate, (3) assemble, (4) execute. Golden Hour comments now anchored to posts scouted on the morning of posting, not days earlier.
+
+### 2026-04-22 — Full automated pipeline design agreed
+Architecture for fully autonomous posting pipeline with Telegram human-in-loop. Three zones: (1) Automated idea generation: weekly Telegram suggestions from NZ health news scan; (2) In-session creation: topic selection, research, draft review, schedule — one laptop session per post; (3) Autonomous execution: Task Scheduler fires Python script at T-40min, runs scout + `claude -p` GH draft, sends comments to Telegram for approval (15 min timeout, posts as-is on no reply), assembles and executes. Additional: Telegram auth health check weekly, automated 48h review via Telegram. Build order: autonomous execute script + Telegram bot first.
+
 ## Weekly Progress Log
+
+### Week of 2026-04-21
+
+**linkedin**
+- Fixed: `assemble_session_state.py` now extracts post body only from `draft_final.md` — metadata headers no longer posted to LinkedIn
+- Fixed: grow live scout wired in `grow_run.py` (removed `return 2` gate); execute phase hardened so log and digest email always run even on browser crash
+- Post execute workflow redesigned: scout deferred to posting day; `linkedin-post-execute` rebuilt with scout, GH approval gate, assemble, and execute phases
+- Full autonomous pipeline agreed: Task Scheduler + `claude -p` GH drafting + Telegram approval loop; build starts next session
 
 ### Week of 2026-04-14
 
