@@ -52,6 +52,14 @@ if (parked.length > 0) {
 
 ### Week of 2026-04-21
 
+**linkedin-agent**
+- Fixed: `assemble_session_state.py` now extracts `## Post Body` section only; metadata headers no longer posted to LinkedIn
+- Fixed: grow live scout wired in `grow_run.py` (removed `return 2` gate); execute phase hardened so log and digest email always run on browser crash
+- Post execute workflow redesigned: scout deferred to posting day; `linkedin-post-execute` rebuilt with four phases (scout, GH approval gate, assemble, execute)
+- Autonomous execute pipeline built: `scripts/execute_scheduled.py`, `tools/telegram.py`, `agents/gh_commenter.md`; Task Scheduler updated to fire at T-40min with WakeToRun
+- Dry-run confirmed: 19 live feed targets found; GH draft degrades gracefully; exit code 0
+- Blocked: Telegram login issue prevents bot setup (tracked: `linkedin-20260422-002`)
+
 **vault restructure**
 - Sprint layer eliminated: `sprints/active/` removed from vault, replaced with `phase:` on projects and `milestone:` on tasks
 - GP Fellowship wikilink ambiguity resolved: `projects/gp-fellowship.md` renamed to `projects/fellowship-application.md` (`id: fellowship-application`); 15 gpf-* task files updated

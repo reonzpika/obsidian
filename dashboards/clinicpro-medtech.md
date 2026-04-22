@@ -65,6 +65,9 @@ for (let p of active) {
 - Audited Lightsail BFF codebase in full: 18 endpoints, auth model, rate limiting, OAuth flow, deployment config, known gaps
 - Created `context/medtech-context/lightsail-bff.md`: complete BFF reference (env vars, all endpoints, systemd commands, error patterns, non-obvious design decisions)
 - Created skills: `/bff-deploy`, `/bff-rotate-secret`, `/bff-debug`
+- Route refactor shipped (commit 6d7b0fe): moved capture routes up one level, dropped `/capture` path segment
+- Duplicate-NHI hardening ported from PR claude/fix-duplicate-nhi-patients-DoaFF (commit eaea8af): guards against race-condition duplicate NHI patient records
+- API path and middleware route fixes applied (commit 7523392): corrected broken routes from port rename
 
 ### Week of 2026-04-14 (continued 19 Apr)
 - `/medtech/capture` landing page shipped (Phase 1 Task 1, commit 64788af): 7-section server-rendered page, editorial-clinical aesthetic, Newsreader + IBM Plex Sans + JetBrains Mono, teal-600 accent, mailto CTA, full spec copy

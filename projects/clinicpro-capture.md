@@ -113,6 +113,13 @@ Non-negotiables (full list in strategy doc):
 
 Tracked in task medtech-20260414-001.
 
+## BFF infrastructure (as of 22 April 2026)
+
+- **Reference doc:** `context/medtech-context/lightsail-bff.md` contains the full BFF reference: all 18 endpoints, `BFF_INTERNAL_SECRET` auth model, rate limiting, OAuth token flow, systemd deployment, env vars, error patterns, and non-obvious design decisions. Read this before any BFF session.
+- **Skills:** `/bff-deploy`, `/bff-rotate-secret`, `/bff-debug` created 22 April. Use these for all BFF operations.
+- **Route refactor (commit 6d7b0fe):** capture routes moved up one level; `/capture` path segment dropped. API paths updated accordingly (commit 7523392).
+- **Duplicate-NHI hardening (commit eaea8af):** guards ported from PR claude/fix-duplicate-nhi-patients-DoaFF. Race-condition duplicate NHI patient record creation is now blocked.
+
 ## DB infrastructure (as of 22 April 2026)
 
 - **Migration tracking:** `public.schema_migrations` table created (migration 0007). All 7 migrations registered. Future migrations must include `INSERT INTO public.schema_migrations (version) VALUES ('XXXX_name') ON CONFLICT DO NOTHING;` at the end.

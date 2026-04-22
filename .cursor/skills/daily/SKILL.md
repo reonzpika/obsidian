@@ -1,6 +1,6 @@
 ---
 name: daily
-description: Morning routine and midday check-in for Ryo's NexWave/ClinicPro workflow. Reads last 3 days of context in parallel (daily notes, Gmail, projects, tasks), presents a tight briefing with project status, urgent tasks, and quick wins, waits for focus declaration, then writes a minimal focused daily note. Use whenever the user says /daily, "morning routine", "daily note", "start my day", "what's on today", "daily briefing", or wants a snapshot of project status and priorities.
+description: Morning routine and midday check-in for Ryo's NexWave/ClinicPro workflow. Reads last 3 days of context in parallel (daily notes, Gmail, projects, tasks), presents a tight briefing with project status, urgent tasks, and quick wins, waits for focus declaration, then writes a minimal focused daily note. Use whenever the user says /daily, "morning routine", "daily note", "start my day", "what's on today", "daily briefing", or wants a snapshot of project status and priorities. Do NOT use for: evening review, day retrospective, tomorrow planning, session wrap-up. Use /daily-review for those.
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash, TaskCreate, TaskUpdate, TaskList, TaskGet, mcp__claude_ai_Gmail__search_threads, mcp__claude_ai_Gmail__get_thread
 user-invocable: true
 ---
@@ -54,6 +54,8 @@ The daily note is a focus layer, not a task layer. All action items live in `tas
 ---
 
 ## Morning Routine
+
+**Time-of-day check:** If the current hour is 17:00 or later, emit one line: "It's evening. Did you mean `/daily-review` for an end-of-day review and tomorrow planning?" and wait before proceeding.
 
 ### Setup
 
@@ -153,6 +155,8 @@ TBD, pending research
 
 **Auto-task creation from Gmail:**
 Identify Gmail threads containing actionable items (reply required, decision needed, unblocks a task) that have no corresponding task file in `tasks/open/`. For each new action item:
+
+Additionally, if any task in `tasks/open/` has `status: blocked` and its body references specific email contacts, search Gmail for threads involving those contacts (both sent and received) and summarise the thread status in the task body. Do not create a new task — annotate the existing one.
 1. Create a task file in `tasks/open/` using the Task Schema below
 2. Track: K tasks created
 
