@@ -2,7 +2,7 @@
 name: obsidian-task-table
 description: Generate a correctly-structured Obsidian task table for the NexWave/ClinicPro vault (C:\Users\reonz\cursor\obsidian). Use whenever creating or updating a task table in ANY vault file — projects/, dashboards/, or context/. NEVER use plain dataview TABLE for task tables in this vault. Always use the dataviewjs pattern with meta-bind inline selects and sortable columns defined below.
 user-invocable: true
-argument-hint: [filter-type: project|repo|sprint] [filter-value] [optional: include-done]
+argument-hint: [filter-type: project|repo|milestone] [filter-value] [optional: include-done]
 allowed-tools:
   - Read
   - Edit
@@ -19,7 +19,7 @@ This vault uses **dataviewjs** for ALL task tables. Never use plain `dataview` T
 |--------------|--------------|---------|
 | `projects/*.md` | `p.project === "project-id"` | `p.project === "gp-fellowship"` |
 | `dashboards/*.md` | `p.repo === "repo-name"` | `p.repo === "clinicpro-saas"` |
-| `sprints/*.md` | `p.sprint === "sprint-id"` | `p.sprint === "2026-03-sprint-1"` |
+| milestone grouping | `p.milestone === "label"` | `p.milestone === "Phase 1 marketing"` |
 
 Always exclude done tasks unless the user asks to show them: add `&& p.status !== "done"` to the where clause.
 
@@ -143,13 +143,6 @@ const headers = ['Task', 'Status', 'Priority', 'Due'];
 ```javascript
 .where(p => p.repo === "clinicpro-saas" && p.status !== "done")
 const headers = ['Task', 'Status', 'Priority', 'Due'];
-```
-
-**Sprint file** (`sprints/active/2026-03-sprint-1.md`):
-```javascript
-.where(p => p.sprint === "2026-03-sprint-1" && p.status !== "done")
-const headers = ['Task', 'Repo', 'Status', 'Priority', 'Due'];
-// add p.repo to the map: dv.fileLink(...), p.repo, statusSelect(...), prioritySelect(...), p.due
 ```
 
 **Overdue section** (always by repo or all):

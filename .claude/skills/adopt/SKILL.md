@@ -27,8 +27,7 @@ Check that these paths exist:
 |------|---------|
 | `tasks/open/` | Active task files |
 | `tasks/done/` | Completed task files |
-| `sprints/active/` | Current sprint files |
-| `sprints/archive/` | Completed sprints |
+| `sprints/archive/` | Completed sprints — read-only archive |
 | `projects/` | Project metadata files |
 | `daily/` | Daily notes |
 | `reviews/weekly/` | Weekly review outputs |
@@ -52,7 +51,6 @@ Write `vault-config.json` to vault root:
     "dailyNotes": "daily",
     "tasks": "tasks/open",
     "tasksDone": "tasks/done",
-    "sprints": "sprints/active",
     "sprintsArchive": "sprints/archive",
     "projects": "projects",
     "reviewsWeekly": "reviews/weekly",
@@ -82,7 +80,7 @@ Folder mapping:
   Daily notes    → daily/
   Tasks (open)   → tasks/open/
   Tasks (done)   → tasks/done/
-  Sprints        → sprints/active/
+  Sprint archive → sprints/archive/
   Projects       → projects/
   Weekly reviews → reviews/weekly/
   Monthly reviews→ reviews/monthly/
@@ -92,7 +90,7 @@ R&D isolation: enabled
 Review day: Friday
 
 Run /daily to create today's note.
-Run /weekly for a sprint review.
+Run /weekly for a project review.
 Run /monthly at end of month.
 ```
 

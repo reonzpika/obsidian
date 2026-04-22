@@ -59,7 +59,7 @@ The daily note is a focus layer, not a task layer. All action items live in `tas
 ### Setup
 
 Create 3 session tasks:
-- `TaskCreate "Read context"`, activeForm: `"Reading notes, sprints, tasks, Gmail..."`
+- `TaskCreate "Read context"`, activeForm: `"Reading notes, projects, tasks, Gmail..."`
 - `TaskCreate "Build briefing report"`, activeForm: `"Building today's briefing..."`
 - `TaskCreate "Write daily note"`, activeForm: `"Writing daily note..."`
 
@@ -82,11 +82,11 @@ Run these three searches simultaneously:
 
 Then read any threads that look actionable: replies from external contacts, anything unread, anything from key contacts (see Key Contacts section).
 
-**Sprints:**
-Glob `sprints/active/*.md`, read all sprint files. Extract `id`, `goal`, `start`, `end`, `repos`, `dashboard` for each.
+**Projects:**
+Glob `projects/*.md`, read all project files. Note `id`, `title`, `phase`, `status`, `dashboard` for each active project.
 
 **Tasks:**
-Glob `tasks/open/*.md`, read all task files. Note `id`, `title`, `status`, `priority`, `due`, `sprint`, `repo`, and approximate body length for each.
+Glob `tasks/open/*.md`, read all task files. Note `id`, `title`, `status`, `priority`, `due`, `milestone`, `project`, `repo`, and approximate body length for each.
 
 Mark "Read context" completed.
 
@@ -152,7 +152,7 @@ Identify Gmail threads containing actionable items (reply required, decision nee
 **Factual-only rule:** Task files must contain only information directly present in the source email. Specifically:
 - `title`: the action required, stated as a plain fact (e.g. "Reply to Anna Bell, Kerikeri Medical")
 - Task body: quote or paraphrase the email content only — sender, subject, date, what they asked or said
-- Cross-references: link to existing task or sprint IDs where the email is clearly related (e.g. `Related: [[medtech-20260414-001]]`)
+- Cross-references: link to existing task IDs where the email is clearly related (e.g. `Related: [[medtech-20260414-001]]`)
 - Never add reply guidance, suggested wording, how-to advice, "Next steps", or any context not present in the source email
 - If you don't know something, leave it blank or omit it — do not invent it
 
@@ -176,9 +176,9 @@ Present the following structure — nothing else, no preamble, no "good morning"
 - [second most significant]
 - [third — only include if genuinely distinct]
 
-**Sprints:**
-| Project | Sprint | Goal | Days left |
-|---------|--------|------|-----------|
+**Projects:**
+| Project | Phase | Open tasks |
+|---------|-------|------------|
 
 **Urgent:**
 | Project | Task | Note |
@@ -194,28 +194,26 @@ Background: [summary line]
 ---
 
 **Off-radar logic:**
-After computing the sprint table, identify which dashboard areas are off radar:
-1. Collect `dashboard` values from all active sprints (today between `start` and `end`). These are on radar.
+After computing the projects table, identify which dashboard areas are off radar:
+1. Collect `dashboard` values from all active projects (status != "parked"). These are on radar.
 2. Any of the 6 areas (clinicpro-saas, clinicpro-medtech, nexwave-rd, gp-fellowship, side-projects, partnerships) not in that set = off radar.
-3. If any off-radar areas exist, add one line immediately after the Sprint table:
-   `**Off radar** (no active sprint): ClinicPro SaaS, Partnerships`
+3. If any off-radar areas exist, add one line immediately after the Projects table:
+   `**Off radar** (no active project): ClinicPro SaaS, Partnerships`
    Use the display name from the Dashboard areas table, not the dashboard value.
-4. If all areas have active sprints, omit this line entirely.
+4. If all areas have active projects, omit this line entirely.
 
-**Sprint table rules:**
-- One row per sprint where today falls between `start` and `end`
-- Project = `[[projects/{sprint.projects[0]}]]` if the sprint has one or more projects listed; else `[[dashboards/{sprint.dashboard}]]`
-- Sprint = `[[sprints/active/{sprint.id}|{display-label}]]`. Display label: use the sprint ID short form (e.g. `saas-sprint-1`) for standard sprints; use a descriptive name (e.g. `Capture AU bundle`) for distinctly-named sprints
-- Goal = sprint's `goal` field, trimmed to ~8 words if long
-- Flag sprints ending in ≤2 days with ⚠ in the Days left cell
+**Projects table rules:**
+- One row per active project (status != "parked")
+- Project = `[[projects/{project.id}|{project.title}]]`
+- Phase = project's `phase` field, or "—" if empty
+- Open tasks = count of `tasks/open/*.md` where `project` matches this project's `id`
 
 **Urgent table rules — include a task if ANY of these are true:**
 - `due` = today or tomorrow
-- Sprint it belongs to ends in ≤2 days
 - `status: in-progress` AND `status: blocked`
 - Task was created in Phase 2 auto-creation (new from Gmail)
 
-Note column = brief reason: `"due today"` / `"sprint ends tomorrow"` / `"blocked: waiting on X"` / `"new from Gmail"`
+Note column = brief reason: `"due today"` / `"blocked: waiting on X"` / `"new from Gmail"`
 
 **Quick wins table rules — include a task if ALL of these are true:**
 - Title contains any of: reply, review, check, confirm, read, await, send, ask
@@ -260,10 +258,10 @@ day: [Day name]
 
 ## Today
 
-### Sprints
+### Projects
 
 **[[dashboards/{dashboard}|Display Name]]**
-- [[sprints/active/{sprint-id}|Sprint goal]] — N days
+- [[projects/{project-id}|Phase label]]
 
 ### Urgent
 - [[task-id]] — title
@@ -280,7 +278,7 @@ day: [Day name]
 ```
 
 **Writing rules:**
-- Sprints section: group active sprints by dashboard. Each group = bold wikilink header `**[[dashboards/{dashboard}|Display Name]]**` using the display name from the Dashboard areas table. Under each group, one bullet per sprint: `- [[sprints/active/{sprint.id}|sprint goal]] — N days`. Append ⚠ when ≤2 days left. If user narrowed scope, include only relevant streams.
+- Projects section: group active projects by dashboard. Each group = bold wikilink header `**[[dashboards/{dashboard}|Display Name]]**` using the display name from the Dashboard areas table. Under each group, one bullet per project: `- [[projects/{project.id}|{project.phase}]]`. If phase is empty, use project title. If user narrowed scope, include only relevant streams.
 - Urgent and Quick wins: wikilinks `[[task-id]]`, no checkboxes, only tasks in scope of the user's stated focus.
 - Blockers: up to 5, only tasks where `status: blocked` pulled from `tasks/open/`. Format: `[[task-id]] — waiting on X`
 - If the user's reply surfaces a new action item: create the task file first, then wikilink it in the note.
@@ -301,7 +299,7 @@ id: {repo-prefix}-{YYYYMMDD}-{NNN}
 title: Short human-readable description
 project: {project-id}
 repo: clinicpro-saas | clinicpro-medtech | nexwave-rd | gp-fellowship
-sprint: {sprint-id}
+milestone: "text label"             # optional grouping label
 status: open | in-progress | blocked | done
 priority: high | medium | low
 created: YYYY-MM-DD
@@ -367,5 +365,5 @@ Then ask: "What's the most important thing for this afternoon?"
 ## Integration
 
 - `/session-update`: end-of-session log, replaces the old evening shutdown
-- `/weekly`: reads daily notes to compile sprint summary
+- `/weekly`: reads daily notes to compile project and milestone summary
 - `/obsidian-task-table`: create new tasks surfaced during daily review

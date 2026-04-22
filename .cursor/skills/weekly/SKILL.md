@@ -8,7 +8,7 @@ user-invocable: true
 
 # Weekly Review Skill
 
-Facilitates Ryo's weekly sprint review. Rolls up task progress across all active sprints, identifies blockers, surfaces wins, and plans the next sprint cycle.
+Facilitates Ryo's weekly project review. Rolls up task progress across all active projects, identifies blockers, surfaces wins, and plans the next week.
 
 ## Usage
 
@@ -29,7 +29,7 @@ Facilitates Ryo's weekly sprint review. Rolls up task progress across all active
 
 ## R&D isolation rule
 
-**Critical:** `nexwave-rd` tasks and sprints must always be reviewed in a separate section from commercial tasks. MBIE audits R&D activity independently. Never mix R&D progress with clinicpro-saas or clinicpro-medtech in the same summary table.
+**Critical:** `nexwave-rd` tasks must always be reviewed in a separate section from commercial tasks. MBIE audits R&D activity independently. Never mix R&D progress with clinicpro-saas or clinicpro-medtech in the same summary table.
 
 ## Review Process
 
@@ -44,28 +44,21 @@ Facilitates Ryo's weekly sprint review. Rolls up task progress across all active
 - Read `tasks/done/*.md`
 - Filter where `created` or file mtime is within last 7 days
 
-**Sprints:**
-- Read all `sprints/active/*.md`
-- For each: extract `id`, `goal`, `start`, `end`, `repos`, `projects`
-- Calculate % of sprint elapsed (days elapsed / total days)
-- Flag sprints ending within 3 days
-
 **Daily notes:**
 - Read `daily/*.md` for the past 7 days (if they exist)
 - Extract any notes under "Wins", "Challenges", or "Tomorrow's priority"
 
 Create session tasks:
 ```
-TaskCreate: "Phase 1: Collect" — activeForm: "Reading tasks, sprints, and daily notes..."
+TaskCreate: "Phase 1: Collect" — activeForm: "Reading projects, tasks, and daily notes..."
 ```
 
 ### Phase 2: Reflect
 
-**Per sprint, compute:**
+**Per project, compute:**
 - Tasks done this week (count)
-- Tasks still open (count)
+- Tasks still open (count), grouped by milestone
 - Tasks blocked (count + reason)
-- Sprint % time elapsed vs tasks remaining — flag if misaligned
 
 **Per repo stream:**
 
@@ -91,10 +84,10 @@ TaskCreate: "Phase 2: Reflect" — blocked by Phase 1
 
 ### Phase 3: Plan
 
-1. Review sprints ending soon — does the sprint need closing or extending?
+1. Review each active project's `phase:` field — does it need updating?
 2. Check `projects/*.md` for each active project: any status changes?
-3. Identify tasks to carry forward, tasks to drop
-4. Ask: "What sprint or tasks should we create for next week?"
+3. Identify tasks to carry forward, tasks to drop, and new milestones to set
+4. Ask: "What tasks or milestones should we create for next week?"
 
 For each new task identified, create it via `/obsidian-task-table` or note it in the review output.
 
@@ -115,17 +108,17 @@ week: YYYY-WNN
 
 # Weekly Review: YYYY-MM-DD
 
-## Sprint Status
+## Project Status
 
 ### Commercial
-| Sprint | Goal | Elapsed | Tasks done | Open | Blocked |
-|--------|------|---------|------------|------|---------|
-| [id] | [goal] | N% | N | N | N |
+| Project | Phase | Tasks done | Open | Blocked |
+|---------|-------|------------|------|---------|
+| [name] | [phase] | N | N | N |
 
 ### R&D (nexwave-rd — MBIE isolated)
-| Sprint | Goal | Elapsed | Tasks done | Open | Blocked |
-|--------|------|---------|------------|------|---------|
-| [id] | [goal] | N% | N | N | N |
+| Project | Phase | Tasks done | Open | Blocked |
+|---------|-------|------------|------|---------|
+| [name] | [phase] | N | N | N |
 
 ## Wins
 1. 
@@ -133,8 +126,8 @@ week: YYYY-WNN
 3. 
 
 ## Blockers
-| Blocker | Sprint | Owner | Next action |
-|---------|--------|-------|-------------|
+| Blocker | Project | Owner | Next action |
+|---------|---------|-------|-------------|
 
 ## Decisions Made
 - 
@@ -147,15 +140,15 @@ week: YYYY-WNN
 ### Key tasks to create or carry forward
 - 
 
-### Sprints to close or extend
+### Project phases to update
 - 
 ```
 
 ## Best Practices
 
-- Run every Friday or at sprint boundary
+- Run every Friday
 - R&D review must stay isolated — never merge into commercial summary
-- If a sprint is > 80% elapsed with > 50% tasks open, flag it explicitly
+- If a project has > 50% tasks open from the previous week, flag it explicitly
 - Wins should be specific and concrete — not "made progress on X"
 
 ## Integration
@@ -164,4 +157,3 @@ week: YYYY-WNN
 - `/monthly` — weekly reviews feed monthly rollup
 - `/session-update` — use during the week to log session progress
 - `/obsidian-task-table` — create new tasks identified during planning
-- `/calendar-sync` — sync sprint timelines after any sprint changes

@@ -1,6 +1,6 @@
 ---
 name: monthly
-description: Monthly review and planning for NexWave/ClinicPro. Rolls up weekly reviews and sprint completions, checks project health, and plans next month. Keeps R&D stream (MBIE reporting) separate from commercial. Run at end of month.
+description: Monthly review and planning for NexWave/ClinicPro. Rolls up weekly reviews, checks project health across all streams, and plans next month's focus. Keeps R&D stream (MBIE reporting) separate from commercial. Run at end of month.
 allowed-tools: Read, Write, Edit, Glob, Grep, TaskCreate, TaskUpdate, TaskList, TaskGet
 model: sonnet
 user-invocable: true
@@ -8,7 +8,7 @@ user-invocable: true
 
 # Monthly Review Skill
 
-Facilitates Ryo's monthly review. Rolls up sprints completed in the month, assesses project health across all repos, identifies patterns, and sets next month's focus. Keeps R&D and commercial streams strictly separated for MBIE reporting.
+Facilitates Ryo's monthly review. Rolls up task progress across all projects, assesses project health across all repos, identifies patterns, and sets next month's focus. Keeps R&D and commercial streams strictly separated for MBIE reporting.
 
 ## Usage
 
@@ -30,7 +30,7 @@ Facilitates Ryo's monthly review. Rolls up sprints completed in the month, asses
 
 ## R&D isolation rule
 
-**Critical:** `nexwave-rd` sprints, tasks, and outputs must be reviewed in a fully separate section. MBIE audits R&D activity independently of commercial work. The R&D section of the monthly review is a source of truth for programme progress reporting to Lisa (MBIE) and Ting (Programme Manager).
+**Critical:** `nexwave-rd` tasks and outputs must be reviewed in a fully separate section. MBIE audits R&D activity independently of commercial work. The R&D section of the monthly review is a source of truth for programme progress reporting to Lisa (MBIE) and Ting (Programme Manager).
 
 ## Review Process
 
@@ -53,7 +53,7 @@ Facilitates Ryo's monthly review. Rolls up sprints completed in the month, asses
 
 Create session task:
 ```
-TaskCreate: "Phase 1: Collect", activeForm: "Collecting sprint and task data for the month..."
+TaskCreate: "Phase 1: Collect", activeForm: "Collecting project and task data for the month..."
 ```
 
 ### Phase 2: Reflect
@@ -73,13 +73,13 @@ TaskCreate: "Phase 1: Collect", activeForm: "Collecting sprint and task data for
 - Any items to surface to Lisa (MBIE)?
 
 **gp-fellowship:**
-- Fellowship sprint progress
+- Fellowship task progress against milestones
 - Any assessments due or completed
 
 **Patterns across the month:**
 - Recurring blockers (flag systemic issues)
 - Repos that stalled (no tasks completed)
-- Over-committed sprints
+- Over-committed projects (too many tasks, no completions)
 
 **Ask Ryo (one at a time):**
 1. "What were the 3 biggest wins this month?"
@@ -94,16 +94,15 @@ TaskCreate: "Phase 2: Reflect", blocked by Phase 1
 
 ### Phase 3: Plan next month
 
-1. Review sprints still active, do they carry over or need closing?
-2. For each project in `projects/*.md`: set next month's focus (one line)
-3. Identify any new sprints to create
-4. Set next month's ONE focus per stream (commercial / R&D)
-5. Flag any external deadlines: MBIE reports, Ting check-ins, medtech partner reviews
+1. For each project in `projects/*.md`: does the `phase:` field need updating for next month?
+2. Identify tasks to carry forward or create for next month's focus
+3. Set next month's ONE focus per stream (commercial / R&D)
+4. Flag any external deadlines: MBIE reports, Ting check-ins, medtech partner reviews
 
 **Ask Ryo:**
 - "What's the ONE commercial focus for next month?"
 - "What's the ONE R&D focus for next month?"
-- "Any sprints to close, extend, or create?"
+- "Any project phases to update or tasks to carry forward?"
 
 Create session task:
 ```
@@ -130,13 +129,9 @@ month: YYYY-MM
 
 ## Commercial Stream
 
-### Sprints
-| Sprint | Goal | Outcome |
-|--------|------|---------|
-
-### Project Health
-| Project | Repo | Status | Notes |
-|---------|------|--------|-------|
+### Projects
+| Project | Phase | Tasks done | Status | Notes |
+|---------|-------|------------|--------|-------|
 
 ### Wins
 1. 
@@ -153,9 +148,9 @@ month: YYYY-MM
 
 ## R&D Stream (nexwave-rd, MBIE isolated)
 
-### Sprints
-| Sprint | Objective | Outcome |
-|--------|-----------|---------|
+### Projects
+| Project | Phase | Tasks done | Status | Notes |
+|---------|-------|------------|--------|-------|
 
 ### Research Outputs
 - Reports/documents produced:
@@ -171,7 +166,7 @@ month: YYYY-MM
 
 ## GP Fellowship
 
-### Sprint progress
+### Progress
 - 
 
 ---
@@ -184,7 +179,7 @@ month: YYYY-MM
 ### R&D focus
 > 
 
-### Sprints to create
+### Project phase updates
 - 
 
 ### External deadlines
@@ -195,6 +190,5 @@ month: YYYY-MM
 ## Integration
 
 - `/weekly`: weekly reviews feed this rollup
-- `/calendar-sync`: sync new sprints to Google Calendar after planning
 - `/obsidian-task-table`: create tasks for next month's priorities
 - `/session-update`: log the review session itself
