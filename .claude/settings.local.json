@@ -1,4 +1,7 @@
 {
   "spinnerTipsEnabled": true,
-  "prefersReducedMotion": true
+  "prefersReducedMotion": true,
+  "permissions": {
+    "additionalDirectories": ["C:/Users/reonz/.claude"]
+  }
 }

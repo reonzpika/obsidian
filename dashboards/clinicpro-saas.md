@@ -29,13 +29,21 @@ if (parked.length > 0) {
 | | |
 |--|--|
 | **Products** | [[ai-scribe]] · [[referral-images]] · [[12-month-prescription]] |
-| **Context docs** | [Design System](context/clinicpro-context/design-system/clinicpro-saas.md) · [Design Research](context/clinicpro-context/design-research.md) · [Colour Options](context/clinicpro-context/colour-options.md) · [Regulatory Compliance](context/clinicpro-context/regulatory-compliance.md) |
+| **Context docs** | [Design System](context/clinicpro-context/design-system/design-clinicpro-saas.md) · [Design Research](context/clinicpro-context/design-research.md) · [Colour Options](context/clinicpro-context/colour-options.md) · [Regulatory Compliance](context/clinicpro-context/regulatory-compliance.md) |
 | **Repo map** | [[repos]] |
 | **Finance & accounting** | Helen Yu (accountant, all entities) — see [people.md](../context/people.md#helen-yu) for scope |
 
 ---
 
 ## Weekly Progress Log
+
+### Week of 2026-04-21
+
+- Design system architecture decided: two self-contained files (SaaS + Medtech), vault canonical, each repo CLAUDE.md holds an explicit path pointer
+- `clinicpro-design-system.md` restructured into AI-lookup format (token tables, copy-paste class strings, DO-NOT list) and migrated to `context/clinicpro-context/design-system/design-clinicpro-saas.md`
+- Old `clinicpro-design-system.md` retired and deleted
+- `clinicpro-saas` CLAUDE.md updated with design system pointer
+- Medtech design system variant deferred to next session
 
 ### Week of 2026-04-14
 

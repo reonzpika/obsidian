@@ -113,6 +113,13 @@ Non-negotiables (full list in strategy doc):
 
 Tracked in task medtech-20260414-001.
 
+## DB infrastructure (as of 22 April 2026)
+
+- **Migration tracking:** `public.schema_migrations` table created (migration 0007). All 7 migrations registered. Future migrations must include `INSERT INTO public.schema_migrations (version) VALUES ('XXXX_name') ON CONFLICT DO NOTHING;` at the end.
+- **Column rename:** `clerk_user_id` renamed to `user_id` on `medtech_image_commit_audit` (migration 0006). Drizzle schema and API route updated.
+- **RLS:** All three tables (`medtech_image_commit_audit`, `rate_limit_buckets`, `users`) have RLS disabled. Service role access is unaffected, but anon key can query via PostgREST. Enable RLS with no policies to close this (task medtech-20260422-003).
+- **Supabase MCP:** Configured globally in `~/.claude.json`. Use `mcp__supabase__execute_sql` for direct DB access in Claude Code sessions.
+
 ## Open questions / blockers
 
 | # | Question | Status |
