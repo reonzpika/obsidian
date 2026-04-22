@@ -29,6 +29,7 @@ if (parked.length > 0) {
 | | |
 |--|--|
 | **Products** | [[ai-scribe]] · [[referral-images]] · [[12-month-prescription]] |
+| **Context docs** | [Design System](context/clinicpro-context/clinicpro-design-system.md) · [Design Research](context/clinicpro-context/design-research.md) · [Colour Options](context/clinicpro-context/colour-options.md) · [Regulatory Compliance](context/clinicpro-context/regulatory-compliance.md) |
 | **Repo map** | [[repos]] |
 | **Finance & accounting** | Helen Yu (accountant, all entities) — see [people.md](../context/people.md#helen-yu) for scope |
 

@@ -27,6 +27,7 @@ for (let p of active) {
 | **Products** | [[clinicpro-capture]], [[clinicpro-dashboard]] |
 | **API reference** | [[alex-api-docs]] |
 | **Glossary** | [Medtech / ALEX Glossary](context/medtech-context/glossary.md) |
+| **Context** | [Capture context](context/medtech-context/clinicpro-capture/) · [Dashboard context](context/medtech-context/clinicpro-dashboard/) |
 | **Repo map** | [[repos]] |
 | **Finance & accounting** | Helen Yu (accountant, all entities) — see [people.md](../context/people.md#helen-yu) for scope |
 
