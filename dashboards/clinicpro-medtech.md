@@ -62,6 +62,9 @@ for (let p of active) {
 - Created `public.schema_migrations` tracking table (migration 0007): all migrations backfilled; going forward each migration registers itself
 - RLS advisory: 3 tables have RLS disabled; SQL ready, task medtech-20260422-003 tracks the fix
 - Tasks created: 003 (RLS), 004 (Vercel env vars for duplicate NHI alerts), 005 (BFF deployment with security deps)
+- Audited Lightsail BFF codebase in full: 18 endpoints, auth model, rate limiting, OAuth flow, deployment config, known gaps
+- Created `context/medtech-context/lightsail-bff.md`: complete BFF reference (env vars, all endpoints, systemd commands, error patterns, non-obvious design decisions)
+- Created skills: `/bff-deploy`, `/bff-rotate-secret`, `/bff-debug`
 
 ### Week of 2026-04-14 (continued 19 Apr)
 - `/medtech/capture` landing page shipped (Phase 1 Task 1, commit 64788af): 7-section server-rendered page, editorial-clinical aesthetic, Newsreader + IBM Plex Sans + JetBrains Mono, teal-600 accent, mailto CTA, full spec copy
