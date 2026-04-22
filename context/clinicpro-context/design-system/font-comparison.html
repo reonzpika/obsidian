@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClinicPro Font Comparison</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400&family=Caveat:wght@400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0f172a;
+    color: #fff;
+    font-family: Inter, sans-serif;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-family: Inter, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #94a3b8;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  /* Nav */
+  .nav {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+  .nav button {
+    background: #1e293b;
+    border: 1px solid #334155;
+    color: #94a3b8;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    font-family: Inter, sans-serif;
+    transition: all 0.2s;
+  }
+  .nav button:hover, .nav button.active {
+    background: #15803d;
+    border-color: #15803d;
+    color: #fff;
+  }
+
+  /* Grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* Card */
+  .card {
+    background: #fafaf7;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s;
+  }
+  .card.hidden { display: none; }
+
+  .badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #15803d;
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    font-family: Inter, sans-serif;
+  }
+  .badge.current { background: #f59e0b; color: #0f172a; }
+
+  /* Hero section */
+  .hero {
+    padding: 3rem 2.5rem 2rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: #15803d;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .hero-headline {
+    font-size: 2.75rem;
+    line-height: 1.1;
+    color: #0f172a;
+    margin-bottom: 1.25rem;
+    font-weight: 400;
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #475569;
+    max-width: 400px;
+    margin-bottom: 1.75rem;
+  }
+
+  .cta-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .btn-primary {
+    background: #15803d;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 0.75rem 1.75rem;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+
+  .btn-ghost {
+    color: #15803d;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  /* Body section */
+  .body-section {
+    padding: 1.75rem 2.5rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .section-marker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: #94a3b8;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.75rem;
+  }
+
+  .body-heading {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 0.6rem;
+  }
+
+  .body-text {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #475569;
+  }
+
+  /* Quote section */
+  .quote-section {
+    padding: 1.75rem 2.5rem;
+    background: #f1f5f9;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .quote-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: #0f172a;
+    border-left: 3px solid #f59e0b;
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .quote-attr {
+    font-family: Inter, sans-serif;
+    font-size: 0.8rem;
+    color: #64748b;
+    padding-left: 1rem;
+  }
+
+  /* Footer label */
+  .font-label {
+    padding: 0.75rem 2.5rem;
+    background: #f8fafc;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .font-label span {
+    font-family: Inter, sans-serif;
+    font-size: 0.72rem;
+    color: #64748b;
+  }
+
+  .font-label strong {
+    color: #0f172a;
+    font-weight: 600;
+  }
+
+  /* ---- Font class definitions ---- */
+
+  /* Display fonts */
+  .f-newsreader .hero-headline,
+  .f-newsreader .quote-text { font-family: 'Newsreader', serif; }
+
+  .f-dm-serif .hero-headline,
+  .f-dm-serif .quote-text { font-family: 'DM Serif Display', serif; }
+
+  .f-playfair .hero-headline,
+  .f-playfair .quote-text { font-family: 'Playfair Display', serif; }
+
+  .f-fraunces .hero-headline,
+  .f-fraunces .quote-text { font-family: 'Fraunces', serif; font-weight: 300; }
+
+  .f-lora .hero-headline,
+  .f-lora .quote-text { font-family: 'Lora', serif; }
+
+  /* Body fonts */
+  .f-inter .hero-sub,
+  .f-inter .body-text,
+  .f-inter .body-heading { font-family: 'Inter', sans-serif; }
+
+  .f-jakarta .hero-sub,
+  .f-jakarta .body-text,
+  .f-jakarta .body-heading { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+  .f-dm-sans .hero-sub,
+  .f-dm-sans .body-text,
+  .f-dm-sans .body-heading { font-family: 'DM Sans', sans-serif; }
+
+  /* Separator */
+  .sep {
+    text-align: center;
+    font-family: Inter, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #475569;
+    margin: 3rem 0 1.5rem;
+  }
+
+  .sep span {
+    background: #0f172a;
+    padding: 0 1rem;
+    position: relative;
+  }
+
+  .sep::before {
+    content: '';
+    display: block;
+    height: 1px;
+    background: #334155;
+    position: absolute;
+    left: 0; right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .sep { position: relative; }
+</style>
+</head>
+<body>
+
+<h1>ClinicPro SaaS — Font Comparison</h1>
+
+<div class="nav">
+  <button class="active" onclick="filter('all', this)">All</button>
+  <button onclick="filter('display', this)">Display fonts only</button>
+  <button onclick="filter('body', this)">Body fonts only</button>
+</div>
+
+<!-- DISPLAY FONTS -->
+<div class="sep"><span>Display font options (hero headlines, pull-quotes)</span></div>
+
+<div class="grid" id="display-grid">
+
+  <!-- 1. Newsreader (current) -->
+  <div class="card f-newsreader f-inter" data-group="display">
+    <span class="badge current">Current</span>
+    <div class="hero">
+      <div class="eyebrow">§ 01 — AI Scribe</div>
+      <div class="hero-headline">Clinical notes.<br>Done before the door closes.</div>
+      <div class="hero-sub">Voice-to-note consult capture built for NZ GPs. Accurate, structured, and integrated with your workflow.</div>
+      <div class="cta-row">
+        <button class="btn-primary">Start free trial</button>
+        <button class="btn-ghost">See how it works →</button>
+      </div>
+    </div>
+    <div class="body-section">
+      <div class="section-marker">§ 02 — Why it works</div>
+      <div class="body-heading">Built around GP workflow</div>
+      <div class="body-text">Transcription runs locally. Notes are structured to your template. No data leaves NZ. Reviewed by a practising GP at every step.</div>
+    </div>
+    <div class="quote-section">
+      <div class="quote-text">"It's the first tool that actually understands what I need to document, not just what I say."</div>
+      <div class="quote-attr">— Auckland GP, 14 years in practice</div>
+    </div>
+    <div class="font-label">
+      <span>Display: <strong>Newsreader</strong></span>
+      <span>Body: <strong>Inter</strong></span>
+      <span>Markers: <strong>JetBrains Mono</strong></span>
+    </div>
+  </div>
+
+  <!-- 2. DM Serif Display -->
+  <div class="card f-dm-serif f-inter" data-group="display">
+    <span class="badge">Option A</span>
+    <div class="hero">
+      <div class="eyebrow">§ 01 — AI Scribe</div>
+      <div class="hero-headline">Clinical notes.<br>Done before the door closes.</div>
+      <div class="hero-sub">Voice-to-note consult capture built for NZ GPs. Accurate, structured, and integrated with your workflow.</div>
+      <div class="cta-row">
+        <button class="btn-primary">Start free trial</button>
+        <button class="btn-ghost">See how it works →</button>
+      </div>
+    </div>
+    <div class="body-section">
+      <div class="section-marker">§ 02 — Why it works</div>
+      <div class="body-heading">Built around GP workflow</div>
+      <div class="body-text">Transcription runs locally. Notes are structured to your template. No data leaves NZ. Reviewed by a practising GP at every step.</div>
+    </div>
+    <div class="quote-section">
+      <div class="quote-text">"It's the first tool that actually understands what I need to document, not just what I say."</div>
+      <div class="quote-attr">— Auckland GP, 14 years in practice</div>
+    </div>
+    <div class="font-label">
+      <span>Display: <strong>DM Serif Display</strong></span>
+      <span>Body: <strong>Inter</strong></span>
+      <span>Markers: <strong>JetBrains Mono</strong></span>
+    </div>
+  </div>
+
+  <!-- 3. Playfair Display -->
+  <div class="card f-playfair f-inter" data-group="display">
+    <span class="badge">Option B</span>
+    <div class="hero">
+      <div class="eyebrow">§ 01 — AI Scribe</div>
+      <div class="hero-headline">Clinical notes.<br>Done before the door closes.</div>
+      <div class="hero-sub">Voice-to-note consult capture built for NZ GPs. Accurate, structured, and integrated with your workflow.</div>
+      <div class="cta-row">
+        <button class="btn-primary">Start free trial</button>
+        <button class="btn-ghost">See how it works →</button>
+      </div>
+    </div>
+    <div class="body-section">
+      <div class="section-marker">§ 02 — Why it works</div>
+      <div class="body-heading">Built around GP workflow</div>
+      <div class="body-text">Transcription runs locally. Notes are structured to your template. No data leaves NZ. Reviewed by a practising GP at every step.</div>
+    </div>
+    <div class="quote-section">
+      <div class="quote-text">"It's the first tool that actually understands what I need to document, not just what I say."</div>
+      <div class="quote-attr">— Auckland GP, 14 years in practice</div>
+    </div>
+    <div class="font-label">
+      <span>Display: <strong>Playfair Display</strong></span>
+      <span>Body: <strong>Inter</strong></span>
+      <span>Markers: <strong>JetBrains Mono</strong></span>
+    </div>
+  </div>
+
+  <!-- 4. Fraunces -->
+  <div class="card f-fraunces f-inter" data-group="display">
+    <span class="badge">Option C</span>
+    <div class="hero">
+      <div class="eyebrow">§ 01 — AI Scribe</div>
+      <div class="hero-headline">Clinical notes.<br>Done before the door closes.</div>
+      <div class="hero-sub">Voice-to-note consult capture built for NZ GPs. Accurate, structured, and integrated with your workflow.</div>
+      <div class="cta-row">
+        <button class="btn-primary">Start free trial</button>
+        <button class="btn-ghost">See how it works →</button>
+      </div>
+    </div>
+    <div class="body-section">
+      <div class="section-marker">§ 02 — Why it works</div>
+      <div class="body-heading">Built around GP workflow</div>
+      <div class="body-text">Transcription runs locally. Notes are structured to your template. No data leaves NZ. Reviewed by a practising GP at every step.</div>
+    </div>
+    <div class="quote-section">
+      <div class="quote-text">"It's the first tool that actually understands what I need to document, not just what I say."</div>
+      <div class="quote-attr">— Auckland GP, 14 years in practice</div>
+    </div>
+    <div class="font-label">
+      <span>Display: <strong>Fraunces</strong></span>
+      <span>Body: <strong>Inter</strong></span>
+      <span>Markers: <strong>JetBrains Mono</strong></span>
+    </div>
+  </div>
+
+  <!-- 5. Lora -->
+  <div class="card f-lora f-inter" data-group="display">
+    <span class="badge">Option D</span>
+    <div class="hero">
+      <div class="eyebrow">§ 01 — AI Scribe</div>
+      <div class="hero-headline">Clinical notes.<br>Done before the door closes.</div>
+      <div class="hero-sub">Voice-to-note consult capture built for NZ GPs. Accurate, structured, and integrated with your workflow.</div>
+      <div class="cta-row">
+        <button class="btn-primary">Start free trial</button>
+        <button class="btn-ghost">See how it works →</button>
+      </div>
+    </div>
+    <div class="body-section">
+      <div class="section-marker">§ 02 — Why it works</div>
+      <div class="body-heading">Built around GP workflow</div>
+      <div class="body-text">Transcription runs locally. Notes are structured to your template. No data leaves NZ. Reviewed by a practising GP at every step.</div>
+    </div>
+    <div class="quote-section">
+      <div class="quote-text">"It's the first tool that actually understands what I need to document, not just what I say."</div>
+      <div class="quote-attr">— Auckland GP, 14 years in practice</div>
+    </div>
+    <div class="font-label">
+      <span>Display: <strong>Lora</strong></span>
+      <span>Body: <strong>Inter</strong></span>
+      <span>Markers: <strong>JetBrains Mono</strong></span>
+    </div>
+  </div>
+
+</div>
+
+<!-- BODY FONTS -->
+<div class="sep" style="margin-top: 3rem;"><span>Body font options (keeping Newsreader as display)</span></div>
+
+<div class="grid" id="body-grid">
+
+  <!-- Inter (current) -->
+  <div class="card f-newsreader f-inter" data-group="body">
+    <span class="badge current">Current</span>
+    <div class="hero">
+      <div class="eyebrow">§ 01 — AI Scribe</div>
+      <div class="hero-headline">Clinical notes.<br>Done before the door closes.</div>
+      <div class="hero-sub">Voice-to-note consult capture built for NZ GPs. Accurate, structured, and integrated with your workflow.</div>
+      <div class="cta-row">
+        <button class="btn-primary">Start free trial</button>
+        <button class="btn-ghost">See how it works →</button>
+      </div>
+    </div>
+    <div class="body-section">
+      <div class="section-marker">§ 02 — Why it works</div>
+      <div class="body-heading">Built around GP workflow</div>
+      <div class="body-text">Transcription runs locally. Notes are structured to your template. No data leaves NZ. Reviewed by a practising GP at every step.</div>
+    </div>
+    <div class="quote-section">
+      <div class="quote-text">"It's the first tool that actually understands what I need to document, not just what I say."</div>
+      <div class="quote-attr">— Auckland GP, 14 years in practice</div>
+    </div>
+    <div class="font-label">
+      <span>Display: <strong>Newsreader</strong></span>
+      <span>Body: <strong>Inter</strong></span>
+      <span>Markers: <strong>JetBrains Mono</strong></span>
+    </div>
+  </div>
+
+  <!-- Plus Jakarta Sans -->
+  <div class="card f-newsreader f-jakarta" data-group="body">
+    <span class="badge">Option E</span>
+    <div class="hero">
+      <div class="eyebrow">§ 01 — AI Scribe</div>
+      <div class="hero-headline">Clinical notes.<br>Done before the door closes.</div>
+      <div class="hero-sub">Voice-to-note consult capture built for NZ GPs. Accurate, structured, and integrated with your workflow.</div>
+      <div class="cta-row">
+        <button class="btn-primary">Start free trial</button>
+        <button class="btn-ghost">See how it works →</button>
+      </div>
+    </div>
+    <div class="body-section">
+      <div class="section-marker">§ 02 — Why it works</div>
+      <div class="body-heading">Built around GP workflow</div>
+      <div class="body-text">Transcription runs locally. Notes are structured to your template. No data leaves NZ. Reviewed by a practising GP at every step.</div>
+    </div>
+    <div class="quote-section">
+      <div class="quote-text">"It's the first tool that actually understands what I need to document, not just what I say."</div>
+      <div class="quote-attr">— Auckland GP, 14 years in practice</div>
+    </div>
+    <div class="font-label">
+      <span>Display: <strong>Newsreader</strong></span>
+      <span>Body: <strong>Plus Jakarta Sans</strong></span>
+      <span>Markers: <strong>JetBrains Mono</strong></span>
+    </div>
+  </div>
+
+  <!-- DM Sans -->
+  <div class="card f-newsreader f-dm-sans" data-group="body">
+    <span class="badge">Option F</span>
+    <div class="hero">
+      <div class="eyebrow">§ 01 — AI Scribe</div>
+      <div class="hero-headline">Clinical notes.<br>Done before the door closes.</div>
+      <div class="hero-sub">Voice-to-note consult capture built for NZ GPs. Accurate, structured, and integrated with your workflow.</div>
+      <div class="cta-row">
+        <button class="btn-primary">Start free trial</button>
+        <button class="btn-ghost">See how it works →</button>
+      </div>
+    </div>
+    <div class="body-section">
+      <div class="section-marker">§ 02 — Why it works</div>
+      <div class="body-heading">Built around GP workflow</div>
+      <div class="body-text">Transcription runs locally. Notes are structured to your template. No data leaves NZ. Reviewed by a practising GP at every step.</div>
+    </div>
+    <div class="quote-section">
+      <div class="quote-text">"It's the first tool that actually understands what I need to document, not just what I say."</div>
+      <div class="quote-attr">— Auckland GP, 14 years in practice</div>
+    </div>
+    <div class="font-label">
+      <span>Display: <strong>Newsreader</strong></span>
+      <span>Body: <strong>DM Sans</strong></span>
+      <span>Markers: <strong>JetBrains Mono</strong></span>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function filter(group, btn) {
+    document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const allCards = document.querySelectorAll('.card');
+    const displayGrid = document.getElementById('display-grid');
+    const bodyGrid = document.getElementById('body-grid');
+    const seps = document.querySelectorAll('.sep');
+
+    if (group === 'all') {
+      allCards.forEach(c => c.classList.remove('hidden'));
+      displayGrid.style.display = '';
+      bodyGrid.style.display = '';
+      seps.forEach(s => s.style.display = '');
+    } else {
+      allCards.forEach(c => {
+        c.classList.toggle('hidden', c.dataset.group !== group);
+      });
+      displayGrid.style.display = group === 'display' ? '' : 'none';
+      bodyGrid.style.display = group === 'body' ? '' : 'none';
+      seps.forEach(s => s.style.display = '');
+    }
+  }
+</script>
+</body>
+</html>

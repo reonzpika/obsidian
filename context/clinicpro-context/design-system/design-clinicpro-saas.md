@@ -252,8 +252,23 @@ Always colour + icon + text label. Never colour alone.
 
 ## 6. Animation spec
 
+### Library
+**Framer Motion** — the sole animation library for `clinicpro-saas`. Do not use GSAP, AOS, or custom IntersectionObserver scroll logic. All animation goes through Framer Motion.
+
+Install: `pnpm add framer-motion`
+
+| Pattern | Framer Motion API |
+|---|---|
+| Scroll reveal | `whileInView` + `viewport={{ once: true, margin: "-15%" }}` |
+| Hero entrance stagger | `variants` with `staggerChildren` on the parent |
+| Hover lift / glow | `whileHover` on the element |
+| Accordion | `AnimatePresence` + `motion.div` with `height: "auto"` / `0` |
+| Counter count-up | `useMotionValue` + `useTransform` or `animate()` imperative |
+| Ambient float | CSS keyframe (`@keyframes float`) — keep outside Framer for perf |
+| Reduced motion | Wrap with `useReducedMotion()` hook — set all durations to `0` |
+
 ### Signature easing curve
-All marketing transitions: `cubic-bezier(0.33, 0, 0, 1)`. In-app clinical UI: `ease` or `ease-out`.
+All marketing transitions: `cubic-bezier(0.33, 0, 0, 1)`. Pass as `ease: [0.33, 0, 0, 1]` in Framer Motion. In-app clinical UI: `"easeOut"`.
 
 ### Timing
 
