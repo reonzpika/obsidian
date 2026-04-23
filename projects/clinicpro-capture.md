@@ -22,7 +22,7 @@ Mobile web app that photographs clinical images and commits them to patient reco
 | Task 0: URL refactor + (marketing) route group  | Complete (commit prior to 64788af)      |
 | Task 1: `/medtech/capture` landing page         | Complete (commit 64788af, 19 Apr)       |
 | Task 2: `/refer-a-practice` bounty page + API   | Complete (commit 4326d34, 19 Apr)       |
-| Task 3: Capture upsell banner in clinicpro-saas | Open (unblocked; planned end of sprint) |
+| Task 3: Capture upsell banner in clinicpro-saas | Complete (commit 4be3b4f, 23 Apr)       |
 | Task 4: Champion email v1                       | Open (pending landing page review)      |
 | Task 5: Demo Loom script + case-study template  | Open                                    |
 

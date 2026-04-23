@@ -44,6 +44,7 @@ if (parked.length > 0) {
 - Old `clinicpro-design-system.md` retired and deleted
 - `clinicpro-saas` CLAUDE.md updated with design system pointer
 - Medtech design system variant deferred to next session
+- Dismissible Capture upsell banner shipped in referral-images capture page: green tint (`nz-green-50/200/900`), copy points Medtech Evolution users to `capture.clinicpro.co.nz/medtech`, permanent dismiss via localStorage key `capture-banner-dismissed`, accessible, matches existing banner pattern (commit `4be3b4f`)
 
 ### Week of 2026-04-14
 
