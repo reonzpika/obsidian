@@ -49,6 +49,12 @@ for (let p of active) {
 - Lawrence Peterson: follow-up sent 13 April re infrastructure running costs
 
 ### Week of 2026-04-21
+- Capture landing page full design overhaul: ported `letter-grammar.tsx` (framer-motion) from clinicpro-saas, added `nz-green` Tailwind tokens, redesigned all 9 sections to match referral-images editorial-clinical aesthetic
+- Dark navy trust section (`#0c1628`), ScrambleRotate cycling heading, amber/slate palette, CharStagger section headings, AnimatePresence FAQ accordion
+- Fixed double-header bug (removed stray header from `app/(marketing)/layout.tsx`)
+- Hero animation simplified to match referral-images: single `0.55s ease` fade-up replacing line mask reveal
+- Hero heading updated: "The Medtech Evolution Capture problem." / italic "Solved."
+
 - Held Wed 22 April meeting with Lawrence Peterson (AU) and Alex Cauble-Chantrenne (NZ)
 - AU: Lawrence confirmed strong interest. No objection to AUD 30/practice. Flagged 50-practice minimum too high, taking to boss. Floor is 40 at AUD 30.
 - AU: product confirmed as G2M, entirely new software. Same ALEX backend. Capture API available. White-label confirmed. Medtech handling all marketing.
