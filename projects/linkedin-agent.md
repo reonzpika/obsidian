@@ -52,7 +52,14 @@ Option 3 chosen: scout deferred from creation time to execution day. `linkedin-p
 ### 2026-04-22 — Full automated pipeline design agreed
 Architecture for fully autonomous posting pipeline with Telegram human-in-loop. Three zones: (1) Automated idea generation: weekly Telegram suggestions from NZ health news scan; (2) In-session creation: topic selection, research, draft review, schedule — one laptop session per post; (3) Autonomous execution: Task Scheduler fires Python script at T-40min, runs scout + `claude -p` GH draft, sends comments to Telegram for approval (15 min timeout, posts as-is on no reply), assembles and executes. Additional: Telegram auth health check weekly, automated 48h review via Telegram. Build order: autonomous execute script + Telegram bot first.
 
-### 2026-04-22 — Autonomous execute pipeline built
+### 2026-04-23 — Root cause: ANTHROPIC_API_KEY contamination kills all claude -p calls
+`load_dotenv(ROOT / ".env")` runs at startup in both `grow_run.py` and `execute_scheduled.py`, setting `ANTHROPIC_API_KEY` in the process env. Every `claude -p` subprocess inherits it. Claude CLI, when it sees `ANTHROPIC_API_KEY`, uses the Anthropic API directly instead of the Claude Code subscription. The API key has depleted credits ("Credit balance is too low"), so every call exits 1. The error appears on stdout, not stderr, so the old handler (`stderr: {result.stderr[:400]}`) silently swallowed it — the log showed empty stderr and "0 drafts" or "GH draft failed". This affected all unattended runs since April 20.
+
+Fix shipped: `CLAUDE_CLI=C:/Users/reonz/.local/bin/claude.exe` added to `.env` (resolves Task Scheduler PATH gap); both `_invoke_claude` functions now strip `ANTHROPIC_API_KEY` from subprocess env and pass prompt via stdin. Error message now includes stdout. Verified working.
+
+Secondary issue also fixed: `StartWhenAvailable` caused a concurrent second fire of `execute_scheduled.py` on Apr 22 when the live run was still alive. A lock file (`temporary/execute_scheduled.lock`, stale threshold 2h) prevents this.
+
+### 2026-04-23 — Autonomous execute pipeline built
 `scripts/execute_scheduled.py` ships as the unattended posting entry point. Phases: (1) scout via `agents.scout.run()` — aborts with Telegram alert on 0 targets; (2) draft 6 GH comments via `claude -p` + `agents/gh_commenter.md` — continues without GH comments on failure; (3) Telegram approval loop: 15 min total budget, natural-language edits parsed via second `claude -p` call, posts as-is on timeout; (4) write `engagement.json`; (5) assemble `session_state.json`; (6) run `execute_post.py`. `tools/scheduler.py` updated: `schedule_execution` now registers `execute_scheduled.py` at T-40min with WakeToRun + StartWhenAvailable. `tools/telegram.py` added (send + poll utility). `agents/gh_commenter.md` added (self-contained picker + drafter prompt). Dry-run verified: 19 live feed targets found; GH draft gracefully degrades when `claude -p` unavailable in nested session. Pending user action: add TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID to .env. Blocked by Telegram login issue — tracked in `linkedin-20260422-002`.
 
 ## Weekly Progress Log

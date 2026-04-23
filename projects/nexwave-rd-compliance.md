@@ -80,7 +80,7 @@ NZ has no AI-specific legislation. The framework is a patchwork of existing heal
 ## Sequencing guidance
 
 **Now (Obj 1, synthetic data):**
-Commission Bell Gully Phase 1 ($2,500–$4,000). The SaMD classification answer controls everything downstream. The Buddle Findlay landscape overview is already captured in this document — the missing piece is the classification determination.
+Commission Buddle Findlay Phase 1 — SaMD classification only, scoped as a standalone piece at a price comparable to Bell Gully Phase 1. Negotiate as the opening phase of a structured annual relationship. Bell Gully is on hold as fallback. The SaMD classification answer controls everything downstream.
 
 **Before Obj 2 (real patient data):**
 Draft a PIA internally. Both firms confirmed NexWave is well-placed to do this. Budget a brief legal review of the PIA ($1,000–$2,000) before submitting to any Health NZ or PHO integration partner.
@@ -91,8 +91,8 @@ Broader Buddle Findlay engagement. By then you'll have real data flows, a live A
 **Before Obj 4 (commercialisation):**
 Full formal assessment: IP, licensing, marketing, contractual protections. Likely the right time for a combined Bell Gully (SaMD/device) + Buddle Findlay (commercial/privacy) engagement.
 
-**On Elevate Medtech (Anne Arndt, back 29 Apr):**
-Different layer — computer science and SaMD technical pathway (IEC 62304, ISO 13485, verification and validation). Complements the legal advice; does not replace it.
+**On Elevate Medtech (Anne Arndt):**
+Discontinued (23 Apr). Technical consultant only (IEC 62304, ISO 13485) — not legal counsel. Cannot replace Buddle Findlay for SaMD classification or privacy obligations. User wants one company throughout the year.
 
 ---
 
@@ -102,7 +102,7 @@ Different layer — computer science and SaMD technical pathway (IEC 62304, ISO 
 |---|---|---|---|---|---|
 | Bell Gully | Laura Hardcastle (Sr Associate), Kirsty Dobbs | Health law, SaMD specialist | 2026-04-15 | Proposal received 2026-04-16 | Phase 1 $2,500–$4,000 + GST. SaMD obligations under current law plus Medical Products Bill pipeline. Conflict check + 3 AI-output Qs required before proceeding. |
 | Buddle Findlay | Catherine Miller (Special Counsel) | Health law firm | 2026-04-07 | Proposal received 2026-04-17 | $9,000–$12,000 + GST + 3.5% service fee (20% R&D discount). Overview across 5 compliance areas: Privacy, System Standards, Professional Regulation, Contract Compliance, Marketing. Optional MTANZ/IP/Medical Products Bill notes. |
-| Elevate Medtech | Anne Arndt | SaMD regulatory consultant | 2026-04-08 | Away until 2026-04-29 | Awaiting response |
+| Elevate Medtech | Anne Arndt | SaMD regulatory consultant | 2026-04-08 | Discontinued 2026-04-23 | N/A — technical consultant only, not legal |
 | Aesculytics | Dr Arindam Bose | Clinical AI + Medsafe consultant | 2026-04-15 | No response | — |
 | CARSL | David Smyth | Medsafe sponsor / device registration | 2026-04-08 | Deprioritised | Not relevant — sponsor/registration focus only |
 
@@ -133,6 +133,7 @@ Different layer — computer science and SaMD technical pathway (IEC 62304, ISO 
 |---|---|
 | 2026-04-17 | Both proposals in hand. Open question: narrow-and-cheap (Bell Gully) vs broad-and-expensive (Buddle Findlay), or both-in-parallel. Budget envelope $18k across 18 months comfortably covers either; combining both would consume most of the first engagement. Elevate Medtech may add a third view when Anne returns 2026-04-29. |
 | 2026-04-20 | Full thread review completed. Bell Gully 3-question answers drafted (Inbox Helper: urgency suggestions only, not prescriptive actions; Care Gap Finder: identifies overdue checks, no treatment recommendations; urgent items: inbox reorder only, no push notifications) — reply pending Ryo sign-off on rd-20260420-002. Aesculytics: no response after 5 days, consider follow-up or deprioritise. Elevate Medtech: await Anne Arndt quote after 2026-04-29 return before deciding on Buddle Findlay. |
+| 2026-04-23 | **Buddle Findlay selected as primary legal partner.** Rationale: full R&D programme (Obj 1-4) requires all 5 compliance areas; Bell Gully Phase 1 is narrow (SaMD only); Buddle Findlay phased across the year is better long-term value. Approach: negotiate Phase 1 as SaMD classification only at a comparable price, then expand scope before each subsequent Objective. Bell Gully held as fallback. Elevate Medtech (Anne Arndt) discontinued — technical consultant, not legal counsel. One legal company for the full year. Next action: rd-20260423-002 (draft Buddle Findlay email to Catherine Miller, due 27 Apr). |
 
 ---
 

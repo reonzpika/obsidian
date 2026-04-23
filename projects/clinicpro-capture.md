@@ -61,7 +61,7 @@ Bundle practices and direct-sales practices are largely distinct sets. Double-di
 
 **Lawrence (AU):** Strong interest, deal likely. AUD 30 not objected to. 50-practice minimum flagged as too high; Lawrence taking to boss — expected response within days. Floor is 40 at AUD 30 (per trade rules). Product confirmed as entirely new G2M software (Medtech AU revamp). Same ALEX backend, not all APIs accessible; capture API available. White-label confirmed. Medtech handling all marketing. Setup fee acknowledged verbally in room, no cost given. Competitor image vendor slow on issue response; Lawrence prefers ClinicPro. Lawrence raised a management dashboard (tenancy/licence model) — confirmed as out-of-bundle scope, separate one-off build engagement (task medtech-20260422-001). Auth, update control, security requirements, domain, tax treatment not discussed — carry to next meeting.
 
-**Alex (NZ):** 15% flat commission confirmed verbally, NZ + AU scope. Default position held. NZ deal still pending formal team sign-off. PIA/pentest timeline and reporting cadence not confirmed.
+**Alex (NZ):** Clarified the 15% figure at the meeting (asked for the number, not a confirmation). Team decision still pending. NZ deal not agreed. PIA/pentest timeline and reporting cadence not confirmed.
 
 ## AU bundle — Lawrence Peterson (Medtech Global)
 
@@ -131,7 +131,7 @@ Tracked in task medtech-20260414-001.
 
 | # | Question | Status |
 |---|---|---|
-| Q1 | Does Medtech team accept 15% flat commission on NZ + AU direct sales? | Verbally confirmed by Alex in 22 Apr meeting. Awaiting formal contract. |
+| Q1 | Does Medtech team accept 15% flat commission on NZ + AU direct sales? | Alex asked for clarification on the figure at 22 Apr meeting; team decision still pending. |
 | Q2 | Does Lawrence accept AUD 30/practice/month — minimum practice number? | AUD 30 not objected to. 50-practice minimum flagged as too high. Lawrence taking to boss. Floor is 40 at AUD 30. |
 | Q3 | Double-dipping carve-out language — operational definition of "bundle practice" vs "direct-sales practice"? | To draft post-meeting |
 | Q4 | Reporting cadence for commission (quarterly acceptable, monthly burdensome) | Not discussed 22 Apr. To confirm next meeting. |

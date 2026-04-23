@@ -50,6 +50,14 @@ if (parked.length > 0) {
 - Cadence: 3x/week (1 carousel Tue + 2 text Thu/Sat) + fortnightly "The GP Builder" newsletter
 - Knowledge files updated to v4.0; Golden Hour system redesigned with core_targets.json
 
+### Week of 2026-04-23
+
+**founder-os**
+- Project created: Claude Code setup audit and improvement. Dashboard: Other Projects.
+- Claude Code audit completed: `context/tools/claude-code-audit-2026-04-23.md` — 4 critical gaps, 7 quick wins. Critical gap: bypassPermissions active globally with no per-repo guardrails.
+- Settings-todo checklist created: `context/tools/claude-code-settings-todo.md` — exact JSON for all settings.json changes, per-repo settings.json for linkedin/clinicpro-medtech/nexwave-rd, code-reviewer agent content. Apply via /update-config from home directory.
+- Task fo-20260423-001 created: watch "The Claude Code Setup Nobody Shows You" and apply improvements (due 27 Apr)
+
 ### Week of 2026-04-21
 
 **linkedin-agent**
@@ -59,6 +67,10 @@ if (parked.length > 0) {
 - Autonomous execute pipeline built: `scripts/execute_scheduled.py`, `tools/telegram.py`, `agents/gh_commenter.md`; Task Scheduler updated to fire at T-40min with WakeToRun
 - Dry-run confirmed: 19 live feed targets found; GH draft degrades gracefully; exit code 0
 - Blocked: Telegram login issue prevents bot setup (tracked: `linkedin-20260422-002`)
+- Diagnosed two production failures (grow 0-draft digest, Apr 21 post not executing): root cause `load_dotenv` sets `ANTHROPIC_API_KEY` in process env; `claude -p` subprocess inherits it and hits depleted API credits; error appeared on stdout not stderr so was silently swallowed as empty stderr
+- Fixed: `CLAUDE_CLI=C:/Users/reonz/.local/bin/claude.exe` added to `.env` (Task Scheduler PATH gap); `ANTHROPIC_API_KEY` stripped from subprocess env in both grow and execute scripts; prompt passed via stdin to avoid Windows arg-length edge cases
+- Fixed: lock file in `execute_scheduled.py` prevents concurrent runs when `StartWhenAvailable` double-fires; `mark_post_executed()` called on success; atexit + SIGTERM handler flushes `grow_log.json` on unexpected termination
+- Apr 21 post (`2026-04-16_managemyhealth-login-ux`) was never executed; registry still "scheduled"; decision needed once Telegram is set up (tracked: `linkedin-20260423-002`)
 
 **vault restructure**
 - Sprint layer eliminated: `sprints/active/` removed from vault, replaced with `phase:` on projects and `milestone:` on tasks

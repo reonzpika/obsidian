@@ -68,6 +68,16 @@ for (let p of active) {
 - Route refactor shipped (commit 6d7b0fe): moved capture routes up one level, dropped `/capture` path segment
 - Duplicate-NHI hardening ported from PR claude/fix-duplicate-nhi-patients-DoaFF (commit eaea8af): guards against race-condition duplicate NHI patient records
 - API path and middleware route fixes applied (commit 7523392): corrected broken routes from port rename
+- Correction: Alex did not confirm 15% verbally at 22 Apr meeting — asked for clarification on the figure only; team decision still pending
+- Lawrence follow-up email drafted (Gmail draft): short "minimum practice number outstanding" note, threaded in AU bundle thread
+- Alex follow-up email drafted (Gmail draft): signals readiness to move to contract, asks if anything needed to unblock team decision
+- Term sheet approach confirmed: 3-year term goes in term sheet (already in 19 Apr proposal); no pre-negotiation needed
+- AU term sheet v1 drafted: `clinicpro-medtech/docs/commercial/au-bundle-term-sheet-v1.md` — AUD $30/practice/month, 40-50 practice floor ($14,400-$18,000/year). 8 open questions documented. Hold until Q5 (WHT/Helen) resolved before sending to Lawrence.
+- AU deal value corrected: $14,400-$18,000/year (not $50-150k as previously stated in draft emails)
+- AU contract approach decided: self-draft with AI, get reviewed only — proportionate for deal size
+- HGM (Andrew Dentice): fee estimate request sent — review-only scope, deal value corrected, WHT flagged as key issue
+- Kindrik Partners: simple inquiry email sent — add scope/deal context when they reply
+- Champion email v1 drafted: `clinicpro-medtech/docs/marketing/phase-1/champion-email-v1.md` — "3 months of Capture, on me" offer; confirm incentive policy and capture.clinicpro.co.nz live before sending
 
 ### Week of 2026-04-14 (continued 19 Apr)
 - `/medtech/capture` landing page shipped (Phase 1 Task 1, commit 64788af): 7-section server-rendered page, editorial-clinical aesthetic, Newsreader + IBM Plex Sans + JetBrains Mono, teal-600 accent, mailto CTA, full spec copy

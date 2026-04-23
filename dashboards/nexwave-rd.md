@@ -182,10 +182,10 @@ Full detail, compliance landscape, sequencing guidance, and firm proposals: [[ne
 
 | Firm | Status | Next action |
 |---|---|---|
-| Bell Gully | Proposal received 2026-04-16 | Answer 3 AI-output questions to unlock conflict check — rd-20260420-002 |
-| Buddle Findlay | Proposal received 2026-04-17 | On hold — awaiting Elevate Medtech quote |
-| Elevate Medtech | Away until 2026-04-29 | Re-engage after 29 Apr for SaMD technical quote |
-| Aesculytics | No response after 5 days | Consider follow-up or deprioritise |
+| Bell Gully | On hold | Fallback only — do not instruct until Buddle Findlay Phase 1 scoped |
+| Buddle Findlay | **Selected — primary partner** | Draft email to Catherine Miller — rd-20260423-002, due 27 Apr |
+| Elevate Medtech | Discontinued 23 Apr | Technical consultant only, not legal counsel |
+| Aesculytics | No response | Deprioritised |
 
 ---
 
@@ -401,6 +401,15 @@ AI-maintained weekly log. Primary audit trail for MBIE claims. Hours: Ryo ~30hrs
 - GP Clinical Review Brief revised before reviewer outreach: BP monitoring trigger restructured into 4-tier stratification (target / mildly elevated / moderately elevated / severe — replaces blanket 6-monthly); CVDRA exclusions added; scope note added clarifying MVP classifies on incoming document only without longitudinal chart context; table cell readability improved
 - Gareth Roberts (Comprehensive Care PHO) outreach actioned: reply drafted with brief PDF attached, scheduled to send 2026-04-09 08:00 NZST via Gmail native Schedule Send. Gareth has offered to circulate within his network and asked about funding (answered: voluntary collegial input, no formal reimbursement budget)
 - Brendan Duck and Heidi Bubendorfer outreach held pending Gareth's network response — strategic decision to preserve warm-intro yield over parallel cold outreach in small Auckland GP community. Heidi (RNZCGP College channel) reserved as next escalation if <2 reviewers confirmed by 2026-04-14
+
+### Week of 23 April 2026
+
+- R&D master plan compiled: `context/rd-context/nexwave-rd-master-plan.md` — Obj 1 step table, compliance track, 6-week plan to 31 May, 8 open risks, full deadline table
+- Compliance engagement decision: Buddle Findlay selected as primary legal partner over Bell Gully; phased annual relationship to cover SaMD (now), privacy/HIPC (before Obj 2), PHO/HISO (before Obj 3)
+- Elevate Medtech (Anne Arndt) discontinued — technical consultant only, not legal counsel
+- Bell Gully on hold as fallback; do not instruct until Buddle Findlay Phase 1 scoped and priced
+- Next action: rd-20260423-002 — draft Buddle Findlay email to Catherine Miller (due 27 Apr)
+- Fellowship action plan compiled: `context/gpf-context/fellowship-action-plan.md` — submission target Sat 25 Apr; CRR Module 2 critical path
 
 ### Week of 20 April 2026
 
