@@ -31,6 +31,7 @@ inbox/            quick capture
 - **Daily note.** `daily/YYYY-MM-DD.md` holds Focus, Projects, Today's Plan. Read today's note at the start of any vault session.
 - **Dashboards are manual.** The weekly progress log in each dashboard is written by hand after work ships. Do not auto-generate.
 - **Task completion.** Use the `/complete-task` Templater macro. Do not manually move files or edit `status: done` alone.
+- **Email trashing.** Before trashing emails (e.g. during the morning routine), emit a single-line confirmation listing message IDs and senders, then wait for explicit yes. The irreversible-action gate applies even when a skill instructs trashing.
 
 ## Information hierarchy rules
 

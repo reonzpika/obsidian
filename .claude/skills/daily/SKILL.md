@@ -1,7 +1,7 @@
 ---
 name: daily
 description: Morning routine and midday check-in for Ryo's NexWave/ClinicPro workflow. Reads last 3 days of context in parallel (daily notes, Gmail, projects, tasks), presents a tight briefing with project status, urgent tasks, and quick wins, waits for focus declaration, then writes a minimal focused daily note. Use whenever the user says /daily, "morning routine", "daily note", "start my day", "what's on today", "daily briefing", or wants a snapshot of project status and priorities. Do NOT use for: evening review, day retrospective, tomorrow planning, session wrap-up. Use /daily-review for those.
-allowed-tools: Read, Write, Edit, Glob, Grep, Bash, TaskCreate, TaskUpdate, TaskList, TaskGet, mcp__claude_ai_Gmail__search_threads, mcp__claude_ai_Gmail__get_thread
+allowed-tools: Read, Write, Edit, Glob, Grep, Bash, TaskCreate, TaskUpdate, TaskList, TaskGet
 user-invocable: true
 ---
 
@@ -84,12 +84,12 @@ Extract from weekly review: the daily plan for today and adjacent days, deferred
 Extract from monthly review: the month's focus headline per stream, external deadline table.
 
 **Gmail (last 3 days):**
-Run these three searches simultaneously:
-- `newer_than:3d` — received
-- `newer_than:3d in:sent` — sent
-- `in:drafts newer_than:3d` — drafts
+Run these three gws searches simultaneously:
+- `gws gmail users threads list --params '{"userId":"me","q":"newer_than:3d"}'` — received
+- `gws gmail users threads list --params '{"userId":"me","q":"newer_than:3d in:sent"}'` — sent
+- `gws gmail users threads list --params '{"userId":"me","q":"in:drafts newer_than:3d"}'` — drafts
 
-Then read any threads that look actionable: replies from external contacts, anything unread, anything from key contacts (see Key Contacts section).
+Then read any actionable threads using `gws gmail users threads get --params '{"userId":"me","id":"<THREAD_ID>"}'`: replies from external contacts, anything unread, anything from key contacts (see Key Contacts section).
 
 **Projects:**
 Glob `projects/*.md`, read all project files. Note `id`, `title`, `phase`, `status`, `dashboard` for each active project.
@@ -106,10 +106,10 @@ Mark "Read context" completed.
 Run these in parallel. Do not print verbose output — this all happens silently.
 
 **Google Alerts (news feed):**
-Search Gmail: `from:googlealerts-noreply@google.com is:unread`. Process all unread alerts regardless of age (Ryo may skip /daily for several days — the queue is the source of truth).
+Search Gmail using gws: `gws gmail users messages list --params '{"userId":"me","q":"from:googlealerts-noreply@google.com is:unread"}'`. Process all unread alerts regardless of age (Ryo may skip /daily for several days — the queue is the source of truth).
 
 For each alert:
-1. Read the message with `get_thread`
+1. Read the thread with `gws gmail users threads get --params '{"userId":"me","id":"<THREAD_ID>"}'`
 2. Extract article titles, sources, and URLs
 3. Filter for NZ health / primary care / GP / AI-in-healthcare relevance — skip generic global AI hype and non-health items
 4. Dedupe against existing URLs in `C:/Users/reonz/cursor/LinkedIn/knowledge/news_feed.md`
@@ -118,10 +118,10 @@ For each alert:
 7. Track: N items added, M alerts trashed
 
 **Tool tips:**
-Search Gmail: `from:reonzpika@gmail.com is:unread`. Ryo forwards tools, YouTube videos, and tech resources from his personal address.
+Search Gmail using gws: `gws gmail users messages list --params '{"userId":"me","q":"from:reonzpika@gmail.com is:unread"}'`. Ryo forwards tools, YouTube videos, and tech resources from his personal address.
 
 For each email:
-1. Read the message with `get_thread`
+1. Read the thread with `gws gmail users threads get --params '{"userId":"me","id":"<THREAD_ID>"}'`
 2. Extract URL and tool/resource name (usually clear from subject)
 3. Skip non-tool emails: Zoom invites, own app links, Vercel logs, meeting forwards, shopping
 4. Classify: `claude-code` / `rag` / `ai-memory` / `ai-research` / `ai-scraping` / `ai-image` / `ai-workflow` / `document-parsing` / `directory` / `claude-code-tips` / `industry-news` / `other`
@@ -157,15 +157,16 @@ TBD, pending research
 Identify Gmail threads containing actionable items (reply required, decision needed, unblocks a task) that have no corresponding task file in `tasks/open/`. For each new action item:
 
 Additionally, if any task in `tasks/open/` has `status: blocked` and its body references specific email contacts, search Gmail for threads involving those contacts (both sent and received) and summarise the thread status in the task body. Do not create a new task — annotate the existing one.
-1. Create a task file in `tasks/open/` using the Task Schema below
-2. Track: K tasks created
 
 **Factual-only rule:** Task files must contain only information directly present in the source email. Specifically:
 - `title`: the action required, stated as a plain fact (e.g. "Reply to Anna Bell, Kerikeri Medical")
 - Task body: quote or paraphrase the email content only — sender, subject, date, what they asked or said
 - Cross-references: link to existing task IDs where the email is clearly related (e.g. `Related: [[medtech-20260414-001]]`)
-- Never add reply guidance, suggested wording, how-to advice, "Next steps", or any context not present in the source email
+- Never add: reply guidance, suggested wording, how-to steps, technical recommendations, "Next steps", or any context not in the source email. If in doubt, omit it.
 - If you don't know something, leave it blank or omit it — do not invent it
+
+1. Create a task file in `tasks/open/` using the Task Schema below
+2. Track: K tasks created
 
 These new task IDs will appear in the Urgent table in Phase 3.
 
@@ -355,7 +356,7 @@ For tasks that progressed but aren't done:
 
 ### Step 3: Check Gmail for urgent items
 
-Search Gmail for unread emails in the last 2 days. Read anything from key contacts or that looks actionable. Cross-reference against `tasks/open/` where `status: blocked` — if an email unblocks a task, note the task ID.
+Search Gmail for unread emails in the last 2 days using gws: `gws gmail users threads list --params '{"userId":"me","q":"newer_than:2d is:unread"}'`. Read actionable threads with `gws gmail users threads get --params '{"userId":"me","id":"<THREAD_ID>"}'`. Cross-reference against `tasks/open/` where `status: blocked` — if an email unblocks a task, note the task ID.
 
 ### Step 4: Create task files for new action items
 
