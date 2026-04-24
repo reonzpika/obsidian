@@ -10,6 +10,8 @@ phase: "Phase 1 marketing"
 dashboard: clinicpro-medtech
 ---
 
+**Commercial tracks**: [[clinicpro-capture-au-bundle]] (Lawrence Peterson) | [[clinicpro-capture-integration]] (Alex Cauble-Chantrenne)
+
 ## Description
 Mobile web app that photographs clinical images and commits them to patient records in Medtech Evolution via the ALEX API. All ALEX calls route through BFF at api.clinicpro.co.nz.
 

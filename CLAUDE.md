@@ -92,6 +92,7 @@ For callouts, embeds, block references, mermaid, footnotes, or any Obsidian synt
 
 ## Vault rules
 
+- **Project scope check.** If a project file starts covering more than one distinct workstream (separate contracts, separate partnerships, separate product tracks), suggest splitting into multiple project files. One project file = one coherent thing. Flag this proactively; do not wait for the user to notice.
 - **No code in the vault.** Implementation lives in the task's `repo:`, not here.
 - **No inline checkbox tasks** (`- [ ]`). Workflow state lives in frontmatter. Body is notes only.
 - **No task lists inside project files.** Use Dataview embeds only.
