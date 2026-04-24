@@ -6,7 +6,7 @@ repo: clinicpro-medtech
 stack: [nextjs, typescript, tailwind, vercel, supabase, aws-lightsail-bff]
 title: "ClinicPro Capture"
 description: "Mobile web app to capture clinical images into Medtech via ALEX API."
-phase: "Phase 1 marketing and AU bundle deal"
+phase: "Phase 1 marketing"
 dashboard: clinicpro-medtech
 ---
 
@@ -46,81 +46,14 @@ Landing page copy/design review (task medtech-20260419-001) must complete before
 - BFF mandatory: never call ALEX directly from Vercel
 - Phase 1 plan: `clinicpro-medtech/docs/superpowers/plans/2026-04-15-capture-marketing-phase1.md`
 
-## Two-contract architecture with Medtech (locked 19 April 2026)
+## Commercial overview
 
-Two separate contracts, two commercial logics. Both land at Wed 22 April 2026 meeting with Lawrence Peterson + Alex Cauble-Chantrenne. Medtech may attempt to link them; refuse linkage.
+Two separate contracts with Medtech, kept strictly separate. Medtech may attempt to link them; refuse linkage.
 
-1. **AU bundle deal** (Lawrence-led). Medtech Global purchases ClinicPro Capture licences to bundle into the Evolution AU launch. Per-licence fee model. Distinct product track (Evolution AU, a new launch separate from Medtech Evolution).
-2. **Integration contract** (Alex-led, NZ + AU direct sales). Commission on ClinicPro-direct Capture sales. Covers both NZ and AU (revised 19 April; earlier 14 April position was NZ-only).
+- **AU bundle deal** (Lawrence Peterson, Medtech Global): [[clinicpro-capture-au-bundle]]
+- **Integration contract** (Alex Cauble-Chantrenne, Medtech NZ): [[clinicpro-capture-integration]]
 
-Bundle practices and direct-sales practices are largely distinct sets. Double-dipping carve-out clause to be written as belt-and-suspenders.
-
-**Strategic context note (19 April 2026):** Medtech is the only PMS without a native image capture tool — Indici, Bp Premier, Best Practice, MedicalDirector have this solved. BATNA inversion: they need Capture to plug a competitive gap more than Ryo needs Medtech on this specific product. Strengthens posture on both contracts.
-
-## 22 April 2026 meeting outcomes
-
-**Lawrence (AU):** Strong interest, deal likely. AUD 30 not objected to. 50-practice minimum flagged as too high; Lawrence taking to boss — expected response within days. Floor is 40 at AUD 30 (per trade rules). Product confirmed as entirely new G2M software (Medtech AU revamp). Same ALEX backend, not all APIs accessible; capture API available. White-label confirmed. Medtech handling all marketing. Setup fee acknowledged verbally in room, no cost given. Competitor image vendor slow on issue response; Lawrence prefers ClinicPro. Lawrence raised a management dashboard (tenancy/licence model) — confirmed as out-of-bundle scope, separate one-off build engagement (task medtech-20260422-001). Auth, update control, security requirements, domain, tax treatment not discussed — carry to next meeting.
-
-**Alex (NZ):** Clarified the 15% figure at the meeting (asked for the number, not a confirmation). Team decision still pending. NZ deal not agreed. PIA/pentest timeline and reporting cadence not confirmed.
-
-## AU bundle — Lawrence Peterson (Medtech Global)
-
-**Execution sprint**: [[2026-04-medtech-sprint-2]] (21 Apr - 16 May 2026)
-**Strategy and pricing analysis**: [[clinicpro-capture-au-strategy]]
-**External proposal one-pager**: [[clinicpro-capture-au-proposal]]
-
-**Proposal received 12 April 2026:** Lawrence proposes Medtech purchases ClinicPro Capture licenses to bundle as a value-add for AU G2M in May. Scope: image capture + post only as starting point. Two other integration partners already confirmed for AU launch.
-
-**Terms sent to Lawrence 19 April 2026** (CC Alex, existing thread 19cfe204467d0370):
-
-- AUD 30 per active practice per month
-- 50 active practices per year minimum → AUD 18,000/year floor
-- 3-year initial term
-- Scope: image capture and ALEX /DocumentReference POST
-- Launch target May–June 2026 to align with Evolution AU G2M
-- Sydney AWS hosting, AU data residency covered
-
-## NZ + AU Integration Contract — Alex Cauble-Chantrenne (Medtech NZ)
-
-**Strategy and pricing analysis**: [[clinicpro-capture-medtech-integration-strategy]]
-
-Draft received from Alex 13 April 2026. Schedule 1 confirmed:
-
-- Commencement Date: 18 March 2026
-- Initial Term: 36 months (expires 18 March 2029)
-- Fee structure (draft): $10–$60/month per Active Facility by enrolment tier — being renegotiated
-- Permitted Purposes: direct image service only (Base + Portal without Confidential Scope + ALEX Apps)
-- Software: Medtech Artia and Medtech Evolution
-
-**Commercial position (confirmed 19 April 2026):**
-
-- Opening ask: 15% flat commission on Gross Revenue. Simplified from earlier 10/15% self-referred / Medtech-referred split (14 April email), consolidated on 16 April call.
-- Fallback: 20% flat commission.
-- Walkaway: above 20%.
-- Scope: both NZ and AU direct sales (revised from 14 April NZ-only position).
-- PIA/pentest timeline: 6 months from go-live (not draft's 3 months).
-
-Alex signalled personally on 16 April call that 30% was always "too much internally" and took 15% back to her team. Scope-revision email sent to Alex 19 April on existing thread (19cdf07cdcd3c13b) pulling back NZ-only line, keeping integration contract separate from AU bundle. 15% not re-mentioned in scope email — Alex already in team discussion.
-
-Non-negotiables (full list in strategy doc):
-1. Explicit NZ + AU geographic scope
-2. Double-dipping carve-out (bundle practices excluded from commission until they convert to direct)
-3. WHT on AU-sourced commission (services fee restructure, same as AU bundle)
-4. Scope locked to ClinicPro Capture (future tools separate)
-5. No exclusivity on ClinicPro side
-6. Termination + integration IP with 6-month wind-down
-7. PIA/pentest at 6 months from go-live
-
-Tracked in task medtech-20260414-001.
-
-## AU commercial contract — legal approach (decided 23 April 2026)
-
-- **Method:** self-draft with AI assistance, review-only legal engagement. No lawyer drafting from scratch.
-- **Rationale:** AUD $14,400-$18,000/year deal value makes full-drafting engagement disproportionate.
-- **Legal firms contacted:** HGM (Andrew Dentice, andrew.dentice@hgmlegal.com) and Kindrik Partners (Averill Dickson, averill.dickson@kindrik.co.nz). Duncan Cotterill (Ron Arieli, ron.arieli@duncancotterill.com, +64 21 254 3575) replied unsolicited via the firm's general Auckland inbox. All three confirmed capacity same day (23 Apr).
-- **Status (24 Apr):** All three firms on hold pending WHT resolution and term sheet finalisation. Evaluating Sprintlaw NZ for fixed-fee contract structure review (~$900 NZD, no calls required). WHT is a tax question requiring a separate specialist opinion — ask Helen first. Hold replies sent to all three firms. See task medtech-20260423-002.
-
-**AU term sheet v1 status (23 April 2026):** Drafted. `clinicpro-medtech/docs/commercial/au-bundle-term-sheet-v1.md`. AUD $30/practice/month, 40-50 practice floor ($14,400-$18,000/year), 3-year term. 8 open questions. Do not send to Lawrence until Q5 (WHT/Helen) is resolved.
+**Strategic note (19 April 2026):** Medtech is the only PMS without a native image capture tool. Indici, Bp Premier, Best Practice, and MedicalDirector have this solved. BATNA inversion: they need Capture to plug a competitive gap more than Ryo needs Medtech on this product. Strengthens posture on both contracts.
 
 ## BFF infrastructure (as of 22 April 2026)
 
@@ -136,18 +69,12 @@ Tracked in task medtech-20260414-001.
 - **RLS:** All three tables (`medtech_image_commit_audit`, `rate_limit_buckets`, `users`) have RLS disabled. Service role access is unaffected, but anon key can query via PostgREST. Enable RLS with no policies to close this (task medtech-20260422-003).
 - **Supabase MCP:** Configured globally in `~/.claude.json`. Use `mcp__supabase__execute_sql` for direct DB access in Claude Code sessions.
 
-## Open questions / blockers
+## Open questions
 
 | # | Question | Status |
 |---|---|---|
-| Q1 | Does Medtech team accept 15% flat commission on NZ + AU direct sales? | Alex asked for clarification on the figure at 22 Apr meeting; team decision still pending. |
-| Q2 | Does Lawrence accept AUD 30/practice/month — minimum practice number? | AUD 30 not objected to. 50-practice minimum flagged as too high. Lawrence taking to boss. Floor is 40 at AUD 30. |
 | Q3 | Double-dipping carve-out language — operational definition of "bundle practice" vs "direct-sales practice"? | To draft post-meeting |
-| Q4 | Reporting cadence for commission (quarterly acceptable, monthly burdensome) | Not discussed 22 Apr. To confirm next meeting. |
-| Q5 | WHT treatment on AU-NZ SaaS payments under NZ-AU DTA | ATO draft ruling TR 2024/D1 (Jan 2024): SaaS payments likely qualify as royalties under Art. 12, 5% WHT, withheld by Medtech (AU payer) before remitting to ClinicPro. Contract must address this explicitly: either gross-up clause (Medtech pays WHT on top, ClinicPro receives full AUD 30) or stated net rate (ClinicPro receives AUD 28.50). Professional tax opinion required — Art. 7 business profits exemption does not override Art. 12 royalty treatment. Next: ask Helen (or her referral) for targeted opinion. Hold term sheet until resolved. |
-| Q6 | Management dashboard scope — what does Lawrence need it to do? | Raised 22 Apr. Cannot price or commit until scope received from Lawrence in writing. Separate one-off invoice. Task medtech-20260422-001. |
 | Q7 | Auth model for main product and admin dashboard | Not discussed 22 Apr. Must resolve before engineering starts. |
-| Q8 | Update control: Medtech approval vs ClinicPro auto-deploy | Not discussed 22 Apr. Needed for setup fee scoping. |
 
 ## Tasks
 
