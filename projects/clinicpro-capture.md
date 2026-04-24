@@ -15,18 +15,18 @@ Mobile web app that photographs clinical images and commits them to patient reco
 
 **API reference**: [[alex-api-docs]]
 
-## Phase 1 marketing — status (19 April 2026)
+## Phase 1 marketing — status (23 April 2026)
 
 | Task                                            | Status                                  |
 | ----------------------------------------------- | --------------------------------------- |
 | Task 0: URL refactor + (marketing) route group  | Complete (commit prior to 64788af)      |
-| Task 1: `/medtech/capture` landing page         | Complete (commit 64788af, 19 Apr)       |
+| Task 1: `/medtech/capture` landing page         | Complete (commit 64788af, 19 Apr); full design overhaul 23 Apr (framer-motion, nz-green tokens, 9 sections) |
 | Task 2: `/refer-a-practice` bounty page + API   | Complete (commit 4326d34, 19 Apr)       |
 | Task 3: Capture upsell banner in clinicpro-saas | Complete (commit 4be3b4f, 23 Apr)       |
-| Task 4: Champion email v1                       | Open (pending landing page review)      |
+| Task 4: Champion email v1                       | Drafted (`clinicpro-medtech/docs/marketing/phase-1/champion-email-v1.md`). Not sent: pending landing page review and incentive policy confirmation. |
 | Task 5: Demo Loom script + case-study template  | Open                                    |
 
-Landing page copy/design review (task medtech-20260419-001) must complete before champion email send.
+Landing page copy/design review (task medtech-20260419-001) must complete before champion email send. Capture subdomain `capture.clinicpro.co.nz` must be live before sending.
 
 ## Current goals
 - Ship Phase 1 marketing (landing page, refer-a-practice, in-app banner, champion email, demo Loom) by 2026-04-21
@@ -113,6 +113,16 @@ Non-negotiables (full list in strategy doc):
 
 Tracked in task medtech-20260414-001.
 
+## AU commercial contract — legal approach (decided 23 April 2026)
+
+- **Method:** self-draft with AI assistance, review-only legal engagement. No lawyer drafting from scratch.
+- **Rationale:** AUD $14,400-$18,000/year deal value makes full-drafting engagement disproportionate.
+- **Legal firms approached:** HGM (Andrew Dentice, andrew.dentice@hgmlegal.com) and Kindrik Partners (hello@kindrik.co.nz). Scope: review of self-prepared draft + markup. Deal value stated in both emails. WHT flagged in HGM email as key issue.
+- **Status:** awaiting quotes from both firms (task medtech-20260423-002, due 30 Apr).
+- **Primary legal partner (NexWave / ClinicPro):** Buddle Findlay selected 23 Apr. Contact: Catherine Miller. Covers SaMD, privacy/HIPC, HISO, PHO contracts, MCNZ guidance across the full R&D year. Phased engagement: SaMD now, privacy before Obj 2, PHO before Obj 3. Bell Gully held as fallback. Elevate Medtech (Anne Arndt) discontinued.
+
+**AU term sheet v1 status (23 April 2026):** Drafted. `clinicpro-medtech/docs/commercial/au-bundle-term-sheet-v1.md`. AUD $30/practice/month, 40-50 practice floor ($14,400-$18,000/year), 3-year term. 8 open questions. Do not send to Lawrence until Q5 (WHT/Helen) is resolved.
+
 ## BFF infrastructure (as of 22 April 2026)
 
 - **Reference doc:** `context/medtech-context/lightsail-bff.md` contains the full BFF reference: all 18 endpoints, `BFF_INTERNAL_SECRET` auth model, rate limiting, OAuth token flow, systemd deployment, env vars, error patterns, and non-obvious design decisions. Read this before any BFF session.
@@ -135,7 +145,7 @@ Tracked in task medtech-20260414-001.
 | Q2 | Does Lawrence accept AUD 30/practice/month — minimum practice number? | AUD 30 not objected to. 50-practice minimum flagged as too high. Lawrence taking to boss. Floor is 40 at AUD 30. |
 | Q3 | Double-dipping carve-out language — operational definition of "bundle practice" vs "direct-sales practice"? | To draft post-meeting |
 | Q4 | Reporting cadence for commission (quarterly acceptable, monthly burdensome) | Not discussed 22 Apr. To confirm next meeting. |
-| Q5 | WHT services-fee restructure applied to both contracts — Helen briefing | Task medtech-20260418-004 |
+| Q5 | WHT services-fee restructure applied to both contracts — Helen briefing | Task medtech-20260418-004. Deferred to Buddle Findlay engagement (23 Apr decision). Hold term sheet until resolved. |
 | Q6 | Management dashboard scope — what does Lawrence need it to do? | Raised 22 Apr. Cannot price or commit until scope received from Lawrence in writing. Separate one-off invoice. Task medtech-20260422-001. |
 | Q7 | Auth model for main product and admin dashboard | Not discussed 22 Apr. Must resolve before engineering starts. |
 | Q8 | Update control: Medtech approval vs ClinicPro auto-deploy | Not discussed 22 Apr. Needed for setup fee scoping. |

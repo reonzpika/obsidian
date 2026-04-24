@@ -84,6 +84,12 @@ for (let p of active) {
 - HGM (Andrew Dentice): fee estimate request sent — review-only scope, deal value corrected, WHT flagged as key issue
 - Kindrik Partners: simple inquiry email sent — add scope/deal context when they reply
 - Champion email v1 drafted: `clinicpro-medtech/docs/marketing/phase-1/champion-email-v1.md` — "3 months of Capture, on me" offer; confirm incentive policy and capture.clinicpro.co.nz live before sending
+- Lawrence follow-up "Following up — AU bundle" sent
+- Alex Cauble-Chantrenne follow-up sent: NZ/AU integration contract readiness, signals move to contract
+- Legal inquiries sent to HGM (Andrew Dentice) and Kindrik Partners for AU contract review; scope: review-only, AUD $14-18k/year deal value
+- Buddle Findlay selected as primary legal partner (covers 5 areas for full R&D year); Bell Gully and Elevate Medtech deferred
+- AU contract approach confirmed: self-draft with AI assistance, review-only legal engagement (proportionate for deal size)
+- New task created: medtech-20260423-002 — review lawyer quotes and engage firm, due 30 Apr
 
 ### Week of 2026-04-14 (continued 19 Apr)
 - `/medtech/capture` landing page shipped (Phase 1 Task 1, commit 64788af): 7-section server-rendered page, editorial-clinical aesthetic, Newsreader + IBM Plex Sans + JetBrains Mono, teal-600 accent, mailto CTA, full spec copy
