@@ -117,9 +117,8 @@ Tracked in task medtech-20260414-001.
 
 - **Method:** self-draft with AI assistance, review-only legal engagement. No lawyer drafting from scratch.
 - **Rationale:** AUD $14,400-$18,000/year deal value makes full-drafting engagement disproportionate.
-- **Legal firms approached:** HGM (Andrew Dentice, andrew.dentice@hgmlegal.com) and Kindrik Partners (hello@kindrik.co.nz). Scope: review of self-prepared draft + markup. Deal value stated in both emails. WHT flagged in HGM email as key issue.
-- **Status:** awaiting quotes from both firms (task medtech-20260423-002, due 30 Apr).
-- **Primary legal partner (NexWave / ClinicPro):** Buddle Findlay selected 23 Apr. Contact: Catherine Miller. Covers SaMD, privacy/HIPC, HISO, PHO contracts, MCNZ guidance across the full R&D year. Phased engagement: SaMD now, privacy before Obj 2, PHO before Obj 3. Bell Gully held as fallback. Elevate Medtech (Anne Arndt) discontinued.
+- **Legal firms contacted:** HGM (Andrew Dentice, andrew.dentice@hgmlegal.com) and Kindrik Partners (Averill Dickson, averill.dickson@kindrik.co.nz). Duncan Cotterill (Ron Arieli, ron.arieli@duncancotterill.com, +64 21 254 3575) replied unsolicited via the firm's general Auckland inbox. All three confirmed capacity same day (23 Apr).
+- **Status (24 Apr):** All three firms on hold pending WHT resolution and term sheet finalisation. Evaluating Sprintlaw NZ for fixed-fee contract structure review (~$900 NZD, no calls required). WHT is a tax question requiring a separate specialist opinion — ask Helen first. Hold replies sent to all three firms. See task medtech-20260423-002.
 
 **AU term sheet v1 status (23 April 2026):** Drafted. `clinicpro-medtech/docs/commercial/au-bundle-term-sheet-v1.md`. AUD $30/practice/month, 40-50 practice floor ($14,400-$18,000/year), 3-year term. 8 open questions. Do not send to Lawrence until Q5 (WHT/Helen) is resolved.
 
@@ -145,7 +144,7 @@ Tracked in task medtech-20260414-001.
 | Q2 | Does Lawrence accept AUD 30/practice/month — minimum practice number? | AUD 30 not objected to. 50-practice minimum flagged as too high. Lawrence taking to boss. Floor is 40 at AUD 30. |
 | Q3 | Double-dipping carve-out language — operational definition of "bundle practice" vs "direct-sales practice"? | To draft post-meeting |
 | Q4 | Reporting cadence for commission (quarterly acceptable, monthly burdensome) | Not discussed 22 Apr. To confirm next meeting. |
-| Q5 | WHT services-fee restructure applied to both contracts — Helen briefing | Task medtech-20260418-004. Deferred to Buddle Findlay engagement (23 Apr decision). Hold term sheet until resolved. |
+| Q5 | WHT treatment on AU-NZ SaaS payments under NZ-AU DTA | ATO draft ruling TR 2024/D1 (Jan 2024): SaaS payments likely qualify as royalties under Art. 12, 5% WHT, withheld by Medtech (AU payer) before remitting to ClinicPro. Contract must address this explicitly: either gross-up clause (Medtech pays WHT on top, ClinicPro receives full AUD 30) or stated net rate (ClinicPro receives AUD 28.50). Professional tax opinion required — Art. 7 business profits exemption does not override Art. 12 royalty treatment. Next: ask Helen (or her referral) for targeted opinion. Hold term sheet until resolved. |
 | Q6 | Management dashboard scope — what does Lawrence need it to do? | Raised 22 Apr. Cannot price or commit until scope received from Lawrence in writing. Separate one-off invoice. Task medtech-20260422-001. |
 | Q7 | Auth model for main product and admin dashboard | Not discussed 22 Apr. Must resolve before engineering starts. |
 | Q8 | Update control: Medtech approval vs ClinicPro auto-deploy | Not discussed 22 Apr. Needed for setup fee scoping. |
