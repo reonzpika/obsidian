@@ -65,6 +65,7 @@ if (parked.length > 0) {
 - 4 criteria with findings: cr.1 (history source), cr.11 (medication labelling), cr.16 (non-scheduled immunisations), cr.17 (occupational history)
 - Report and Plan template filled in PDF programmatically; output: `Clinical Record Review Audit Checklist - Complete.pdf`
 - gpf-20260330-004 closed
+- Fellowship Assessment Visit form (7-page fillable PDF) walked through; submission package broken into 7 tasks (gpf-20260425-001..007) split across desk fill (Sun/Mon) and on-site equipment + drug walkthrough (Tue)
 
 **linkedin-agent**
 - Fixed: `assemble_session_state.py` now extracts `## Post Body` section only; metadata headers no longer posted to LinkedIn

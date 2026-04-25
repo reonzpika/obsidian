@@ -14,17 +14,17 @@
 
 **Tools:**
 
-- **PhotoRoom** -- best all-in-one. Background removal, lifestyle scene generation, AI model feature (dress AI models in product; useful for earrings, pendants on neck). ~NZD $22-30/month (annual). Mobile-first. Strong NZ accessibility. No jewellery-specific training but widely used. Limitation: reflections on polished metal still require a clean product shot as input.
+- **PhotoRoom** -- best all-in-one. Background removal, lifestyle scene generation, AI model feature (dress AI models in product; useful for earrings, pendants on neck). Pro: USD $7.50/month (~NZD $13) on annual billing, or USD $12.99/month (~NZD $22) monthly. Mobile-first. Strong NZ accessibility. No jewellery-specific training but widely used. Limitation: reflections on polished metal still require a clean product shot as input.
 
-- **Flair.ai** -- canvas-based drag-and-drop. Place product on screen, add props (marble podiums, florals, dark velvet), AI renders the scene. Good for editorial lifestyle shots matching Miozuki's deep burgundy and cream palette. Documented issues with fine text and complex reflective geometry. Free tier exists; paid from ~USD $10/month (~NZD $17).
+- **Flair.ai** -- canvas-based drag-and-drop. Place product on screen, add props (marble podiums, florals, dark velvet), AI renders the scene. Good for editorial lifestyle shots matching Miozuki's deep burgundy and cream palette. Documented issues with fine text and complex reflective geometry. Very limited free trial (~5 images, not a working free tier); paid from ~USD $10/month (~NZD $17). Treat as paid from day one.
 
-- **Pixora** -- jewellery-specific. Accessory presets trained for reflective surfaces, gemstone transparency, and matching lighting to the material. Preserves stone fire and brilliance in scene generation. Most technically appropriate for moissanite and pearl. Pricing: verify at usepixora.com -- not confirmed in this research.
+- **Pixora** -- material-aware product photography tool with specific handling for reflective surfaces, gemstone transparency, and matching lighting to material type. Well-suited for moissanite and pearl. Pro: USD $9.90/month (~NZD $17). Free tier: 100 credits to start.
 
 - **Mokker** -- fast and simple. Pre-built templates including jewellery staging. Upload one photo, select style, generate. Best for non-technical use (Ting could operate this). No creative control over composition. Limited for editorial brand identity work. Free trial; paid plans from ~USD $30/month.
 
-**LunaJewels case study (verified 2026):** Shopify jewellery brand used Midjourney to generate lifestyle backgrounds (sunlit villa, editorial settings) and Canva Magic Edit to composite product onto AI-generated scenes. Reduced branding budget by 85%, launched 5x more collections. Directly applicable to Miozuki.
+**Workflow note:** DTC jewellery brands have used Midjourney to generate lifestyle backgrounds (sunlit settings, editorial scenes) and Canva Magic Edit to composite product shots onto those backgrounds, substantially reducing traditional photography costs. This workflow is directly applicable to Miozuki.
 
-**Miozuki fit:** Flair or Pixora for hero/editorial shots; Mokker for catalogue speed; PhotoRoom for product-on-model (earrings, pendants). Start with Flair free tier + Canva Magic Edit as the LunaJewels workflow before committing to a paid tool.
+**Miozuki fit:** Flair or Pixora for hero/editorial shots; Mokker for catalogue speed; PhotoRoom for product-on-model (earrings, pendants). Start with Midjourney + Canva Magic Edit as the minimum viable workflow before committing to additional paid tools.
 
 ---
 
@@ -34,7 +34,7 @@
 
 - **AdCreative.ai** -- generates static ad creatives (Meta, Google Display) from product images and brand assets. Starter: USD $39/month (~NZD $67) for 10 downloads/month and 1 brand. Useful for rapid A/B testing of ad variants. Limitation: outputs can look generic without strong brand input. No verified jewellery-specific conversion data found.
 
-- **Creatify.ai** -- UGC-style short video ad generation for TikTok, Instagram Reels, YouTube Shorts. 1,000+ AI avatars, 29 languages, generates 5-10 video variations per product in one click. Relevant for pre-revenue brand that cannot yet film real customer testimonials. Pricing: not confirmed in this research; verify at creatify.ai.
+- **Creatify.ai** -- UGC-style short video ad generation for TikTok, Instagram Reels, YouTube Shorts. 1,000+ AI avatars, 29 languages, generates 5-10 video variations per product in one click. Relevant for pre-revenue brand that cannot yet film real customer testimonials. Creator plan: USD $39/month (~NZD $67), or $33/month billed annually. Free plan available with watermark.
 
 - **Canva AI (Magic Design for ads)** -- included in Canva Pro (~NZD $22/month). Not a dedicated ad platform but generates ad-ready creatives from product images. Lowest additional cost given Canva is already a likely tool. Less automated than AdCreative but more brand-controllable.
 
@@ -67,6 +67,7 @@ Miozuki has Klaviyo integrated. The following AI features are live and should be
 - Free tier: 250 active profiles, 500 emails/month. Adequate for launch.
 - 500 contacts: ~USD $20/month (~NZD $34). Upgrade when list exceeds 250.
 - Note: post-Feb 2025, billing is on total active profiles, not emails sent.
+- Shopify sync caveat: Klaviyo pulls all historical Shopify customers as active profiles, not just new email subscribers. A store with existing buyers will exceed the 250-profile free limit faster than expected. Low risk at pre-revenue launch; watch on first purchase wave.
 
 **Miozuki fit:** Activate Smart Send Time and AI subject lines immediately. Predictive Analytics and CLV features become valuable once there are 100+ purchasers. Klaviyo is well-positioned for the email capture popup (already built) and post-purchase sequences.
 
@@ -101,7 +102,7 @@ Miozuki has Klaviyo integrated. The following AI features are live and should be
 2. **Canva Magic Edit / Magic Design** to composite product photography onto Midjourney backgrounds. Canva Pro ~NZD $22/month.
 3. **Adobe Firefly** for background removal and background generation within Adobe products. Included in Creative Cloud; standalone access via Firefly web app (free tier available).
 
-**LunaJewels precedent (2026 case study):** Jewellery brand cut branding budget 85% and launched 5x more collections using Midjourney + Canva Magic Edit. Direct precedent for Miozuki.
+**Workflow precedent:** DTC jewellery brands have cut branding costs substantially and increased collection output using Midjourney + Canva Magic Edit for lifestyle imagery. Direct precedent for Miozuki.
 
 **Video content:**
 
@@ -109,14 +110,14 @@ Miozuki has Klaviyo integrated. The following AI features are live and should be
 - **HeyGen** -- AI avatar video creation. Useful for explainer-style content (moissanite education, stone guide). USD $29/month (~NZD $50) for Creator plan.
 - **Creatify.ai** -- UGC-style short video ads from product stills. Relevant once ad creative is needed.
 
-**Midjourney pricing:** USD $10/month (Basic, 200 images/month) to USD $30/month (Standard, unlimited relaxed). Start at Basic.
+**Midjourney pricing:** USD $10/month (Basic, ~200 Fast mode images, no Relax mode) or USD $30/month (Standard, unlimited Relax mode). Note: the Basic plan has no Relax mode and runs out in the first week of daily use. Standard ($30/month) is the practical minimum for consistent daily content production. There is no free plan.
 
 **Platform priority for Miozuki:**
 - Instagram: static editorial content (Midjourney + Canva workflow)
 - TikTok: educational video (moissanite vs diamond content) -- HeyGen or direct-to-camera
 - Pinterest: product pins with lifestyle backgrounds (high SEO value; covered in community doc)
 
-**Miozuki fit:** Midjourney ($10/month USD) + Canva Pro ($22/month NZD) is the minimum viable content stack. No additional tools needed to start. HeyGen as a later addition for educational video.
+**Miozuki fit:** Midjourney Standard ($30/month USD) + Canva Pro (~$22/month NZD) is the minimum viable content stack for consistent daily use. HeyGen as a later addition for educational video.
 
 ---
 
@@ -127,10 +128,10 @@ Miozuki has Klaviyo integrated. The following AI features are live and should be
 | Klaviyo Smart Send Time + AI subject lines | $0 (already on free tier) | Now | Turn on in Klaviyo settings |
 | Judge.me (free plan) | $0 | Now | Install via Shopify App Store |
 | Canva Pro | ~$22 | Now | Required for Magic Edit workflow |
-| Midjourney Basic | ~$17 | Now | Lifestyle background generation |
+| Midjourney Standard | ~$51 | Now | Lifestyle background generation (Basic is insufficient for daily use -- no Relax mode) |
 | Flair.ai | ~$17 | Months 1-3 | Hero and editorial shot generation |
 | AdCreative.ai Starter | ~$67 | When ads begin | A/B test ad creatives |
-| PhotoRoom Pro | ~$25 | Months 1-3 | On-model shots for earrings/pendants |
+| PhotoRoom Pro | ~$13 (annual) / ~$22 (monthly) | Months 1-3 | On-model shots for earrings/pendants |
 | Klaviyo Predictive Analytics | Included on paid plan (~$34+) | When 100+ purchasers | Needs customer data to function |
 | Judge.me Awesome | ~$26 | When 30+ reviews | AI summaries, syndication |
 | Creatify / HeyGen | ~$50 | Months 3-6 | Video content once product assets exist |

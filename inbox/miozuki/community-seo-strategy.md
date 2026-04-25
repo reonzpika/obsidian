@@ -50,7 +50,7 @@ The benchmark case: a jeweller documented in National Jeweler generated thousand
 
 | Subreddit | Est. members | Rules | Miozuki opportunity |
 |---|---|---|---|
-| r/EngagementRings | 256k+ | Promotion banned; personal posts allowed | High. Moissanite questions are frequent. Same expert-participant approach applies. |
+| r/EngagementRings | 479k+ | Promotion banned; personal posts allowed | High. Moissanite questions are frequent. Same expert-participant approach applies. |
 | r/jewelry | 500k+ | Similar to above | Medium. Pearl and moissanite education posts have organic reach. |
 | r/weddingplanning | Large | Personal focus; no selling | Low direct value. Indirect: moissanite questions appear regularly. |
 | r/MoissaniteBST | 28k | Personal BST only | Monitor for brand mentions only. Do not engage commercially. |
@@ -96,7 +96,7 @@ NZ Reddit communities offer modest brand-building value compared to global jewel
 - 70% of Pinterest users explore jewellery on the platform
 - 83% of Pinterest users report making purchase decisions based on discovery there
 - Pinterest content lifespan: months to years, versus hours on Instagram/TikTok
-- 498 million monthly active users globally
+- 619 million monthly active users globally (Q4 2025)
 - Jewellery is consistently cited as a top Pinterest shopping category
 
 ### Content formats that perform
@@ -176,13 +176,13 @@ A new domain needs 25-50 dofollow links from 25+ unique referring domains before
 
 ### Tier 2: NZ media and editorial (months 2-6)
 
-- **SourceBottle (sourcebottle.com.au):** The leading HARO-equivalent for Australia and NZ. Journalists from Stuff, NZ Herald, NZME, and lifestyle outlets post source requests here. Free to sign up. Filter by NZ region and lifestyle/fashion/consumer categories. Respond to relevant queries (ethical jewellery, engagement ring trends, moissanite vs diamond, sustainable shopping) with expert commentary. A successful SourceBottle placement in Stuff or Viva is a high-DA editorial backlink with zero cost beyond time.
+- **SourceBottle (sourcebottle.com):** The leading HARO-equivalent for Australia and NZ. Journalists from Stuff, NZ Herald, NZME, and lifestyle outlets post source requests here. Free to sign up. Filter by NZ region and lifestyle/fashion/consumer categories. Respond to relevant queries (ethical jewellery, engagement ring trends, moissanite vs diamond, sustainable shopping) with expert commentary. A successful SourceBottle placement in Stuff or Viva is a high-DA editorial backlink with zero cost beyond time.
 - **HARO (now rebranded, via Featured.com):** Quality has declined due to AI-generated response flooding. SourceBottle is a better NZ-specific option. Still worth monitoring.
 - **Viva (NZ Herald):** 259,000 weekly readership. Editorial focus includes NZ fashion and lifestyle brands. Contact: viva@nzherald.co.nz. Pitch angles: "NZ-designed moissanite jewellery as ethical alternative to mined diamonds," "pearl revival as 2026 jewellery trend" (search interest confirmed up 45% on Pinterest). Lead time for editorial: 4-8 weeks. A Viva feature or mention is a high-authority dofollow link.
 - **Stuff Life and Style:** Consumer-facing, broad NZ readership. More accessible than Viva for new brands. Pitch via editorial contacts or through SourceBottle queries.
 - **Metro NZ:** Quarterly, Auckland-focused lifestyle and culture. Smaller but high-credibility. Relevant for a premium Auckland-adjacent brand.
-- **Ensemble Magazine (ensemblemagazine.co.nz):** Fashion and lifestyle, editorial team with backgrounds at Viva, Metro, and Stuff. Email hello@ensemblemagazine.co.nz with a product sample and pitch. More approachable for new brands than NZME properties.
-- **Bride and Groom Magazine (brideandgroom.co.nz):** NZ's top-selling wedding magazine. Engagement ring features are a standard editorial section. Request for review/feature is appropriate for a moissanite brand. DA moderate but highly relevant audience.
+- **Ensemble Magazine:** ~~ensemblemagazine.co.nz~~ **CLOSED -- no longer publishing as of 2025.** Remove from outreach plan. Alternative: Fashion Quarterly (fqmagazine.co.nz) or Next Magazine for NZ fashion/lifestyle editorial coverage.
+- **Bride and Groom Magazine (brideandgroom.co.nz):** NZ's top-selling wedding magazine (in print since 1987). Engagement ring features are a standard editorial section. Request for review/feature is appropriate for a moissanite brand. DA moderate but highly relevant audience. Contact: production@brideandgroom.co.nz.
 
 ### Tier 3: NZ wedding and lifestyle blogs (months 3-9)
 
@@ -228,7 +228,7 @@ This is achievable without a paid link-building budget. Getting to 50 unique ref
 
 | Platform | Cost | NZ coverage | Best for |
 |---|---|---|---|
-| Modash (modash.io) | From $99/month | Strong -- 52+ NZ micro-influencers indexed, filterable by niche and engagement | Paid tool with audience analytics; best for vetting before outreach |
+| Modash (modash.io) | From $199/month | Strong -- NZ micro-influencers indexed, filterable by niche and engagement; 14-day free trial | Paid tool with audience analytics; best for vetting before outreach |
 | Collabstr (collabstr.com) | Free tier available | Moderate -- 34 NZ UGC creators listed, 33 in Auckland specifically | Self-serve marketplace; creators set their own rates; easy for small brands |
 | Favikon | Free tier | Good for NZ discovery and ranking | Influencer discovery and benchmarking |
 | StarNgage | Free tier | Good | Instagram fashion/lifestyle NZ ranking |
@@ -319,12 +319,12 @@ These five actions should run in parallel from launch week, ordered by speed of 
 - Respond to relevant queries as the Miozuki brand founder with expert commentary
 - A single Stuff or Viva placement from this channel is worth 20 directory backlinks in SEO authority
 
-**5. Pitch Ensemble Magazine and Bride and Groom for editorial coverage (Month 2)**
-- Ensemble (ensemblemagazine.co.nz) is the most accessible NZ fashion editorial for a new brand
-- Bride and Groom (brideandgroom.co.nz) is the direct-access route to engaged couple purchase intent
+**5. Pitch Bride and Groom (and NZ fashion editorial) for editorial coverage (Month 2)**
+- Bride and Groom (brideandgroom.co.nz, production@brideandgroom.co.nz) is the direct-access route to engaged couple purchase intent
+- Ensemble Magazine has closed (ceased 2025). Alternatives for NZ fashion/lifestyle editorial: Fashion Quarterly (fqmagazine.co.nz), Next Magazine, or Vogue Australia/NZ digital
 - Pitch: product samples + a brand story angle (NZ-based, moissanite and pearl, ethical sourcing)
 - Lead time 4-8 weeks; start outreach in month 2 to target a month 3-4 placement
-- One feature in either publication generates a high-DA backlink and credibility that accelerates all other channels
+- One feature in a relevant publication generates a high-DA backlink and credibility that accelerates all other channels
 
 ---
 

@@ -46,7 +46,7 @@ Urban List and Neat Places: advertising and sponsored placements. JWNZ: member s
 
 | Tool | MVP Time | Monthly Cost | SEO Rendering | Best For |
 |---|---|---|---|---|
-| Softr + Airtable | 1-2 weeks | $50-$100 | Server-rendered, Google-indexable | No-code, fast launch, basic directories |
+| Softr + Airtable | 1-2 weeks | Basic $49/month (annual); Professional $139/month | Server-rendered, Google-indexable | No-code, fast launch, basic directories |
 | Webflow CMS + Airtable + Whalesync | 3-5 weeks | $100-$200 | Static/SSR, strong SEO | No-code, design-quality matters |
 | Next.js + Airtable (custom) | 4-8 weeks | $20-$50 (infra only) | SSG/SSR, best-in-class SEO | Dev-available, large listing count, programmatic SEO |
 | Dorik | 1-2 weeks | $20-$40 | Server-rendered, solid SEO basics | Simplest no-code option, less flexible |
@@ -58,7 +58,7 @@ Urban List and Neat Places: advertising and sponsored placements. JWNZ: member s
 
 **Programmatic SEO is the real play for directories.** The core value of a directory for SEO is not the homepage: it is hundreds of individual listing pages, each targeting a long-tail query. "Moissanite rings Auckland," "recycled gold jeweller Wellington," "ethical engagement rings NZ." Each page becomes a unique, indexed URL. This only works if each listing has genuine, differentiated content (not a copied-in blurb).
 
-**Build recommendation for Miozuki:** If pursuing this, Next.js + Airtable is the natural choice. Miozuki's main site is already Next.js on Vercel. A directory site could be a separate subdomain (`directory.miozuki.co.nz` or a standalone domain) built with the same stack. Airtable handles the listing database; Next.js generates static pages at build time. Estimated build: 4-6 weeks part-time with developer involvement. No recurring SaaS cost beyond Airtable Team (~$24/month).
+**Build recommendation for Miozuki:** If pursuing this, Next.js + Airtable is the natural choice. Miozuki's main site is already Next.js on Vercel. The guide should be built as a subdirectory on miozuki.co.nz (`/moissanite-guide`), not a subdomain. 2026 SEO consensus is clear: subdirectories consolidate domain authority more effectively than subdomains for content hubs. Airtable handles the listing database; Next.js generates static pages at build time. Estimated build: 4-6 weeks part-time with developer involvement. No recurring SaaS cost beyond Airtable Team (~$24/month per user).
 
 The Softr route launches faster (1-2 weeks) but sacrifices programmatic SEO granularity and long-term flexibility. Acceptable for validating concept; not ideal for serious SEO play.
 
@@ -74,7 +74,7 @@ The Softr route launches faster (1-2 weeks) but sacrifices programmatic SEO gran
 
 **Hello May** (Australia/NZ wedding directory and magazine): The most relevant comparable. Established curated wedding vendor directory covering Australia and NZ. Ranks well for wedding vendor searches. Critically, its authority comes from the editorial magazine component, not just the directory. Vendors pay for featured listings; the magazine content drives organic search; the directory monetises the traffic. This is the model that works: content-first, directory-second.
 
-**Mindfully Wed** (sustainable weddings, Australia/NZ focus): Smaller example of a niche-within-niche approach for ethical and sustainable wedding vendors across Australia and NZ. Sustainable Wedding Alliance takes a similar approach globally.
+**Mindfully Wed** (mindfullywed.com -- note double-l): Smaller example of a niche-within-niche approach for ethical and sustainable wedding vendors across Australia and NZ. Operating since 2016. Sustainable Wedding Alliance takes a similar approach globally.
 
 **Key pattern across all successful examples:**
 - Launched with 50-200 curated listings, not empty or near-empty
@@ -114,7 +114,7 @@ An educational and comparison site covering all NZ moissanite retailers, stone g
 
 **Monetisation potential:** Low direct revenue in NZ market. Indirect SEO and brand authority value is significant. Over 12-18 months, a guide site with strong rankings for "moissanite NZ" queries generates qualified referral traffic to miozuki.co.nz.
 
-**Brand alignment:** Very strong. Miozuki is a moissanite retailer building category authority. Owning the NZ moissanite education space is a natural extension of what the brand should be doing on its main site anyway. This concept is less a separate site and more an expansion of Miozuki's blog/content strategy, potentially hosted at `moissanite.co.nz` (note: moissanite.co.nz is already registered, confirmed in search results as active) or a subdomain.
+**Brand alignment:** Very strong. Miozuki is a moissanite retailer building category authority. Owning the NZ moissanite education space is a natural extension of what the brand should be doing on its main site anyway. This concept is less a separate site and more an expansion of Miozuki's blog/content strategy. Build as `/moissanite-guide` on miozuki.co.nz. Note: moissanite.co.nz is already registered and actively operated by an authorised Charles and Colvard distributor -- Miozuki cannot use it.
 
 ---
 
@@ -142,7 +142,7 @@ A broader sustainable wedding directory covering venues, photographers, florists
 
 **Chicken-and-egg on listings.** A directory with 10 listings is not useful to visitors. But convincing 80 businesses to participate requires demonstrating value. NZ's small market size exacerbates this: there are genuinely fewer ethical NZ jewellers or moissanite retailers to list than in the US or UK.
 
-**New domain authority timeline.** A new domain starts with no trust. Google's sandbox effect for new domains can suppress rankings for 6-12 months regardless of content quality. Building from a subdomain of miozuki.co.nz (`guide.miozuki.co.nz`) partially mitigates this by inheriting some domain trust, but subdomain authority transfer is partial and contested among SEO practitioners.
+**New domain authority timeline.** A new domain starts with no trust. Google's sandbox effect for new domains can suppress rankings for 6-12 months regardless of content quality. Building on miozuki.co.nz as a subdirectory (`/moissanite-guide`) fully inherits domain trust. A subdomain (`guide.miozuki.co.nz`) would only partially transfer authority and is the weaker SEO option. 2026 consensus clearly favours subdirectory for content hubs.
 
 **Content maintenance burden.** Directory listings go stale. Businesses close, change details, drop ethical practices. Outdated listings harm trust and SEO. Maintenance is ongoing and underestimated.
 
@@ -180,7 +180,7 @@ The reasoning is direct:
 
 **On timing:** The original 12-18 month deferral was reasonable in 2025 but should be revisited. The moissanite search opportunity is relatively niche, and the NZ market is small enough that building the content now, incrementally, carries low risk and low cost. AI content tooling in 2026 makes drafting guide pages faster, but thin AI content will not rank: human editorial oversight on each page is still required. The work is manageable at low velocity (2-3 guide pages per month) without a dedicated resource.
 
-Start in months 4-6, not months 12-18. Build it as a content project on the existing stack, not a separate business. Keep the scope narrow: NZ moissanite, pearl alternatives, and lab-grown stones. Expand only if traffic data justifies it.
+Start in months 4-6, not months 12-18. Build it as a content project on the existing stack at `/moissanite-guide` on miozuki.co.nz (subdirectory, not subdomain). Not a separate business. Keep the scope narrow: NZ moissanite, pearl alternatives, and lab-grown stones. Expand only if traffic data justifies it.
 
 ---
 
