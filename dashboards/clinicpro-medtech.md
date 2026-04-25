@@ -52,6 +52,11 @@ for (let p of active) {
 - Hold replies sent to all 3 law firms: HGM (Andrew Dentice), Kindrik (Averill Dickson), Duncan Cotterill (Ron Arieli) — all on hold pending WHT resolution and term sheet finalisation
 - Duncan Cotterill (Ron Arieli) appeared unsolicited; hold reply sent, task medtech-20260424-001 closed
 - Mark Lowndes (Tompkins Wake) also replied unsolicited; no draft exists — task medtech-20260424-002 open, reply needed
+- Partner portal concept scoped: one platform, two views — Medtech Global (AU bundle admin) and Medtech NZ (self-serve practice onboarding); self-serve licence purchasing planned for Lawrence's view
+- DB schema confirmed: no practices entity exists; portal requires practices, partners, partner_users, practice_invites tables; `facility_id` in audit table is join key; 3-4 week build estimate
+- Partner portal section added to clinicpro-capture.md with schema findings and build estimate
+- Gmail draft ready: "Following up from the 22nd" to Lawrence (TO) + Alex (CC), introduces partner portal concept (draft r5920732408655842353)
+- Tasks created: medtech-20260425-001 (send partner portal email), medtech-20260425-002 (scope Medtech NZ portal, blocked on commission decision)
 
 ### Week of 2026-04-21
 - Capture landing page full design overhaul: ported `letter-grammar.tsx` (framer-motion) from clinicpro-saas, added `nz-green` Tailwind tokens, redesigned all 9 sections to match referral-images editorial-clinical aesthetic

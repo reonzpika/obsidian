@@ -71,6 +71,21 @@ Two separate contracts with Medtech, kept strictly separate. Medtech may attempt
 - **RLS:** All three tables (`medtech_image_commit_audit`, `rate_limit_buckets`, `users`) have RLS disabled. Service role access is unaffected, but anon key can query via PostgREST. Enable RLS with no policies to close this (task medtech-20260422-003).
 - **Supabase MCP:** Configured globally in `~/.claude.json`. Use `mcp__supabase__execute_sql` for direct DB access in Claude Code sessions.
 
+## Partner portal
+
+Scoped 25 April 2026. Provides dedicated views for each Medtech counterparty to manage their own practice pipeline without going through Ryo.
+
+**Medtech Global (Lawrence):** manage AU bundle practices, see active licence counts, trigger practice onboarding directly.
+**Medtech NZ (Alex):** initiate Capture onboarding for integration-side practices, self-serve, with usage data and commission tracking.
+
+Same platform, separate data scopes. Bundle and direct-sales practices kept distinct by design.
+
+**Schema finding (25 April 2026):** No `practices` table exists. Practices are currently just `facility_id` values in `medtech_image_commit_audit`. Portal requires four new tables: `practices`, `partners`, `partner_users`, `practice_invites`. The `facility_id` column in the audit table is the join key for usage data.
+
+**Build estimate:** 3-4 weeks focused. Not started. Gated on both commercial arrangements being confirmed.
+
+Tasks: AU bundle view tracked in `medtech-20260425-001`. Medtech NZ view tracked in `medtech-20260425-002`.
+
 ## Open questions
 
 | # | Question | Status |
