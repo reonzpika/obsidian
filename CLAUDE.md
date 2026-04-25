@@ -83,7 +83,7 @@ repo: clinicpro-saas | clinicpro-medtech | nexwave-rd | gp-fellowship | miozuki-
 stack: [...]
 description: "One-line description for home.md display."
 phase: "Current focus area — one line"  # shown in home.md and daily briefing
-dashboard: clinicpro-saas | clinicpro-medtech | nexwave-rd | gp-fellowship | side-projects | partnerships
+dashboard: clinicpro-saas | clinicpro-medtech | nexwave-rd | gp-os | personal | other-projects | partnerships
 ```
 
 ## Advanced Obsidian syntax
