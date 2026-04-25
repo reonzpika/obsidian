@@ -48,6 +48,11 @@ for (let p of active) {
 - Alex Cauble-Chantrenne: partnership agreement draft promised 7 April but not yet received
 - Lawrence Peterson: follow-up sent 13 April re infrastructure running costs
 
+### Week of 2026-04-21 (continued 25 Apr)
+- Hold replies sent to all 3 law firms: HGM (Andrew Dentice), Kindrik (Averill Dickson), Duncan Cotterill (Ron Arieli) — all on hold pending WHT resolution and term sheet finalisation
+- Duncan Cotterill (Ron Arieli) appeared unsolicited; hold reply sent, task medtech-20260424-001 closed
+- Mark Lowndes (Tompkins Wake) also replied unsolicited; no draft exists — task medtech-20260424-002 open, reply needed
+
 ### Week of 2026-04-21
 - Capture landing page full design overhaul: ported `letter-grammar.tsx` (framer-motion) from clinicpro-saas, added `nz-green` Tailwind tokens, redesigned all 9 sections to match referral-images editorial-clinical aesthetic
 - Dark navy trust section (`#0c1628`), ScrambleRotate cycling heading, amber/slate palette, CharStagger section headings, AnimatePresence FAQ accordion

@@ -42,7 +42,7 @@ Kept strictly separate from the Medtech NZ integration contract ([[clinicpro-cap
 - **Method:** self-draft with AI assistance, review-only legal engagement. No lawyer drafting from scratch.
 - **Rationale:** AUD $14,400-$18,000/year deal value makes full-drafting engagement disproportionate.
 - **Legal firms contacted:** HGM (Andrew Dentice, andrew.dentice@hgmlegal.com) and Kindrik Partners (Averill Dickson, averill.dickson@kindrik.co.nz). Duncan Cotterill (Ron Arieli, ron.arieli@duncancotterill.com, +64 21 254 3575) replied unsolicited via the firm's general Auckland inbox. All three confirmed capacity same day (23 Apr).
-- **Status (24 Apr):** All three firms on hold pending WHT resolution and term sheet finalisation. Evaluating Sprintlaw NZ for fixed-fee contract structure review (~$900 NZD, no calls required). WHT is a tax question requiring a separate specialist opinion — ask Helen first. Hold replies sent to all three firms. See task medtech-20260423-002.
+- **Status (25 Apr):** All three firms on hold pending WHT resolution and term sheet finalisation. Hold replies confirmed sent 25 Apr: HGM (Andrew Dentice), Kindrik (Averill Dickson), Duncan Cotterill (Ron Arieli). Mark Lowndes (Tompkins Wake, mark.lowndes@tompkinswake.co.nz) also replied unsolicited 23 Apr — hold reply not yet sent, no draft exists (task medtech-20260424-002). WHT question to Helen (helen@hscg.co.nz) still in draft. See task medtech-20260423-002.
 
 **AU term sheet v1 status (23 April 2026):** Drafted. `clinicpro-medtech/docs/commercial/au-bundle-term-sheet-v1.md`. AUD $30/practice/month, 40-50 practice floor ($14,400-$18,000/year), 3-year term. 8 open questions. Do not send to Lawrence until Q5 (WHT/Helen) is resolved.
 
