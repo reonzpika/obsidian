@@ -7,7 +7,7 @@ stack: [rnzcgp, gpep3, amp]
 title: "GP Fellowship"
 description: "RNZCGP Fellowship application. Final stage: Assessment Visit."
 phase: "Fellowship audit and application submission"
-dashboard: other-projects
+dashboard: gp-os
 ---
 
 ## Description

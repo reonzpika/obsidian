@@ -1,7 +1,7 @@
 > [!info]+
 > `= dateformat(date(today), "d MMMM yyyy")` · `= link("daily/" + dateformat(date(today), "yyyy-MM-dd"), "Today's Note")` · [[dashboards/portfolio-map|🗺 Portfolio Map]] · [[#Quick Links|↓ Quick Links]]
 >
-> [[clinicpro-saas|ClinicPro SaaS]] · [[clinicpro-medtech|ClinicPro Medtech]] · [[nexwave-rd|Nexwave R&D]] · [[other-projects|Other Projects]] · Partnerships
+> [[clinicpro-saas|ClinicPro SaaS]] · [[clinicpro-medtech|ClinicPro Medtech]] · [[nexwave-rd|Nexwave R&D]] · [[gp-os|GP OS]] · [[personal|Personal]] · [[other-projects|Other Projects]] · Partnerships
 
 ---
 
@@ -49,6 +49,40 @@ for (let p of active) {
   const badge = p.status == "production" ? "🟢" : "🔵";
   const phase = p.phase ? ` · _${p.phase}_` : "";
   dv.paragraph(`${badge} [[${p.file.name}|${p.title ?? p.file.name}]] · ${p.description ?? ""}${phase}`);
+}
+```
+
+### [[gp-os|GP OS]]
+
+```dataviewjs
+const active = dv.pages('"projects"')
+  .where(p => p.dashboard == "gp-os" && p.status != "parked")
+  .sort(p => p.title ?? p.file.name);
+for (let p of active) {
+  const badge = p.status == "production" ? "🟢" : "🔵";
+  const phase = p.phase ? ` · _${p.phase}_` : "";
+  dv.paragraph(`${badge} [[${p.file.name}|${p.title ?? p.file.name}]] · ${p.description ?? ""}${phase}`);
+}
+const parked = dv.pages('"projects"').where(p => p.dashboard == "gp-os" && p.status == "parked");
+if (parked.length > 0) {
+  dv.paragraph("💤 **Parked:** " + parked.map(p => `[[${p.file.name}|${p.title ?? p.file.name}]]`).join(" · "));
+}
+```
+
+### [[personal|Personal]]
+
+```dataviewjs
+const active = dv.pages('"projects"')
+  .where(p => p.dashboard == "personal" && p.status != "parked")
+  .sort(p => p.title ?? p.file.name);
+for (let p of active) {
+  const badge = p.status == "production" ? "🟢" : "🔵";
+  const phase = p.phase ? ` · _${p.phase}_` : "";
+  dv.paragraph(`${badge} [[${p.file.name}|${p.title ?? p.file.name}]] · ${p.description ?? ""}${phase}`);
+}
+const parked = dv.pages('"projects"').where(p => p.dashboard == "personal" && p.status == "parked");
+if (parked.length > 0) {
+  dv.paragraph("💤 **Parked:** " + parked.map(p => `[[${p.file.name}|${p.title ?? p.file.name}]]`).join(" · "));
 }
 ```
 
