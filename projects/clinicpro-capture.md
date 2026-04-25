@@ -43,6 +43,7 @@ Landing page copy/design review (task medtech-20260419-001) must complete before
 - Multi-PMS architecture (decided 2026-04-22): one repo (`clinicpro-medtech`), PMS adapters as modules. API and light UI differences per PMS are handled by the adapter, not separate repos or deployments. Adding a new PMS = new adapter module, no new repo.
 - AU white-label deployment (decided 2026-04-22): separate Vercel project, same codebase, Lawrence's domain via CNAME (e.g. Medtech's own domain). Brand config via env vars. All product updates ship to NZ and AU from the same codebase.
 - Marketing typography: Newsreader (serif display), IBM Plex Sans (body), JetBrains Mono (mono). Inter stays in-app only.
+- Hero video toolchain (decided 2026-04-25): Nano Banana (still image generation, API already configured) + Kling 3.0 via Higsfield (image-to-video animation, setup pending). Workflow: generate key frames with Nano Banana, animate with Kling 3.0, Claude Code handles scroll-triggered frame integration and performance optimisation. Budget estimate ~$3-4 per hero clip. Kling 3.0 chosen over Veo 3.1 and Runway for quality/cost/control at 1080p.
 - Auth: Supabase OTP (6-digit code, no magic link)
 - Pricing (decided 2026-04-15): annual per practice by enrolled patient count ($299 / $799 / $1,500 / contact). No self-serve trial. Concierge trial via ryo@clinicpro.co.nz.
 - BFF mandatory: never call ALEX directly from Vercel
