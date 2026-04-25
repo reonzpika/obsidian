@@ -23,9 +23,14 @@ The most significant recent development for Shopify + Claude Code workflows is S
 - Enables Claude Code to read and write Shopify store data, query products, check orders, manage metafields
 - Useful for Liquid theme development and headless storefront queries
 
-**Install command:**
+**Install command (macOS/Linux/WSL):**
 ```bash
 claude mcp add --transport stdio shopify-dev-mcp -- npx -y @shopify/dev-mcp@latest
+```
+
+**Windows (native, non-WSL):**
+```bash
+claude mcp add --transport stdio shopify-dev-mcp -- cmd /c npx -y @shopify/dev-mcp@latest
 ```
 
 **Miozuki relevance:** Miozuki runs headless Next.js over Shopify Storefront API. The Shopify Dev MCP gives Claude Code visibility into the Shopify schema without copy-pasting GraphQL docs. Speeds up writing Storefront API queries, product data fetching, and metafield schema work.
@@ -68,7 +73,7 @@ A community-maintained GitHub Gist (karimmtarek) provides CLAUDE.md templates sp
 ### claude-seo (GitHub: AgriciDaniel)
 
 A Claude Code skill set specifically for SEO, comprising:
-- 19 sub-skills covering keyword research, content briefs, meta generation, internal linking analysis
+- 19 sub-skills covering technical SEO, E-E-A-T, schema markup, GEO/AEO, backlinks, local SEO, maps intelligence, and Google API integrations (Search Console, PageSpeed, GA4)
 - 12 subagents for parallelising SEO research tasks (competitor analysis, SERP research, content gap analysis)
 
 This is a practitioner-built tool, not an official Anthropic product. Quality and maintenance status require verification.
@@ -84,7 +89,7 @@ Practitioners are combining Claude Code + Ahrefs MCP to build programmatic SEO l
 
 This pattern is directly applicable to the Moissanite Guide NZ concept (see `directory-seo-feasibility.md`). Rather than manually writing guide pages, a Claude Code workflow could generate first drafts against a keyword list, with human editorial review before publish. The editorial review step is non-negotiable given Google's E-E-A-T requirements and the accuracy standards required for gemstone education content.
 
-**Caveat on Ahrefs MCP:** Ahrefs MCP availability and current pricing require verification. The pattern is documented but tool-specific details may have changed.
+**Ahrefs MCP:** Confirmed available at github.com/ahrefs/ahrefs-mcp-server (official Ahrefs product). Requires a paid Ahrefs plan from Lite tier. Verify current Lite plan pricing at ahrefs.com before committing to this workflow.
 
 ---
 
@@ -141,7 +146,7 @@ claude mcp add --transport stdio shopify-dev-mcp -- npx -y @shopify/dev-mcp@late
 - Brand voice rules for any AI-generated content
 
 **Workflow for /moissanite-guide content:**
-1. Claude Code + Ahrefs MCP (if available) to pull NZ moissanite keyword clusters
+1. Claude Code + Ahrefs MCP to pull NZ moissanite keyword clusters
 2. Claude Code generates content briefs per page
 3. Ryo reviews briefs and approves scope
 4. Claude Code drafts guide pages against approved briefs
@@ -156,7 +161,7 @@ claude mcp add --transport stdio shopify-dev-mcp -- npx -y @shopify/dev-mcp@late
 - **No confirmed Judge.me or Shopify review platform MCP.** Review management stays in Shopify admin.
 - **Shopify Agentic Storefronts NZ eligibility unconfirmed.** March 2026 rollout was US-only. Check Shopify partner portal for NZ activation status before building toward it.
 - **Subagent and skill quality varies widely.** Community-built tools require validation before production use. Treat as starting points, not production infrastructure.
-- **Ahrefs MCP availability unconfirmed.** Verify current status before building a workflow around it.
+- **Ahrefs MCP:** Confirmed available; requires paid Ahrefs plan from Lite tier. Verify current Lite pricing at ahrefs.com before committing.
 
 ---
 

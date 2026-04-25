@@ -29,7 +29,7 @@ Multiple providers now offer Instagram MCP servers:
 
 Pinterest itself deployed MCP internally (confirmed InfoQ, April 2026). External tooling:
 
-- **CData Connect AI**: Read-only for Pinterest data (boards, pins, analytics). Full CRUD available through CData Connect AI cloud connector.
+- **CData Connect AI**: Free GitHub version is read-only (boards, pins, analytics). Full CRUD available through the commercial CData MCP Server for Pinterest (paid).
 - **Ayrshare MCP** (see below): Includes Pinterest among its 13+ platforms. Best route for publishing.
 
 **Note on headless Pinterest**: Pinterest Rich Pins require server-rendered Open Graph meta tags. Miozuki's Next.js stack already supports this, but it needs explicit verification that the `og:type`, `og:title`, `og:image`, and `product:price:amount` tags are being rendered at the page level, not injected client-side. If they are not, Rich Pins will not validate. This is a prerequisite for any Pinterest publishing workflow to carry full SEO and product discovery value.
@@ -40,10 +40,10 @@ Pinterest itself deployed MCP internally (confirmed InfoQ, April 2026). External
 
 - 75+ tools, 13+ platforms: Instagram, Pinterest, TikTok, Facebook, X, LinkedIn, Threads, YouTube, and more.
 - Bulk scheduling, post drafting, analytics pull, image attachment.
-- $29/month (Personal) to $149/month (Agency). API key-based auth; no per-platform OAuth complexity once Ayrshare is connected.
+- Pricing: Free tier (20 posts, images only) / $149/month Premium / $499/month Business. API key-based auth; no per-platform OAuth complexity once Ayrshare is connected.
 - Claude Code workflow: connect Ayrshare MCP, draft posts in session, schedule or publish directly. No switching between apps.
 
-**This is the most production-ready social MCP currently available.** For Miozuki's volume (small, curated), the Personal plan is sufficient.
+**This is the most production-ready social MCP currently available.** For Miozuki's volume (small, curated), the Free tier may suffice initially; Premium at $149/month is needed for video, scheduling, and analytics. Verify current tier limits at ayrshare.com before committing.
 
 ### Canva MCP
 
@@ -69,7 +69,7 @@ Shopify released the **AI Toolkit** on April 9, 2026. Four official MCP servers:
 | Shopify Dev MCP | Store configuration, theme, app setup (developer-facing) |
 | Shopify Storefront MCP | Product catalogue, collections, pricing, inventory (customer-facing data) |
 | Shopify Customer Account MCP | Order history, account data, loyalty |
-| Shopify Checkout MCP | Checkout configuration, discount codes, shipping |
+| Shopify Checkout MCP | Checkout configuration, discount codes, shipping (preview only, not GA) |
 
 **Every Shopify store gets a free Storefront MCP endpoint.** No third-party proxy needed.
 
@@ -91,7 +91,7 @@ Shopify released the **AI Toolkit** on April 9, 2026. Four official MCP servers:
 
 - $29/month. Platform-specific content (caption styles, hashtag norms, image ratios) vary by target.
 - Blotato MCP: YouTube transcript scraper built in. Pulls transcript from any public video. Feed to Claude Code for repurposing.
-- Documented workflow: one YouTube video, 40 minutes, generates nine pieces of platform-specific content (caption + image prompt for each platform).
+- Community-reported workflow: one YouTube video generates around nine pieces of platform-specific content in a single session. Not a vendor benchmark.
 - Works for any long-form input: a podcast transcript, a long-form blog post, a supplier product brief.
 
 **Miozuki application**: Miozuki does not yet have video content, but the pattern applies to blog posts and product descriptions. A single long-form piece (e.g., "Moissanite vs Diamond Guide") can be sliced into Instagram carousels, Pinterest pin descriptions, TikTok script outlines, and Twitter/X thread drafts in one session.
@@ -121,7 +121,7 @@ This is not hypothetical: multiple solo operators are running this pattern as of
 
 ## 5. Community Resources and Repos
 
-**awesome-claude-code** (GitHub: `hesreallyhim/awesome-claude-code`): The primary community-maintained resource for Claude Code integrations. Was the #1 trending GitHub repo in February 2026. Lists MCP servers, skills, workflows, CLAUDE.md templates, and real use cases. Start here for any new integration research.
+**awesome-claude-code** (GitHub: `hesreallyhim/awesome-claude-code`): The primary community-maintained resource for Claude Code integrations. 21.6k+ stars, highly active. Lists MCP servers, skills, workflows, CLAUDE.md templates, and real use cases. Start here for any new integration research.
 
 **Content Ops Skill**: A Claude Code skill pattern (slash command) that runs a full editorial pipeline. Researches a topic, drafts content for multiple platforms, applies brand voice, saves structured output. Not a specific repo, but a pattern that has been published in multiple forms in the awesome-claude-code community. Buildable as a custom skill for Miozuki.
 
@@ -132,7 +132,7 @@ This is not hypothetical: multiple solo operators are running this pattern as of
 **Minimum viable setup (start now):**
 
 1. Connect Shopify Storefront MCP using the new official endpoint.
-2. Install Ayrshare MCP (`vanman2024/ayrshare-mcp`) and connect Ayrshare Personal ($29/month).
+2. Install Ayrshare MCP (`vanman2024/ayrshare-mcp`) and connect Ayrshare (Free tier to start; Premium $149/month for video and scheduling -- verify at ayrshare.com).
 3. Connect Ayrshare to Instagram and Pinterest.
 4. Write a `content-draft` slash command in `.claude/commands/` that:
    - Accepts a product SKU or collection name as input.

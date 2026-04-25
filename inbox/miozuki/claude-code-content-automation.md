@@ -47,7 +47,7 @@ A single Claude Code session with Max 5x can run 4-6 parallel forks without hitt
 
 ## 3. Hooks for Content Automation
 
-Hooks are shell commands that fire automatically on tool events. They run outside the AI context, on your local machine (or CI). Four hook types:
+Hooks are shell commands that fire automatically on tool events. They run outside the AI context, on your local machine (or CI). Key hook types (Claude Code has 12 lifecycle events in total; the four below are the most relevant for content automation):
 
 | Hook type | When it fires | Primary use |
 |---|---|---|
@@ -105,16 +105,16 @@ Blocks any `git push` or Shopify deployment until a custom condition is met. Use
 
 ### How they work
 
-Create `.claude/commands/` in any repo. Each `.md` file in that directory becomes a slash command available in that Claude Code session. The file content is the command prompt.
+Create `.claude/commands/` in any repo. Each `.md` file in that directory becomes a slash command available in that Claude Code session. The file content is the command prompt. Note: as of Claude Code v2.1.101 (April 2026), the recommended format is `.claude/skills/<name>/SKILL.md`. The `.claude/commands/` directory remains supported (backwards compatible) but is now the legacy format.
 
 Example: `.claude/commands/product-description.md`
 ```markdown
-Generate a product description for {{PRODUCT_NAME}} using Miozuki's brand voice. 
+Generate a product description for $ARGUMENTS using Miozuki's brand voice. 
 Tone: editorial, informed, not salesy. NZ English. 150-200 words.
 Mention: stone type, setting, care, ethical sourcing angle.
 Do not use: "stunning", "gorgeous", "perfect", "unique".
 ```
-Usage: `/product-description` in Claude Code; prompts for `{{PRODUCT_NAME}}`.
+Usage: `/product-description Aria Round 1ct` in Claude Code; `$ARGUMENTS` receives the full argument string. Note: `{{VARIABLE}}` curly-brace syntax is not supported in Claude Code slash commands.
 
 ### Curated command repositories
 
@@ -134,7 +134,7 @@ Usage: `/product-description` in Claude Code; prompts for `{{PRODUCT_NAME}}`.
 
 ## 5. Shopify AI Toolkit MCP (April 2026)
 
-Shopify announced and shipped an official MCP server for Claude Code on April 15, 2026.
+Shopify announced and shipped an official MCP server for Claude Code on April 9, 2026.
 
 ### Setup
 
@@ -188,7 +188,7 @@ Platforms supported: Pinterest, Twitter/X, Facebook, Instagram, TikTok, LinkedIn
 
 75+ tools exposed via MCP: post creation, scheduling, analytics, comment management.
 
-**Pricing:** Verify current plans at ayrshare.com; plans start around $29/month USD. The MCP integration is available on paid plans.
+**Pricing:** Free tier (20 posts, images only) / $149/month Premium / $499/month Business. The MCP integration is available on paid plans. Verify current tier limits at ayrshare.com.
 
 **Miozuki fit:** Pinterest is the highest-value platform for Miozuki SEO (covered in community-seo-strategy.md). Ayrshare's MCP lets Claude Code post product pins with descriptions, alt text, and board assignment directly. Eliminates manual publishing step.
 
@@ -229,7 +229,7 @@ Same pattern for FAQ schema: provide a list of questions (from the moissanite gu
 | Build /product-description slash command | 1-2 hr | Now | Speeds up any catalogue or guide content work |
 | Build /pin-caption slash command | 30 min | Now | Pinterest is highest-value SEO platform for Miozuki |
 | Set up auto-commit hook | 30 min | Now | Tracks all AI-generated content in git without manual steps |
-| Ayrshare MCP for Pinterest publishing | 2-4 hr | Months 1-3 | Automates pin publishing; $29/month plan required |
+| Ayrshare MCP for Pinterest publishing | 2-4 hr | Months 1-3 | Automates pin publishing; Premium $149/month or test Free tier first |
 | Composio Instagram MCP | 2-4 hr | Months 1-3 | Automates Instagram post publishing; Meta dev app setup required |
 | Next.js Storefront MCP proxy | 4-8 hr | Months 1-3 | Live product data in Claude Code context; dev work required |
 | Batch guide content generation | 1 session | Months 4-6 | When /moissanite-guide build starts |
