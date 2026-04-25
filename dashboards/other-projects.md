@@ -60,6 +60,12 @@ if (parked.length > 0) {
 
 ### Week of 2026-04-21
 
+**fellowship-application**
+- Module 2 Clinical Record Review completed: 10 records, all 17 criteria audited
+- 4 criteria with findings: cr.1 (history source), cr.11 (medication labelling), cr.16 (non-scheduled immunisations), cr.17 (occupational history)
+- Report and Plan template filled in PDF programmatically; output: `Clinical Record Review Audit Checklist - Complete.pdf`
+- gpf-20260330-004 closed
+
 **linkedin-agent**
 - Fixed: `assemble_session_state.py` now extracts `## Post Body` section only; metadata headers no longer posted to LinkedIn
 - Fixed: grow live scout wired in `grow_run.py` (removed `return 2` gate); execute phase hardened so log and digest email always run on browser crash

@@ -34,6 +34,19 @@ All three items must be received before an assessor is allocated:
 3. Up-to-date CV
 4. Hauora Māori Reflection (highly recommended — submit with the above)
 
+## CRR Module 2 findings (25 April 2026)
+
+Audit of 10 consecutive records. 13/17 criteria fully met. 4 criteria with findings:
+
+| Criterion | Score | Finding | Improvement plan |
+|---|---|---|---|
+| 1. History source | 1/10 | One record: history obtained from patient's mother, source not documented | Document third-party history sources explicitly |
+| 11. Medications | 2/10 | Some medications not labelled long-term vs acute; reason for changes not always documented | Differentiate medication types in PMS list; document reason for changes |
+| 16. Non-scheduled immunisations | 3/10 | Shingles (50+) and meningococcal (teenagers) not documented in 3 records | For 50+: discuss shingles; for teenagers: discuss meningococcal. Document advice and decision. |
+| 17. Occupational history | 2/10 | Not documented in 2 records where occupationally relevant | Include occupational history where clinically relevant; add to new patient registration template |
+
+PDF output: `obsidian/temp/Clinical Record Review Audit Checklist - Complete.pdf` (first draft, pending Ryo review before submission)
+
 ## Key requirements to meet
 
 - Practice must hold Foundation Standard accreditation (minimum Cornerstone Bronze, or pre-approved by College)

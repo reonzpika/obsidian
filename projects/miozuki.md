@@ -73,20 +73,6 @@ Ting works directly on `master` with zero git literacy; Ryo uses feature branche
 - Mapped moissanite-specific credibility problem ("fake diamond" perception) as requiring separate trust framing beyond standard DTC tactics — certification detail and lab-stone narrative are the key levers
 - Added fourth deep research track: trust signals for zero-review DTC fine jewellery launch — structured prompt ready to run in Claude.ai
 
-## Sprints
-
-```dataviewjs
-const active = dv.pages('"sprints/active"')
-  .where(p => p.projects && p.projects.includes("miozuki"));
-const archived = dv.pages('"sprints/archive"')
-  .where(p => p.projects && p.projects.includes("miozuki"));
-const pages = active.concat(archived).sort(p => p.start);
-const headers = ['Sprint', 'Goal', 'Start', 'End', 'Status'];
-dv.table(headers, pages.map(p => [
-  dv.fileLink(p.file.path, false, p.id), p.goal, p.start, p.end, p.status
-]));
-```
-
 ## Tasks
 
 ```dataviewjs

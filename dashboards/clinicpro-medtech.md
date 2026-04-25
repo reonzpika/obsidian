@@ -48,6 +48,13 @@ for (let p of active) {
 - Alex Cauble-Chantrenne: partnership agreement draft promised 7 April but not yet received
 - Lawrence Peterson: follow-up sent 13 April re infrastructure running costs
 
+### Week of 2026-04-21 (continued 25 Apr, session 2)
+- Hero video toolchain decided: Nano Banana (stills) + Kling 3.0 via Higsfield (animation) + Remotion + Claude Code (sequencing and integration)
+- Hero video concept confirmed via board session: over-the-shoulder clinical scene wrap + screenshot walkthrough with cursor animation; 4:5 portrait, 6/6 hero grid split
+- Hero video production brief written to `clinicpro-medtech/docs/marketing/phase-1/hero-video-brief.md`
+- notebooklm-py v0.3.4 installed and authenticated; hero video research complete (10 YouTube sources indexed)
+- Kling 3.0 Higsfield account setup pending (blocks cinematic shots 1-3); Remotion-only version (walkthrough) can ship independently
+
 ### Week of 2026-04-21 (continued 25 Apr)
 - Hold replies sent to all 3 law firms: HGM (Andrew Dentice), Kindrik (Averill Dickson), Duncan Cotterill (Ron Arieli) — all on hold pending WHT resolution and term sheet finalisation
 - Duncan Cotterill (Ron Arieli) appeared unsolicited; hold reply sent, task medtech-20260424-001 closed

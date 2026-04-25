@@ -23,7 +23,7 @@ The NZ moissanite and fine jewellery search market has several distinct tiers.
 - moissanite.co.nz -- independently owned distributor, operating since 1999, Forever One supplier
 - Four Words (fourwords.co.nz) -- custom bespoke, editorial blog content, good informational footprint
 - NZ Jewellers (nzjewellers.co.nz) -- moissanite rings, 10-14 day turnaround, ethical positioning
-- Raphana Jewellery (raphanajewellery.co.nz) -- moissanite and pearl, NZ + AU shipping
+- Raphana Jewellery (raphanajewellery.co.nz) -- moissanite, NZ + AU shipping (no pearl line -- pear-cut rings confirmed, pearl category does not exist)
 
 **Tier 3: Pearl jewellery specialists**
 - Queen's Jewellery (queensjewellery.co.nz) -- pearls and opals, Auckland
@@ -242,7 +242,7 @@ Total addressable monthly searches across these 15 terms: approximately 640-1,56
 Implement these from day 1. Non-negotiable for a new domain.
 
 **Rendering:**
-- Use SSR (server-side rendering) or SSG (static generation) for all product and collection pages. Client-side rendering will prevent Google from indexing product content reliably. Next.js 15 supports both; product pages should be SSG with revalidation, not client-rendered.
+- Use SSR (server-side rendering) or SSG (static generation) for all product and collection pages. Client-side rendering will prevent Google from indexing product content reliably. Next.js 16 supports both; product pages should be SSG with revalidation, not client-rendered.
 
 **Structured data (JSON-LD):**
 - `Product` schema on every product page: name, image, description, brand, offers (price, availability, currency, URL), aggregateRating (once reviews exist), gtin if available. As of 2026, AI-driven search engines weight structured data heavily for product recommendations. Missing `brand` and `aggregateRating` significantly reduces visibility in AI-assisted discovery.

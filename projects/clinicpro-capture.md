@@ -27,6 +27,7 @@ Mobile web app that photographs clinical images and commits them to patient reco
 | Task 3: Capture upsell banner in clinicpro-saas | Complete (commit 4be3b4f, 23 Apr)       |
 | Task 4: Champion email v1                       | Drafted (`clinicpro-medtech/docs/marketing/phase-1/champion-email-v1.md`). Not sent: pending landing page review and incentive policy confirmation. |
 | Task 5: Demo Loom script + case-study template  | Open                                    |
+| Task 6: Hero video                              | Brief complete (25 Apr). Execution pending: `medtech-20260425-004`. Kling account pending: `medtech-20260425-003`. Brief at `docs/marketing/phase-1/hero-video-brief.md`. |
 
 Landing page copy/design review (task medtech-20260419-001) must complete before champion email send. Capture subdomain `capture.clinicpro.co.nz` must be live before sending.
 

@@ -10,7 +10,7 @@
 
 ### Market signals (2025-2026)
 
-Conversational commerce is growing fast. AI-referred visits to US retailers increased 760% year-on-year in November 2025. More importantly for conversion: AI-referred shoppers convert at 1.5x the rate of other traffic sources, and over 70% of those visitors land directly on product pages. Chatbot-enabled ecommerce sites report a 23% average conversion lift; proactive chat triggering (chat appears contextually, not just as a persistent widget) can reach 40%.
+Conversational commerce is growing fast. Adobe Digital Insights reported AI-referred visits to US retailers increased 769% year-on-year in November 2025 (Brightedge reported 752% for the same period). More importantly for conversion: AI-referred shoppers convert at 1.5x the rate of other traffic sources, and over 70% of those visitors land directly on product pages. Chatbot-enabled ecommerce sites report a 23% average conversion lift (Glassix vendor research; not an independent study); proactive chat triggering (chat appears contextually, not just as a persistent widget) can reach 40% (also vendor-cited).
 
 Conversational commerce revenue was USD 7.12 billion in 2024, projected to reach USD 32.5 billion by 2034 (16.4% CAGR).
 
@@ -167,10 +167,10 @@ For Miozuki, the risk is low because the moissanite education angle is genuinely
 **What exists in 2026:**
 - **Shopify Sidekick:** Merchant-facing admin assistant. Helps the store owner, not the customer. Not relevant for on-site customer chat.
 - **Shopify Magic:** AI content generation for product descriptions, emails, and image backgrounds. Merchant-side only.
-- **Shopify Agentic Storefronts:** Makes products discoverable in ChatGPT, Perplexity, Microsoft Copilot, and Google AI Mode. Not a customer chat widget on the Miozuki site.
+- **Shopify Agentic Storefronts:** Makes products discoverable in ChatGPT, Perplexity, Microsoft Copilot, and Google AI Mode. Not a customer chat widget on the Miozuki site. **NZ eligibility unconfirmed -- March 2026 activation was US merchants only. Verify before acting.**
 - **Shopify Inbox with AI suggested replies:** Basic customer support chat. Shopify Inbox offers AI-generated reply suggestions for inbound queries. Not a proactive advisor or quiz flow.
 
-**Cost at under 1,000 chats/month:** Shopify Inbox is free. Agentic Storefronts is included in standard plans (verify at shopify.com/editions/winter2026 as features may be plan-gated). [Post-cutoff note: confirm which plans include Agentic Storefronts.]
+**Cost at under 1,000 chats/month:** Shopify Inbox is free. Agentic Storefronts plan gating and NZ merchant eligibility unconfirmed -- March 2026 activation was US-only. Verify at shopify.com/editions/winter2026 before assuming it is enabled on your store.
 
 **Setup complexity:** Very low for Inbox. Agentic Storefronts requires product feed and metafield configuration.
 
@@ -182,20 +182,20 @@ For Miozuki, the risk is low because the moissanite education angle is genuinely
 - Con: No genuine "jewellery advisor" capability in any current Shopify native tool
 - Con: Inbox AI is reactive support, not proactive conversion
 
-**Verdict:** Agentic Storefronts is worth enabling regardless of which chat option you choose. It is free optionality. Shopify's native tools do not replace a custom advisor.
+**Verdict:** Agentic Storefronts is worth enabling if available for NZ merchants (verify eligibility before acting). Shopify's native tools do not replace a custom advisor.
 
 ---
 
 ### Option 3: Third-party AI chat platform
 
 **Tidio Lyro AI:**
-- Cost at 1,000 chats/month: ~USD 149/month (1,000 Lyro AI conversation tier, verified April 2026)
+- Cost at 1,000 chats/month: approximately USD $100-$149/month for ~1,000 conversations (Lyro charged as a separate add-on; verify exact SKU at tidio.com/pricing)
 - Setup complexity: Low. Shopify plugin, no-code configuration, knowledge base ingestion.
 - NZ English: Adequate. No brand-specific voice without custom training.
 - Tradeoffs: Fast to deploy, but expensive relative to Claude API direct at this volume. Brand voice is generic. Product knowledge requires ongoing knowledge base maintenance.
 
 **Intercom Fin AI:**
-- Cost at 1,000 chats/month: USD 0.99 per resolved conversation = ~USD 990/month if all resolve via Fin. In practice, resolution rates of 67% mean ~USD 663 in Fin fees, plus the base Intercom plan (Essential starts at ~USD 29/month, but Fin requires higher tiers). Total: USD 200-700+/month depending on plan.
+- Cost at 1,000 chats/month: USD $0.99 per resolved conversation (50-resolution minimum) = ~USD $990/month if all resolve via Fin. In practice, resolution rates of 67% mean ~USD $663 in Fin fees, plus the base Intercom plan (base plan pricing unconfirmed -- verify current tiers at intercom.com/pricing; Fin requires a higher tier). Total: USD $200-700+/month depending on plan.
 - Setup complexity: Low to medium. Shopify integration exists. But configuration for a specialised jewellery advisor requires significant knowledge base work.
 - NZ English: Good.
 - Tradeoffs: Best-in-class for complex support resolution at scale. Overkill and expensive for a pre-revenue brand. Resolution-based billing means costs scale sharply if Fin is successful.
@@ -210,7 +210,7 @@ For Miozuki, the risk is low because the moissanite education angle is genuinely
 
 ## Part 5: Recommendation
 
-Build the Claude API advisor first. At under 1,000 chats/month, the API cost is under USD 15/month, compared to USD 150-700/month for any viable third-party platform. More importantly, none of the third-party tools offer genuine moissanite education in a brand voice: they are generic support bots. Miozuki's conversion problem is not "answer basic FAQs faster" but "give shoppers the confidence to buy a stone they have never heard of before." That requires a custom-authored system prompt, Miozuki's product knowledge baked in, and a structured advisor flow (3-4 qualifying questions before recommendation). The Claude API, a Next.js route, and 30-40 hours of build time delivers exactly that. Separately, enable Shopify Agentic Storefronts immediately (free, low effort) to capture AI discovery traffic from ChatGPT and Google AI Mode. Consider Octane AI as a secondary investment once the Claude advisor has validated quiz-style engagement.
+Build the Claude API advisor first. At under 1,000 chats/month, the API cost is under USD 15/month, compared to USD 150-700/month for any viable third-party platform. More importantly, none of the third-party tools offer genuine moissanite education in a brand voice: they are generic support bots. Miozuki's conversion problem is not "answer basic FAQs faster" but "give shoppers the confidence to buy a stone they have never heard of before." That requires a custom-authored system prompt, Miozuki's product knowledge baked in, and a structured advisor flow (3-4 qualifying questions before recommendation). The Claude API, a Next.js route, and 30-40 hours of build time delivers exactly that. Separately, enable Shopify Agentic Storefronts if available for your NZ merchant account (verify eligibility -- March 2026 rollout was US-only) to capture AI discovery traffic from ChatGPT and Google AI Mode. Consider Octane AI as a secondary investment once the Claude advisor has validated quiz-style engagement.
 
 ---
 

@@ -12,7 +12,7 @@
 
 - **URL:** nzmoissanite.co.nz
 - **Product focus:** Moissanite engagement rings, wedding bands, earrings, pendants, and lab-grown coloured gemstone jewellery (emeralds, rubies, sapphires). Auckland-based.
-- **Price positioning:** Entry-level solitaire rings from approx. NZD $999. Stud earrings from NZD $249. Mid-tier engagement rings NZD $1,000-$1,500.
+- **Price positioning:** Entry-level solitaire rings from approx. NZD $999. Stud earrings from NZD $249. Mid-tier engagement rings NZD $1,000-$1,500. *(Currency display on site unclear -- verify entry pricing at nzmoissanite.co.nz before citing any figure.)*
 - **Key marketing angle:** Sustainability and ethics. "Better for you, better for the planet." Claims 20+ years of experience and uses recycled metals. Targets conscious consumers.
 - **SEO footprint:** Ranks #3 organically for "NZ moissanite jewellery" queries. Thin content strategy -- product pages only, no visible blog or editorial layer. No content moat.
 - **Weaknesses / gaps:**
@@ -27,7 +27,7 @@
 
 - **URL:** fourwords.co.nz
 - **Product focus:** Custom bespoke moissanite engagement rings and wedding jewellery. 30+ design collections. Oval, round, emerald, pear, marquise cuts. No off-the-shelf ready stock -- all made-to-order.
-- **Price positioning:** Entry NZD $2,300 for a 0.7ct equivalent custom ring. 1ct from NZD $2,600, 1.5ct from NZD $3,100, 2ct from NZD $3,600.
+- **Price positioning:** Entry NZD $2,500 for a 0.7ct equivalent custom ring. 1ct from NZD $2,600, 1.5ct from NZD $3,100, 2ct from NZD $3,600.
 - **Key marketing angle:** Precision craftsmanship and superior cut quality. Claims their moissanite is cut to specific angles that maximise brilliance and eliminate the "cloudy" look of poorly cut stones. Also leans on ethical and carbon offset claims (7x less environmental impact, 500% carbon offset).
 - **SEO footprint:** Best content strategy of any NZ moissanite competitor. Active blog with informational posts targeting high-intent search phrases: "where to buy moissanite engagement ring NZ," "custom engagement rings NZ cost," "ethical engagement rings NZ." Appears to rank for several of these. This is the strongest SEO player in the category.
 - **Weaknesses / gaps:**
@@ -43,7 +43,7 @@
 
 - **URL:** nzjewellers.co.nz
 - **Product focus:** Large catalogue -- 238 moissanite engagement rings plus lab-grown diamonds and natural diamonds. Solitaire, halo, three-stone, accented styles. Also wedding bands.
-- **Price positioning:** NZD $899-$6,999. Entry ring at NZD $899. Broad price ladder covering budget through premium.
+- **Price positioning:** Entry ring listed at NZD $899 (unverified -- current search shows ~$1,150 for representative listings; manual check at nzjewellers.co.nz required before citing). Broad price ladder covering budget through premium.
 - **Key marketing angle:** Ethical luxury at accessible prices. "Conflict-free" and "significantly lower environmental footprint." Positions moissanite as "around 90% less than a comparable diamond."
 - **SEO footprint:** Large product catalogue likely generates long-tail organic traffic. Appears to rank for broad moissanite ring search terms. No evident editorial blog.
 - **Weaknesses / gaps:**
@@ -146,7 +146,7 @@ These brands compete for the same NZ consumer wallet but are not moissanite-firs
 
 - **URL:** cullenjewellery.com/en-nz
 - **Product focus:** Lab-grown diamond and moissanite engagement rings. Designed in Melbourne. NZ-localised storefront with NZD pricing.
-- **Price positioning:** Lab-grown diamond rings from approx. NZD $5,524-$7,801 for 2ct. Moissanite likely lower -- not separately displayed. Premium positioning.
+- **Price positioning:** Lab-grown diamond rings from approx. NZD $5,400-$8,300 for 2ct. Moissanite likely lower -- not separately displayed. Premium positioning.
 - **Key marketing angle:** "Conflict-free, consciously crafted." Carbon-neutral gemstones. Lifetime warranty and free resizing. Luxury-ethical convergence.
 - **SEO footprint:** Well-resourced AU brand with dedicated NZ URLs. Likely has meaningful DA from AU domain authority. Targets "moissanite engagement rings NZ" with dedicated collection pages.
 - **Weaknesses / gaps:**
