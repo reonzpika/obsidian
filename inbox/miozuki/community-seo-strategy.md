@@ -248,7 +248,7 @@ This is achievable without a paid link-building budget. Getting to 50 unique ref
 Based on Shopify NZ and influencer rate guides (2026):
 - **Pure gifted (product only, no fee):** viable for under-10k followers; no guaranteed post; works best when product is genuinely desirable and the brief is clear
 - **Gifted + small creative fee:** $50-$150 NZD per post is the realistic range for 1k-10k accounts; maximises post completion rate
-- **Paid micro-influencer posts (10k-20k):** $150-$300 NZD per Instagram post; $200-$400 NZD per TikTok video
+- **Paid micro-influencer posts (10k-20k):** $250-$500 NZD per Instagram post (paid engagement rate); $200-$400 NZD per TikTok video. The $150-300 range applies to gifted-plus-nominal-fee arrangements, not a full paid post rate.
 - For 15 creators at a hybrid gifted + $100 fee average: approximately $1,500 NZD cash plus product cost
 
 Note: gifted product constitutes a material connection under NZ Consumer Law (aligned with FTC/ACCC guidelines). All posts must include #gifted or equivalent disclosure. This is not optional.
@@ -314,7 +314,7 @@ These five actions should run in parallel from launch week, ordered by speed of 
 - This produces the social proof imagery that all other channels (ads, email, product pages) depend on
 
 **4. Register on SourceBottle and begin responding to NZ journalist queries (Week 2)**
-- SourceBottle.com.au is free and NZ journalist queries appear regularly
+- SourceBottle (sourcebottle.com) is free and NZ journalist queries appear regularly
 - Set up alerts for: jewellery, engagement, wedding, ethical shopping, sustainable fashion, consumer trends NZ
 - Respond to relevant queries as the Miozuki brand founder with expert commentary
 - A single Stuff or Viva placement from this channel is worth 20 directory backlinks in SEO authority
