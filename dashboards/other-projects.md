@@ -58,7 +58,24 @@ if (parked.length > 0) {
 - Settings-todo checklist created: `context/tools/claude-code-settings-todo.md` — exact JSON for all settings.json changes, per-repo settings.json for linkedin/clinicpro-medtech/nexwave-rd, code-reviewer agent content. Apply via /update-config from home directory.
 - Task fo-20260423-001 created: watch "The Claude Code Setup Nobody Shows You" and apply improvements (due 27 Apr)
 
+**linkedin-agent**
+- grow reliability: diagnosis doc fact-checked against code; 4 inaccuracies found (atexit claim wrong, line numbers off, Apr 20 grow-2 gap unexplained)
+- RC-5: stderr now written to `temporary/logs/grow_run_YYYY-MM-DD.log` in `grow_run.py`
+- RC-1: ctypes `SetThreadExecutionState` sleep block prevents laptop lid from killing headed Playwright browser mid-scout; released on atexit and normal exit
+- RC-3: `ExecutionTimeLimit` bumped 30 to 90 min in `install_grow_scheduler.ps1`; all three tasks re-registered via elevated PowerShell
+- RC-2 diagnostic: `claude -p` confirmed exit 0 in non-interactive context; no code change needed
+- `linkedin-20260426-001` closed
+
 ### Week of 2026-04-21
+
+**miozuki**
+- Full strategy review: 10 AI research docs reviewed (1 deleted), selective do/defer/skip decisions made across SEO, content, backlinks, tooling, and community themes
+- Brand positioning locked: heirloom ethics narrative, dual-category (moissanite + pearl) positioning, NZ provenance narrative, gifting collection ($300-$1,200 tier)
+- SEO architecture confirmed: subdirectory /learn (not subdomain), /moissanite-guide hub launching Month 4-6, 1-2 posts/month content floor
+- Action plan produced: `inbox/miozuki/action-plan.md` -- 6 phases, source docs deleted
+- 9 new tasks created (miozuki-20260426-002..010): Phase 0 (this week urgent), Phase 1 (developer sprint), Phase 2 (brand positioning)
+- Deferred: Reddit, micro-influencer campaign, Pinterest active channel, all AI photography tools
+- Open blocker: product photography needed before Viva pitch, chatbot build, and collection copy
 
 **fellowship-application**
 - Module 2 Clinical Record Review completed: 10 records, all 17 criteria audited

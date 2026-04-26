@@ -7,7 +7,7 @@ repo: miozuki-web
 stack: Next.js, TypeScript, Tailwind, Vercel, Shopify Storefront API
 title: "Miozuki"
 description: "NZ fine jewellery ecommerce. Next.js headless frontend over Shopify."
-phase: "Content migration to Next.js frontend"
+phase: "Pre-launch: SEO foundation, brand positioning, chatbot MVP"
 dashboard: other-projects
 ---
 ## Quick Links ##
@@ -34,6 +34,35 @@ Fine jewellery ecommerce brand (NZ) specialising in moissanite and pearl pieces.
 - Env vars: `KLAVIYO_PRIVATE_KEY`, `KLAVIYO_LIST_ID` — must be set in both `.env.local` and Vercel project settings
 
 ## Decisions
+
+### 2026-04-26 — Strategy review: brand positioning and launch priorities
+
+Full strategy review session (10 docs reviewed, action plan produced in `inbox/miozuki/action-plan.md`). Permanent decisions:
+
+**Brand positioning:**
+- Primary narrative: "heirloom ethics" -- jewellery designed to be passed down, not replaced. Not "moissanite instead of a diamond." The stone earns its place in the family without the extraction story.
+- Dual-category (moissanite + pearl) positioning is Miozuki's structural differentiator. No NZ competitor combines both. Explicit in all copy and PR.
+- NZ provenance narrative required: a specific story about what NZ means to the brand aesthetically. Not generic "NZ-owned."
+- Gifting collection ($300-$1,200 NZD): pearl studs, moissanite pendants, stacking rings. Framed as curated fine gifting, not entry-level.
+
+**SEO and content architecture:**
+- Content hub: subdirectory only (`/learn` or `/moissanite-guide` on miozuki.co.nz). Never a subdomain. Decision is permanent -- subdomains split domain authority on a new domain.
+- `/moissanite-guide` launches Month 4-6 as NZ's first standalone moissanite education resource. 2-3 guide pages per month. Includes honest NZ retailer comparison.
+- Content floor: 1-2 posts/month. Comparison and informational queries first (Year 1). Head terms for "engagement rings NZ" and "fine jewellery NZ" skipped in Year 1 -- too competitive.
+
+**Chatbot:**
+- Claude API direct (not third-party platforms). MVP first (10-15 hours: API route + chat UI + system prompt). Quiz/structured flow deferred to Month 3-4 after visitor data informs design.
+- Cost at under 1,000 chats/month: under USD $15/month either way. Third-party platforms at $100-700/month are not justified.
+- Static education page earns the ranking; chatbot widget on same page handles conversion. Two separate jobs.
+
+**Deferred:**
+- Reddit expert-participant: deferred (ongoing time commitment)
+- Micro-influencer gifting campaign: deferred (pre-revenue budget)
+- Pinterest as active channel: deferred (content pipeline unsustainable solo)
+- All AI photography/ad tools (Midjourney, Flair, PhotoRoom, etc.): deferred
+
+**Open blocker:**
+- Product photography: blocking Viva pitch, chatbot system prompt, styled shoot, collection page copy. Must be resolved before any content or PR work begins.
 
 ### 2026-04-15 — Two-track collaboration model for non-dev collaborator
 Ting works directly on `master` with zero git literacy; Ryo uses feature branches + Vercel preview URLs for approval before merge. The onboarding primitives are `.vscode/tasks.json` (dev server auto-start on folder open), `.vscode/settings.json` (one-click commit auto-pushes), a `Ctrl+Alt+P` publish shortcut, and a plain-English `TING-GUIDE.md`. Trade-off explicitly accepted: coordination risk in exchange for Ting's autonomy — she can edit content end-to-end without touching a terminal or understanding branches. Pattern is reusable for any future non-dev collaborator on any repo.
