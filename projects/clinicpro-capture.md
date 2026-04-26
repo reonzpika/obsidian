@@ -26,8 +26,8 @@ Mobile web app that photographs clinical images and commits them to patient reco
 | Task 2: `/refer-a-practice` bounty page + API   | Complete (commit 4326d34, 19 Apr)       |
 | Task 3: Capture upsell banner in clinicpro-saas | Complete (commit 4be3b4f, 23 Apr)       |
 | Task 4: Champion email v1                       | Drafted (`clinicpro-medtech/docs/marketing/phase-1/champion-email-v1.md`). Not sent: pending landing page review and incentive policy confirmation. |
-| Task 5: Demo Loom script + case-study template  | Open                                    |
-| Task 6: Hero video                              | Brief complete (25 Apr). Execution pending: `medtech-20260425-004`. Kling account pending: `medtech-20260425-003`. Brief at `docs/marketing/phase-1/hero-video-brief.md`. |
+| Task 5: Demo Loom script + case-study template  | Loom embed superseded by walkthrough video (26 Apr). Case-study template still open. |
+| Task 6: Hero video                              | Walkthrough (Shot 4) complete 26 Apr. 17s portrait MP4 at `public/video-assets/hero-walkthrough.mp4`, wired into HeroSection. Cinematic Shots 1-3 still pending Kling/Higsfield account (`medtech-20260425-003`). Minor adjustments tracked in `medtech-20260426-005`. |
 
 Landing page copy/design review (task medtech-20260419-001) must complete before champion email send. Capture subdomain `capture.clinicpro.co.nz` must be live before sending.
 
@@ -44,7 +44,7 @@ Landing page copy/design review (task medtech-20260419-001) must complete before
 - Multi-PMS architecture (decided 2026-04-22): one repo (`clinicpro-medtech`), PMS adapters as modules. API and light UI differences per PMS are handled by the adapter, not separate repos or deployments. Adding a new PMS = new adapter module, no new repo.
 - AU white-label deployment (decided 2026-04-22): separate Vercel project, same codebase, Lawrence's domain via CNAME (e.g. Medtech's own domain). Brand config via env vars. All product updates ship to NZ and AU from the same codebase.
 - Marketing typography: Newsreader (serif display), IBM Plex Sans (body), JetBrains Mono (mono). Inter stays in-app only.
-- Hero video toolchain (decided 2026-04-25): Nano Banana (still image generation, API already configured) + Kling 3.0 via Higsfield (image-to-video animation, setup pending). Workflow: generate key frames with Nano Banana, animate with Kling 3.0, Claude Code handles scroll-triggered frame integration and performance optimisation. Budget estimate ~$3-4 per hero clip. Kling 3.0 chosen over Veo 3.1 and Runway for quality/cost/control at 1080p.
+- Hero video toolchain (decided 2026-04-25): Nano Banana (still image generation, API already configured) + Kling 3.0 via Higsfield (image-to-video animation, setup pending). Workflow: generate key frames with Nano Banana, animate with Kling 3.0, Claude Code handles scroll-triggered frame integration and performance optimisation. Budget estimate ~$3-4 per hero clip. Kling 3.0 chosen over Veo 3.1 and Runway for quality/cost/control at 1080p. (26 Apr: gen-image.mjs adopted into clinicpro-medtech, `scripts/gen-image.mjs` reads `LAOZHANG_API_KEY` from `.env`; sidecars at `scripts/prompts/`. Remotion 4.0.451 installed under `remotion/` for walkthrough rendering.)
 - Auth: Supabase OTP (6-digit code, no magic link)
 - Pricing (decided 2026-04-15): annual per practice by enrolled patient count ($299 / $799 / $1,500 / contact). No self-serve trial. Concierge trial via ryo@clinicpro.co.nz.
 - BFF mandatory: never call ALEX directly from Vercel

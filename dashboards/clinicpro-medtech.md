@@ -48,6 +48,15 @@ for (let p of active) {
 - Alex Cauble-Chantrenne: partnership agreement draft promised 7 April but not yet received
 - Lawrence Peterson: follow-up sent 13 April re infrastructure running costs
 
+### Week of 2026-04-21 (continued 26 Apr)
+- Hero video walkthrough (Shot 4) shipped: 17-second 4:5 portrait MP4, two-photo capture flow with native iPhone camera UI + shutter flash, ABC1234 / John Smith demo data
+- Remotion 4.0.451 + @remotion/tailwind installed; remotion/ folder scaffolded with PhoneFrame, Cursor, NativeCameraScreen, plus 5 pixel-faithful screen clones (Search, Confirm, Camera, Review, Progress)
+- Two clinical stills generated via Nano Banana Pro (~$0.10): forearm BCC close-up + matching dermoscopy view (img2img refinement against a real reference photo)
+- gen-image.mjs script adopted from miozuki-web; sidecar prompts at scripts/prompts/, audit trail per workflow; LAOZHANG_API_KEY in clinicpro-medtech/.env
+- HeroSection.tsx wired: grid 7/5 to 6/6, loom-embed-slot replaced with autoplay/muted/loop video at aspect-[4/5], caption Walkthrough · 10 sec
+- Visual verification in browser deferred: claude-in-chrome's automated Chrome rejects local video decode (silent stall, networkState 2 readyState 0). File is well-formed (H.264 High@4.0 yuv420p, fast-start, plays in Media Player and via curl). Verify in user's regular browser.
+- Follow-up: minor adjustments to walkthrough timing / cursor positions tracked in medtech-20260426-005
+
 ### Week of 2026-04-21 (continued 25 Apr, session 2)
 - Hero video toolchain decided: Nano Banana (stills) + Kling 3.0 via Higsfield (animation) + Remotion + Claude Code (sequencing and integration)
 - Hero video concept confirmed via board session: over-the-shoulder clinical scene wrap + screenshot walkthrough with cursor animation; 4:5 portrait, 6/6 hero grid split
