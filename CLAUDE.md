@@ -99,7 +99,7 @@ For callouts, embeds, block references, mermaid, footnotes, or any Obsidian synt
 - **R&D research output lives in `../nexwave-rd/docs/`.** The vault holds task files for R&D; research reports, specs, and architecture decisions go in the product repo under `docs/obj-N/research/` or `docs/obj-N/output/`.
 - **Sprint archive is read-only.** Files in `sprints/archive/` are historical records. Never delete or modify.
 - **Never edit anything inside `.obsidian/`.**
-- **`dashboards/home.md` is Dataview-powered.** Project lists and active counts are generated from frontmatter. Do not manually add or edit project entries in home.md. To update what appears there, update the relevant project frontmatter fields (`title`, `description`, `status`, `phase`, `dashboard`).
+- **`home.md` is Dataview-powered.** Project lists and active counts are generated from frontmatter. Do not manually add or edit project entries in home.md. To update what appears there, update the relevant project frontmatter fields (`title`, `description`, `status`, `phase`, `dashboard`).
 - **`dashboards/portfolio-map.canvas` is the visual portfolio map.** Update it when projects are added or archived.
 
 ## Gotchas

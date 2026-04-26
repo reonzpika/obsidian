@@ -8,7 +8,7 @@ stack: Next.js, TypeScript, Tailwind, Vercel, Shopify Storefront API
 title: "Miozuki"
 description: "NZ fine jewellery ecommerce. Next.js headless frontend over Shopify."
 phase: "Pre-launch: SEO foundation, brand positioning, chatbot MVP"
-dashboard: other-projects
+dashboard: miozuki
 ---
 ## Quick Links ##
 - [Shopify](https://admin.shopify.com/store/miozuki/)

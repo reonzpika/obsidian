@@ -1,6 +1,6 @@
 {
   "defaultViewMode": "preview",
-  "openBehavior": "file:dashboards/home",
+  "openBehavior": "file:home",
   "alwaysUpdateLinks": true,
   "promptDelete": false,
   "pdfExportSettings": {
