@@ -105,3 +105,10 @@ if (parked.length > 0) {
 - `home.md` nav and section headers updated: GP Fellowship removed, Side Projects → Other Projects
 - All skill files updated (daily, weekly, monthly, obsidian, obsidian-task-table, adopt): sprint references removed, project/phase/milestone pattern adopted throughout
 - Vault `CLAUDE.md` updated: hierarchy rules, task schema, project schema, gotchas
+
+**vault restructure (Apr 26)**
+- `home.md` moved to repo root; references updated in `.obsidian/app.json`, vault `CLAUDE.md`, and `daily/SKILL.md`
+- LinkedIn dashboard created: `dashboards/linkedin.md`; `linkedin-agent` split into two projects: `linkedin-content` (strategy, pillars, post management) and `linkedin-agent` (automation pipeline); both under `dashboard: linkedin`; tasks linkedin-20260419-001 and linkedin-20260423-002 reassigned to `linkedin-content`
+- Miozuki dashboard created: `dashboards/miozuki.md`; `projects/miozuki.md` moved from `other-projects` to `miozuki` dashboard
+- `home.md` nav and sections updated: LinkedIn and Miozuki added between Personal and Other Projects
+- `daily/SKILL.md` Dashboard areas table updated: added gp-os, personal, linkedin, miozuki

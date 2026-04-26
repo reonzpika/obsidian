@@ -35,6 +35,10 @@ Evening review and tomorrow planning is handled by `/daily-review`.
 | clinicpro-saas | ClinicPro SaaS |
 | clinicpro-medtech | ClinicPro Medtech |
 | nexwave-rd | Nexwave R&D |
+| gp-os | GP OS |
+| personal | Personal |
+| linkedin | LinkedIn |
+| miozuki | Miozuki |
 | other-projects | Other Projects |
 | partnerships | Partnerships |
 
