@@ -268,7 +268,7 @@ day: [Day name]
 
 # YYYY-MM-DD
 
-[[dashboards/home]] | [[daily/YYYY-MM-DD-1]]
+[[home]] | [[daily/YYYY-MM-DD-1]]
 
 ## Focus
 - [user's stated focus, verbatim or lightly cleaned — one bullet per distinct goal]
@@ -291,7 +291,7 @@ day: [Day name]
 
 ---
 
-[[dashboards/home]]
+[[home]]
 ```
 
 **Writing rules:**
@@ -299,8 +299,8 @@ day: [Day name]
 - Urgent and Quick wins: wikilinks `[[task-id]]`, no checkboxes, only tasks in scope of the user's stated focus.
 - Blockers: up to 5, only tasks where `status: blocked` pulled from `tasks/open/`. Format: `[[task-id]] — waiting on X`
 - If the user's reply surfaces a new action item: create the task file first, then wikilink it in the note.
-- Always add `[[dashboards/home]] | [[daily/YYYY-MM-DD-1]]` (home link + previous day link) on the line immediately after the `# YYYY-MM-DD` title. No nav links at the bottom.
-- Always add `[[daily/YYYY-MM-DD]]` on the line immediately after the `# Dashboard: All Projects` title in `dashboards/home.md`, replacing the previous date's link.
+- Always add `[[home]] | [[daily/YYYY-MM-DD-1]]` (home link + previous day link) on the line immediately after the `# YYYY-MM-DD` title. No nav links at the bottom.
+- Always add `[[daily/YYYY-MM-DD]]` on the line immediately after the `# Dashboard: All Projects` title in `home.md`, replacing the previous date's link.
 - Nothing else: no Gmail section, no From Yesterday, no Evening Reflection, no Notes section. Ephemeral notes belong in chat.
 
 Mark "Write daily note" completed.
