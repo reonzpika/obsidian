@@ -1,0 +1,113 @@
+BEGIN:VCALENDAR
+METHOD:REQUEST
+PRODID:Microsoft Exchange Server 2010
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:New Zealand Standard Time
+BEGIN:STANDARD
+DTSTART:16010101T030000
+TZOFFSETFROM:+1300
+TZOFFSETTO:+1200
+RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=1SU;BYMONTH=4
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:16010101T020000
+TZOFFSETFROM:+1200
+TZOFFSETTO:+1300
+RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=-1SU;BYMONTH=9
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+ORGANIZER;CN=Alex Cauble-Chantrenne:mailto:AChantrenne@medtechglobal.com
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=reonzpika@
+ gmail.com:mailto:reonzpika@gmail.com
+ATTENDEE;ROLE=OPT-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=Lawrence P
+ eterson:mailto:LPeterson@medtechglobal.com
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=Ryo Eguchi
+ :mailto:ryo@clinicpro.co.nz
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=Prashanth 
+ Koval:mailto:pkoval@medtechglobal.com
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=Ging Ming 
+ Chan:mailto:gmchan@medtechglobal.com
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=John Zhao:
+ mailto:john.zhao@medtechglobal.com
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=Nikhil Kil
+ ari:mailto:nikhil.kilari@medtechglobal.com
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=Bhavani Ka
+ kani:mailto:bhavani.kakani@medtechglobal.com
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=Defne Arza
+ noglu:mailto:defne.arzanoglu@medtechglobal.com
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=Tony Kuo:m
+ ailto:tony.kuo@medtechglobal.com
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=Chieh-Ting
+  Chan:mailto:chieh-ting.chan@medtechglobal.com
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=Srinivasan
+  Rajagopalan:mailto:srajagopalan@medtechglobal.com
+DESCRIPTION;LANGUAGE=en-US:Dr Ryo Eguchi is ready to showcase ClinicPro and
+  how it integrates with Evolution! This is our opportunity to see it first
+ hand for production credentialing and ask any questions we may have.\n\nIf
+  you’re unable to make this time\, I will record the session for viewing
+  at a more amenable time – please note the recording will be for interna
+ l viewing only and should not be disseminated outside of Medtech.\n\nThank
+  you so much!\n___________________________________________________________
+ _____________________\nMicrosoft Teams meeting\nJoin: https://teams.micros
+ oft.com/meet/44002315567832?p=cXUp9Ub1vmXe85LqGg\nMeeting ID: 440 023 155 
+ 678 32\nPasscode: zL3Fs66v\n________________________________\nNeed help?<h
+ ttps://aka.ms/JoinTeamsMeeting?omkt=en-US> | System reference<https://team
+ s.microsoft.com/l/meetup-join/19%3ameeting_MWU1NDMzZWItMDQzOC00ZDhhLThlN2Y
+ tMDg0YmUwZTEyZDM2%40thread.v2/0?context=%7b%22Tid%22%3a%228a024e99-aba3-4b
+ 25-b875-28b0c0ca6096%22%2c%22Oid%22%3a%22ce53dd59-4e1c-4982-ab75-4f5867323
+ cb0%22%7d>\nFor organizers: Meeting options<https://teams.microsoft.com/me
+ etingOptions/?organizerId=ce53dd59-4e1c-4982-ab75-4f5867323cb0&tenantId=8a
+ 024e99-aba3-4b25-b875-28b0c0ca6096&threadId=19_meeting_MWU1NDMzZWItMDQzOC0
+ 0ZDhhLThlN2YtMDg0YmUwZTEyZDM2@thread.v2&messageId=0&language=en-US>\n_____
+ __________________________________________________________________________
+ _\n\n
+UID:040000008200E00074C5B7101A82E008000000003006D42413B2DC01000000000000000
+ 01000000012817792AF9C3A4C8CFD3FD99564FF30
+SUMMARY;LANGUAGE=en-US:ClinicPro + Evolution Integration Demo
+DTSTART;TZID=New Zealand Standard Time:20260317T150000
+DTEND;TZID=New Zealand Standard Time:20260317T160000
+CLASS:PUBLIC
+PRIORITY:5
+DTSTAMP:20260317T004806Z
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+SEQUENCE:1
+LOCATION;LANGUAGE=en-US:Microsoft Teams Meeting\; Room Toru
+X-MICROSOFT-CDO-APPT-SEQUENCE:1
+X-MICROSOFT-CDO-OWNERAPPTID:1049376746
+X-MICROSOFT-CDO-BUSYSTATUS:TENTATIVE
+X-MICROSOFT-CDO-INTENDEDSTATUS:BUSY
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-CDO-INSTTYPE:0
+X-MICROSOFT-ONLINEMEETINGINFORMATION:{"OnlineMeetingChannelId":null\,"Onlin
+ eMeetingProvider":3}
+X-MICROSOFT-SKYPETEAMSMEETINGURL:https://teams.microsoft.com/l/meetup-join/
+ 19%3ameeting_MWU1NDMzZWItMDQzOC00ZDhhLThlN2YtMDg0YmUwZTEyZDM2%40thread.v2/
+ 0?context=%7b%22Tid%22%3a%228a024e99-aba3-4b25-b875-28b0c0ca6096%22%2c%22O
+ id%22%3a%22ce53dd59-4e1c-4982-ab75-4f5867323cb0%22%7d
+X-MICROSOFT-SCHEDULINGSERVICEUPDATEURL:https://api.scheduler.teams.microsof
+ t.com/teams/8a024e99-aba3-4b25-b875-28b0c0ca6096/ce53dd59-4e1c-4982-ab75-4
+ f5867323cb0/19_meeting_MWU1NDMzZWItMDQzOC00ZDhhLThlN2YtMDg0YmUwZTEyZDM2@th
+ read.v2/0
+X-MICROSOFT-SKYPETEAMSPROPERTIES:{"cid":"19:meeting_MWU1NDMzZWItMDQzOC00ZDh
+ hLThlN2YtMDg0YmUwZTEyZDM2@thread.v2"\,"private":true\,"type":0\,"mid":0\,"
+ rid":0\,"uid":null}
+X-MICROSOFT-DONOTFORWARDMEETING:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MICROSOFT-REQUESTEDATTENDANCEMODE:DEFAULT
+X-MICROSOFT-ISRESPONSEREQUESTED:TRUE
+X-MICROSOFT-LOCATIONS:[ { "DisplayName" : "Microsoft Teams Meeting"\, "Loca
+ tionAnnotation" : ""\, "LocationSource" : 0\, "Unresolved" : false\, "Loca
+ tionUri" : "" }\, { "DisplayName" : "Room Toru"\, "LocationAnnotation" : "
+ "\, "LocationSource" : 5\, "Unresolved" : false\, "LocationUri" : "room_to
+ ru@medtechglobal.com" } ]
+BEGIN:VALARM
+DESCRIPTION:REMINDER
+TRIGGER;RELATED=START:-PT15M
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+END:VCALENDAR
