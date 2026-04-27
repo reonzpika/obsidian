@@ -15,7 +15,8 @@ tasks/done/*.md             Completed tasks. Archive only.
 weekly/briefing.md          Cross-stream orientation. 4 lines. Always-on.
 weekly/{project-id}.md      Per-project focus and day sections. Reset each Monday.
 logs/{project-id}/YYYY-WNN.md  Session logs per project. Grows freely. Not for orientation.
-context/system/             System reference docs (this folder).
+system/             System reference docs (this folder).
+system/                     System reference docs (this folder).
 context/{stream}-context/   Stream-specific reference material.
 inbox/                      Unreviewed AI output. Nothing leaves without Ryo approval.
 ```
@@ -44,11 +45,11 @@ No sprints folder. Sprint concept removed 2026-04-27.
 | Project detail | `projects/{project}.md` |
 | Finding a task | `tasks/open/` |
 | Stream overview | `dashboards/{stream}.md` |
-| System question | `context/system/` |
-| Techstack | `context/stack.md` |
-| Repos and folders | `context/repos.md` |
-| Skills reference | `context/skills-index.md` |
-| Workflow rituals | `context/system/workflow-reference.md` |
+| System question | `system/system-map.md` |
+| Techstack | `system/stack.md` |
+| Repos and folders | `system/repos.md` |
+| Skills reference | `system/skills-index.md` |
+| Workflow rituals | `system/workflow-reference.md` |
 | Contacts | `context/people.md` |
 
 ---
@@ -79,8 +80,8 @@ logs/{project-id}/YYYY-WNN.md
 
 ## Related docs
 
-- File structural spec: `context/system/file-structure.md`
-- Workflow rituals and skill triggers: `context/system/workflow-reference.md`
-- System decisions: `context/system/decisions-log.md`
-- Techstack: `context/stack.md`
-- Skills: `context/skills-index.md`
+- File structural spec: `system/file-structure.md`
+- Workflow rituals and skill triggers: `system/workflow-reference.md`
+- System decisions: `system/decisions-log.md`
+- Techstack: `system/stack.md`
+- Skills: `system/skills-index.md`

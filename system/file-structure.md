@@ -146,13 +146,13 @@ GP Fellowship: ...
 
 ---
 
-## context/system/
+## system/
 
 **Purpose:** System reference docs for Ryo and AI.
 
-**Contains:** system-map.md, file-structure.md, workflow-reference.md, decisions-log.md only.
+**Contains:** system-map.md, file-structure.md, workflow-reference.md, decisions-log.md, stack.md, skills-index.md, repos.md.
 
-**Rule:** No project content here.
+**Rule:** No project content here. Anything about how the vault works or what tools are used lives here.
 
 ---
 

@@ -1,6 +1,6 @@
 # Workflow Reference
 
-Rituals and skill triggers. Full skill list: `context/skills-index.md`.
+Rituals and skill triggers. Full skill list: `system/skills-index.md`.
 
 ---
 

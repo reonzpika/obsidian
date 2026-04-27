@@ -44,9 +44,9 @@ Adjust if the user’s base path differs; structure is stable.
 ## Where knowledge lives
 
 - **Repo:** `README`, `docs/`, ADRs, comments next to code — versioned with the product; use when **implementing**.
-- **Vault:** `context/repos.md` (route map), `context/stack.md`, people, planning — use when **scoping or prioritising**; not a substitute for repo docs.
+- **Vault:** `system/repos.md` (route map), `system/stack.md`, people, planning — use when **scoping or prioritising**; not a substitute for repo docs.
 
-When you need product structure (routes, folders), prefer **`context/repos.md`** in the vault **plus** the target repo’s tree — not the vault for code.
+When you need product structure (routes, folders), prefer **`system/repos.md`** in the vault **plus** the target repo’s tree — not the vault for code.
 
 ## R&D isolation
 
