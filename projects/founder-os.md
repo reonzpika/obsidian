@@ -5,7 +5,7 @@ status: active
 type: side-project
 description: "Personal tooling, Claude Code setup, workflow systems, and automation."
 phase: "Claude Code setup audit and improvement"
-dashboard: other-projects
+dashboard: founder-os
 ---
 
 ## Description
