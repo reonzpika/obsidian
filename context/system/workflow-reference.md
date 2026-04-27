@@ -6,22 +6,22 @@ Rituals and skill triggers. Full skill list: `context/skills-index.md`.
 
 ## Daily ritual
 
-1. Open `weekly.md`. Read the briefing section at the top (4 lines, one per stream).
-2. Run `/daily`. It updates the weekly file with today's section. Surfaces urgent items.
+1. Open `weekly/briefing.md`. Read the 4-line cross-stream orientation.
+2. Run `/daily`. Declare which project is in focus. It reads `weekly/{project-id}.md` and updates it with today's section. Surfaces urgent items.
 3. Pick one stream. Start directing.
 
 ---
 
 ## Session end ritual
 
-1. Run `/session-update`. Writes session summary to `logs/YYYY-WNN.md`. Updates briefing section in `weekly.md`.
+1. Run `/session-update`. Writes session summary to `logs/{project-id}/YYYY-WNN.md`. Updates `weekly/briefing.md` stream line.
 2. Confirm any AI output generated this session landed in `inbox/` before moving anywhere.
 
 ---
 
 ## Weekly ritual (Friday or end of last session of the week)
 
-1. Run `/weekly`. Rolls up the week. Archives `weekly.md` to `logs/`. Resets `weekly.md` for next week.
+1. Run `/weekly`. Rolls up the week. Archives each `weekly/{project-id}.md` day sections to `logs/{project-id}/YYYY-WNN.md`. Resets all per-project weekly files and `weekly/briefing.md` for next week.
 
 ---
 
@@ -58,7 +58,7 @@ Rituals and skill triggers. Full skill list: `context/skills-index.md`.
 
 - Every strategic question: propose `/board` before writing anything.
 - Every AI output: lands in `inbox/` first. No exceptions.
-- Never create `daily/YYYY-MM-DD.md` files. Update `weekly.md` instead.
+- Never create `daily/YYYY-MM-DD.md` files. Update `weekly/{project-id}.md` instead.
 - History and logs go to `logs/`. Not dashboards.
 - Before editing `settings.json` or `.mcp.json`: run `/update-config`.
 - Irreversible actions (delete, push, send, bulk move): one-line confirmation, wait for explicit yes.

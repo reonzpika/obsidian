@@ -12,9 +12,9 @@ dashboards/*.md             Stream index. Project list, current sprint. No histo
 projects/*.md               Project detail. Task table. Current focus.
 tasks/open/*.md             Single task. Frontmatter + notes only.
 tasks/done/*.md             Completed tasks. Archive only.
-weekly.md                   Planning only. Reset each Monday.
-monthly.md                  Planning only. Written once per month.
-logs/YYYY-WNN.md            Session logs. Grows freely. Not for orientation.
+weekly/briefing.md          Cross-stream orientation. 4 lines. Always-on.
+weekly/{project-id}.md      Per-project focus and day sections. Reset each Monday.
+logs/{project-id}/YYYY-WNN.md  Session logs per project. Grows freely. Not for orientation.
 context/system/             System reference docs (this folder).
 context/{stream}-context/   Stream-specific reference material.
 inbox/                      Unreviewed AI output. Nothing leaves without Ryo approval.
@@ -31,7 +31,7 @@ No sprints folder. Sprint concept removed 2026-04-27.
 - Detail lives in `projects/`. Never in `dashboards/` or `home.md`.
 - History and session logs live in `logs/`. Never in `dashboards/`.
 - AI output lands in `inbox/` first. Ryo reviews. Then moves to final location.
-- Planning lives in `weekly.md` and `monthly.md`. These are forward-looking only.
+- Planning lives in `weekly/briefing.md` and `weekly/{project-id}.md`. Forward-looking only.
 
 ---
 
@@ -39,7 +39,7 @@ No sprints folder. Sprint concept removed 2026-04-27.
 
 | Task | Start here |
 |---|---|
-| Morning orientation | `weekly.md` briefing section |
+| Morning orientation | `weekly/briefing.md` (4 lines) |
 | Strategic question | Run `/board` first |
 | Project detail | `projects/{project}.md` |
 | Finding a task | `tasks/open/` |
@@ -62,11 +62,15 @@ home.md
               └── embeds tasks from tasks/open/ (Dataview)
                     └── links to context/{stream}-context/ as needed
 
-weekly.md
-  └── updated by /daily (planning sections)
-  └── briefing section updated by /session-update
+weekly/briefing.md
+  └── updated by /session-update (stream status line)
+  └── read by /daily for morning orientation
 
-logs/YYYY-WNN.md
+weekly/{project-id}.md
+  └── updated by /daily (day sections for that project)
+  └── archived to logs/{project-id}/YYYY-WNN.md by /weekly, then reset
+
+logs/{project-id}/YYYY-WNN.md
   └── session records written by /session-update
   └── not linked from dashboards or home
 ```

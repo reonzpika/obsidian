@@ -23,9 +23,10 @@ Facilitates Ryo's weekly project review. Rolls up task progress across all activ
 - Projects: `projects/*.md` (includes `phase:` field for current focus area)
 - Open tasks: `tasks/open/*.md`
 - Done tasks: `tasks/done/*.md`
-- Weekly planning file: `weekly.md`
-- Logs: `logs/*.md`
-- Review output: `logs/YYYY-WNN-review.md`
+- Weekly planning file (orientation): `weekly/briefing.md`
+- Weekly planning file (per-project): `weekly/{project-id}.md`
+- Logs (per-project): `logs/{project-id}/*.md`
+- Review output: `logs/{project-id}/YYYY-WNN-review.md`
 
 ## R&D isolation rule
 
@@ -45,7 +46,8 @@ Facilitates Ryo's weekly project review. Rolls up task progress across all activ
 - Filter where `created` or file mtime is within last 7 days
 
 **Weekly planning file:**
-- Read `weekly.md`
+- Full run: Read `weekly/briefing.md` + all `weekly/{project-id}.md` files
+- Scoped run (`/weekly rd`, `/weekly saas`): Read `weekly/briefing.md` + only the relevant `weekly/{project-id}.md`
 - Extract: briefing (stream status), week focus, day sections (focus, urgent, blockers per day)
 
 Create session tasks:
@@ -98,7 +100,7 @@ TaskCreate: "Phase 3: Plan" — blocked by Phase 2
 
 ## Output Format
 
-Save to `logs/YYYY-WNN-review.md`:
+Save to `logs/{project-id}/YYYY-WNN-review.md`. For a full run, save one file per stream.
 
 ```markdown
 ---
@@ -153,11 +155,18 @@ week: YYYY-WNN
 
 ## Archive and Reset weekly.md
 
-After saving the review to `logs/YYYY-WNN-review.md`:
+After saving the review to `logs/{project-id}/YYYY-WNN-review.md`:
 
-1. Read current `weekly.md`.
-2. Append the day sections from `weekly.md` (everything after `## Focus this week`) to `logs/YYYY-WNN.md` under a heading `## Weekly planning archive`.
-3. Reset `weekly.md` for the new week — overwrite with a blank template:
+1. For each project: read `weekly/{project-id}.md`.
+2. Append the day sections from each `weekly/{project-id}.md` (everything after `## Focus this week`) to `logs/{project-id}/YYYY-WNN.md` under a heading `## Weekly planning archive`.
+3. Reset each `weekly/{project-id}.md` for the new week — overwrite with:
+
+```markdown
+## Focus this week
+-
+```
+
+4. Reset `weekly/briefing.md` to:
 
 ```markdown
 ## Briefing
@@ -165,21 +174,15 @@ ClinicPro SaaS: — | — | —
 ClinicPro Medtech: — | — | —
 NexWave R&D: — | — | —
 GP Fellowship: — | — | —
-
-## Focus this week
-- ClinicPro SaaS:
-- ClinicPro Medtech:
-- NexWave R&D:
-- GP Fellowship:
 ```
 
-Confirm: `weekly.md reset for week YYYY-WNN+1`
+Confirm: `weekly/ reset for week YYYY-WNN+1`
 
 ---
 
 ## Integration
 
-- `/daily` — updates weekly.md; Phase 1 reads it for context
+- `/daily` — updates weekly/{project-id}.md; Phase 1 reads weekly/briefing.md for orientation
 - `/monthly` — reads logs/ for weekly review context
 - `/session-update` — use during the week to log session progress
 - `/obsidian-task-table` — create new tasks identified during planning

@@ -31,7 +31,7 @@ What goes in each file type. What does not. Authoritative reference.
 
 **Does not contain:** task tables, progress history, weekly logs, context docs, planning.
 
-**Rule:** If this file is growing over time, something is in the wrong place. History goes to `logs/`. Planning goes to `weekly.md`.
+**Rule:** If this file is growing over time, something is in the wrong place. History goes to `logs/{project-id}/`. Planning goes to `weekly/`.
 
 ---
 
@@ -73,34 +73,50 @@ What goes in each file type. What does not. Authoritative reference.
 
 ---
 
-## weekly.md
+## weekly/briefing.md
 
-**Purpose:** Rolling weekly planning file. Forward-looking only. Reset each Monday.
+**Purpose:** Cross-stream orientation. 4 lines. Always-on for morning reads.
 
 **Structure:**
 ```
 ## Briefing
-{stream}: {one-line status} | {urgent item} | {open decision}
-(4 lines, one per stream — updated by /session-update at session end)
+ClinicPro SaaS: {one-line status} | {urgent item} | {open decision}
+ClinicPro Medtech: ...
+NexWave R&D: ...
+GP Fellowship: ...
+```
 
+**Rule:** Updated by `/session-update` at session end. Read by `/daily` for morning orientation. Reset by `/weekly` at end of week.
+
+---
+
+## weekly/{project-id}.md
+
+**Purpose:** Per-project weekly planning. Forward-looking only. Reset each Monday.
+
+**Structure:**
+```
 ## Focus this week
-- ClinicPro SaaS:
-- ClinicPro Medtech:
-- NexWave R&D:
-- GP Fellowship:
+-
 
 ## Monday YYYY-MM-DD
-**Plan:**
-**Done:**
-**Blocked:**
 
-## Tuesday ...
-(repeat for each day worked)
+### Focus
+- [user's stated focus]
+
+### Urgent
+- [[task-id]] — title
+
+### Quick wins
+- [[task-id]] — title
+
+### Blockers
+- [[task-id]] — waiting on X
 ```
 
 **Does not contain:** session logs, project detail, task tables, history beyond the current week.
 
-**Rule:** `/daily` updates this file. It does not create new `daily/YYYY-MM-DD.md` files. At end of week, `/weekly` archives this file to `logs/` and resets it.
+**Rule:** `/daily` writes to `weekly/{project-id}.md` for the project in scope. At end of week, `/weekly` archives day sections to `logs/{project-id}/YYYY-WNN.md` and resets the file.
 
 ---
 
@@ -120,13 +136,13 @@ What goes in each file type. What does not. Authoritative reference.
 
 ---
 
-## logs/YYYY-WNN.md
+## logs/{project-id}/YYYY-WNN.md
 
-**Purpose:** Session and weekly log records. Grows freely.
+**Purpose:** Per-project session and weekly log records. Grows freely.
 
-**Contains:** Session summaries (written by `/session-update`), archived weekly files (moved by `/weekly`).
+**Contains:** Session summaries written by `/session-update`, archived weekly day sections moved by `/weekly`.
 
-**Rule:** Never read for orientation. This is a write-only sink except for retrospective lookups.
+**Rule:** Never read for orientation. Write-only sink except for retrospective lookups. Each project has its own directory: `logs/nexwave-rd/`, `logs/clinicpro-saas/`, `logs/clinicpro-medtech/`, `logs/gp-fellowship/`.
 
 ---
 

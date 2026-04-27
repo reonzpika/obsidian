@@ -22,8 +22,9 @@ Evening review and tomorrow planning is handled by `/daily-review`.
 
 ## Vault paths
 
-- Weekly planning file: `weekly.md`
-- Logs: `logs/YYYY-WNN.md`
+- Weekly planning file (orientation): `weekly/briefing.md`
+- Weekly planning file (per-project): `weekly/{project-id}.md`
+- Logs (per-project): `logs/{project-id}/YYYY-WNN.md`
 - Active tasks: `tasks/open/*.md` (frontmatter: id, title, project, repo, milestone, status, priority, due — `project` always set; `milestone` optional grouping label)
 - Done tasks: `tasks/done/*.md`
 - Projects: `projects/*.md` (frontmatter: id, title, status, type, repo, description, phase, dashboard — `phase` is current focus area)
@@ -78,10 +79,10 @@ Mark "Read context" in_progress.
 Fire all of the following tool calls in a single message. Do not wait between them.
 
 **Weekly planning file:**
-Read `weekly.md`. Extract the briefing section (stream status per line), this week's focus, and any day sections already written this week for context.
+Read `weekly/briefing.md` for the cross-stream orientation (one status line per stream). If a specific project is in scope for today, also read `weekly/{project-id}.md` for that project's focus and day sections.
 
 **Recent logs and monthly review:**
-Glob `logs/*.md` — read the most recent file (highest name) for weekly context. Glob `reviews/monthly/*.md` — read the file matching the current month (YYYY-MM.md), or the most recent if none matches.
+Glob `logs/*/*.md` — read the most recent session log per project directory for weekly context. Glob `reviews/monthly/*.md` — read the file matching the current month (YYYY-MM.md), or the most recent if none matches.
 
 If neither exists or is empty, note this as a flag: emit one line in Phase 3 after the Projects table: `**No logs/monthly review found** — consider running /weekly or /monthly`
 
@@ -263,7 +264,7 @@ Wait. Do not suggest a plan. Do not ask follow-up questions.
 
 Once the user replies, mark "Write daily note" in_progress.
 
-Read `weekly.md`. Check if a section for today already exists (e.g. `## Monday 2026-04-27`).
+Identify which project(s) the user declared as focus. For each project in scope, read `weekly/{project-id}.md`. Check if a section for today already exists (e.g. `## Monday 2026-04-27`).
 
 **If today's section does not exist:** append it after the last existing day section.
 
@@ -292,11 +293,11 @@ Today's section template:
 - Urgent and Quick wins: wikilinks `[[task-id]]`, no checkboxes, only tasks in scope of the user's stated focus.
 - Blockers: up to 5, only tasks where `status: blocked` pulled from `tasks/open/`. Format: `[[task-id]] — waiting on X`
 - If the user's reply surfaces a new action item: create the task file first, then wikilink it.
-- Do not create a new file. Always edit `weekly.md`.
+- Do not create a new file. Always edit `weekly/{project-id}.md` for each project in scope.
 
 Mark "Write daily note" completed.
 
-Confirm with one line: `weekly.md updated → [Day] YYYY-MM-DD section written`
+Confirm with one line: `weekly/{project-id}.md updated → [Day] YYYY-MM-DD section written`
 
 ---
 
@@ -334,7 +335,7 @@ R&D tasks add: `objective: obj-1|obj-2|obj-3|obj-4|capability` and `owner: ryo|t
 
 ### Step 1: Review morning plan
 
-Read `weekly.md`. Find today's section (e.g. `## Monday 2026-04-27`). Identify tasks in `### Urgent` and `### Quick wins` — what's done, in-progress, not started.
+Read `weekly/{project-id}.md` for the project in scope. Find today's section (e.g. `## Monday 2026-04-27`). Identify tasks in `### Urgent` and `### Quick wins` — what's done, in-progress, not started.
 
 ### Step 2: Update task statuses
 
@@ -373,5 +374,5 @@ Then ask: "What's the most important thing for this afternoon?"
 ## Integration
 
 - `/session-update`: end-of-session log, replaces the old evening shutdown
-- `/weekly`: reads weekly.md and logs/ to compile project and milestone summary
+- `/weekly`: reads weekly/briefing.md, weekly/{project-id}.md files, and logs/{project-id}/ per project
 - `/obsidian-task-table`: create new tasks surfaced during daily review

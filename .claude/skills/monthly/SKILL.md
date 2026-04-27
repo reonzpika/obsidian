@@ -23,7 +23,7 @@ Facilitates Ryo's monthly review. Rolls up task progress across all projects, as
 - Open tasks: `tasks/open/*.md`
 - Done tasks: `tasks/done/*.md`
 - Projects: `projects/*.md`
-- Logs: `logs/*.md` (weekly reviews at `logs/YYYY-WNN-review.md`, session logs at `logs/YYYY-WNN.md`)
+- Logs: `logs/{project-id}/*.md` (weekly reviews at `logs/{project-id}/YYYY-WNN-review.md`, session logs at `logs/{project-id}/YYYY-WNN.md`)
 - Review output: `reviews/monthly/YYYY-MM.md`
 
 ## R&D isolation rule
@@ -42,8 +42,9 @@ Facilitates Ryo's monthly review. Rolls up task progress across all projects, as
 - Read `tasks/done/*.md`, filter by file mtime or `created` within the month
 
 **Weekly reviews:**
-- Glob `logs/*-review.md` — read all weekly review files from this month
-- Also read session log files `logs/YYYY-WNN.md` for supplementary context
+- Full run: Glob `logs/*/*-review.md` — read all weekly review files from this month across all project directories
+- Scoped run: Glob `logs/{project-id}/*-review.md` — read only that project's review files
+- Also read session log files `logs/{project-id}/YYYY-WNN.md` for supplementary context
 - Extract: wins, blockers, decisions
 
 **Projects:**
@@ -58,7 +59,7 @@ TaskCreate: "Phase 1: Collect", activeForm: "Collecting project and task data fo
 ### Phase 2: Reflect
 
 **Commercial stream (clinicpro-saas + clinicpro-medtech):**
-- Sprints completed: goals met or not?
+- Tasks completed against goals this month
 - Tasks done vs tasks left open at month end
 - Key decisions made
 - Blockers that recurred across multiple weeks

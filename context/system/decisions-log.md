@@ -4,6 +4,15 @@ Running record of system decisions. Prevents relitigating. One entry per decisio
 
 ---
 
+## 2026-04-27: Modular weekly/ and logs/ structure (Option A)
+
+What: `weekly/` directory with `briefing.md` + per-project files. `logs/` directory with per-project subdirectories.
+Why: Monolithic `weekly.md` and `logs/YYYY-WNN.md` caused token cost problem: per-project skill sessions loaded all streams. Per-project files allow scoped reads with zero cross-stream noise.
+Structure: `weekly/briefing.md` (4 lines), `weekly/{project-id}.md`, `logs/{project-id}/YYYY-WNN.md`, `logs/{project-id}/YYYY-WNN-review.md`.
+Skills updated: `/daily`, `/session-update`, `/weekly`, `/monthly`.
+
+---
+
 ## 2026-04-27: weekly.md replaces daily files
 
 What: `/daily` updates `weekly.md` instead of creating `daily/YYYY-MM-DD.md` files.
@@ -36,11 +45,12 @@ Replaces: `sprints/active/` and `sprints/archive/` workflow.
 
 ---
 
-## 2026-04-27: Single weekly.md, not stream-specific weekly files
+## 2026-04-27 (revised same day): Per-project weekly files, not single weekly.md
 
-What: One `weekly.md` for all streams. No per-stream weekly files.
-Why: Stream-specific weekly files would require opening 4 files each morning to reconstruct the full picture. One file preserves the single-entry orientation goal.
-Considered: `dashboards/{stream}/weekly.md` with a linking index. Rejected.
+What: `weekly/briefing.md` (4 lines, always-on) + `weekly/{project-id}.md` (per-project focus and day sections). Replaces single `weekly.md`.
+Why: Single `weekly.md` caused token cost problem: every per-project skill session had to load all four streams. Per-project files allow scoped reads. Briefing.md preserves single-file morning orientation at 4 lines.
+Replaces: Earlier same-day decision to use single `weekly.md`. That decision was reversed after testing surfaced the token cost problem.
+MBIE benefit: `weekly/nexwave-rd.md` isolates R&D planning by structure, not just convention.
 
 ---
 
