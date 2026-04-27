@@ -52,7 +52,7 @@ inbox/            quick capture
 
 Priority order:
 1. Task frontmatter `repo:` field (authoritative)
-2. Task ID prefix: `saas-*` → `clinicpro-saas`; `medtech-*` → `clinicpro-medtech`; `rd-*` → `nexwave-rd`; `gpf-*` → `gp-fellowship`
+2. Task ID prefix: `saas-*` → `clinicpro-saas`; `medtech-*` → `clinicpro-medtech`; `rd-*` → `nexwave-rd`; `gpf-*` → `gp-fellowship`; `gpw-*` → `gp-workflow-tools`
 3. Project file (`projects/*.md`) `repo:` field
 4. If still ambiguous, ask
 
@@ -63,7 +63,7 @@ Priority order:
 id: {repo-prefix}-{YYYYMMDD}-{NNN}
 title: Short human-readable description
 project: {project-id}                    # must match filename in projects/ (no .md) — always set
-repo: clinicpro-saas | clinicpro-medtech | nexwave-rd | gp-fellowship
+repo: clinicpro-saas | clinicpro-medtech | nexwave-rd | gp-fellowship | gp-workflow-tools
 milestone: "text label"                  # optional grouping label — human-readable, not a file reference
 status: open | in-progress | blocked | done
 priority: high | medium | low
@@ -79,7 +79,7 @@ id: {project-id}
 title: "Human-readable name"
 status: active | parked | production
 type: product | rd | training | side-project | partnership
-repo: clinicpro-saas | clinicpro-medtech | nexwave-rd | gp-fellowship | miozuki-web   # omit if no repo
+repo: clinicpro-saas | clinicpro-medtech | nexwave-rd | gp-fellowship | gp-workflow-tools | miozuki-web   # omit if no repo
 stack: [...]
 description: "One-line description for home.md display."
 phase: "Current focus area — one line"  # shown in home.md and daily briefing

@@ -2,6 +2,7 @@
 id: gp-workflow
 status: active
 type: training
+repo: gp-workflow-tools
 title: "GP Workflow"
 description: "Reduce overwhelm at clinical work. Inbox processing + reliable loop closure on self-tasks."
 phase: "Mapping pain points and trialling fixes"
