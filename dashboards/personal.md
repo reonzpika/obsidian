@@ -26,3 +26,5 @@ if (parked.length > 0) {
 
 ## Weekly Progress Log
 
+**2026-04-27:** Wedding -- reconstructed full vendor picture from Gmail. Venue confirmed (高良大社, 14 Sep 2026). Styling vendor undecided: re-engaged Wedding Select (¥88,000) and sent pricing enquiry to JUNO (¥187,000, campaign TBC). 7 tasks created. gws personal auth fixed.
+

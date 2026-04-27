@@ -1,7 +1,13 @@
 {
-  "spinnerTipsEnabled": true,
-  "prefersReducedMotion": true,
   "permissions": {
-    "additionalDirectories": ["C:/Users/reonz/.claude"]
-  }
+    "additionalDirectories": [
+      "C:/Users/reonz/.claude"
+    ],
+    "allow": [
+      "Bash(mkdir -p \"C:/Users/reonz/cursor/clinicpro-medtech/.claude\")",
+      "Bash(mkdir -p \"C:/Users/reonz/cursor/nexwave-rd/.claude\")"
+    ]
+  },
+  "spinnerTipsEnabled": true,
+  "prefersReducedMotion": true
 }

@@ -4,7 +4,7 @@ status: active
 type: side-project
 title: "Wedding"
 description: "Shinto shrine wedding, Kora Taisha, Kurume, 14 Sep 2026."
-phase: "Venue booked. JUNO styling contract pending."
+phase: "Venue booked. Awaiting replies from JUNO and Wedding Select on pricing."
 dashboard: personal
 ---
 
@@ -28,7 +28,21 @@ Shinto shrine wedding (神前式) at 高良大社 (Kora Taisha), Kurume, Fukuoka
 - Plan table sent by Matsushita on 6 Mar 2026. Not yet reviewed or contracted.
 - Last contact: 18 Mar 2026 (Ryo confirmed date, said would review plan)
 
-**Declined:** Wedding Select (門井, Fukuoka) -- notified 18 Mar 2026.
+**Also contacting: Wedding Select (門井)**
+- Contact: 門井, info@wedding-select.wedding, tel 092-522-1110
+- Plan: 挙式撮影付き神社挙式プラン, ¥88,000 (kimono, H&M, dressing, photographer 150+ shots, attendant)
+- Kora Taisha experience: confirmed
+- No weekend surcharge
+- Previously declined 18 Mar 2026, re-engaged 27 Apr 2026. Awaiting reply.
+
+## Open questions / blockers
+
+| Question | Sent | Waiting on |
+|---|---|---|
+| Written booking confirmation for 14 Sep slot | 26 Mar 2026 | 高良大社 (Tanaka) |
+| Does ¥99,000 Fukuoka campaign apply to our booking? | 27 Apr 2026 | JUNO (Matsushita) |
+| Can Wedding Select accommodate 14 Sep, what are next steps? | 27 Apr 2026 | Wedding Select (門井) |
+| Dressing venue near Kora Taisha (no on-site changing rooms) | -- | To be sourced once vendor confirmed |
 
 ## Tasks
 

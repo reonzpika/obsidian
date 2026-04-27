@@ -4,13 +4,21 @@ title: "Founder OS"
 status: active
 type: side-project
 description: "Personal tooling, Claude Code setup, workflow systems, and automation."
-phase: "Claude Code setup audit and improvement"
+phase: "Vault OS redesign planning"
 dashboard: founder-os
 ---
 
 ## Description
 
 The meta-layer of how the business runs. Claude Code configuration, MCP servers, hooks, skills, keyboard shortcuts, and workflow systems that make everything else faster.
+
+## Architectural decisions (2026-04-27)
+
+- Skills with disable-model-invocation: evolve, board, handoff, evolve-queue. Prevents model from auto-triggering high-risk/interactive skills mid-task.
+- CLAUDE_CODE_SUBAGENT_MODEL set to haiku globally. Sonnet was running for every fork subagent; unnecessary cost.
+- clinicpro-medtech/.claude/settings.json: deny rules for rm -rf, rm -r, curl DELETE, dropdb, psql DROP. No deny rules existed despite PHI + FHIR exposure.
+- nexwave-rd/.claude/settings.json: deny rules for Write/Edit on docs/*/output/*. Protects MBIE deliverables from accidental overwrite.
+- 3 hooks active as of 2026-04-27: em-dash detector (PostToolUse Write+Edit), bash audit log (PreToolUse Bash to ~/.claude/logs/), session stats (Stop, outputs systemMessage). Scripts in C:/Users/reonz/Cursor/hooks/.
 
 ## Tasks
 

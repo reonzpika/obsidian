@@ -37,3 +37,6 @@ if (parked.length > 0) {
 - Board session: identified 5 structural issues for Vault OS redesign (folder structure, memory system, CLAUDE.md architecture, skills architecture, hooks/automation)
 - Research base: 12 founder-os inbox reports reviewed (LYT, MemPalace, memory systems, GStack, agentic patterns, AutoResearch)
 - Tasks created: fo-20260427-001 through fo-20260427-005
+- Security quick wins: disable-model-invocation on 4 skills (evolve, board, handoff, evolve-queue); haiku subagent model; medtech PHI deny rules; nexwave-rd output dir protection
+- Hook quick wins: 3 hooks registered (em-dash detector, bash audit log, session stats)
+- Vault integrity: 10 rd-tasks rerouted to correct project IDs; 5 done-task statuses corrected
