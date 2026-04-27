@@ -3,14 +3,32 @@ id: wedding
 status: active
 type: side-project
 title: "Wedding"
-description: "Wedding planning."
-phase: "Awaiting context"
+description: "Shinto shrine wedding, Kora Taisha, Kurume, 14 Sep 2026."
+phase: "Venue booked. JUNO styling contract pending."
 dashboard: personal
 ---
 
 ## Description
 
-Placeholder. Context to follow from Ryo.
+Shinto shrine wedding (神前式) at 高良大社 (Kora Taisha), Kurume, Fukuoka. Ceremony only -- already legally married in NZ. Date: Monday 14 September 2026, 14:00.
+
+**Venue: 高良大社**
+- Contact: 田中友也 (Tanaka), 権禰宜, office@kourataisya.or.jp
+- Ceremony fee: 50,000 yen cash on the day
+- Duration: 30-40 min, main hall
+- External photographer allowed
+- No changing rooms or hair/makeup on site -- dressing venue needed nearby
+- 19 guests (12 groom, 7 bride)
+- Application form sent 26 Mar 2026. Awaiting written confirmation.
+
+**Styling vendor: JUNO / Dress The Life (Fuchigami Fines)**
+- Contact: 松下雪穂 (Matsushita Yukiho), y-matsushita@ffines.jp, +81-80-4922-5978
+- Covers: kimono, dressing, hair/makeup, photographer, on-day planner (all-in-one)
+- No weekend surcharge
+- Plan table sent by Matsushita on 6 Mar 2026. Not yet reviewed or contracted.
+- Last contact: 18 Mar 2026 (Ryo confirmed date, said would review plan)
+
+**Declined:** Wedding Select (門井, Fukuoka) -- notified 18 Mar 2026.
 
 ## Tasks
 
