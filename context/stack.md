@@ -1,5 +1,18 @@
 # Tech Stack Reference
 
+## Shared tools
+
+| Tool | Details |
+|---|---|
+| AI | Claude Code CLI — default model `claude-sonnet-4-6`; use `claude-opus-4-7` for complex reasoning |
+| Vault | Obsidian with Dataview, Meta-bind, Templater, obsidian-git (auto-commits every edit) |
+| Google Workspace | Access via `gws` CLI — never use Gmail/Drive/Calendar MCP tools directly |
+| Version control | Git — obsidian vault auto-commits via obsidian-git; code repos use main branch only |
+| Hosting | Vercel (all Next.js apps); AWS Lightsail (BFF only) |
+| Cloud | AWS (Bedrock, Lightsail) — Auckland region `ap-southeast-6` for data residency |
+
+---
+
 ## clinicpro-saas
 - Framework: Next.js (App Router), TypeScript, Tailwind
 - Database: Neon (Postgres), Drizzle ORM

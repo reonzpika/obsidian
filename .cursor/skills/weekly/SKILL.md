@@ -23,9 +23,9 @@ Facilitates Ryo's weekly project review. Rolls up task progress across all activ
 - Projects: `projects/*.md` (includes `phase:` field for current focus area)
 - Open tasks: `tasks/open/*.md`
 - Done tasks: `tasks/done/*.md`
-- Sprint archive: `sprints/archive/*.md` (read-only reference; no active sprints folder)
-- Daily notes: `daily/*.md`
-- Review output: `reviews/weekly/YYYY-MM-DD.md`
+- Weekly planning file: `weekly.md`
+- Logs: `logs/*.md`
+- Review output: `logs/YYYY-WNN-review.md`
 
 ## R&D isolation rule
 
@@ -44,9 +44,9 @@ Facilitates Ryo's weekly project review. Rolls up task progress across all activ
 - Read `tasks/done/*.md`
 - Filter where `created` or file mtime is within last 7 days
 
-**Daily notes:**
-- Read `daily/*.md` for the past 7 days (if they exist)
-- Extract any notes under "Wins", "Challenges", or "Tomorrow's priority"
+**Weekly planning file:**
+- Read `weekly.md`
+- Extract: briefing (stream status), week focus, day sections (focus, urgent, blockers per day)
 
 Create session tasks:
 ```
@@ -98,7 +98,7 @@ TaskCreate: "Phase 3: Plan" — blocked by Phase 2
 
 ## Output Format
 
-Save to `reviews/weekly/YYYY-MM-DD.md`:
+Save to `logs/YYYY-WNN-review.md`:
 
 ```markdown
 ---
@@ -151,9 +151,35 @@ week: YYYY-WNN
 - If a project has > 50% tasks open from the previous week, flag it explicitly
 - Wins should be specific and concrete — not "made progress on X"
 
+## Archive and Reset weekly.md
+
+After saving the review to `logs/YYYY-WNN-review.md`:
+
+1. Read current `weekly.md`.
+2. Append the day sections from `weekly.md` (everything after `## Focus this week`) to `logs/YYYY-WNN.md` under a heading `## Weekly planning archive`.
+3. Reset `weekly.md` for the new week — overwrite with a blank template:
+
+```markdown
+## Briefing
+ClinicPro SaaS: — | — | —
+ClinicPro Medtech: — | — | —
+NexWave R&D: — | — | —
+GP Fellowship: — | — | —
+
+## Focus this week
+- ClinicPro SaaS:
+- ClinicPro Medtech:
+- NexWave R&D:
+- GP Fellowship:
+```
+
+Confirm: `weekly.md reset for week YYYY-WNN+1`
+
+---
+
 ## Integration
 
-- `/daily` — daily notes feed Phase 1 context
-- `/monthly` — weekly reviews feed monthly rollup
+- `/daily` — updates weekly.md; Phase 1 reads it for context
+- `/monthly` — reads logs/ for weekly review context
 - `/session-update` — use during the week to log session progress
 - `/obsidian-task-table` — create new tasks identified during planning

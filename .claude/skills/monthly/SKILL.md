@@ -20,12 +20,10 @@ Facilitates Ryo's monthly review. Rolls up task progress across all projects, as
 
 ## Vault paths
 
-- Sprint archive: `sprints/archive/*.md` (read-only reference; no active sprints folder)
 - Open tasks: `tasks/open/*.md`
 - Done tasks: `tasks/done/*.md`
 - Projects: `projects/*.md`
-- Weekly reviews: `reviews/weekly/*.md`
-- Daily notes: `daily/*.md`
+- Logs: `logs/*.md` (weekly reviews at `logs/YYYY-WNN-review.md`, session logs at `logs/YYYY-WNN.md`)
 - Review output: `reviews/monthly/YYYY-MM.md`
 
 ## R&D isolation rule
@@ -44,7 +42,8 @@ Facilitates Ryo's monthly review. Rolls up task progress across all projects, as
 - Read `tasks/done/*.md`, filter by file mtime or `created` within the month
 
 **Weekly reviews:**
-- Read all `reviews/weekly/*.md` from this month
+- Glob `logs/*-review.md` — read all weekly review files from this month
+- Also read session log files `logs/YYYY-WNN.md` for supplementary context
 - Extract: wins, blockers, decisions
 
 **Projects:**
@@ -121,7 +120,6 @@ month: YYYY-MM
 # Monthly Review: [Month YYYY]
 
 ## Summary
-- Sprints completed: N (commercial), N (R&D)
 - Tasks completed: N (commercial), N (R&D)
 - Projects active: N
 

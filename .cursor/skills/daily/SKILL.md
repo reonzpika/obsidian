@@ -22,7 +22,8 @@ Evening review and tomorrow planning is handled by `/daily-review`.
 
 ## Vault paths
 
-- Daily notes: `daily/YYYY-MM-DD.md`
+- Weekly planning file: `weekly.md`
+- Logs: `logs/YYYY-WNN.md`
 - Active tasks: `tasks/open/*.md` (frontmatter: id, title, project, repo, milestone, status, priority, due — `project` always set; `milestone` optional grouping label)
 - Done tasks: `tasks/done/*.md`
 - Projects: `projects/*.md` (frontmatter: id, title, status, type, repo, description, phase, dashboard — `phase` is current focus area)
@@ -76,13 +77,13 @@ Mark "Read context" in_progress.
 
 Fire all of the following tool calls in a single message. Do not wait between them.
 
-**Daily notes (last 3 days):**
-Read `daily/YYYY-MM-DD.md`, `daily/YYYY-MM-DD-1.md`, `daily/YYYY-MM-DD-2.md`. Skip silently if a file doesn't exist.
+**Weekly planning file:**
+Read `weekly.md`. Extract the briefing section (stream status per line), this week's focus, and any day sections already written this week for context.
 
-**Weekly and monthly reviews:**
-Glob `reviews/weekly/*.md` — read the most recent file (highest date). Glob `reviews/monthly/*.md` — read the file matching the current month (YYYY-MM.md), or the most recent if none matches.
+**Recent logs and monthly review:**
+Glob `logs/*.md` — read the most recent file (highest name) for weekly context. Glob `reviews/monthly/*.md` — read the file matching the current month (YYYY-MM.md), or the most recent if none matches.
 
-If neither folder exists or is empty, note this as a flag: emit one line in Phase 3 after the Projects table: `**No weekly/monthly review found** — consider creating reviews/weekly/YYYY-MM-DD.md`
+If neither exists or is empty, note this as a flag: emit one line in Phase 3 after the Projects table: `**No logs/monthly review found** — consider running /weekly or /monthly`
 
 Extract from weekly review: the daily plan for today and adjacent days, deferred items, open blockers, upcoming external deadlines within 7 days.
 Extract from monthly review: the month's focus headline per stream, external deadline table.
@@ -187,8 +188,8 @@ Present the following structure — nothing else, no preamble, no "good morning"
 ```
 ## [Day], [Date]
 
-**3-day recap:**
-- [most significant thing that shipped, moved, or landed]
+**This week's recap:**
+- [most significant thing that shipped, moved, or landed this week]
 - [second most significant]
 - [third — only include if genuinely distinct]
 
@@ -258,31 +259,23 @@ Wait. Do not suggest a plan. Do not ask follow-up questions.
 
 ---
 
-### Phase 4: Write daily note
+### Phase 4: Update weekly.md
 
 Once the user replies, mark "Write daily note" in_progress.
 
-Write `daily/YYYY-MM-DD.md` using this template:
+Read `weekly.md`. Check if a section for today already exists (e.g. `## Monday 2026-04-27`).
+
+**If today's section does not exist:** append it after the last existing day section.
+
+**If today's section exists:** update the Focus subsection in-place with the user's stated focus.
+
+Today's section template:
 
 ```markdown
----
-date: YYYY-MM-DD
-day: [Day name]
----
+## [Day] YYYY-MM-DD
 
-# YYYY-MM-DD
-
-[[home]] | [[daily/YYYY-MM-DD-1]]
-
-## Focus
-- [user's stated focus, verbatim or lightly cleaned — one bullet per distinct goal]
-
-## Today
-
-### Projects
-
-**[[dashboards/{dashboard}|Display Name]]**
-- [[projects/{project-id}|Phase label]]
+### Focus
+- [user's stated focus — one bullet per distinct goal]
 
 ### Urgent
 - [[task-id]] — title
@@ -290,26 +283,20 @@ day: [Day name]
 ### Quick wins
 - [[task-id]] — title
 
-## Blockers
+### Blockers
 - [[task-id]] — waiting on X
-
----
-
-[[home]]
 ```
 
 **Writing rules:**
-- Projects section: group active projects by dashboard. Each group = bold wikilink header `**[[dashboards/{dashboard}|Display Name]]**` using the display name from the Dashboard areas table. Under each group, one bullet per project: `- [[projects/{project.id}|{project.phase}]]`. If phase is empty, use project title. If user narrowed scope, include only relevant streams.
+- Focus: user's stated focus verbatim or lightly cleaned. One bullet per distinct goal.
 - Urgent and Quick wins: wikilinks `[[task-id]]`, no checkboxes, only tasks in scope of the user's stated focus.
 - Blockers: up to 5, only tasks where `status: blocked` pulled from `tasks/open/`. Format: `[[task-id]] — waiting on X`
-- If the user's reply surfaces a new action item: create the task file first, then wikilink it in the note.
-- Always add `[[home]] | [[daily/YYYY-MM-DD-1]]` (home link + previous day link) on the line immediately after the `# YYYY-MM-DD` title. No nav links at the bottom.
-- Always add `[[daily/YYYY-MM-DD]]` on the line immediately after the `# Dashboard: All Projects` title in `home.md`, replacing the previous date's link.
-- Nothing else: no Gmail section, no From Yesterday, no Evening Reflection, no Notes section. Ephemeral notes belong in chat.
+- If the user's reply surfaces a new action item: create the task file first, then wikilink it.
+- Do not create a new file. Always edit `weekly.md`.
 
 Mark "Write daily note" completed.
 
-Confirm with one line: `Daily note written → daily/YYYY-MM-DD.md`
+Confirm with one line: `weekly.md updated → [Day] YYYY-MM-DD section written`
 
 ---
 
@@ -347,7 +334,7 @@ R&D tasks add: `objective: obj-1|obj-2|obj-3|obj-4|capability` and `owner: ryo|t
 
 ### Step 1: Review morning plan
 
-Read today's `daily/YYYY-MM-DD.md`. Identify tasks in `## Today` — what's done, in-progress, not started.
+Read `weekly.md`. Find today's section (e.g. `## Monday 2026-04-27`). Identify tasks in `### Urgent` and `### Quick wins` — what's done, in-progress, not started.
 
 ### Step 2: Update task statuses
 
@@ -386,5 +373,5 @@ Then ask: "What's the most important thing for this afternoon?"
 ## Integration
 
 - `/session-update`: end-of-session log, replaces the old evening shutdown
-- `/weekly`: reads daily notes to compile project and milestone summary
+- `/weekly`: reads weekly.md and logs/ to compile project and milestone summary
 - `/obsidian-task-table`: create new tasks surfaced during daily review
