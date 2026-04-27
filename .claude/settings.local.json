@@ -1,11 +1,12 @@
 {
   "permissions": {
-    "additionalDirectories": [
-      "C:/Users/reonz/.claude"
-    ],
     "allow": [
       "Bash(mkdir -p \"C:/Users/reonz/cursor/clinicpro-medtech/.claude\")",
-      "Bash(mkdir -p \"C:/Users/reonz/cursor/nexwave-rd/.claude\")"
+      "Bash(mkdir -p \"C:/Users/reonz/cursor/nexwave-rd/.claude\")",
+      "WebSearch"
+    ],
+    "additionalDirectories": [
+      "C:/Users/reonz/.claude"
     ]
   },
   "spinnerTipsEnabled": true,
