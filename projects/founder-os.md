@@ -4,13 +4,26 @@ title: "Founder OS"
 status: active
 type: side-project
 description: "Personal tooling, Claude Code setup, workflow systems, and automation."
-phase: "Vault OS redesign planning"
+phase: "Vault OS redesign: sprint plan complete, execution ready"
 dashboard: founder-os
 ---
 
 ## Description
 
 The meta-layer of how the business runs. Claude Code configuration, MCP servers, hooks, skills, keyboard shortcuts, and workflow systems that make everything else faster.
+
+## Architectural decisions (2026-04-28): Vault OS redesign
+
+Sprint plan: `context/vault-os-redesign-sprint-plan.md`
+
+- Vault structure: area-based under `areas/` folder. Each area has index.md, tasks/open, tasks/done, inbox, context, projects, logs, weekly.
+- Shared root: daily/, templates/, home.md, weekly.md (master index), reference/ (cross-area docs), archives/.
+- dashboards/ folder removed: replaced by per-area index.md files.
+- Memory Level 2: subfolders domain/, tools/, product/, project/. SessionStart hook injects MEMORY.md index. Level 3 (memsearch) deferred until index exceeds 50 entries.
+- CLAUDE.md architecture: behavioral rules stay inline in global CLAUDE.md (~40-50 lines). me.md for identity narrative (on demand). vault-map.md, skill-map.md, area CLAUDE.md files for navigation and area context (on demand or cwd-based).
+- Skills self-improvement: assertion-only loop (Option B), overnight cron, suggestions staged for human review before apply.
+- PreCompact hook: captures current objective, uncommitted decisions, active constraints, open questions. session-state.md rejected.
+- session-update skill needs updating after Task 1: write to weekly.md (master) and areas/{project}/weekly/.
 
 ## Architectural decisions (2026-04-27)
 
