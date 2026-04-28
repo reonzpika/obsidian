@@ -5,21 +5,25 @@
   "version": "1.0",
   "folderMapping": {
     "dailyNotes": "daily",
-    "tasks": "tasks/open",
-    "tasksDone": "tasks/done",
-    "sprints": "sprints/active",
-    "sprintsArchive": "sprints/archive",
-    "projects": "projects",
+    "areas": "areas",
+    "reference": "reference",
+    "archives": "archives",
     "reviewsWeekly": "reviews/weekly",
     "reviewsMonthly": "reviews/monthly",
     "inbox": "inbox",
-    "templates": "templates"
+    "templates": "templates",
+    "weekly": "weekly.md"
   },
-  "repos": [
+  "areas": [
+    "nexwave-rd",
     "clinicpro-saas",
     "clinicpro-medtech",
-    "nexwave-rd",
-    "gp-fellowship"
+    "gp-os",
+    "founder-os",
+    "linkedin",
+    "miozuki",
+    "other-projects",
+    "personal"
   ],
   "rdIsolation": true,
   "reviewDay": "Friday"

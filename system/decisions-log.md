@@ -4,6 +4,17 @@ Running record of system decisions. Prevents relitigating. One entry per decisio
 
 ---
 
+## 2026-04-28: Area-based vault structure (Vault OS Redesign — Task 1)
+
+What: Vault migrated from flat global structure to per-area structure under `areas/`. 9 areas: nexwave-rd, clinicpro-saas, clinicpro-medtech, gp-os, founder-os, linkedin, miozuki, other-projects, personal. Each area is self-contained: `areas/{area}/{tasks/open, tasks/done, inbox, context, projects, logs, weekly, index.md}`.
+Why: Global tasks/ and projects/ caused Dataview to scan all streams for every view. Area isolation eliminates cross-stream noise and enables per-area CLAUDE.md context files.
+Key moves: dashboards/ removed (each became areas/{area}/index.md), projects/ removed (distributed to areas/{area}/projects/), logs/ removed (distributed to areas/{area}/logs/), context/ replaced by reference/ for non-area files, weekly/ replaced by root weekly.md + areas/{area}/weekly/, zArchives/ renamed archives/.
+Dataview: All FROM "tasks/open" and FROM "projects" queries updated to area-specific paths. home.md uses FROM "areas" with dashboard: filter.
+Prerequisite for: Task 3 (area CLAUDE.md files, vault-map.md), Task 5 (/session-update path update).
+Sprint plan: context/vault-os-redesign-sprint-plan.md (now at areas/founder-os/context/).
+
+---
+
 ## 2026-04-27: Modular weekly/ and logs/ structure (Option A)
 
 What: `weekly/` directory with `briefing.md` + per-project files. `logs/` directory with per-project subdirectories.
