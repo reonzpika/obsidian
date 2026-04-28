@@ -25,7 +25,7 @@ Mobile web app that photographs clinical images and commits them to patient reco
 | Task 1: `/medtech/capture` landing page         | Complete (commit 64788af, 19 Apr); full design overhaul 23 Apr (framer-motion, nz-green tokens, 9 sections) |
 | Task 2: `/refer-a-practice` bounty page + API   | Complete (commit 4326d34, 19 Apr)       |
 | Task 3: Capture upsell banner in clinicpro-saas | Complete (commit 4be3b4f, 23 Apr)       |
-| Task 4: Champion email v1                       | Drafted (`clinicpro-medtech/docs/marketing/phase-1/champion-email-v1.md`). Not sent: pending landing page review and incentive policy confirmation. |
+| Task 4: Champion email v1                       | Revised 28 Apr: bullet-point structure, GP/nurse/admin use cases, no free trial. Send blocked on landing page review (medtech-20260419-001) and capture.clinicpro.co.nz live. Send task: medtech-20260428-001. |
 | Task 5: Demo Loom script + case-study template  | Loom embed superseded by walkthrough video (26 Apr). Case-study template still open. |
 | Task 6: Hero video                              | Walkthrough (Shot 4) complete 26 Apr. 17s portrait MP4 at `public/video-assets/hero-walkthrough.mp4`, wired into HeroSection. Cinematic Shots 1-3 still pending Kling/Higsfield account (`medtech-20260425-003`). Minor adjustments tracked in `medtech-20260426-005`. |
 
